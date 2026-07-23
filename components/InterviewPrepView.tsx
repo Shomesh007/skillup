@@ -51,8 +51,8 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
 
   return (
     <div className="flex-1 flex flex-col h-full overflow-hidden">
-      <header className="px-6 shrink-0 pt-4">
-        <h1 className="text-3xl font-bold mb-1 text-white">Interview Prep</h1>
+      <header className="px-6 shrink-0 pt-4 lg:px-8 lg:pt-6">
+        <h1 className="text-3xl font-bold mb-1 text-white lg:text-5xl">Interview Prep</h1>
         <p className="text-xs text-gray-500 font-mono">Get ready for {displayCompany.name}</p>
         
         <div className="flex border-b border-white/5 mt-6">
@@ -68,7 +68,7 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
         </div>
       </header>
 
-      <div className="flex-1 overflow-y-auto no-scrollbar px-6 pt-6 pb-24">
+      <div className="flex-1 overflow-y-auto no-scrollbar px-6 pt-6 pb-24 lg:px-8 lg:pb-8">
         {activeTab === 'QUESTIONS' && (
           <div className="space-y-4">
             <div className="flex justify-between items-center mb-6 px-1">
@@ -82,7 +82,8 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
             {loading ? (
               <div className="text-center py-8 text-gray-500 text-sm">Loading interview questions...</div>
             ) : questions.length > 0 ? (
-              questions.map((q, i) => (
+              <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
+              {questions.map((q, i) => (
                 <div key={q.id} className="glass-panel p-4 rounded-xl border-l-2 border-l-neon-violet">
                   <div className="flex justify-between items-start mb-2">
                     <span className="text-[9px] font-mono text-neon-violet bg-neon-violet/10 px-2 py-0.5 rounded">{q.category}</span>
@@ -94,7 +95,8 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
                     <button className="text-[10px] font-mono text-primary font-bold hover:text-neon-cyan transition">SOLVE &gt;</button>
                   </div>
                 </div>
-              ))
+              ))}
+              </div>
             ) : (
               <div className="text-center py-8 text-gray-500 text-sm">
                 No interview questions available yet. Check back soon!
@@ -104,7 +106,7 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
         )}
 
         {activeTab === 'PRACTICE' && (
-          <div className="space-y-6">
+          <div className="space-y-6 lg:max-w-3xl">
             <div className="glass-panel overflow-hidden rounded-2xl group">
               <div className="aspect-video bg-black/60 flex items-center justify-center relative">
                 <span className="material-symbols-outlined text-6xl text-white/20 group-hover:text-neon-cyan group-hover:scale-110 transition-all cursor-pointer">play_circle</span>
@@ -119,7 +121,7 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
         )}
 
         {activeTab === 'TIPS' && (
-          <div className="space-y-8">
+          <div className="space-y-8 lg:grid lg:grid-cols-2 lg:gap-6 lg:space-y-0">
             <section>
               <h3 className="text-[10px] font-mono text-neon-cyan tracking-widest uppercase mb-4 border-l-2 border-neon-cyan pl-2">Phone Screen</h3>
               <ul className="space-y-3">
@@ -150,7 +152,7 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
         )}
 
         {activeTab === 'RESOURCES' && (
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
             {[
               { t: 'Cracking Coding', icon: 'book' },
               { t: 'NeetCode 150', icon: 'list' },

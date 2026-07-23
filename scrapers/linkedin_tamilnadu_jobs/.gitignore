@@ -1,0 +1,9 @@
+output/
+.selenium_chrome_profile/
+config.json
+*.log
+*.sqlite
+*.db
+__pycache__/
+.venv/
+venv/

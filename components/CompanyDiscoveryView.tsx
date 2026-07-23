@@ -2,14 +2,16 @@
 import React, { useState, useMemo } from 'react';
 import { Company } from '../types';
 import { useAppContext } from '../context/AppContext';
+import { LINKEDIN_COMPANIES } from '../src/data/linkedinCompanies';
 
 interface Props {
   role: string;
   onSelectCompany: (company: Company) => void;
   onBack: () => void;
+  onShowJobs?: (companyName: string) => void;
 }
 
-const CompanyDiscoveryView: React.FC<Props> = ({ role, onSelectCompany, onBack }) => {
+const CompanyDiscoveryView: React.FC<Props> = ({ role, onSelectCompany, onBack, onShowJobs }) => {
   const [activeTab, setActiveTab] = useState<'ALL' | 'MNC' | 'PRODUCT' | 'STARTUP'>('ALL');
   const { companies: contextCompanies } = useAppContext();
 
@@ -38,7 +40,11 @@ const CompanyDiscoveryView: React.FC<Props> = ({ role, onSelectCompany, onBack }
   }, [contextCompanies]);
 
   const filtered = useMemo(() => {
-    let result = mappedCompanies;
+    const companyMap = new Map<string, Company>();
+    [...mappedCompanies, ...LINKEDIN_COMPANIES].forEach((company) => {
+      companyMap.set(company.name.toLowerCase(), company);
+    });
+    let result = Array.from(companyMap.values());
     
     if (activeTab !== 'ALL') {
       // Map activeTab to the corresponding category value
@@ -58,8 +64,8 @@ const CompanyDiscoveryView: React.FC<Props> = ({ role, onSelectCompany, onBack }
 
   return (
     <div className="flex-1 flex flex-col min-h-0 overflow-hidden">
-      <header className="px-6 pt-4 pb-2 shrink-0">
-        <div className="flex gap-2 mb-4 overflow-x-auto no-scrollbar -mx-6 px-6">
+      <header className="px-6 pt-4 pb-2 shrink-0 lg:px-8 lg:pt-6">
+        <div className="flex gap-2 mb-4 overflow-x-auto no-scrollbar -mx-6 px-6 lg:mx-0 lg:px-0">
           <button className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-[10px] font-mono whitespace-nowrap">REMOTE FRIENDLY</button>
           <button className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-[10px] font-mono whitespace-nowrap">0-5 YEARS EXP</button>
         </div>
@@ -77,7 +83,7 @@ const CompanyDiscoveryView: React.FC<Props> = ({ role, onSelectCompany, onBack }
         </div>
       </header>
 
-      <div className="flex-1 overflow-y-auto no-scrollbar px-6 space-y-4 pb-32 pt-4">
+      <div className="flex-1 overflow-y-auto no-scrollbar px-6 space-y-4 pb-32 pt-4 lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-5 lg:space-y-0 lg:px-8 lg:pb-8 lg:items-start lg:content-start">
         {filtered.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-slate-400 text-sm">No companies found in this category</p>
@@ -87,7 +93,7 @@ const CompanyDiscoveryView: React.FC<Props> = ({ role, onSelectCompany, onBack }
             <div 
               key={c.id} 
               onClick={() => onSelectCompany(c)}
-              className="glass-panel p-5 rounded-2xl group cursor-pointer hover:border-neon-cyan/50 transition-all shrink-0"
+              className="glass-panel p-5 rounded-2xl group cursor-pointer hover:border-neon-cyan/50 transition-all shrink-0 h-fit lg:h-auto"
             >
               <div className="flex justify-between items-start mb-4">
                 <div className="w-12 h-12 rounded-xl bg-white p-2 flex items-center justify-center text-2xl">
@@ -106,7 +112,7 @@ const CompanyDiscoveryView: React.FC<Props> = ({ role, onSelectCompany, onBack }
               </div>
               
               <h3 className="text-xl font-bold text-white group-hover:text-neon-cyan transition-colors">{c.name}</h3>
-              <p className="text-xs text-gray-500 font-mono mb-4 line-clamp-1">{c.about}</p>
+              <p className="text-xs text-gray-500 font-mono mb-4 line-clamp-2">{c.about || `${c.name} is actively hiring`}</p>
               
               <div className="grid grid-cols-2 gap-2 mb-5">
                 <div className="bg-black/40 p-2 rounded-lg border border-white/5">
@@ -120,10 +126,28 @@ const CompanyDiscoveryView: React.FC<Props> = ({ role, onSelectCompany, onBack }
               </div>
 
               <div className="flex gap-2">
-                <button className="flex-1 py-2 rounded-lg bg-white/5 border border-white/10 text-[10px] font-mono uppercase tracking-widest hover:bg-white/10">
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (c.isHiring) {
+                      onShowJobs?.(c.name);
+                    } else {
+                      onSelectCompany(c);
+                    }
+                  }}
+                  className="flex-1 py-2 rounded-lg bg-white/5 border border-white/10 text-[10px] font-mono uppercase tracking-widest hover:bg-white/10"
+                >
                   {c.isHiring ? 'Show Jobs' : 'Explore'}
                 </button>
-                <button className="flex-1 py-2 rounded-lg bg-primary/20 border border-primary/40 text-primary text-[10px] font-mono uppercase tracking-widest hover:bg-primary/30">Get Ready</button>
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onSelectCompany(c);
+                  }}
+                  className="flex-1 py-2 rounded-lg bg-primary/20 border border-primary/40 text-primary text-[10px] font-mono uppercase tracking-widest hover:bg-primary/30"
+                >
+                  Get Ready
+                </button>
               </div>
             </div>
           ))

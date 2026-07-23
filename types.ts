@@ -6,9 +6,11 @@ export enum AppView {
   COMPANY_DISCOVERY = 'company_discovery',
   COMPANY_PROFILE = 'company_profile',
   GUIDE = 'guide',
+  RESUME_TEMPLATES = 'resume_templates',
   INTERVIEW_PREP = 'interview_prep',
   SUCCESS_STORIES = 'success_stories',
   AI_CHAT = 'ai_chat',
+  LIVE_COACHING = 'live_coaching',
   PROFILE_HUB = 'profile_hub',
   JOB_LIST = 'job_list',
   AUTH = 'auth'
@@ -41,6 +43,30 @@ export interface Company {
   stack: TechStack;
   about: string;
   timeline: { step: string; duration: string }[];
+  website?: string;
+  careersPage?: string;
+  linkedInUrl?: string;
+  openRoles?: number;
+}
+
+export interface JobOpportunity {
+  id: number | string;
+  title: string;
+  company: string;
+  location: string;
+  experience: string;
+  salary: string;
+  mode: string;
+  description?: string;
+  linkedinUrl?: string;
+  division?: string;
+  skills?: string[];
+  postedAt?: string;
+  applicants?: string;
+  employmentType?: string;
+  seniorityLevel?: string;
+  jobFunction?: string;
+  industries?: string;
 }
 
 export interface SuccessStory {

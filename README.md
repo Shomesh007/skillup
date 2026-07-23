@@ -6,6 +6,7 @@ A comprehensive career guidance and interview preparation platform for tech prof
 
 - **Role Discovery**: Explore 37+ tech roles with detailed career paths
 - **Company Intelligence**: Access 70+ companies with hiring data and insights
+- **ATS Resume Templates**: Ready-made resume structures for students and freshers
 - **Interview Preparation**: 96+ real interview questions by company and difficulty
 - **Salary Benchmarks**: View percentile-based salary data by role and company
 - **Success Stories**: Learn from real hiring experiences and career trajectories

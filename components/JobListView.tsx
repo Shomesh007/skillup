@@ -1,15 +1,16 @@
 
 import React, { useState } from 'react';
-import { useAppContext } from '../context/AppContext';
-import { AppView } from '../types';
+import { JobOpportunity } from '../types';
+import { LINKEDIN_JOBS } from '../src/data/linkedinJobs';
 
 interface Props {
   role?: string;
-  onSelectJob: (view: AppView) => void;
+  companyName?: string;
+  onSelectJob: (job: JobOpportunity) => void;
   onBack: () => void;
 }
 
-const mockJobs = [
+const mockJobs: JobOpportunity[] = [
   {
     id: 1,
     title: 'Full Stack Developer',
@@ -57,12 +58,18 @@ const mockJobs = [
   },
 ];
 
-const JobListView: React.FC<Props> = ({ role, onSelectJob, onBack }) => {
-  const { selectedRole } = useAppContext();
+const JobListView: React.FC<Props> = ({ role, companyName, onSelectJob, onBack }) => {
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
-  const displayRole = selectedRole || role || 'Technology';
+  const displayRole = role || 'Technology';
+  const jobs = LINKEDIN_JOBS.length > 0 ? LINKEDIN_JOBS : mockJobs;
 
-  const filteredJobs = mockJobs.filter(job => {
+  const filteredJobs = jobs.filter(job => {
+    // Filter by company if companyName is provided
+    if (companyName && job.company.toLowerCase() !== companyName.toLowerCase()) {
+      return false;
+    }
+    
+    // Apply other filters
     if (selectedFilters.length === 0) return true;
     return selectedFilters.some(filter => 
       filter === 'Remote' ? job.mode === 'Remote' : 
@@ -71,13 +78,22 @@ const JobListView: React.FC<Props> = ({ role, onSelectJob, onBack }) => {
       true
     );
   });
+
+  const openJobDetails = (job: JobOpportunity) => {
+    if (job.linkedinUrl) {
+      window.open(job.linkedinUrl, '_blank', 'noopener,noreferrer');
+      return;
+    }
+    onSelectJob(job);
+  };
+
   return (
     <div className="flex-1 h-full flex flex-col overflow-hidden relative">
-      <header className="pt-4 pb-2 px-6 shrink-0 z-20">
+      <header className="pt-4 pb-2 px-6 shrink-0 z-20 lg:px-8 lg:pt-6">
         <div className="flex justify-between items-end mb-6">
           <div>
-            <h1 className="text-2xl font-bold text-white leading-tight">
-              {displayRole} <br/><span className="font-light text-gray-400">Jobs</span>
+            <h1 className="text-2xl font-bold text-white leading-tight lg:text-4xl">
+              {companyName || displayRole} <br/><span className="font-light text-gray-400">Jobs</span>
             </h1>
           </div>
           <div className="glass-panel px-3 py-1.5 rounded-lg border-l-2 border-neon-cyan flex flex-col items-end">
@@ -106,10 +122,10 @@ const JobListView: React.FC<Props> = ({ role, onSelectJob, onBack }) => {
         </div>
       </header>
 
-      <div className="flex-1 overflow-y-auto no-scrollbar px-6 pb-32 relative space-y-5 pt-4 min-h-0">
+      <div className="flex-1 overflow-y-auto no-scrollbar px-6 pb-32 relative space-y-5 pt-4 min-h-0 lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:items-start lg:gap-5 lg:space-y-0 lg:px-8 lg:pb-8">
         {filteredJobs.length > 0 ? (
           filteredJobs.map((job) => (
-            <article key={job.id} className="glass-panel rounded-2xl p-5 hover:border-neon-cyan/50 transition-all cursor-pointer group shrink-0">
+            <article key={job.id} className="glass-panel rounded-2xl p-5 hover:border-neon-cyan/50 transition-all cursor-pointer group shrink-0 lg:min-h-60">
               <div className="flex justify-between items-start mb-2">
                 <div>
                   <h3 className="text-lg font-bold text-white">{job.title}</h3>
@@ -117,6 +133,11 @@ const JobListView: React.FC<Props> = ({ role, onSelectJob, onBack }) => {
                 </div>
                 <span className="text-[10px] font-mono bg-primary/10 text-primary px-2 py-1 rounded">{job.mode}</span>
               </div>
+              {job.division && (
+                <div className="mb-3 text-[9px] font-mono uppercase tracking-widest text-neon-cyan">
+                  {job.division.replace(/_/g, ' ')}
+                </div>
+              )}
               
               <div className="grid grid-cols-3 gap-2 mb-4 text-[10px] text-gray-500 font-mono">
                 <div>📍 {job.location}</div>
@@ -124,10 +145,25 @@ const JobListView: React.FC<Props> = ({ role, onSelectJob, onBack }) => {
                 <div>💰 {job.salary}</div>
               </div>
 
+              {job.skills && job.skills.length > 0 && (
+                <div className="mb-4 flex flex-wrap gap-1.5">
+                  {job.skills.slice(0, 4).map((skill) => (
+                    <span key={skill} className="rounded-md bg-white/5 px-2 py-1 text-[9px] font-mono text-gray-400">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
+
               <div className="flex gap-2">
-                <button className="flex-1 py-2 rounded-lg border border-white/20 text-xs font-medium hover:bg-white/5 transition">Details</button>
+                <button
+                  onClick={() => openJobDetails(job)}
+                  className="flex-1 py-2 rounded-lg border border-white/20 text-xs font-medium hover:bg-white/5 transition"
+                >
+                  Details
+                </button>
                 <button 
-                  onClick={() => onSelectJob(AppView.COMPANY_PROFILE)}
+                  onClick={() => onSelectJob(job)}
                   className="flex-1 py-2 rounded-lg bg-neon-cyan/10 border border-neon-cyan/50 text-neon-cyan text-xs font-medium hover:bg-neon-cyan/20 transition"
                 >
                   Get Ready

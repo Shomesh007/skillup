@@ -9,14 +9,15 @@ interface Props {
 
 const BottomNav: React.FC<Props> = ({ currentView, onViewChange }) => {
   const items = [
+    { view: AppView.PROFILE_HUB, icon: 'hub', label: 'DASHBOARD' },
     { view: AppView.ROLE_HUB, icon: 'explore', label: 'GUIDES' },
     { view: AppView.AI_CHAT, icon: 'forum', label: 'ASSISTANT' },
+    { view: AppView.RESUME_TEMPLATES, icon: 'badge', label: 'RESUME' },
     { view: AppView.JOB_LIST, icon: 'search', label: 'JOBS' },
-    { view: AppView.PROFILE_HUB, icon: 'hub', label: 'MY INFO' },
   ];
 
   return (
-    <nav className="absolute bottom-0 w-full glass-panel border-t border-white/10 flex justify-around items-center h-16 pb-2 z-50">
+    <nav className="absolute bottom-0 w-full glass-panel border-t border-white/10 flex justify-around items-center h-16 pb-2 z-50 lg:hidden">
       {items.map((item) => (
         <button 
           key={item.view}

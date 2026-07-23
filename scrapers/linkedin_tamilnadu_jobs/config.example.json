@@ -1,0 +1,59 @@
+{
+  "location": "Tamil Nadu, India",
+  "output_dir": "output",
+  "max_pages_per_query": 2,
+  "max_jobs_per_query": 40,
+  "delay_seconds": {
+    "min": 2.5,
+    "max": 6.0
+  },
+  "date_posted": "past_month",
+  "work_modes": ["on-site", "hybrid", "remote"],
+  "divisions": {
+    "software_development": [
+      "software engineer",
+      "full stack developer",
+      "frontend developer",
+      "backend developer",
+      "java developer",
+      "python developer",
+      "react developer"
+    ],
+    "testing_qa": [
+      "qa engineer",
+      "software tester",
+      "manual tester",
+      "automation tester",
+      "sdet",
+      "selenium tester",
+      "test engineer"
+    ],
+    "data_ai": [
+      "data analyst",
+      "data engineer",
+      "machine learning engineer",
+      "ai engineer",
+      "business intelligence analyst"
+    ],
+    "cloud_devops": [
+      "devops engineer",
+      "cloud engineer",
+      "site reliability engineer",
+      "aws engineer",
+      "azure engineer"
+    ],
+    "security_networking": [
+      "cyber security analyst",
+      "security engineer",
+      "network engineer",
+      "soc analyst"
+    ],
+    "product_design_support": [
+      "ui ux designer",
+      "product analyst",
+      "technical support engineer",
+      "application support engineer"
+    ]
+  }
+}
+

@@ -40,8 +40,8 @@ const LevelSelectView: React.FC<Props> = ({ onSelect, onBack }) => {
 
   return (
     <div className="flex-1 flex flex-col overflow-y-auto no-scrollbar relative min-h-0">
-      <div className="p-6 pt-24 pb-32">
-        <header className="mb-12 relative">
+      <div className="p-6 pt-24 pb-32 lg:p-10 lg:pt-16 lg:pb-10">
+        <header className="mb-12 relative lg:max-w-3xl">
           {onBack && (
             <button
               onClick={onBack}
@@ -54,7 +54,7 @@ const LevelSelectView: React.FC<Props> = ({ onSelect, onBack }) => {
           <div className="text-[10px] font-mono text-neon-cyan mb-2 tracking-[0.2em] uppercase opacity-70 animate-pulse">
             &gt; Welcome!
           </div>
-          <h1 className="text-4xl font-bold leading-tight text-white">
+          <h1 className="text-4xl font-bold leading-tight text-white lg:text-6xl">
             Tell us about <br/>
             <span className="text-neon-cyan text-neon">yourself</span>
           </h1>
@@ -64,12 +64,12 @@ const LevelSelectView: React.FC<Props> = ({ onSelect, onBack }) => {
           <div className="w-16 h-1 bg-gradient-to-r from-neon-cyan to-transparent mt-4"></div>
         </header>
 
-        <div className="relative w-full mt-12 min-h-[600px]">
+        <div className="relative w-full mt-12 min-h-[600px] lg:grid lg:min-h-0 lg:grid-cols-3 lg:gap-6">
           {levels.map((level, idx) => (
             <div 
               key={level.id}
               onClick={() => onSelect(level.id)}
-              className={`absolute ${level.pos} w-48 h-56 group cursor-pointer transform transition-all hover:scale-105 active:scale-95 z-10`}
+              className={`absolute ${level.pos} w-48 h-56 group cursor-pointer transform transition-all hover:scale-105 active:scale-95 z-10 lg:static lg:h-80 lg:w-full`}
             >
               <div className="glass-prism w-full h-full flex flex-col items-center justify-center relative overflow-hidden hover:bg-white/5">
                 <div className={`absolute inset-0 bg-gradient-to-b ${level.color.replace('text', 'from')}/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -87,7 +87,7 @@ const LevelSelectView: React.FC<Props> = ({ onSelect, onBack }) => {
             </div>
           ))}
 
-          <svg className="absolute inset-0 w-full h-full pointer-events-none -z-10 opacity-30">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none -z-10 opacity-30 lg:hidden">
             <path className="animate-pulse" d="M100 100 L 100 200 L 50 250" fill="none" stroke="#00f0ff" strokeDasharray="4 4" strokeWidth="1"></path>
             <path className="animate-pulse" d="M250 150 L 250 250 L 200 300" fill="none" stroke="#8b5cf6" strokeDasharray="4 4" strokeWidth="1" style={{ animationDelay: '1s' }}></path>
             <circle cx="100" cy="100" fill="#00f0ff" r="3"></circle>

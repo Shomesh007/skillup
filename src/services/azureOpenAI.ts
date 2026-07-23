@@ -21,6 +21,32 @@ interface AzureChatCompletionResponse {
   };
 }
 
+// Error classes
+export class AzureOpenAIError extends Error {
+  constructor(
+    message: string,
+    public statusCode?: number,
+    public requestId?: string
+  ) {
+    super(message);
+    this.name = 'AzureOpenAIError';
+  }
+}
+
+export class RateLimitError extends AzureOpenAIError {
+  constructor(public retryAfter: number, requestId?: string) {
+    super(`Rate limit exceeded. Retry after ${retryAfter}s`, 429, requestId);
+    this.name = 'RateLimitError';
+  }
+}
+
+export class AuthenticationError extends AzureOpenAIError {
+  constructor(requestId?: string) {
+    super('Azure OpenAI authentication failed', 401, requestId);
+    this.name = 'AuthenticationError';
+  }
+}
+
 const endpoint = import.meta.env.VITE_AZURE_OPENAI_ENDPOINT;
 const apiKey = import.meta.env.VITE_AZURE_OPENAI_API_KEY;
 const deployment = import.meta.env.VITE_AZURE_OPENAI_DEPLOYMENT || 'gpt-5.2-chat';
@@ -28,8 +54,41 @@ const apiVersion = import.meta.env.VITE_AZURE_OPENAI_API_VERSION || '2024-12-01-
 const temperature = 1;
 const maxCompletionTokens = 1000;
 
-if (!endpoint || !apiKey) {
-  throw new Error('Azure OpenAI credentials not configured in environment variables');
+// Configuration constants
+const REQUEST_TIMEOUT_MS = 30000; // 30 seconds
+const MAX_RETRIES = 3;
+const RATE_LIMIT_RETRY_DELAY_MS = 5000; // 5 seconds
+
+// Validate configuration on module load
+function validateConfiguration(): void {
+  if (!apiKey) {
+    throw new AzureOpenAIError('Azure OpenAI API key not found');
+  }
+  if (!endpoint) {
+    throw new AzureOpenAIError('Azure OpenAI endpoint not configured');
+  }
+}
+
+// Call validation on module initialization
+try {
+  validateConfiguration();
+} catch (error) {
+  console.error('Azure OpenAI configuration error:', error);
+}
+
+// Utility to generate request IDs
+function generateRequestId(): string {
+  return `req_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+}
+
+// Sleep utility for retries
+function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Calculate exponential backoff delay
+function calculateBackoffDelay(retryCount: number): number {
+  return Math.pow(2, retryCount) * 1000; // 2s, 4s, 8s
 }
 
 const SYSTEM_PROMPT = `You are s4skillup Assistant, an AI career mentor helping professionals advance their careers.
@@ -63,33 +122,111 @@ function getChatCompletionsUrl(stream = false) {
   return `${baseUrl}/openai/deployments/${deployment}/chat/completions?api-version=${apiVersion}${suffix}`;
 }
 
-async function postChatCompletion(messages: Message[], stream = false) {
-  const response = await fetch(getChatCompletionsUrl(stream), {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'api-key': apiKey,
-    },
-    body: JSON.stringify({
-      messages,
-      max_completion_tokens: maxCompletionTokens,
-      temperature,
-      stream,
-    }),
-  });
-
-  if (!response.ok) {
-    let errorMessage = `Azure OpenAI request failed with status ${response.status}`;
-    try {
-      const errorBody = (await response.json()) as AzureChatCompletionResponse;
-      errorMessage = errorBody.error?.message || errorMessage;
-    } catch {
-      // Ignore JSON parsing issues and fall back to the status-based message.
-    }
-    throw new Error(errorMessage);
+async function postChatCompletion(messages: Message[], stream = false, retryCount = 0): Promise<Response> {
+  const requestId = generateRequestId();
+  
+  if (!endpoint || !apiKey) {
+    throw new AzureOpenAIError('Azure OpenAI credentials not configured in environment variables');
   }
 
-  return response;
+  try {
+    // Create AbortController for timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+    const response = await fetch(getChatCompletionsUrl(stream), {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'api-key': apiKey,
+      },
+      body: JSON.stringify({
+        messages,
+        max_completion_tokens: maxCompletionTokens,
+        temperature,
+        stream,
+      }),
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeoutId);
+
+    // Handle error responses with retry logic
+    if (!response.ok) {
+      const status = response.status;
+      let errorMessage = `Azure OpenAI request failed with status ${status}`;
+      
+      try {
+        const errorBody = (await response.json()) as AzureChatCompletionResponse;
+        errorMessage = errorBody.error?.message || errorMessage;
+      } catch {
+        // Ignore JSON parsing issues and fall back to the status-based message.
+      }
+
+      // Handle authentication errors (401/403) - no retry
+      if (status === 401 || status === 403) {
+        console.error(`Authentication error: ${errorMessage}`, { requestId, endpoint, timestamp: new Date().toISOString() });
+        throw new AuthenticationError(requestId);
+      }
+
+      // Handle rate limit errors (429) - retry after delay
+      if (status === 429 && retryCount < MAX_RETRIES) {
+        console.warn(`Rate limit hit, retrying (attempt ${retryCount + 1}/${MAX_RETRIES})`, { requestId });
+        await sleep(RATE_LIMIT_RETRY_DELAY_MS);
+        return postChatCompletion(messages, stream, retryCount + 1);
+      }
+
+      // Handle server errors (500-599) - exponential backoff
+      if (status >= 500 && status < 600 && retryCount < MAX_RETRIES) {
+        const backoffDelay = calculateBackoffDelay(retryCount);
+        console.warn(`Server error ${status}, retrying after ${backoffDelay}ms (attempt ${retryCount + 1}/${MAX_RETRIES})`, { requestId, status });
+        await sleep(backoffDelay);
+        return postChatCompletion(messages, stream, retryCount + 1);
+      }
+
+      // If we've exhausted retries or it's a non-retryable error
+      throw new AzureOpenAIError(errorMessage, status, requestId);
+    }
+
+    return response;
+
+  } catch (error) {
+    // Handle timeout errors
+    if (error instanceof Error && error.name === 'AbortError') {
+      console.error('Request timeout after 30 seconds', { requestId, endpoint, timestamp: new Date().toISOString() });
+      throw new AzureOpenAIError('Request timeout after 30 seconds', undefined, requestId);
+    }
+
+    // Handle network errors with retry
+    if (retryCount < MAX_RETRIES && !(error instanceof AzureOpenAIError)) {
+      const backoffDelay = calculateBackoffDelay(retryCount);
+      console.warn(`Network error, retrying after ${backoffDelay}ms (attempt ${retryCount + 1}/${MAX_RETRIES})`, { 
+        requestId, 
+        endpoint, 
+        error: error instanceof Error ? error.message : 'Unknown error',
+        timestamp: new Date().toISOString()
+      });
+      await sleep(backoffDelay);
+      return postChatCompletion(messages, stream, retryCount + 1);
+    }
+
+    // Re-throw AzureOpenAIError instances or wrap other errors
+    if (error instanceof AzureOpenAIError) {
+      throw error;
+    }
+
+    console.error('Network error details', { 
+      requestId, 
+      endpoint, 
+      error: error instanceof Error ? error.message : 'Unknown error',
+      timestamp: new Date().toISOString()
+    });
+    throw new AzureOpenAIError(
+      `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`,
+      undefined,
+      requestId
+    );
+  }
 }
 
 export async function getChatResponse(
@@ -106,7 +243,13 @@ export async function getChatResponse(
     );
   } catch (error) {
     console.error('Azure OpenAI API Error:', error);
-    throw new Error(
+    
+    // Re-throw our custom error types
+    if (error instanceof AzureOpenAIError) {
+      throw error;
+    }
+    
+    throw new AzureOpenAIError(
       `Failed to get AI response: ${error instanceof Error ? error.message : 'Unknown error'}`
     );
   }
@@ -159,7 +302,13 @@ export async function* streamChatResponse(
     }
   } catch (error) {
     console.error('Azure OpenAI Streaming Error:', error);
-    throw new Error(
+    
+    // Re-throw our custom error types
+    if (error instanceof AzureOpenAIError) {
+      throw error;
+    }
+    
+    throw new AzureOpenAIError(
       `Failed to stream AI response: ${error instanceof Error ? error.message : 'Unknown error'}`
     );
   }

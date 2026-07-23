@@ -48,12 +48,12 @@ const SuccessStoriesView: React.FC<Props> = ({ company, onBack }) => {
   }, [displayCompany.id]);
   return (
     <div className="flex-1 flex flex-col h-full overflow-y-auto no-scrollbar">
-      <header className="p-6 shrink-0 pt-4">
-        <h1 className="text-3xl font-bold mb-1 text-white">Experience Stories</h1>
+      <header className="p-6 shrink-0 pt-4 lg:p-8 lg:pb-4">
+        <h1 className="text-3xl font-bold mb-1 text-white lg:text-5xl">Experience Stories</h1>
         <p className="text-xs text-gray-500 font-mono">Stories from people who got hired at {displayCompany.name}</p>
       </header>
 
-      <section className="px-6 mb-8">
+      <section className="px-6 mb-8 lg:px-8">
         <div className="glass-panel p-4 rounded-xl flex justify-around border-neon-amber/30 bg-neon-amber/5">
           <div className="text-center">
             <div className="text-xl font-bold text-neon-amber">
@@ -72,7 +72,7 @@ const SuccessStoriesView: React.FC<Props> = ({ company, onBack }) => {
         </div>
       </section>
 
-      <div className="px-6 space-y-6 pb-24">
+      <div className="px-6 space-y-6 pb-24 lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-5 lg:space-y-0 lg:px-8 lg:pb-8">
         {loading ? (
           <div className="text-center py-12 text-gray-500">
             <p className="text-sm">Loading stories...</p>

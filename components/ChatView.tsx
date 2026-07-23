@@ -65,10 +65,10 @@ const ChatView: React.FC<Props> = ({ onBack }) => {
           {error}
         </div>
       )}
-      <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4 no-scrollbar pb-32 pt-6">
+      <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4 no-scrollbar pb-32 pt-6 lg:px-10 lg:pb-28">
         {messages.map((m, i) => (
-          <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`max-w-[85%] p-4 rounded-2xl font-mono text-sm leading-relaxed ${
+          <div key={i} className={`mx-auto flex w-full max-w-4xl ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+            <div className={`max-w-[85%] p-4 rounded-2xl font-mono text-sm leading-relaxed lg:max-w-[68%] lg:p-5 ${
               m.role === 'user' 
                 ? 'bg-primary/20 border border-primary/30 text-white rounded-br-none' 
                 : 'glass-panel text-gray-300 rounded-bl-none'
@@ -78,7 +78,7 @@ const ChatView: React.FC<Props> = ({ onBack }) => {
           </div>
         ))}
         {loading && (
-          <div className="flex justify-start">
+          <div className="mx-auto flex w-full max-w-4xl justify-start">
             <div className="glass-panel p-4 rounded-2xl rounded-bl-none">
               <span className="animate-pulse text-neon-cyan font-mono text-xs tracking-widest">THINKING...</span>
             </div>
@@ -86,8 +86,8 @@ const ChatView: React.FC<Props> = ({ onBack }) => {
         )}
       </div>
 
-      <div className="absolute bottom-20 left-4 right-4 z-10">
-        <div className="relative group">
+      <div className="absolute bottom-20 left-4 right-4 z-10 lg:bottom-8 lg:left-10 lg:right-10">
+        <div className="relative group mx-auto max-w-4xl">
           <input 
             value={input}
             onChange={(e) => setInput(e.target.value)}

@@ -14,6 +14,7 @@ const Breadcrumbs: React.FC<Props> = ({ level, role, company, view }) => {
     if (v === AppView.COMPANY_DISCOVERY) return 'Companies';
     if (v === AppView.COMPANY_PROFILE) return 'Hub';
     if (v === AppView.GUIDE) return 'Guide';
+    if (v === AppView.RESUME_TEMPLATES) return 'Templates';
     if (v === AppView.INTERVIEW_PREP) return 'Prep';
     if (v === AppView.SUCCESS_STORIES) return 'Stories';
     if (v === AppView.JOB_LIST) return 'Jobs';

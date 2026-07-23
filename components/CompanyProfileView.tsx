@@ -4,6 +4,12 @@ import { Company, AppView } from '../types';
 import { useAppContext } from '../context/AppContext';
 import { getCompanyInterviewRounds, getSalaryBenchmarks } from '../src/services/supabase';
 
+type CompanyDetails = Company & {
+  website?: string;
+  careersPage?: string;
+  linkedInUrl?: string;
+};
+
 interface InterviewRound {
   id: string;
   round_number: number;
@@ -23,12 +29,13 @@ interface SalaryBenchmark {
 }
 
 interface Props {
-  company: Company;
+  company: CompanyDetails;
   onAction: (view: AppView) => void;
   onBack: () => void;
+  onShowJobs?: (companyName: string) => void;
 }
 
-const CompanyProfileView: React.FC<Props> = ({ company, onAction, onBack }) => {
+const CompanyProfileView: React.FC<Props> = ({ company, onAction, onBack, onShowJobs }) => {
   const { selectedCompany } = useAppContext();
   const displayCompany = selectedCompany || company;
   const [rounds, setRounds] = useState<InterviewRound[]>([]);
@@ -69,7 +76,7 @@ const CompanyProfileView: React.FC<Props> = ({ company, onAction, onBack }) => {
 
   return (
     <div className="flex-1 flex flex-col h-full overflow-y-auto no-scrollbar">
-      <header className="p-6 relative overflow-hidden shrink-0">
+      <header className="p-6 relative overflow-hidden shrink-0 lg:p-8">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none"></div>
         <div className="flex justify-between items-start mb-4 relative z-10">
           <div className="w-20 h-20 bg-white rounded-3xl p-4 shadow-xl border border-white/10">
@@ -79,21 +86,29 @@ const CompanyProfileView: React.FC<Props> = ({ company, onAction, onBack }) => {
             <span className="material-symbols-outlined">bookmark</span>
           </button>
         </div>
-        <h1 className="text-4xl font-bold text-white mb-2 relative z-10">{displayCompany.name}</h1>
+        <h1 className="text-4xl font-bold text-white mb-2 relative z-10 lg:text-6xl">{displayCompany.name}</h1>
         <p className="text-sm font-mono text-neon-cyan tracking-widest uppercase mb-6 relative z-10">Get Ready for {displayCompany.name}</p>
-        <button className="w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all relative z-10">
+        <button 
+          onClick={() => onShowJobs?.(displayCompany.name)}
+          className="w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all relative z-10 lg:w-56"
+        >
           SHOW JOBS
         </button>
       </header>
 
-      <div className="px-6 space-y-10 pb-32">
+      <div className="px-6 space-y-10 pb-32 lg:px-8 lg:pb-8">
         <section>
           <h3 className="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] mb-4">About</h3>
           <p className="text-sm text-gray-400 leading-relaxed font-mono">
-            {displayCompany.website ? `${displayCompany.name} is a leading tech company. Visit their careers page to explore opportunities.` : 'Learn more about this company and explore career opportunities.'}
+            {displayCompany.about || `Learn more about ${displayCompany.name} and explore career opportunities.`}
           </p>
+          {displayCompany.linkedInUrl && (
+            <a href={displayCompany.linkedInUrl} target="_blank" rel="noopener noreferrer" className="inline-block text-xs text-neon-cyan font-mono mt-3 hover:underline">
+              View Jobs on LinkedIn →
+            </a>
+          )}
           {displayCompany.website && (
-            <a href={displayCompany.website} target="_blank" rel="noopener noreferrer" className="text-xs text-neon-cyan font-mono mt-2 hover:underline">
+            <a href={displayCompany.website} target="_blank" rel="noopener noreferrer" className="inline-block text-xs text-neon-cyan font-mono mt-2 hover:underline ml-4">
               Visit Website →
             </a>
           )}
@@ -103,7 +118,7 @@ const CompanyProfileView: React.FC<Props> = ({ company, onAction, onBack }) => {
         {salaries.length > 0 && (
           <section className="glass-panel p-5 rounded-2xl">
             <h3 className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-6">💰 Salary Benchmarks</h3>
-            <div className="space-y-4">
+            <div className="space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0">
               {salaries.map((salary) => (
                 <div key={salary.id} className="p-4 bg-white/5 rounded-xl border border-white/5">
                   <div className="flex justify-between items-center mb-3">
@@ -163,7 +178,18 @@ const CompanyProfileView: React.FC<Props> = ({ company, onAction, onBack }) => {
           )}
         </section>
 
-        <section className="grid grid-cols-1 gap-4">
+        <section className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-4">
+          <button 
+            onClick={() => onAction(AppView.RESUME_TEMPLATES)}
+            className="flex items-center gap-4 p-5 glass-panel rounded-2xl text-left border-l-4 border-l-cyan-300 group"
+          >
+            <span className="material-symbols-outlined text-4xl text-cyan-300 opacity-50 group-hover:opacity-100 transition-opacity">badge</span>
+            <div>
+              <h4 className="font-bold text-white">Resume Templates</h4>
+              <p className="text-[10px] text-gray-500 font-mono">ATS-friendly formats for this role</p>
+            </div>
+          </button>
+
           <button 
             onClick={() => onAction(AppView.GUIDE)}
             className="flex items-center gap-4 p-5 glass-panel rounded-2xl text-left border-l-4 border-l-neon-cyan group"
