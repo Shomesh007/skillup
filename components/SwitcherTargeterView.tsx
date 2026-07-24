@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DecisionCoachCard from './DecisionCoachCard';
 
 interface Pivot {
   title: string;
@@ -18,7 +19,11 @@ const pivots: Pivot[] = [
   { title: 'Developer -> Better Product Role', from: 'Developer role', bridge: 'You need stronger project impact, system ownership, and interview stories.', proof: ['Impact bullets', 'System design basics', 'Code samples'], keywords: ['software engineer', 'backend engineer', 'product engineer'], risk: 'Medium risk' },
 ];
 
-const SwitcherTargeterView: React.FC = () => {
+interface Props {
+  onOpenCoaching: () => void;
+}
+
+const SwitcherTargeterView: React.FC<Props> = ({ onOpenCoaching }) => {
   const [selectedTitle, setSelectedTitle] = useState(pivots[0].title);
   const selected = pivots.find((pivot) => pivot.title === selectedTitle) || pivots[0];
 
@@ -31,6 +36,15 @@ const SwitcherTargeterView: React.FC = () => {
         </div>
         <h1 className="text-3xl font-bold leading-none text-white lg:text-6xl">Choose a switch path with leverage.</h1>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-400">The best switch is not always the flashiest role. It is the role where your old experience reduces the risk of hiring you.</p>
+      </section>
+
+      <section className="mt-5">
+        <DecisionCoachCard
+          accent="violet"
+          eyebrow="Need help choosing a safe pivot?"
+          desc="A 1-on-1 session can help compare role risk, proof gaps, and the best bridge path from your current work."
+          onOpenCoaching={onOpenCoaching}
+        />
       </section>
 
       <section className="mt-5 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">

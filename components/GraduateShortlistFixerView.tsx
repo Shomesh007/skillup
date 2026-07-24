@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DecisionCoachCard from './DecisionCoachCard';
 
 interface FixArea {
   id: string;
@@ -58,7 +59,11 @@ const fixAreas: FixArea[] = [
   },
 ];
 
-const GraduateShortlistFixerView: React.FC = () => {
+interface Props {
+  onOpenCoaching: () => void;
+}
+
+const GraduateShortlistFixerView: React.FC<Props> = ({ onOpenCoaching }) => {
   const [activeId, setActiveId] = useState(fixAreas[1].id);
   const active = fixAreas.find((area) => area.id === activeId) || fixAreas[0];
 
@@ -74,6 +79,15 @@ const GraduateShortlistFixerView: React.FC = () => {
           <h1 className="text-3xl font-bold leading-none text-white lg:text-6xl">Find why calls are not coming.</h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-400">Most graduates do not need more panic. They need the exact blocker: role targeting, resume proof, project visibility, profile trust, or application quality.</p>
         </div>
+      </section>
+
+      <section className="mt-5">
+        <DecisionCoachCard
+          accent="green"
+          eyebrow="Not sure what is blocking calls?"
+          desc="Book a 1-on-1 session to review your resume, target roles, projects, and application strategy."
+          onOpenCoaching={onOpenCoaching}
+        />
       </section>
 
       <section className="mt-5 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">

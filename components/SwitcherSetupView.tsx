@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DecisionCoachCard from './DecisionCoachCard';
 
 export interface SwitcherSetupProfile {
   current: string;
@@ -9,6 +10,7 @@ export interface SwitcherSetupProfile {
 interface Props {
   onComplete: (profile: SwitcherSetupProfile) => void;
   onBack: () => void;
+  onOpenCoaching: () => void;
 }
 
 interface Choice {
@@ -50,7 +52,7 @@ const steps = [
 
 const getChoice = (options: Choice[], id: string) => options.find((item) => item.id === id) || options[0];
 
-const SwitcherSetupView: React.FC<Props> = ({ onComplete, onBack }) => {
+const SwitcherSetupView: React.FC<Props> = ({ onComplete, onBack, onOpenCoaching }) => {
   const [stepIndex, setStepIndex] = useState(0);
   const [profile, setProfile] = useState<SwitcherSetupProfile>({
     current: currentOptions[0].id,
@@ -126,7 +128,7 @@ const SwitcherSetupView: React.FC<Props> = ({ onComplete, onBack }) => {
               </div>
             </div>
           ) : (
-            <ReviewScreen current={selectedCurrent} target={selectedTarget} blocker={selectedBlocker} />
+            <ReviewScreen current={selectedCurrent} target={selectedTarget} blocker={selectedBlocker} onOpenCoaching={onOpenCoaching} />
           )}
         </section>
 
@@ -160,7 +162,7 @@ const ChoiceButton: React.FC<{ item: Choice; active: boolean; onClick: () => voi
   </button>
 );
 
-const ReviewScreen: React.FC<{ current: Choice; target: Choice; blocker: Choice }> = ({ current, target, blocker }) => (
+const ReviewScreen: React.FC<{ current: Choice; target: Choice; blocker: Choice; onOpenCoaching: () => void }> = ({ current, target, blocker, onOpenCoaching }) => (
   <div className="relative z-10 grid min-h-[540px] gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
     <div>
       <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-neon-violet/20 bg-neon-violet/10 px-3 py-1">
@@ -174,6 +176,13 @@ const ReviewScreen: React.FC<{ current: Choice; target: Choice; blocker: Choice 
       <ReviewCard marker="01" item={current} label="Current base" />
       <ReviewCard marker="02" item={target} label="Target move" />
       <ReviewCard marker="03" item={blocker} label="Main blocker" />
+      <DecisionCoachCard
+        compact
+        accent="violet"
+        eyebrow="Want to de-risk the switch?"
+        desc="Talk to a coach before choosing a pivot path or rewriting your experience."
+        onOpenCoaching={onOpenCoaching}
+      />
     </div>
   </div>
 );

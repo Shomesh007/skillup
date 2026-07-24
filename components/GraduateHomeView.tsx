@@ -1,5 +1,6 @@
 import React from 'react';
 import { GraduateSetupProfile } from './GraduateSetupView';
+import DecisionCoachCard from './DecisionCoachCard';
 
 interface Props {
   profile: GraduateSetupProfile | null;
@@ -8,6 +9,7 @@ interface Props {
   onOpenJobs: () => void;
   onOpenResume: () => void;
   onOpenInterview: () => void;
+  onOpenCoaching: () => void;
   onChangeProfile: () => void;
 }
 
@@ -37,7 +39,7 @@ const labels = {
 
 const getLabel = (map: Record<string, string>, key?: string) => (key && map[key]) || 'Not selected';
 
-const GraduateHomeView: React.FC<Props> = ({ profile, onOpenRoleTargeter, onOpenShortlistFixer, onOpenJobs, onOpenResume, onOpenInterview, onChangeProfile }) => {
+const GraduateHomeView: React.FC<Props> = ({ profile, onOpenRoleTargeter, onOpenShortlistFixer, onOpenJobs, onOpenResume, onOpenInterview, onOpenCoaching, onChangeProfile }) => {
   const situation = getLabel(labels.situation, profile?.situation);
   const target = getLabel(labels.target, profile?.target);
   const readiness = getLabel(labels.readiness, profile?.readiness);
@@ -74,6 +76,15 @@ const GraduateHomeView: React.FC<Props> = ({ profile, onOpenRoleTargeter, onOpen
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="mt-5">
+        <DecisionCoachCard
+          accent="amber"
+          eyebrow="Need a job-search sanity check?"
+          desc="Book a 1-on-1 session to choose a target role, fix shortlisting blockers, and decide what to apply for first."
+          onOpenCoaching={onOpenCoaching}
+        />
       </section>
 
       <section className="mt-6 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">

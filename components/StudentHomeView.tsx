@@ -1,5 +1,6 @@
 import React from 'react';
 import { StudentSetupProfile } from './StudentSetupView';
+import DecisionCoachCard from './DecisionCoachCard';
 
 interface Props {
   profile: StudentSetupProfile | null;
@@ -8,6 +9,7 @@ interface Props {
   onOpenJobs: () => void;
   onOpenResume: () => void;
   onOpenInterview: () => void;
+  onOpenCoaching: () => void;
   onChangeProfile: () => void;
 }
 
@@ -39,6 +41,7 @@ const StudentHomeView: React.FC<Props> = ({
   onOpenJobs,
   onOpenResume,
   onOpenInterview,
+  onOpenCoaching,
   onChangeProfile,
 }) => {
   const stage = getLabel(labelMaps.stage, profile?.stage);
@@ -123,6 +126,15 @@ const StudentHomeView: React.FC<Props> = ({
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="mt-5">
+        <DecisionCoachCard
+          accent="cyan"
+          eyebrow="Unsure which path fits?"
+          desc="A 1-on-1 session can help you choose between roles, projects, internships, and prep without wasting months guessing."
+          onOpenCoaching={onOpenCoaching}
+        />
       </section>
 
       <section className="mt-6 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">

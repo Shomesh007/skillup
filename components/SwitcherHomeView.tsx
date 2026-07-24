@@ -1,5 +1,6 @@
 import React from 'react';
 import { SwitcherSetupProfile } from './SwitcherSetupView';
+import DecisionCoachCard from './DecisionCoachCard';
 
 interface Props {
   profile: SwitcherSetupProfile | null;
@@ -8,6 +9,7 @@ interface Props {
   onOpenJobs: () => void;
   onOpenResume: () => void;
   onOpenInterview: () => void;
+  onOpenCoaching: () => void;
   onChangeProfile: () => void;
 }
 
@@ -19,7 +21,7 @@ const labels = {
 
 const getLabel = (map: Record<string, string>, key?: string) => (key && map[key]) || 'Not selected';
 
-const SwitcherHomeView: React.FC<Props> = ({ profile, onOpenTargeter, onOpenTranslator, onOpenJobs, onOpenResume, onOpenInterview, onChangeProfile }) => {
+const SwitcherHomeView: React.FC<Props> = ({ profile, onOpenTargeter, onOpenTranslator, onOpenJobs, onOpenResume, onOpenInterview, onOpenCoaching, onChangeProfile }) => {
   const current = getLabel(labels.current, profile?.current);
   const target = getLabel(labels.target, profile?.target);
   const blocker = getLabel(labels.blocker, profile?.blocker);
@@ -56,6 +58,15 @@ const SwitcherHomeView: React.FC<Props> = ({ profile, onOpenTargeter, onOpenTran
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="mt-5">
+        <DecisionCoachCard
+          accent="violet"
+          eyebrow="Switching roles feels risky?"
+          desc="Use a 1-on-1 session to compare pivot paths, translate your current experience, and choose a switch plan that is realistic."
+          onOpenCoaching={onOpenCoaching}
+        />
       </section>
 
       <section className="mt-6 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">

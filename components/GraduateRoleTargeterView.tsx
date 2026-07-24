@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DecisionCoachCard from './DecisionCoachCard';
 
 interface TargetRole {
   title: string;
@@ -20,7 +21,11 @@ const roles: TargetRole[] = [
   { title: 'Technical Support Engineer', fit: 'Best if communication is strong and you can troubleshoot calmly.', proof: ['SQL basics', 'Logs basics', 'Support playbook'], keywords: ['technical support engineer fresher', 'application support', 'support analyst'], applyTo: 'SaaS companies, product support, cloud support teams.', avoid: 'Do not treat support as non-technical; show debugging ability.', difficulty: 'Easy entry' },
 ];
 
-const GraduateRoleTargeterView: React.FC = () => {
+interface Props {
+  onOpenCoaching: () => void;
+}
+
+const GraduateRoleTargeterView: React.FC<Props> = ({ onOpenCoaching }) => {
   const [selectedTitle, setSelectedTitle] = useState(roles[3].title);
   const selected = roles.find((role) => role.title === selectedTitle) || roles[0];
 
@@ -35,6 +40,15 @@ const GraduateRoleTargeterView: React.FC = () => {
           <h1 className="text-3xl font-bold leading-none text-white lg:text-6xl">Find a fresher role you can actually win.</h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-400">Choose a target role based on proof, keywords, and hiring reality. The goal is fewer random applications and better shortlist odds.</p>
         </div>
+      </section>
+
+      <section className="mt-5">
+        <DecisionCoachCard
+          accent="amber"
+          eyebrow="Need help choosing a target?"
+          desc="A 1-on-1 session can help you pick the most realistic fresher role and stop applying randomly."
+          onOpenCoaching={onOpenCoaching}
+        />
       </section>
 
       <section className="mt-5 grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">

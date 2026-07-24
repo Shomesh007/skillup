@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DecisionCoachCard from './DecisionCoachCard';
 
 interface Track {
   id: string;
@@ -82,7 +83,11 @@ const tracks: Track[] = [
   },
 ];
 
-const StudentTrackBuilderView: React.FC = () => {
+interface Props {
+  onOpenCoaching: () => void;
+}
+
+const StudentTrackBuilderView: React.FC<Props> = ({ onOpenCoaching }) => {
   const [trackId, setTrackId] = useState(tracks[2].id);
   const selectedTrack = tracks.find((track) => track.id === trackId) || tracks[0];
 
@@ -100,6 +105,15 @@ const StudentTrackBuilderView: React.FC = () => {
             This is not career exploration. This is the execution plan: what to learn, what to build, and how to turn it into resume proof.
           </p>
         </div>
+      </section>
+
+      <section className="mt-5">
+        <DecisionCoachCard
+          accent="green"
+          eyebrow="Not sure which track to build?"
+          desc="Book a 1-on-1 session to choose the right project path and avoid building something that will not help your resume."
+          onOpenCoaching={onOpenCoaching}
+        />
       </section>
 
       <section className="mt-5">

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DecisionCoachCard from './DecisionCoachCard';
 
 interface Translation {
   id: string;
@@ -49,7 +50,11 @@ const translations: Translation[] = [
   },
 ];
 
-const SwitcherTranslatorView: React.FC = () => {
+interface Props {
+  onOpenCoaching: () => void;
+}
+
+const SwitcherTranslatorView: React.FC<Props> = ({ onOpenCoaching }) => {
   const [activeId, setActiveId] = useState(translations[0].id);
   const active = translations.find((item) => item.id === activeId) || translations[0];
 
@@ -64,6 +69,15 @@ const SwitcherTranslatorView: React.FC = () => {
           <h1 className="text-3xl font-bold leading-none text-white lg:text-6xl">Make your old work sound useful for the new role.</h1>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-gray-400">Switchers do not need to erase their past. They need to rewrite it as proof the new hiring team understands.</p>
         </div>
+      </section>
+
+      <section className="mt-5">
+        <DecisionCoachCard
+          accent="green"
+          eyebrow="Need your experience rewritten?"
+          desc="Book a 1-on-1 session to translate your past work into target-role resume bullets and interview stories."
+          onOpenCoaching={onOpenCoaching}
+        />
       </section>
 
       <section className="mt-5 grid gap-4 lg:grid-cols-[0.88fr_1.12fr]">

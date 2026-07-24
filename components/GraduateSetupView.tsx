@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DecisionCoachCard from './DecisionCoachCard';
 
 export interface GraduateSetupProfile {
   situation: string;
@@ -9,6 +10,7 @@ export interface GraduateSetupProfile {
 interface Props {
   onComplete: (profile: GraduateSetupProfile) => void;
   onBack: () => void;
+  onOpenCoaching: () => void;
 }
 
 interface Choice {
@@ -50,7 +52,7 @@ const steps = [
 
 const getChoice = (options: Choice[], id: string) => options.find((item) => item.id === id) || options[0];
 
-const GraduateSetupView: React.FC<Props> = ({ onComplete, onBack }) => {
+const GraduateSetupView: React.FC<Props> = ({ onComplete, onBack, onOpenCoaching }) => {
   const [stepIndex, setStepIndex] = useState(0);
   const [profile, setProfile] = useState<GraduateSetupProfile>({
     situation: situationOptions[1].id,
@@ -131,7 +133,7 @@ const GraduateSetupView: React.FC<Props> = ({ onComplete, onBack }) => {
               </div>
             </div>
           ) : (
-            <ReviewScreen situation={selectedSituation} target={selectedTarget} readiness={selectedReadiness} />
+            <ReviewScreen situation={selectedSituation} target={selectedTarget} readiness={selectedReadiness} onOpenCoaching={onOpenCoaching} />
           )}
         </section>
 
@@ -165,7 +167,7 @@ const ChoiceButton: React.FC<{ item: Choice; active: boolean; onClick: () => voi
   </button>
 );
 
-const ReviewScreen: React.FC<{ situation: Choice; target: Choice; readiness: Choice }> = ({ situation, target, readiness }) => (
+const ReviewScreen: React.FC<{ situation: Choice; target: Choice; readiness: Choice; onOpenCoaching: () => void }> = ({ situation, target, readiness, onOpenCoaching }) => (
   <div className="relative z-10 grid min-h-[540px] gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
     <div>
       <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-neon-amber/20 bg-neon-amber/10 px-3 py-1">
@@ -179,6 +181,13 @@ const ReviewScreen: React.FC<{ situation: Choice; target: Choice; readiness: Cho
       <ReviewCard marker="01" item={situation} label="Current status" />
       <ReviewCard marker="02" item={target} label="Target role" />
       <ReviewCard marker="03" item={readiness} label="Priority need" />
+      <DecisionCoachCard
+        compact
+        accent="amber"
+        eyebrow="Want a target-role check?"
+        desc="Book a 1-on-1 session before committing to a fresher role or application plan."
+        onOpenCoaching={onOpenCoaching}
+      />
     </div>
   </div>
 );

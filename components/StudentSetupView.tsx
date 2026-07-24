@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DecisionCoachCard from './DecisionCoachCard';
 
 export interface StudentSetupProfile {
   stage: string;
@@ -9,6 +10,7 @@ export interface StudentSetupProfile {
 interface Props {
   onComplete: (profile: StudentSetupProfile) => void;
   onBack: () => void;
+  onOpenCoaching: () => void;
 }
 
 interface Choice {
@@ -66,7 +68,7 @@ const steps = [
 
 const getChoice = (options: Choice[], id: string) => options.find((item) => item.id === id) || options[0];
 
-const StudentSetupView: React.FC<Props> = ({ onComplete, onBack }) => {
+const StudentSetupView: React.FC<Props> = ({ onComplete, onBack, onOpenCoaching }) => {
   const [stepIndex, setStepIndex] = useState(0);
   const [profile, setProfile] = useState<StudentSetupProfile>({
     stage: stageOptions[1].id,
@@ -161,7 +163,7 @@ const StudentSetupView: React.FC<Props> = ({ onComplete, onBack }) => {
               </div>
             </div>
           ) : (
-            <ReviewScreen stage={selectedStage} goal={selectedGoal} interest={selectedInterest} />
+            <ReviewScreen stage={selectedStage} goal={selectedGoal} interest={selectedInterest} onOpenCoaching={onOpenCoaching} />
           )}
         </section>
 
@@ -224,7 +226,7 @@ const ChoiceButton: React.FC<{ item: Choice; active: boolean; onClick: () => voi
   </button>
 );
 
-const ReviewScreen: React.FC<{ stage: Choice; goal: Choice; interest: Choice }> = ({ stage, goal, interest }) => (
+const ReviewScreen: React.FC<{ stage: Choice; goal: Choice; interest: Choice; onOpenCoaching: () => void }> = ({ stage, goal, interest, onOpenCoaching }) => (
   <div className="relative z-10 grid min-h-[540px] gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
     <div>
       <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-neon-green/20 bg-neon-green/10 px-3 py-1">
@@ -241,6 +243,13 @@ const ReviewScreen: React.FC<{ stage: Choice; goal: Choice; interest: Choice }> 
       <ReviewCard marker="01" item={stage} label="Current stage" />
       <ReviewCard marker="02" item={goal} label="Main goal" />
       <ReviewCard marker="03" item={interest} label="Starting direction" />
+      <DecisionCoachCard
+        compact
+        accent="cyan"
+        eyebrow="Want guidance before choosing?"
+        desc="Talk to a coach before locking your first role direction or project plan."
+        onOpenCoaching={onOpenCoaching}
+      />
     </div>
   </div>
 );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DecisionCoachCard from './DecisionCoachCard';
 
 interface RoleTitle {
   title: string;
@@ -88,7 +89,11 @@ const families: RoleFamily[] = [
   },
 ];
 
-const StudentRoleExplorerView: React.FC = () => {
+interface Props {
+  onOpenCoaching: () => void;
+}
+
+const StudentRoleExplorerView: React.FC<Props> = ({ onOpenCoaching }) => {
   const [familyId, setFamilyId] = useState(families[1].id);
   const activeFamily = families.find((family) => family.id === familyId) || families[1];
   const [roleTitle, setRoleTitle] = useState(activeFamily.titles[0].title);
@@ -114,6 +119,15 @@ const StudentRoleExplorerView: React.FC = () => {
             Pick a family, scan exact titles, then open one role to see what it does, what to learn, and what to search for.
           </p>
         </div>
+      </section>
+
+      <section className="mt-5">
+        <DecisionCoachCard
+          accent="cyan"
+          eyebrow="Confused between IT titles?"
+          desc="Use a 1-on-1 session to compare roles, difficulty, projects, and what fits your strengths."
+          onOpenCoaching={onOpenCoaching}
+        />
       </section>
 
       <section className="mt-5">

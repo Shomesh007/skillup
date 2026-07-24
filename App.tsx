@@ -201,6 +201,7 @@ const App: React.FC = () => {
         return (
           <StudentSetupView
             onBack={handleBack}
+            onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
             onComplete={(profile) => {
               setStudentProfile(profile);
               navigateTo(AppView.STUDENT_HOME);
@@ -216,17 +217,19 @@ const App: React.FC = () => {
             onOpenJobs={() => navigateTo(AppView.JOB_LIST)}
             onOpenResume={() => navigateTo(AppView.RESUME_TEMPLATES)}
             onOpenInterview={() => navigateTo(AppView.INTERVIEW_PREP)}
+            onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
             onChangeProfile={() => navigateTo(AppView.STUDENT_SETUP)}
           />
         );
       case AppView.STUDENT_ROLE_EXPLORER:
-        return <StudentRoleExplorerView />;
+        return <StudentRoleExplorerView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.STUDENT_TRACK_BUILDER:
-        return <StudentTrackBuilderView />;
+        return <StudentTrackBuilderView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.GRADUATE_SETUP:
         return (
           <GraduateSetupView
             onBack={handleBack}
+            onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
             onComplete={(profile) => {
               setGraduateProfile(profile);
               navigateTo(AppView.GRADUATE_HOME);
@@ -242,17 +245,19 @@ const App: React.FC = () => {
             onOpenJobs={() => navigateTo(AppView.JOB_LIST)}
             onOpenResume={() => navigateTo(AppView.RESUME_TEMPLATES)}
             onOpenInterview={() => navigateTo(AppView.INTERVIEW_PREP)}
+            onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
             onChangeProfile={() => navigateTo(AppView.GRADUATE_SETUP)}
           />
         );
       case AppView.GRADUATE_ROLE_TARGETER:
-        return <GraduateRoleTargeterView />;
+        return <GraduateRoleTargeterView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.GRADUATE_SHORTLIST_FIXER:
-        return <GraduateShortlistFixerView />;
+        return <GraduateShortlistFixerView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.SWITCHER_SETUP:
         return (
           <SwitcherSetupView
             onBack={handleBack}
+            onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
             onComplete={(profile) => {
               setSwitcherProfile(profile);
               navigateTo(AppView.SWITCHER_HOME);
@@ -268,13 +273,14 @@ const App: React.FC = () => {
             onOpenJobs={() => navigateTo(AppView.JOB_LIST)}
             onOpenResume={() => navigateTo(AppView.RESUME_TEMPLATES)}
             onOpenInterview={() => navigateTo(AppView.INTERVIEW_PREP)}
+            onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
             onChangeProfile={() => navigateTo(AppView.SWITCHER_SETUP)}
           />
         );
       case AppView.SWITCHER_TARGETER:
-        return <SwitcherTargeterView />;
+        return <SwitcherTargeterView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.SWITCHER_TRANSLATOR:
-        return <SwitcherTranslatorView />;
+        return <SwitcherTranslatorView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.ROLE_HUB:
         return <RoleHubView onSelectRole={(r) => { setSelectedRole(r); navigateTo(AppView.COMPANY_DISCOVERY); }} />;
       case AppView.COMPANY_DISCOVERY:
