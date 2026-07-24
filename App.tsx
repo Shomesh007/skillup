@@ -15,10 +15,23 @@ import JobListView from './components/JobListView';
 import ProfileHubView from './components/ProfileHubView';
 import LiveCoachingView from './components/LiveCoachingView';
 import AuthView from './components/AuthView';
+import StudentSetupView, { StudentSetupProfile } from './components/StudentSetupView';
+import StudentHomeView from './components/StudentHomeView';
+import StudentRoleExplorerView from './components/StudentRoleExplorerView';
+import StudentTrackBuilderView from './components/StudentTrackBuilderView';
+import GraduateSetupView, { GraduateSetupProfile } from './components/GraduateSetupView';
+import GraduateHomeView from './components/GraduateHomeView';
+import GraduateRoleTargeterView from './components/GraduateRoleTargeterView';
+import GraduateShortlistFixerView from './components/GraduateShortlistFixerView';
+import SwitcherSetupView, { SwitcherSetupProfile } from './components/SwitcherSetupView';
+import SwitcherHomeView from './components/SwitcherHomeView';
+import SwitcherTargeterView from './components/SwitcherTargeterView';
+import SwitcherTranslatorView from './components/SwitcherTranslatorView';
 import BottomNav from './components/BottomNav';
 import NavHeader from './components/NavHeader';
 import DesktopSidebar from './components/DesktopSidebar';
 import { useAppContext } from './context/AppContext';
+import { classifyJobGuide } from './src/utils/jobGuideClassifier';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<AppView>(() => AppView.HOME);
@@ -28,6 +41,9 @@ const App: React.FC = () => {
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
   const [selectedJob, setSelectedJob] = useState<JobOpportunity | null>(null);
   const [jobListCompanyFilter, setJobListCompanyFilter] = useState<string | null>(null);
+  const [studentProfile, setStudentProfile] = useState<StudentSetupProfile | null>(null);
+  const [graduateProfile, setGraduateProfile] = useState<GraduateSetupProfile | null>(null);
+  const [switcherProfile, setSwitcherProfile] = useState<SwitcherSetupProfile | null>(null);
   const { logout, setUserLevel: setContextUserLevel } = useAppContext();
   const fallbackCompany: Company = {
     id: '',
@@ -47,7 +63,7 @@ const App: React.FC = () => {
 
   const navigateTo = (view: AppView) => {
     if (view === currentView) return;
-    if (view === AppView.PROFILE_HUB) {
+    if (view === AppView.PROFILE_HUB || view === AppView.STUDENT_HOME || view === AppView.GRADUATE_HOME || view === AppView.SWITCHER_HOME) {
       setViewHistory([]);
       setCurrentView(view);
       return;
@@ -60,6 +76,9 @@ const App: React.FC = () => {
     setSelectedRole(null);
     setSelectedCompany(null);
     setSelectedJob(null);
+    setStudentProfile(null);
+    setGraduateProfile(null);
+    setSwitcherProfile(null);
     navigateTo(AppView.LEVEL_SELECT);
   };
 
@@ -69,21 +88,25 @@ const App: React.FC = () => {
     setSelectedRole(null);
     setSelectedCompany(null);
     setSelectedJob(null);
+    setStudentProfile(null);
+    setGraduateProfile(null);
+    setSwitcherProfile(null);
     setViewHistory([]);
     setCurrentView(AppView.LEVEL_SELECT);
   };
 
   const buildJobCompany = (job: JobOpportunity): Company => {
+    const jobGuide = classifyJobGuide(job);
     const knownCompany = [fallbackCompany].find((company) => company.name === job.company);
     return knownCompany || {
       ...fallbackCompany,
       id: job.company.toLowerCase().replace(/\s+/g, '-'),
       name: job.company,
-      tagline: `${job.title} hiring guide`,
+      tagline: `${jobGuide.normalizedTitle} hiring guide`,
       location: job.location,
       salary: job.salary,
       experience: job.experience,
-      about: job.description || `${job.company} is hiring for ${job.title} in ${job.location}.`,
+      about: job.description || `${job.company} is hiring for ${jobGuide.normalizedTitle} in ${job.location}.`,
       linkedInUrl: job.linkedinUrl,
       stack: {
         frontend: job.skills || [],
@@ -128,7 +151,7 @@ const App: React.FC = () => {
         setCurrentView(AppView.HOME);
         break;
       default:
-        setCurrentView(AppView.PROFILE_HUB);
+        setCurrentView(userLevel === UserLevel.STUDENT ? AppView.STUDENT_HOME : userLevel === UserLevel.GRADUATE ? AppView.GRADUATE_HOME : userLevel === UserLevel.PRO ? AppView.SWITCHER_HOME : AppView.PROFILE_HUB);
         break;
     }
   };
@@ -157,11 +180,101 @@ const App: React.FC = () => {
             onSelect={(l) => {
               setUserLevel(l);
               setContextUserLevel(l);
+              if (l === UserLevel.STUDENT) {
+                navigateTo(AppView.STUDENT_SETUP);
+                return;
+              }
+              if (l === UserLevel.GRADUATE) {
+                navigateTo(AppView.GRADUATE_SETUP);
+                return;
+              }
+              if (l === UserLevel.PRO) {
+                navigateTo(AppView.SWITCHER_SETUP);
+                return;
+              }
               navigateTo(AppView.PROFILE_HUB);
             }}
             onBack={handleBack}
           />
         );
+      case AppView.STUDENT_SETUP:
+        return (
+          <StudentSetupView
+            onBack={handleBack}
+            onComplete={(profile) => {
+              setStudentProfile(profile);
+              navigateTo(AppView.STUDENT_HOME);
+            }}
+          />
+        );
+      case AppView.STUDENT_HOME:
+        return (
+          <StudentHomeView
+            profile={studentProfile}
+            onOpenRoleExplorer={() => navigateTo(AppView.STUDENT_ROLE_EXPLORER)}
+            onOpenTrackBuilder={() => navigateTo(AppView.STUDENT_TRACK_BUILDER)}
+            onOpenJobs={() => navigateTo(AppView.JOB_LIST)}
+            onOpenResume={() => navigateTo(AppView.RESUME_TEMPLATES)}
+            onOpenInterview={() => navigateTo(AppView.INTERVIEW_PREP)}
+            onChangeProfile={() => navigateTo(AppView.STUDENT_SETUP)}
+          />
+        );
+      case AppView.STUDENT_ROLE_EXPLORER:
+        return <StudentRoleExplorerView />;
+      case AppView.STUDENT_TRACK_BUILDER:
+        return <StudentTrackBuilderView />;
+      case AppView.GRADUATE_SETUP:
+        return (
+          <GraduateSetupView
+            onBack={handleBack}
+            onComplete={(profile) => {
+              setGraduateProfile(profile);
+              navigateTo(AppView.GRADUATE_HOME);
+            }}
+          />
+        );
+      case AppView.GRADUATE_HOME:
+        return (
+          <GraduateHomeView
+            profile={graduateProfile}
+            onOpenRoleTargeter={() => navigateTo(AppView.GRADUATE_ROLE_TARGETER)}
+            onOpenShortlistFixer={() => navigateTo(AppView.GRADUATE_SHORTLIST_FIXER)}
+            onOpenJobs={() => navigateTo(AppView.JOB_LIST)}
+            onOpenResume={() => navigateTo(AppView.RESUME_TEMPLATES)}
+            onOpenInterview={() => navigateTo(AppView.INTERVIEW_PREP)}
+            onChangeProfile={() => navigateTo(AppView.GRADUATE_SETUP)}
+          />
+        );
+      case AppView.GRADUATE_ROLE_TARGETER:
+        return <GraduateRoleTargeterView />;
+      case AppView.GRADUATE_SHORTLIST_FIXER:
+        return <GraduateShortlistFixerView />;
+      case AppView.SWITCHER_SETUP:
+        return (
+          <SwitcherSetupView
+            onBack={handleBack}
+            onComplete={(profile) => {
+              setSwitcherProfile(profile);
+              navigateTo(AppView.SWITCHER_HOME);
+            }}
+          />
+        );
+      case AppView.SWITCHER_HOME:
+        return (
+          <SwitcherHomeView
+            profile={switcherProfile}
+            onOpenTargeter={() => navigateTo(AppView.SWITCHER_TARGETER)}
+            onOpenTranslator={() => navigateTo(AppView.SWITCHER_TRANSLATOR)}
+            onOpenJobs={() => navigateTo(AppView.JOB_LIST)}
+            onOpenResume={() => navigateTo(AppView.RESUME_TEMPLATES)}
+            onOpenInterview={() => navigateTo(AppView.INTERVIEW_PREP)}
+            onChangeProfile={() => navigateTo(AppView.SWITCHER_SETUP)}
+          />
+        );
+      case AppView.SWITCHER_TARGETER:
+        return <SwitcherTargeterView />;
+      case AppView.SWITCHER_TRANSLATOR:
+        return <SwitcherTranslatorView />;
       case AppView.ROLE_HUB:
         return <RoleHubView onSelectRole={(r) => { setSelectedRole(r); navigateTo(AppView.COMPANY_DISCOVERY); }} />;
       case AppView.COMPANY_DISCOVERY:
@@ -197,8 +310,10 @@ const App: React.FC = () => {
     }
   };
 
-  const showNav = ![AppView.HOME, AppView.LEVEL_SELECT, AppView.AUTH].includes(currentView);
-  const showTopHeader = ![AppView.HOME, AppView.LEVEL_SELECT, AppView.AUTH].includes(currentView);
+  const setupViews = [AppView.STUDENT_SETUP, AppView.GRADUATE_SETUP, AppView.SWITCHER_SETUP];
+  const showNav = ![AppView.HOME, AppView.LEVEL_SELECT, AppView.AUTH, ...setupViews].includes(currentView);
+  const showTopHeader = ![AppView.HOME, AppView.LEVEL_SELECT, AppView.AUTH, ...setupViews].includes(currentView);
+  const dashboardView = userLevel === UserLevel.STUDENT ? AppView.STUDENT_HOME : userLevel === UserLevel.GRADUATE ? AppView.GRADUATE_HOME : userLevel === UserLevel.PRO ? AppView.SWITCHER_HOME : AppView.PROFILE_HUB;
 
   return (
     <div className="relative w-full h-screen overflow-hidden flex flex-col items-center font-display lg:h-auto lg:min-h-screen lg:overflow-visible">
@@ -214,6 +329,7 @@ const App: React.FC = () => {
             level={userLevel}
             role={selectedRole}
             company={selectedCompany?.name}
+            dashboardView={dashboardView}
             onViewChange={navigateTo}
             onLogout={handleLogout}
           />
@@ -227,14 +343,14 @@ const App: React.FC = () => {
               role={selectedRole}
               company={selectedCompany?.name}
               view={currentView}
-              onBack={currentView === AppView.PROFILE_HUB ? undefined : handleBack}
+              onBack={currentView === AppView.PROFILE_HUB || currentView === AppView.STUDENT_HOME || currentView === AppView.GRADUATE_HOME || currentView === AppView.SWITCHER_HOME ? undefined : handleBack}
               onLogout={handleLogout}
             />
           )}
           <main className="flex-1 flex flex-col min-h-0 overflow-hidden relative lg:overflow-visible">
             {renderView()}
           </main>
-          {showNav && <BottomNav currentView={currentView} onViewChange={navigateTo} />}
+          {showNav && <BottomNav currentView={currentView} dashboardView={dashboardView} onViewChange={navigateTo} />}
         </div>
       </div>
     </div>

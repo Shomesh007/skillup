@@ -1,8 +1,6 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Company } from '../types';
 import { useAppContext } from '../context/AppContext';
-import { getInterviewQuestions } from '../src/services/supabase';
 
 interface InterviewQuestion {
   id: string;
@@ -17,50 +15,59 @@ interface Props {
   onBack: () => void;
 }
 
-const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
+const QUESTION_BANK: Record<string, InterviewQuestion[]> = {
+  default: [
+    { id: 'q1', title: 'Tell me about yourself', question_text: 'Walk through your background and explain why this role fits your current goals.', difficulty: 'Entry', category: 'Behavioral' },
+    { id: 'q2', title: 'Most challenging project', question_text: 'Share the hardest project you worked on and what you learned from it.', difficulty: 'Mid', category: 'Behavioral' },
+    { id: 'q3', title: 'Bug fix walkthrough', question_text: 'Explain how you identified, fixed, and validated a recent bug or issue.', difficulty: 'Entry', category: 'Coding' },
+    { id: 'q4', title: 'Why this company?', question_text: 'Show that you understand the company, product, and team direction.', difficulty: 'Entry', category: 'Behavioral' },
+    { id: 'q5', title: 'Handling ambiguity', question_text: 'Talk through how you make progress when requirements are incomplete.', difficulty: 'Mid', category: 'Behavioral' },
+  ],
+  google: [
+    { id: 'g1', title: 'Scalable service design', question_text: 'Design a service that can scale cleanly and explain your trade-offs.', difficulty: 'Mid', category: 'System Design' },
+    { id: 'g2', title: 'Algorithm fundamentals', question_text: 'Solve a coding problem and explain your time and space complexity.', difficulty: 'Entry', category: 'Coding' },
+  ],
+  microsoft: [
+    { id: 'm1', title: 'Cross-team collaboration', question_text: 'Describe how you work with product, design, and engineering teams.', difficulty: 'Entry', category: 'Behavioral' },
+    { id: 'm2', title: 'Debugging approach', question_text: 'Walk through how you would investigate and isolate a production issue.', difficulty: 'Mid', category: 'Coding' },
+  ],
+  amazon: [
+    { id: 'a1', title: 'Ownership story', question_text: 'Share an example that demonstrates ownership and customer obsession.', difficulty: 'Entry', category: 'Behavioral' },
+    { id: 'a2', title: 'System scaling', question_text: 'How would you design for high traffic, reliability, and observability?', difficulty: 'Mid', category: 'System Design' },
+  ],
+  tcs: [
+    { id: 't1', title: 'Project delivery', question_text: 'Explain how you delivered a feature from requirements to release.', difficulty: 'Entry', category: 'Behavioral' },
+  ],
+  infosys: [
+    { id: 'i1', title: 'Client communication', question_text: 'How do you manage expectation and scope with a client or stakeholder?', difficulty: 'Entry', category: 'Behavioral' },
+  ],
+};
+
+function getQuestions(companyName: string) {
+  const key = companyName.toLowerCase();
+  return [...(QUESTION_BANK[key] || []), ...QUESTION_BANK.default];
+}
+
+const InterviewPrepView: React.FC<Props> = ({ company }) => {
   const [activeTab, setActiveTab] = useState<'QUESTIONS' | 'PRACTICE' | 'RESOURCES' | 'TIPS'>('QUESTIONS');
-  const [questions, setQuestions] = useState<InterviewQuestion[]>([]);
-  const [loading, setLoading] = useState(true);
   const { selectedCompany } = useAppContext();
   const displayCompany = selectedCompany || company;
-
-  useEffect(() => {
-    const fetchQuestions = async () => {
-      try {
-        setLoading(true);
-        const { data, error } = await getInterviewQuestions(
-          undefined,
-          undefined,
-          displayCompany.id
-        );
-        
-        if (error) throw error;
-        setQuestions(data || []);
-      } catch (error) {
-        console.error('Error fetching interview questions:', error);
-        setQuestions([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    if (displayCompany.id) {
-      fetchQuestions();
-    }
-  }, [displayCompany.id]);
+  const questions = useMemo(() => getQuestions(displayCompany.name), [displayCompany.name]);
 
   return (
     <div className="flex-1 flex flex-col h-full overflow-hidden">
       <header className="px-6 shrink-0 pt-4 lg:px-8 lg:pt-6">
         <h1 className="text-3xl font-bold mb-1 text-white lg:text-5xl">Interview Prep</h1>
         <p className="text-xs text-gray-500 font-mono">Get ready for {displayCompany.name}</p>
-        
+
         <div className="flex border-b border-white/5 mt-6">
-          {['QUESTIONS', 'PRACTICE', 'RESOURCES', 'TIPS'].map(t => (
-            <button 
+          {['QUESTIONS', 'PRACTICE', 'RESOURCES', 'TIPS'].map((t) => (
+            <button
               key={t}
               onClick={() => setActiveTab(t as any)}
-              className={`flex-1 py-3 text-[10px] font-mono tracking-widest transition-all ${activeTab === t ? 'text-neon-violet border-b-2 border-neon-violet bg-neon-violet/5' : 'text-gray-500'}`}
+              className={`flex-1 py-3 text-[10px] font-mono tracking-widest transition-all ${
+                activeTab === t ? 'text-neon-violet border-b-2 border-neon-violet bg-neon-violet/5' : 'text-gray-500'
+              }`}
             >
               {t === 'PRACTICE' ? 'PRACTICE' : t}
             </button>
@@ -78,12 +85,9 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
                 <span className="w-4 h-1 bg-gray-700 rounded-full"></span>
               </div>
             </div>
-            
-            {loading ? (
-              <div className="text-center py-8 text-gray-500 text-sm">Loading interview questions...</div>
-            ) : questions.length > 0 ? (
-              <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
-              {questions.map((q, i) => (
+
+            <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3">
+              {questions.map((q) => (
                 <div key={q.id} className="glass-panel p-4 rounded-xl border-l-2 border-l-neon-violet">
                   <div className="flex justify-between items-start mb-2">
                     <span className="text-[9px] font-mono text-neon-violet bg-neon-violet/10 px-2 py-0.5 rounded">{q.category}</span>
@@ -96,12 +100,7 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
                   </div>
                 </div>
               ))}
-              </div>
-            ) : (
-              <div className="text-center py-8 text-gray-500 text-sm">
-                No interview questions available yet. Check back soon!
-              </div>
-            )}
+            </div>
           </div>
         )}
 
@@ -114,7 +113,7 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
               </div>
               <div className="p-4">
                 <h4 className="font-bold text-white mb-1">Watch how to answer</h4>
-                <p className="text-xs text-gray-500">15 minutes • Helpful tips</p>
+                <p className="text-xs text-gray-500">15 minutes - helpful tips</p>
               </div>
             </div>
           </div>
@@ -132,7 +131,7 @@ const InterviewPrepView: React.FC<Props> = ({ company, onBack }) => {
                 ))}
               </ul>
             </section>
-            
+
             <section>
               <h3 className="text-[10px] font-mono text-neon-violet tracking-widest uppercase mb-4 border-l-2 border-neon-violet pl-2">Salary Negotiation</h3>
               <div className="glass-panel p-4 rounded-xl border-neon-violet/20">

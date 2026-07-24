@@ -4,12 +4,13 @@ import { AppView } from '../types';
 
 interface Props {
   currentView: AppView;
+  dashboardView?: AppView;
   onViewChange: (view: AppView) => void;
 }
 
-const BottomNav: React.FC<Props> = ({ currentView, onViewChange }) => {
+const BottomNav: React.FC<Props> = ({ currentView, dashboardView = AppView.PROFILE_HUB, onViewChange }) => {
   const items = [
-    { view: AppView.PROFILE_HUB, icon: 'hub', label: 'DASHBOARD' },
+    { view: dashboardView, icon: 'hub', label: 'DASHBOARD' },
     { view: AppView.ROLE_HUB, icon: 'explore', label: 'GUIDES' },
     { view: AppView.AI_CHAT, icon: 'forum', label: 'ASSISTANT' },
     { view: AppView.RESUME_TEMPLATES, icon: 'badge', label: 'RESUME' },

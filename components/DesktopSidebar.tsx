@@ -6,39 +6,67 @@ interface Props {
   level: UserLevel | null;
   role: string | null;
   company?: string;
+  dashboardView?: AppView;
   onViewChange: (view: AppView) => void;
   onLogout: () => void;
 }
 
-const navGroups = [
-  {
-    label: 'Workspace',
-    items: [
-      { view: AppView.PROFILE_HUB, icon: 'space_dashboard', label: 'Dashboard', hint: 'Your command center' },
-      { view: AppView.LIVE_COACHING, icon: 'videocam', label: 'Live Coaching', hint: 'Job-search guidance' },
-      { view: AppView.AI_CHAT, icon: 'forum', label: 'AI Assistant', hint: 'Ask career questions' },
-    ],
-  },
-  {
-    label: 'Explore',
-    items: [
-      { view: AppView.ROLE_HUB, icon: 'explore', label: 'Job Guides', hint: 'Roles and paths' },
-      { view: AppView.COMPANY_DISCOVERY, icon: 'corporate_fare', label: 'Companies', hint: 'Hiring teams' },
-      { view: AppView.JOB_LIST, icon: 'search', label: 'Job List', hint: 'Open positions' },
-      { view: AppView.RESUME_TEMPLATES, icon: 'badge', label: 'Resume', hint: 'ATS templates' },
-    ],
-  },
-  {
-    label: 'Prepare',
-    items: [
-      { view: AppView.GUIDE, icon: 'description', label: 'Apply Guide', hint: 'Steps and referrals' },
-      { view: AppView.INTERVIEW_PREP, icon: 'terminal', label: 'Interview Prep', hint: 'Questions and tips' },
-      { view: AppView.SUCCESS_STORIES, icon: 'auto_awesome', label: 'Success Stories', hint: 'Hiring playbooks' },
-    ],
-  },
-];
+const DesktopSidebar: React.FC<Props> = ({ currentView, level, role, company, dashboardView = AppView.PROFILE_HUB, onViewChange, onLogout }) => {
+  const studentItems = level === UserLevel.STUDENT
+    ? [
+        { view: AppView.STUDENT_ROLE_EXPLORER, icon: 'travel_explore', label: 'Career Explorer', hint: 'Exact IT titles' },
+        { view: AppView.STUDENT_TRACK_BUILDER, icon: 'route', label: 'Track Builder', hint: 'Projects and proof' },
+      ]
+    : [];
+  const graduateItems = level === UserLevel.GRADUATE
+    ? [
+        { view: AppView.GRADUATE_ROLE_TARGETER, icon: 'adjust', label: 'Role Targeter', hint: 'Fresher role focus' },
+        { view: AppView.GRADUATE_SHORTLIST_FIXER, icon: 'fact_check', label: 'Shortlist Fixer', hint: 'Get more calls' },
+      ]
+    : [];
+  const switcherItems = level === UserLevel.PRO
+    ? [
+        { view: AppView.SWITCHER_TARGETER, icon: 'conversion_path', label: 'Switch Targeter', hint: 'Pivot path' },
+        { view: AppView.SWITCHER_TRANSLATOR, icon: 'translate', label: 'Experience Translator', hint: 'Resume bridge' },
+      ]
+    : [];
 
-const DesktopSidebar: React.FC<Props> = ({ currentView, level, role, company, onViewChange, onLogout }) => {
+  const navGroups = [
+    {
+      label: 'Workspace',
+      items: [
+        {
+          view: dashboardView,
+          icon: dashboardView === AppView.STUDENT_HOME ? 'school' : dashboardView === AppView.GRADUATE_HOME ? 'workspace_premium' : dashboardView === AppView.SWITCHER_HOME ? 'move_up' : 'space_dashboard',
+          label: dashboardView === AppView.STUDENT_HOME ? 'Student Home' : dashboardView === AppView.GRADUATE_HOME ? 'Graduate Home' : dashboardView === AppView.SWITCHER_HOME ? 'Switcher Home' : 'Dashboard',
+          hint: dashboardView === AppView.STUDENT_HOME ? 'Your student path' : dashboardView === AppView.GRADUATE_HOME ? 'Your job cockpit' : dashboardView === AppView.SWITCHER_HOME ? 'Your migration console' : 'Your command center',
+        },
+        { view: AppView.LIVE_COACHING, icon: 'videocam', label: 'Live Coaching', hint: 'Job-search guidance' },
+        { view: AppView.AI_CHAT, icon: 'forum', label: 'AI Assistant', hint: 'Ask career questions' },
+      ],
+    },
+    {
+      label: 'Explore',
+      items: [
+        ...studentItems,
+        ...graduateItems,
+        ...switcherItems,
+        { view: AppView.ROLE_HUB, icon: 'explore', label: 'Job Guides', hint: 'Roles and paths' },
+        { view: AppView.COMPANY_DISCOVERY, icon: 'corporate_fare', label: 'Companies', hint: 'Hiring teams' },
+        { view: AppView.JOB_LIST, icon: 'search', label: 'Job List', hint: 'Open positions' },
+        { view: AppView.RESUME_TEMPLATES, icon: 'badge', label: 'Resume', hint: 'ATS templates' },
+      ],
+    },
+    {
+      label: 'Prepare',
+      items: [
+        { view: AppView.GUIDE, icon: 'description', label: 'Apply Guide', hint: 'Steps and referrals' },
+        { view: AppView.INTERVIEW_PREP, icon: 'terminal', label: 'Interview Prep', hint: 'Questions and tips' },
+        { view: AppView.SUCCESS_STORIES, icon: 'auto_awesome', label: 'Success Stories', hint: 'Hiring playbooks' },
+      ],
+    },
+  ];
+
   const isActive = (view: AppView) => {
     if (view === currentView) return true;
     if (view === AppView.COMPANY_DISCOVERY && currentView === AppView.COMPANY_PROFILE) return true;

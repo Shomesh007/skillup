@@ -125,8 +125,32 @@ export const ROLE_CATEGORIES: RoleCategory[] = [
     title: 'Software Development',
     icon: 'code',
     trending: 'Always popular',
-    roles: ['Frontend Developer', 'Backend Developer', 'Full Stack Developer'],
+    roles: ['Frontend Developer', 'Backend Developer', 'Full Stack Developer', 'Software Engineer'],
     color: 'from-purple-500 to-pink-500'
+  },
+  {
+    id: '04',
+    title: 'Testing',
+    icon: 'fact_check',
+    trending: 'High demand',
+    roles: ['QA Engineer', 'Automation Tester', 'Manual Tester', 'Performance Test Engineer', 'API Test Engineer', 'Validation Engineer'],
+    color: 'from-amber-400 to-orange-500'
+  },
+  {
+    id: '05',
+    title: 'Security',
+    icon: 'shield',
+    trending: 'Critical skills',
+    roles: ['Security Engineer', 'Security Analyst', 'Cybersecurity Engineer'],
+    color: 'from-emerald-400 to-cyan-500'
+  },
+  {
+    id: '06',
+    title: 'Support and Ops',
+    icon: 'support_agent',
+    trending: 'Steady demand',
+    roles: ['Support Engineer', 'Application Support Engineer', 'Technical Support Engineer', 'Production Support Engineer'],
+    color: 'from-slate-400 to-slate-600'
   }
 ];
 

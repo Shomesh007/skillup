@@ -25,6 +25,18 @@ const NavHeader: React.FC<Props> = ({ level, role, company, view, onBack, onLogo
       case AppView.AI_CHAT: return "Easy Assistant";
       case AppView.LIVE_COACHING: return "Live Coaching";
       case AppView.PROFILE_HUB: return "Dashboard";
+      case AppView.STUDENT_HOME: return "Student Home";
+      case AppView.STUDENT_SETUP: return "Student Setup";
+      case AppView.STUDENT_ROLE_EXPLORER: return "IT Career Explorer";
+      case AppView.STUDENT_TRACK_BUILDER: return "Track Builder";
+      case AppView.GRADUATE_HOME: return "Graduate Home";
+      case AppView.GRADUATE_SETUP: return "Graduate Setup";
+      case AppView.GRADUATE_ROLE_TARGETER: return "Role Targeter";
+      case AppView.GRADUATE_SHORTLIST_FIXER: return "Shortlist Fixer";
+      case AppView.SWITCHER_HOME: return "Switcher Home";
+      case AppView.SWITCHER_SETUP: return "Switcher Setup";
+      case AppView.SWITCHER_TARGETER: return "Switch Targeter";
+      case AppView.SWITCHER_TRANSLATOR: return "Experience Translator";
       default: return "";
     }
   };

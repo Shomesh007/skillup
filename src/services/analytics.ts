@@ -1,64 +1,30 @@
 import posthog from 'posthog-js';
-import { supabase } from './supabase';
 
-// Initialize PostHog
 export function initializeAnalytics() {
   if (import.meta.env.VITE_POSTHOG_API_KEY) {
     posthog.init(import.meta.env.VITE_POSTHOG_API_KEY, {
       api_host: import.meta.env.VITE_POSTHOG_API_HOST || 'https://us.posthog.com',
-      loaded: (ph: any) => {
+      loaded: () => {
         console.log('PostHog initialized');
       },
     });
   }
 }
 
-// Analytics Events to track
-export async function trackUserSignup(userId: string, email: string, careerLevel?: string) {
-  posthog?.capture('user_signup', {
-    userId,
-    email,
-    careerLevel,
-  });
+async function track(eventName: string, properties: Record<string, unknown>) {
+  posthog?.capture(eventName, properties);
+}
 
-  // Also log to database
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'user_signup',
-      event_properties: { email, careerLevel },
-    },
-  ]);
+export async function trackUserSignup(userId: string, email: string, careerLevel?: string) {
+  await track('user_signup', { userId, email, careerLevel });
 }
 
 export async function trackRoleSelected(userId: string, roleId: string, roleName: string) {
-  posthog?.capture('role_selected', {
-    roleId,
-    roleName,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'role_selected',
-      event_properties: { roleId, roleName },
-    },
-  ]);
+  await track('role_selected', { userId, roleId, roleName });
 }
 
 export async function trackCompanyViewed(userId: string, companyId: string, companyName: string) {
-  posthog?.capture('company_viewed', {
-    companyId,
-    companyName,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'company_viewed',
-      event_properties: { companyId, companyName },
-    },
-  ]);
+  await track('company_viewed', { userId, companyId, companyName });
 }
 
 export async function trackInterviewQuestionViewed(
@@ -67,34 +33,11 @@ export async function trackInterviewQuestionViewed(
   difficulty: string,
   category: string
 ) {
-  posthog?.capture('interview_question_viewed', {
-    questionId,
-    difficulty,
-    category,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'interview_question_viewed',
-      event_properties: { questionId, difficulty, category },
-    },
-  ]);
+  await track('interview_question_viewed', { userId, questionId, difficulty, category });
 }
 
 export async function trackSuccessStoryViewed(userId: string, storyId: string, companyName: string) {
-  posthog?.capture('success_story_viewed', {
-    storyId,
-    companyName,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'success_story_viewed',
-      event_properties: { storyId, companyName },
-    },
-  ]);
+  await track('success_story_viewed', { userId, storyId, companyName });
 }
 
 export async function trackLearningResourceAccessed(
@@ -103,67 +46,19 @@ export async function trackLearningResourceAccessed(
   resourceType: string,
   platform: string
 ) {
-  posthog?.capture('learning_resource_accessed', {
-    resourceId,
-    resourceType,
-    platform,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'learning_resource_accessed',
-      event_properties: { resourceId, resourceType, platform },
-    },
-  ]);
+  await track('learning_resource_accessed', { userId, resourceId, resourceType, platform });
 }
 
 export async function trackLearningPathCompleted(userId: string, roleId: string, roleName: string) {
-  posthog?.capture('learning_path_completed', {
-    roleId,
-    roleName,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'learning_path_completed',
-      event_properties: { roleId, roleName },
-    },
-  ]);
+  await track('learning_path_completed', { userId, roleId, roleName });
 }
 
-export async function trackSuccessStorySubmitted(
-  userId: string,
-  companyId: string,
-  roleId: string
-) {
-  posthog?.capture('success_story_submitted', {
-    companyId,
-    roleId,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'success_story_submitted',
-      event_properties: { companyId, roleId },
-    },
-  ]);
+export async function trackSuccessStorySubmitted(userId: string, companyId: string, roleId: string) {
+  await track('success_story_submitted', { userId, companyId, roleId });
 }
 
 export async function trackSalaryDataSubmitted(userId: string, companyId: string) {
-  posthog?.capture('salary_data_submitted', {
-    companyId,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'salary_data_submitted',
-      event_properties: { companyId },
-    },
-  ]);
+  await track('salary_data_submitted', { userId, companyId });
 }
 
 export async function trackMatchScoreCalculated(
@@ -172,56 +67,17 @@ export async function trackMatchScoreCalculated(
   companyId: string,
   matchPercentage: number
 ) {
-  posthog?.capture('match_score_calculated', {
-    roleId,
-    companyId,
-    matchPercentage,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'match_score_calculated',
-      event_properties: { roleId, companyId, matchPercentage },
-    },
-  ]);
+  await track('match_score_calculated', { userId, roleId, companyId, matchPercentage });
 }
 
 export async function trackChatInteraction(userId: string, topic: string) {
-  posthog?.capture('chat_interaction', {
-    topic,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'chat_interaction',
-      event_properties: { topic },
-    },
-  ]);
+  await track('chat_interaction', { userId, topic });
 }
 
 export async function trackDataExportRequested(userId: string) {
-  posthog?.capture('data_export_requested', {});
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'data_export_requested',
-    },
-  ]);
+  await track('data_export_requested', { userId });
 }
 
 export async function trackConsentGiven(userId: string, consentType: string) {
-  posthog?.capture('consent_given', {
-    consentType,
-  });
-
-  await supabase.from('analytics_events').insert([
-    {
-      user_id: userId,
-      event_name: 'consent_given',
-      event_properties: { consentType },
-    },
-  ]);
+  await track('consent_given', { userId, consentType });
 }

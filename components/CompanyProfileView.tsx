@@ -2,12 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import { Company, AppView } from '../types';
 import { useAppContext } from '../context/AppContext';
-import { getCompanyInterviewRounds, getSalaryBenchmarks } from '../src/services/supabase';
 
 type CompanyDetails = Company & {
   website?: string;
   careersPage?: string;
   linkedInUrl?: string;
+  about?: string;
 };
 
 interface InterviewRound {
@@ -28,6 +28,34 @@ interface SalaryBenchmark {
   bonus_avg: number;
 }
 
+const LOCAL_ROUNDS: InterviewRound[] = [
+  { id: 'r1', round_number: 1, round_name: 'Resume Screening', duration_minutes: 30, focus_areas: ['Fit', 'Experience', 'Projects'], pass_rate_percentage: 70 },
+  { id: 'r2', round_number: 2, round_name: 'Technical Round', duration_minutes: 60, focus_areas: ['Coding', 'Problem Solving', 'Communication'], pass_rate_percentage: 45 },
+  { id: 'r3', round_number: 3, round_name: 'Hiring Manager', duration_minutes: 45, focus_areas: ['Ownership', 'Teamwork', 'Motivation'], pass_rate_percentage: 60 },
+];
+
+function buildLocalSalaries(companyName: string): SalaryBenchmark[] {
+  const isTierOne = ['google', 'microsoft', 'amazon'].includes(companyName.toLowerCase());
+  return [
+    {
+      id: `${companyName}-entry`,
+      level: 'Entry',
+      base_25th_percentile: isTierOne ? 1800000 : 800000,
+      base_50th_percentile: isTierOne ? 2500000 : 1200000,
+      base_75th_percentile: isTierOne ? 3200000 : 1600000,
+      bonus_avg: isTierOne ? 250000 : 100000,
+    },
+    {
+      id: `${companyName}-mid`,
+      level: 'Mid',
+      base_25th_percentile: isTierOne ? 2800000 : 1400000,
+      base_50th_percentile: isTierOne ? 3800000 : 2200000,
+      base_75th_percentile: isTierOne ? 5000000 : 3200000,
+      bonus_avg: isTierOne ? 400000 : 150000,
+    },
+  ];
+}
+
 interface Props {
   company: CompanyDetails;
   onAction: (view: AppView) => void;
@@ -37,38 +65,16 @@ interface Props {
 
 const CompanyProfileView: React.FC<Props> = ({ company, onAction, onBack, onShowJobs }) => {
   const { selectedCompany } = useAppContext();
-  const displayCompany = selectedCompany || company;
+  const displayCompany: CompanyDetails = (selectedCompany || company) as CompanyDetails;
   const [rounds, setRounds] = useState<InterviewRound[]>([]);
   const [salaries, setSalaries] = useState<SalaryBenchmark[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const [roundsRes, salariesRes] = await Promise.all([
-          getCompanyInterviewRounds(displayCompany.id),
-          getSalaryBenchmarks(displayCompany.id)
-        ]);
-        
-        if (roundsRes.error) throw roundsRes.error;
-        if (salariesRes.error) throw salariesRes.error;
-        
-        setRounds(roundsRes.data || []);
-        setSalaries(salariesRes.data || []);
-      } catch (error) {
-        console.error('Error fetching company data:', error);
-        setRounds([]);
-        setSalaries([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    if (displayCompany.id) {
-      fetchData();
-    }
-  }, [displayCompany.id]);
+    setRounds(LOCAL_ROUNDS);
+    setSalaries(buildLocalSalaries(displayCompany.name));
+    setLoading(false);
+  }, [displayCompany.name]);
 
   const formatSalary = (amount: number) => {
     return `₹${(amount / 100000).toFixed(1)}L`;

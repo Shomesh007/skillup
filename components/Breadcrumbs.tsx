@@ -19,6 +19,18 @@ const Breadcrumbs: React.FC<Props> = ({ level, role, company, view }) => {
     if (v === AppView.SUCCESS_STORIES) return 'Stories';
     if (v === AppView.JOB_LIST) return 'Jobs';
     if (v === AppView.PROFILE_HUB) return 'Profile';
+    if (v === AppView.STUDENT_HOME) return 'Student Home';
+    if (v === AppView.STUDENT_SETUP) return 'Student Setup';
+    if (v === AppView.STUDENT_ROLE_EXPLORER) return 'Career Explorer';
+    if (v === AppView.STUDENT_TRACK_BUILDER) return 'Track Builder';
+    if (v === AppView.GRADUATE_HOME) return 'Graduate Home';
+    if (v === AppView.GRADUATE_SETUP) return 'Graduate Setup';
+    if (v === AppView.GRADUATE_ROLE_TARGETER) return 'Role Targeter';
+    if (v === AppView.GRADUATE_SHORTLIST_FIXER) return 'Shortlist Fixer';
+    if (v === AppView.SWITCHER_HOME) return 'Switcher Home';
+    if (v === AppView.SWITCHER_SETUP) return 'Switcher Setup';
+    if (v === AppView.SWITCHER_TARGETER) return 'Switch Targeter';
+    if (v === AppView.SWITCHER_TRANSLATOR) return 'Experience Translator';
     if (v === AppView.AI_CHAT) return 'AI Consultant';
     return '';
   };

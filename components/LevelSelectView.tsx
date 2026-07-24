@@ -21,19 +21,19 @@ const LevelSelectView: React.FC<Props> = ({ onSelect, onBack }) => {
     { 
       id: UserLevel.GRADUATE, 
       label: 'GRADUATE', 
-      desc: 'Looking for jobs', 
+      desc: 'Entry-level job hunt', 
       icon: 'workspace_premium', 
-      color: 'text-neon-violet', 
-      glow: 'bg-neon-violet/40',
+      color: 'text-neon-amber', 
+      glow: 'bg-neon-amber/40',
       pos: 'top-44 left-0' 
     },
     { 
       id: UserLevel.PRO, 
-      label: 'PRO', 
-      desc: 'Already working', 
-      icon: 'business_center', 
-      color: 'text-blue-400', 
-      glow: 'bg-blue-400/40',
+      label: 'SWITCHER', 
+      desc: 'Working, changing roles', 
+      icon: 'move_up', 
+      color: 'text-neon-violet', 
+      glow: 'bg-neon-violet/40',
       pos: 'top-[22rem] right-4' 
     },
   ];

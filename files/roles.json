@@ -327,6 +327,1525 @@
     }
   },
   {
+    "id": "role_software_engineer",
+    "name": "Software Engineer",
+    "category": "Software Development",
+    "difficulty": "intermediate",
+    "timeToMastery": "9-15 months",
+    "description": "Design and build reliable software systems across the stack",
+    "overview": "Work on programming, debugging, testing, and delivery across product teams",
+    "companiesHiring": [
+      "tcs",
+      "infosys",
+      "wipro",
+      "zoho",
+      "freshworks",
+      "amazon",
+      "microsoft",
+      "google"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "3-4 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Programming fundamentals",
+          "Git and collaboration",
+          "Debugging and troubleshooting",
+          "Data structures basics",
+          "APIs and basic testing"
+        ],
+        "tools": [
+          "VS Code",
+          "Git",
+          "Postman",
+          "Browser DevTools"
+        ],
+        "projectIdeas": [
+          "Task tracker",
+          "Feature-rich CRUD app",
+          "Portfolio site"
+        ]
+      },
+      "intermediate": {
+        "duration": "3-4 months",
+        "estimatedHours": 350,
+        "topics": [
+          "System design basics",
+          "CI/CD concepts",
+          "Database design",
+          "Authentication",
+          "Code quality and reviews"
+        ],
+        "tools": [
+          "Docker",
+          "SQL",
+          "Jenkins",
+          "TypeScript"
+        ],
+        "projectIdeas": [
+          "Production-style web app",
+          "Team collaboration tool",
+          "API platform"
+        ]
+      },
+      "advanced": {
+        "duration": "3-6 months",
+        "estimatedHours": 400,
+        "topics": [
+          "Scalability",
+          "Reliability",
+          "Performance optimization",
+          "Distributed systems",
+          "Ownership and delivery"
+        ],
+        "tools": [
+          "Kubernetes",
+          "AWS",
+          "Redis",
+          "Monitoring"
+        ],
+        "projectIdeas": [
+          "High-scale service",
+          "Microservices platform",
+          "Real-time application"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Programming",
+        "Git",
+        "Testing",
+        "APIs",
+        "Databases"
+      ],
+      "nice": [
+        "Docker",
+        "Cloud",
+        "TypeScript",
+        "System Design"
+      ],
+      "optional": [
+        "Kubernetes",
+        "Redis",
+        "Message Queues",
+        "Observability"
+      ]
+    }
+  },
+  {
+    "id": "role_java_developer",
+    "name": "Java Developer",
+    "category": "Software Development",
+    "difficulty": "intermediate",
+    "timeToMastery": "9-15 months",
+    "description": "Build enterprise applications and backend services using Java",
+    "overview": "Develop APIs, services, and business logic in Java ecosystems",
+    "companiesHiring": [
+      "tcs",
+      "infosys",
+      "wipro",
+      "amazon",
+      "microsoft",
+      "google"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "3-4 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Java syntax",
+          "OOP",
+          "Collections",
+          "Exception handling",
+          "Git"
+        ],
+        "tools": [
+          "IntelliJ IDEA",
+          "Git",
+          "Maven",
+          "Postman"
+        ],
+        "projectIdeas": [
+          "Console banking app",
+          "Mini REST API",
+          "Student management system"
+        ]
+      },
+      "intermediate": {
+        "duration": "3-4 months",
+        "estimatedHours": 350,
+        "topics": [
+          "Spring Boot",
+          "REST APIs",
+          "JPA/Hibernate",
+          "Testing",
+          "Security basics"
+        ],
+        "tools": [
+          "Spring Boot",
+          "PostgreSQL",
+          "JUnit",
+          "Docker"
+        ],
+        "projectIdeas": [
+          "Order service",
+          "Employee management API",
+          "Inventory system"
+        ]
+      },
+      "advanced": {
+        "duration": "3-6 months",
+        "estimatedHours": 400,
+        "topics": [
+          "Microservices",
+          "Messaging",
+          "Caching",
+          "Scalability",
+          "Production debugging"
+        ],
+        "tools": [
+          "Kafka",
+          "Redis",
+          "Kubernetes",
+          "AWS"
+        ],
+        "projectIdeas": [
+          "Microservices backend",
+          "Event-driven platform",
+          "Enterprise integration service"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Java",
+        "Spring Boot",
+        "SQL",
+        "Git"
+      ],
+      "nice": [
+        "Docker",
+        "JUnit",
+        "Hibernate",
+        "Kafka"
+      ],
+      "optional": [
+        "Redis",
+        "Kubernetes",
+        "Maven",
+        "Gradle"
+      ]
+    }
+  },
+  {
+    "id": "role_python_developer",
+    "name": "Python Developer",
+    "category": "Software Development",
+    "difficulty": "entry",
+    "timeToMastery": "6-12 months",
+    "description": "Build backend services, automation, and scripting solutions",
+    "overview": "Use Python for web apps, automation, APIs, and data workflows",
+    "companiesHiring": [
+      "tcs",
+      "infosys",
+      "wipro",
+      "amazon",
+      "microsoft",
+      "google"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "2-3 months",
+        "estimatedHours": 250,
+        "topics": [
+          "Python syntax",
+          "OOP basics",
+          "Data structures",
+          "File handling",
+          "Git"
+        ],
+        "tools": [
+          "VS Code",
+          "Python",
+          "Git",
+          "Jupyter Notebook"
+        ],
+        "projectIdeas": [
+          "CLI tool",
+          "Automation script",
+          "Simple web app"
+        ]
+      },
+      "intermediate": {
+        "duration": "2-3 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Flask/FastAPI",
+          "REST APIs",
+          "Testing",
+          "Databases",
+          "Virtual environments"
+        ],
+        "tools": [
+          "FastAPI",
+          "PostgreSQL",
+          "Pytest",
+          "Docker"
+        ],
+        "projectIdeas": [
+          "Task API",
+          "Automation dashboard",
+          "CRUD backend"
+        ]
+      },
+      "advanced": {
+        "duration": "3-4 months",
+        "estimatedHours": 350,
+        "topics": [
+          "Async programming",
+          "Performance tuning",
+          "Scalable services",
+          "Deployment",
+          "Monitoring"
+        ],
+        "tools": [
+          "Docker",
+          "AWS",
+          "Redis",
+          "Celery"
+        ],
+        "projectIdeas": [
+          "Background job service",
+          "Event processor",
+          "Production API"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Python",
+        "Git",
+        "SQL",
+        "APIs"
+      ],
+      "nice": [
+        "FastAPI",
+        "Flask",
+        "Docker",
+        "Pytest"
+      ],
+      "optional": [
+        "Celery",
+        "Redis",
+        "AWS",
+        "Jupyter Notebook"
+      ]
+    }
+  },
+  {
+    "id": "role_react_developer",
+    "name": "React Developer",
+    "category": "Frontend",
+    "difficulty": "entry",
+    "timeToMastery": "6-8 months",
+    "description": "Build modern interfaces with React and TypeScript",
+    "overview": "Focus on reusable UI, state management, and API integration",
+    "companiesHiring": [
+      "tcs",
+      "infosys",
+      "wipro",
+      "zoho",
+      "freshworks",
+      "amazon",
+      "microsoft",
+      "google"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "2-3 months",
+        "estimatedHours": 250,
+        "topics": [
+          "HTML/CSS",
+          "JavaScript",
+          "React fundamentals",
+          "Components",
+          "Props and state"
+        ],
+        "tools": [
+          "React",
+          "TypeScript",
+          "Git",
+          "Browser DevTools"
+        ],
+        "projectIdeas": [
+          "Landing page",
+          "Todo app",
+          "Portfolio site"
+        ]
+      },
+      "intermediate": {
+        "duration": "2-3 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Hooks",
+          "Routing",
+          "Forms",
+          "API integration",
+          "State management"
+        ],
+        "tools": [
+          "React Router",
+          "Redux Toolkit",
+          "Tailwind CSS",
+          "Postman"
+        ],
+        "projectIdeas": [
+          "Dashboard",
+          "E-commerce UI",
+          "Content management app"
+        ]
+      },
+      "advanced": {
+        "duration": "2-3 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Performance optimization",
+          "Testing",
+          "Accessibility",
+          "Architecture",
+          "Deployment"
+        ],
+        "tools": [
+          "Jest",
+          "Playwright",
+          "Lighthouse",
+          "Vite"
+        ],
+        "projectIdeas": [
+          "Large-scale SPA",
+          "Design system playground",
+          "Realtime UI"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "CSS"
+      ],
+      "nice": [
+        "Redux",
+        "Tailwind CSS",
+        "Router",
+        "Testing Library"
+      ],
+      "optional": [
+        "Storybook",
+        "Playwright",
+        "Vite",
+        "Figma"
+      ]
+    }
+  },
+  {
+    "id": "role_qa_engineer",
+    "name": "QA Engineer",
+    "category": "Testing",
+    "difficulty": "entry",
+    "timeToMastery": "6-8 months",
+    "description": "Validate product quality through manual and automated testing",
+    "overview": "Cover test planning, defect reporting, and automation fundamentals",
+    "companiesHiring": [
+      "tcs",
+      "infosys",
+      "wipro",
+      "zoho",
+      "freshworks",
+      "amazon",
+      "microsoft",
+      "google"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "2-3 months",
+        "estimatedHours": 250,
+        "topics": [
+          "Testing fundamentals",
+          "Test case design",
+          "Bug reporting",
+          "Regression testing",
+          "Agile basics"
+        ],
+        "tools": [
+          "Jira",
+          "Git",
+          "Postman",
+          "Selenium"
+        ],
+        "projectIdeas": [
+          "Test plan",
+          "Bug report portfolio",
+          "Manual test suite"
+        ]
+      },
+      "intermediate": {
+        "duration": "2-3 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Automation basics",
+          "API testing",
+          "CI/CD",
+          "Cross-browser testing",
+          "Framework design"
+        ],
+        "tools": [
+          "Playwright",
+          "Selenium",
+          "Postman",
+          "Jenkins"
+        ],
+        "projectIdeas": [
+          "Automated UI suite",
+          "API checks",
+          "Regression pack"
+        ]
+      },
+      "advanced": {
+        "duration": "2-3 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Performance testing",
+          "Mobile automation",
+          "Reporting",
+          "Test strategy",
+          "Quality metrics"
+        ],
+        "tools": [
+          "JMeter",
+          "Appium",
+          "Allure",
+          "Cypress"
+        ],
+        "projectIdeas": [
+          "Performance suite",
+          "Mobile automation pack",
+          "CI quality gate"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Testing",
+        "Selenium",
+        "Postman",
+        "Jira"
+      ],
+      "nice": [
+        "Playwright",
+        "Jenkins",
+        "JMeter",
+        "Git"
+      ],
+      "optional": [
+        "Appium",
+        "Cypress",
+        "Allure",
+        "Robot Framework"
+      ]
+    }
+  },
+  {
+    "id": "role_test_engineer",
+    "name": "Test Engineer",
+    "category": "Testing",
+    "difficulty": "entry",
+    "timeToMastery": "6-8 months",
+    "description": "Design and execute functional and regression test plans",
+    "overview": "Focus on structured testing, validation, and defect prevention",
+    "companiesHiring": [
+      "tcs",
+      "infosys",
+      "wipro",
+      "amazon",
+      "microsoft",
+      "google"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "2-3 months",
+        "estimatedHours": 220,
+        "topics": [
+          "Testing lifecycle",
+          "Manual tests",
+          "Assertions",
+          "Defect tracking"
+        ],
+        "tools": [
+          "Jira",
+          "TestRail",
+          "Git",
+          "Postman"
+        ],
+        "projectIdeas": [
+          "Regression checklist",
+          "Test case document",
+          "Smoke suite"
+        ]
+      },
+      "intermediate": {
+        "duration": "2-3 months",
+        "estimatedHours": 280,
+        "topics": [
+          "Test automation basics",
+          "API validation",
+          "Data-driven testing",
+          "CI integration"
+        ],
+        "tools": [
+          "Playwright",
+          "Selenium",
+          "JUnit/TestNG",
+          "Jenkins"
+        ],
+        "projectIdeas": [
+          "Functional automation suite",
+          "API smoke tests",
+          "Release checklist"
+        ]
+      },
+      "advanced": {
+        "duration": "2-3 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Strategy",
+          "Coverage analysis",
+          "Traceability",
+          "Quality gates",
+          "Metrics"
+        ],
+        "tools": [
+          "Allure",
+          "Cypress",
+          "JMeter",
+          "Git"
+        ],
+        "projectIdeas": [
+          "Quality dashboard",
+          "Test strategy docs",
+          "Pipeline gates"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Testing",
+        "Jira",
+        "Postman",
+        "Git"
+      ],
+      "nice": [
+        "Playwright",
+        "Selenium",
+        "TestRail",
+        "Jenkins"
+      ],
+      "optional": [
+        "JMeter",
+        "Cypress",
+        "Allure",
+        "Appium"
+      ]
+    }
+  },
+  {
+    "id": "role_automation_tester",
+    "name": "Automation Tester",
+    "category": "Testing",
+    "difficulty": "entry",
+    "timeToMastery": "6-8 months",
+    "description": "Automate end-to-end tests and reduce manual testing effort",
+    "overview": "Build automation coverage for UI, API, and regression workflows",
+    "companiesHiring": [
+      "tcs",
+      "infosys",
+      "wipro",
+      "zoho",
+      "freshworks",
+      "amazon",
+      "microsoft",
+      "google"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "2-3 months",
+        "estimatedHours": 250,
+        "topics": [
+          "Automation basics",
+          "Java/Python",
+          "Test scripts",
+          "Locators",
+          "Git"
+        ],
+        "tools": [
+          "Selenium",
+          "Playwright",
+          "Postman",
+          "VS Code"
+        ],
+        "projectIdeas": [
+          "Login automation",
+          "Smoke suite",
+          "Simple API checks"
+        ]
+      },
+      "intermediate": {
+        "duration": "2-3 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Framework design",
+          "Data-driven testing",
+          "Reports",
+          "Parallel runs",
+          "CI/CD"
+        ],
+        "tools": [
+          "TestNG",
+          "JUnit",
+          "Jenkins",
+          "Cucumber"
+        ],
+        "projectIdeas": [
+          "Reusable framework",
+          "CI pipeline suite",
+          "Cross-browser tests"
+        ]
+      },
+      "advanced": {
+        "duration": "2-3 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Stable automation",
+          "Flaky test fixes",
+          "Performance basics",
+          "Maintenance",
+          "Scaling suites"
+        ],
+        "tools": [
+          "Cypress",
+          "JMeter",
+          "Allure",
+          "Docker"
+        ],
+        "projectIdeas": [
+          "Enterprise automation pack",
+          "Health dashboard",
+          "Release gate automation"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Selenium",
+        "Playwright",
+        "Git",
+        "Postman"
+      ],
+      "nice": [
+        "TestNG",
+        "JUnit",
+        "Jenkins",
+        "Cucumber"
+      ],
+      "optional": [
+        "JMeter",
+        "Allure",
+        "Docker",
+        "Cypress"
+      ]
+    }
+  },
+  {
+    "id": "role_manual_tester",
+    "name": "Manual Tester",
+    "category": "Testing",
+    "difficulty": "entry",
+    "timeToMastery": "6-8 months",
+    "description": "Execute manual test cases and exploratory testing for product quality",
+    "overview": "Focus on uncovering issues through structured manual validation and user flows",
+    "companiesHiring": [
+      "tcs",
+      "infosys",
+      "wipro",
+      "zoho",
+      "amazon",
+      "microsoft"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "2-3 months",
+        "estimatedHours": 220,
+        "topics": [
+          "Test case writing",
+          "Exploratory testing",
+          "Defect reporting",
+          "Regression basics"
+        ],
+        "tools": ["Jira", "Excel", "TestRail", "Browser DevTools"],
+        "projectIdeas": ["Test case suite", "Bug report portfolio", "Manual regression pack"]
+      },
+      "intermediate": {
+        "duration": "2-3 months",
+        "estimatedHours": 260,
+        "topics": [
+          "Test design techniques",
+          "UAT support",
+          "Risk-based testing",
+          "Release validation"
+        ],
+        "tools": ["Jira", "Confluence", "SQL", "Postman"],
+        "projectIdeas": ["Release checklist", "Exploratory test charter", "UAT plan"]
+      },
+      "advanced": {
+        "duration": "2-3 months",
+        "estimatedHours": 280,
+        "topics": [
+          "Quality strategy",
+          "Coverage analysis",
+          "Defect triage",
+          "Process improvement"
+        ],
+        "tools": ["TestRail", "Allure", "Power BI", "Git"],
+        "projectIdeas": ["Quality dashboard", "Traceability matrix", "Release readiness report"]
+      }
+    },
+    "requiredTools": {
+      "core": ["Test Cases", "Jira", "Excel", "Bug Reporting"],
+      "nice": ["TestRail", "Confluence", "SQL", "Postman"],
+      "optional": ["Allure", "Power BI", "Git", "Browser DevTools"]
+    }
+  },
+  {
+    "id": "role_performance_test_engineer",
+    "name": "Performance Test Engineer",
+    "category": "Testing",
+    "difficulty": "mid",
+    "timeToMastery": "9-15 months",
+    "description": "Validate load, stress, and scalability characteristics of applications",
+    "overview": "Measure response times, throughput, and bottlenecks under production-like load",
+    "companiesHiring": ["amazon", "microsoft", "google", "tcs", "wipro", "deloitte"],
+    "learningPath": {
+      "beginner": {
+        "duration": "3-4 months",
+        "estimatedHours": 280,
+        "topics": ["Performance basics", "HTTP", "Metrics", "Test planning"],
+        "tools": ["JMeter", "SQL", "Linux", "Grafana"],
+        "projectIdeas": ["Load test plan", "Baseline performance report", "Simple stress test"]
+      },
+      "intermediate": {
+        "duration": "3-4 months",
+        "estimatedHours": 320,
+        "topics": ["Script design", "Correlation", "Parameterization", "Monitoring"],
+        "tools": ["LoadRunner", "JMeter", "Prometheus", "K6"],
+        "projectIdeas": ["API load suite", "Concurrency test pack", "Bottleneck analysis"]
+      },
+      "advanced": {
+        "duration": "3-4 months",
+        "estimatedHours": 350,
+        "topics": ["Distributed load", "Capacity planning", "Scalability", "Reporting"],
+        "tools": ["Grafana", "Apm tools", "Docker", "Cloud"],
+        "projectIdeas": ["Production load lab", "Scalability benchmark", "Performance trend dashboard"]
+      }
+    },
+    "requiredTools": {
+      "core": ["JMeter", "LoadRunner", "Grafana", "SQL"],
+      "nice": ["K6", "Prometheus", "Linux", "Docker"],
+      "optional": ["Apm tools", "Cloud", "Python", "Jenkins"]
+    }
+  },
+  {
+    "id": "role_api_test_engineer",
+    "name": "API Test Engineer",
+    "category": "Testing",
+    "difficulty": "entry",
+    "timeToMastery": "6-8 months",
+    "description": "Test APIs, contracts, and service integrations",
+    "overview": "Focus on functional correctness, auth flows, and integration behavior",
+    "companiesHiring": ["tcs", "infosys", "wipro", "amazon", "microsoft", "google"],
+    "learningPath": {
+      "beginner": {
+        "duration": "2-3 months",
+        "estimatedHours": 220,
+        "topics": ["HTTP basics", "API testing", "Auth flows", "JSON validation"],
+        "tools": ["Postman", "Swagger", "Jira", "Git"],
+        "projectIdeas": ["Postman collection", "API smoke suite", "Request/response checklist"]
+      },
+      "intermediate": {
+        "duration": "2-3 months",
+        "estimatedHours": 280,
+        "topics": ["Rest Assured", "Contract tests", "Negative testing", "CI integration"],
+        "tools": ["Rest Assured", "Cypress", "Jenkins", "Python"],
+        "projectIdeas": ["Reusable API framework", "Service integration pack", "Contract validation suite"]
+      },
+      "advanced": {
+        "duration": "2-3 months",
+        "estimatedHours": 300,
+        "topics": ["Mocking", "Test data", "Resilience", "Observability"],
+        "tools": ["WireMock", "Newman", "Docker", "Grafana"],
+        "projectIdeas": ["API quality gate", "Mock service lab", "Regression pipeline"]
+      }
+    },
+    "requiredTools": {
+      "core": ["Postman", "Swagger", "JSON", "Git"],
+      "nice": ["Rest Assured", "Newman", "Jenkins", "Python"],
+      "optional": ["WireMock", "Docker", "Cypress", "Grafana"]
+    }
+  },
+  {
+    "id": "role_validation_engineer",
+    "name": "Validation Engineer",
+    "category": "Testing",
+    "difficulty": "mid",
+    "timeToMastery": "9-15 months",
+    "description": "Validate regulated systems with traceability and compliance evidence",
+    "overview": "Operate in regulated environments where documentation and audit trails matter",
+    "companiesHiring": ["tcs", "infosys", "wipro", "deloitte", "expleo", "cognizant"],
+    "learningPath": {
+      "beginner": {
+        "duration": "3-4 months",
+        "estimatedHours": 260,
+        "topics": ["Validation lifecycle", "Documentation", "Traceability", "Risk basics"],
+        "tools": ["Jira", "Excel", "Confluence", "Word"],
+        "projectIdeas": ["Validation plan", "Traceability matrix", "Evidence log"]
+      },
+      "intermediate": {
+        "duration": "3-4 months",
+        "estimatedHours": 300,
+        "topics": ["CSV", "Protocol writing", "Testing evidence", "Change control"],
+        "tools": ["Test scripts", "Document control", "SQL", "Audit checklists"],
+        "projectIdeas": ["Validation protocol", "Release evidence pack", "Controlled test suite"]
+      },
+      "advanced": {
+        "duration": "3-4 months",
+        "estimatedHours": 320,
+        "topics": ["Compliance", "Deviations", "CAPA", "GxP", "Inspection readiness"],
+        "tools": ["Risk matrix", "Power BI", "QMS tools", "Git"],
+        "projectIdeas": ["Audit readiness binder", "Risk assessment workbook", "Compliance dashboard"]
+      }
+    },
+    "requiredTools": {
+      "core": ["Traceability Matrix", "CSV", "Jira", "Documentation"],
+      "nice": ["Excel", "Confluence", "SQL", "Risk Analysis"],
+      "optional": ["QMS tools", "Power BI", "Git", "Word"]
+    }
+  },
+  {
+    "id": "role_mobile_test_engineer",
+    "name": "Mobile Test Engineer",
+    "category": "Testing",
+    "difficulty": "entry",
+    "timeToMastery": "6-8 months",
+    "description": "Test Android and iOS applications across devices and release cycles",
+    "overview": "Validate app behavior, device compatibility, and mobile release readiness",
+    "companiesHiring": ["amazon", "microsoft", "google", "tcs", "infosys", "wipro"],
+    "learningPath": {
+      "beginner": {
+        "duration": "2-3 months",
+        "estimatedHours": 220,
+        "topics": ["Mobile testing basics", "Device matrix", "Bug reporting", "App lifecycle"],
+        "tools": ["Appium", "Android Studio", "Xcode", "BrowserStack"],
+        "projectIdeas": ["Mobile test plan", "Device compatibility matrix", "Crash reproduction steps"]
+      },
+      "intermediate": {
+        "duration": "2-3 months",
+        "estimatedHours": 280,
+        "topics": ["Automation", "Gestures", "Regression", "Release validation"],
+        "tools": ["Appium", "TestFlight", "Firebase Test Lab", "Jenkins"],
+        "projectIdeas": ["Automated mobile suite", "Release smoke tests", "Cross-device regression"]
+      },
+      "advanced": {
+        "duration": "2-3 months",
+        "estimatedHours": 300,
+        "topics": ["Performance", "Network conditions", "Accessibility", "Monitoring"],
+        "tools": ["Charles Proxy", "Grafana", "Allure", "Git"],
+        "projectIdeas": ["Mobile quality dashboard", "Offline behavior pack", "Performance profile"]
+      }
+    },
+    "requiredTools": {
+      "core": ["Appium", "Android Studio", "Xcode", "BrowserStack"],
+      "nice": ["TestFlight", "Firebase Test Lab", "Jenkins", "Git"],
+      "optional": ["Charles Proxy", "Allure", "Grafana", "Docker"]
+    }
+  },
+  {
+    "id": "role_data_test_engineer",
+    "name": "Data Test Engineer",
+    "category": "Testing",
+    "difficulty": "mid",
+    "timeToMastery": "9-15 months",
+    "description": "Validate ETL pipelines, data quality, and warehouse outputs",
+    "overview": "Specialize in checking data integrity across ETL and analytics systems",
+    "companiesHiring": ["amazon", "microsoft", "google", "tcs", "infosys", "wipro"],
+    "learningPath": {
+      "beginner": {
+        "duration": "3-4 months",
+        "estimatedHours": 250,
+        "topics": ["SQL validation", "Data quality", "ETL basics", "Reconciliation"],
+        "tools": ["SQL", "Python", "Databricks", "Excel"],
+        "projectIdeas": ["Data reconciliation report", "Warehouse validation checklist", "ETL smoke tests"]
+      },
+      "intermediate": {
+        "duration": "3-4 months",
+        "estimatedHours": 300,
+        "topics": ["Spark validation", "Cucumber", "Automation", "Pipeline testing"],
+        "tools": ["Spark", "Cucumber", "Pytest", "Airflow"],
+        "projectIdeas": ["ETL automation suite", "Data quality monitor", "Schema change checks"]
+      },
+      "advanced": {
+        "duration": "3-4 months",
+        "estimatedHours": 320,
+        "topics": ["Lineage", "Governance", "Observability", "Performance"],
+        "tools": ["Great Expectations", "dbt", "Grafana", "Kafka"],
+        "projectIdeas": ["Data validation framework", "Quality dashboard", "Governance checklist"]
+      }
+    },
+    "requiredTools": {
+      "core": ["SQL", "Python", "Spark", "Databricks"],
+      "nice": ["Cucumber", "Pytest", "Airflow", "Excel"],
+      "optional": ["Great Expectations", "dbt", "Kafka", "Grafana"]
+    }
+  },
+  {
+    "id": "role_data_engineer",
+    "name": "Data Engineer",
+    "category": "Data & AI",
+    "difficulty": "intermediate",
+    "timeToMastery": "12-18 months",
+    "description": "Build data pipelines and data processing systems",
+    "overview": "Move and transform data reliably for analytics and ML teams",
+    "companiesHiring": [
+      "amazon",
+      "microsoft",
+      "google",
+      "tcs",
+      "infosys",
+      "wipro"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "3-4 months",
+        "estimatedHours": 300,
+        "topics": [
+          "SQL",
+          "Python",
+          "Data modeling",
+          "ETL basics",
+          "Git"
+        ],
+        "tools": [
+          "Python",
+          "SQL",
+          "Jupyter Notebook",
+          "Airflow"
+        ],
+        "projectIdeas": [
+          "CSV pipeline",
+          "Warehouse loader",
+          "Data cleanup job"
+        ]
+      },
+      "intermediate": {
+        "duration": "3-4 months",
+        "estimatedHours": 350,
+        "topics": [
+          "Spark",
+          "Orchestration",
+          "Batch vs streaming",
+          "Data quality",
+          "Cloud storage"
+        ],
+        "tools": [
+          "Spark",
+          "dbt",
+          "Airflow",
+          "Snowflake"
+        ],
+        "projectIdeas": [
+          "ETL pipeline",
+          "Incremental loader",
+          "Analytics warehouse model"
+        ]
+      },
+      "advanced": {
+        "duration": "3-6 months",
+        "estimatedHours": 400,
+        "topics": [
+          "Distributed systems",
+          "Scalability",
+          "Reliability",
+          "Monitoring",
+          "Governance"
+        ],
+        "tools": [
+          "Kafka",
+          "Kubernetes",
+          "Terraform",
+          "Databricks"
+        ],
+        "projectIdeas": [
+          "Streaming pipeline",
+          "Production data platform",
+          "Lakehouse setup"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Python",
+        "SQL",
+        "Spark",
+        "Airflow"
+      ],
+      "nice": [
+        "dbt",
+        "Docker",
+        "Cloud",
+        "Git"
+      ],
+      "optional": [
+        "Kafka",
+        "Terraform",
+        "Snowflake",
+        "Databricks"
+      ]
+    }
+  },
+  {
+    "id": "role_security_engineer",
+    "name": "Security Engineer",
+    "category": "Security",
+    "difficulty": "intermediate",
+    "timeToMastery": "12-18 months",
+    "description": "Build and monitor secure systems and controls",
+    "overview": "Protect applications, infrastructure, and data from threats",
+    "companiesHiring": [
+      "amazon",
+      "microsoft",
+      "google",
+      "tcs",
+      "infosys",
+      "wipro",
+      "deloitte"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "3-4 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Networking",
+          "Linux",
+          "Threat basics",
+          "OWASP",
+          "Security tooling"
+        ],
+        "tools": [
+          "Wireshark",
+          "Nmap",
+          "Linux",
+          "Burp Suite"
+        ],
+        "projectIdeas": [
+          "Security audit",
+          "Vulnerability scan",
+          "Threat model"
+        ]
+      },
+      "intermediate": {
+        "duration": "3-4 months",
+        "estimatedHours": 350,
+        "topics": [
+          "IAM",
+          "Monitoring",
+          "Incident response",
+          "AppSec",
+          "Compliance"
+        ],
+        "tools": [
+          "Splunk",
+          "Kali Linux",
+          "AWS Security",
+          "Nessus"
+        ],
+        "projectIdeas": [
+          "SIEM dashboard",
+          "Security playbook",
+          "Secure app checklist"
+        ]
+      },
+      "advanced": {
+        "duration": "3-6 months",
+        "estimatedHours": 400,
+        "topics": [
+          "Risk management",
+          "Forensics",
+          "Secure architecture",
+          "Automation",
+          "Governance"
+        ],
+        "tools": [
+          "Defender",
+          "Sentinel",
+          "HashiCorp Vault",
+          "Terraform"
+        ],
+        "projectIdeas": [
+          "Security baseline",
+          "Blue team lab",
+          "Zero-trust design"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Networking",
+        "Linux",
+        "OWASP",
+        "SIEM"
+      ],
+      "nice": [
+        "Burp Suite",
+        "Nmap",
+        "Splunk",
+        "AWS Security"
+      ],
+      "optional": [
+        "Kali Linux",
+        "Vault",
+        "Forensics tools",
+        "Terraform"
+      ]
+    }
+  },
+  {
+    "id": "role_network_engineer",
+    "name": "Network Engineer",
+    "category": "Cloud & DevOps",
+    "difficulty": "intermediate",
+    "timeToMastery": "12-18 months",
+    "description": "Design and maintain reliable networks and connectivity",
+    "overview": "Work on routing, switching, network security, and troubleshooting",
+    "companiesHiring": [
+      "tcs",
+      "infosys",
+      "wipro",
+      "amazon",
+      "microsoft",
+      "google",
+      "hpe"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "3-4 months",
+        "estimatedHours": 280,
+        "topics": [
+          "TCP/IP",
+          "Routing",
+          "Switching",
+          "Subnetting",
+          "Linux"
+        ],
+        "tools": [
+          "Wireshark",
+          "Cisco Packet Tracer",
+          "Nmap",
+          "Linux"
+        ],
+        "projectIdeas": [
+          "Home lab design",
+          "Subnetting workbook",
+          "Packet capture report"
+        ]
+      },
+      "intermediate": {
+        "duration": "3-4 months",
+        "estimatedHours": 320,
+        "topics": [
+          "VPNs",
+          "Firewalls",
+          "Monitoring",
+          "DNS",
+          "Troubleshooting"
+        ],
+        "tools": [
+          "Cisco IOS",
+          "SolarWinds",
+          "Wireshark",
+          "Nmap"
+        ],
+        "projectIdeas": [
+          "Branch network plan",
+          "Monitoring dashboard",
+          "VPN setup guide"
+        ]
+      },
+      "advanced": {
+        "duration": "3-6 months",
+        "estimatedHours": 350,
+        "topics": [
+          "High availability",
+          "Network automation",
+          "Security",
+          "Scalability",
+          "Cloud networking"
+        ],
+        "tools": [
+          "Ansible",
+          "Terraform",
+          "AWS VPC",
+          "Azure Networking"
+        ],
+        "projectIdeas": [
+          "Multi-site topology",
+          "Automated config rollout",
+          "Cloud network design"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Networking",
+        "TCP/IP",
+        "Wireshark",
+        "Nmap"
+      ],
+      "nice": [
+        "Cisco",
+        "Linux",
+        "Firewall",
+        "Monitoring"
+      ],
+      "optional": [
+        "Ansible",
+        "Terraform",
+        "Cloud networking",
+        "Packet Tracer"
+      ]
+    }
+  },
+  {
+    "id": "role_support_engineer",
+    "name": "Support Engineer",
+    "category": "Business",
+    "difficulty": "entry",
+    "timeToMastery": "6-12 months",
+    "description": "Resolve production issues and support customers and internal teams",
+    "overview": "Troubleshoot incidents, document fixes, and coordinate escalations",
+    "companiesHiring": [
+      "amazon",
+      "microsoft",
+      "google",
+      "tcs",
+      "infosys",
+      "wipro",
+      "hpe"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "2-3 months",
+        "estimatedHours": 220,
+        "topics": [
+          "Troubleshooting",
+          "Customer communication",
+          "Documentation",
+          "Monitoring basics"
+        ],
+        "tools": [
+          "Jira",
+          "ServiceNow",
+          "Linux",
+          "SQL"
+        ],
+        "projectIdeas": [
+          "Troubleshooting playbook",
+          "Knowledge base article",
+          "Issue triage process"
+        ]
+      },
+      "intermediate": {
+        "duration": "2-3 months",
+        "estimatedHours": 260,
+        "topics": [
+          "Root cause analysis",
+          "Escalation handling",
+          "Logging",
+          "Automation",
+          "SLAs"
+        ],
+        "tools": [
+          "Splunk",
+          "Python",
+          "Postman",
+          "Excel"
+        ],
+        "projectIdeas": [
+          "Incident tracker",
+          "Self-service guide",
+          "Alert workflow"
+        ]
+      },
+      "advanced": {
+        "duration": "3-4 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Reliability",
+          "Operations",
+          "Process improvement",
+          "Reporting",
+          "Knowledge management"
+        ],
+        "tools": [
+          "Power BI",
+          "Python",
+          "Monitoring",
+          "Dashboards"
+        ],
+        "projectIdeas": [
+          "Ops dashboard",
+          "Escalation matrix",
+          "Runbook collection"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Troubleshooting",
+        "Documentation",
+        "Communication",
+        "Monitoring"
+      ],
+      "nice": [
+        "SQL",
+        "Linux",
+        "ServiceNow",
+        "Splunk"
+      ],
+      "optional": [
+        "Python",
+        "Power BI",
+        "Automation",
+        "Postman"
+      ]
+    }
+  },
+  {
+    "id": "role_application_support_engineer",
+    "name": "Application Support Engineer",
+    "category": "Business",
+    "difficulty": "intermediate",
+    "timeToMastery": "9-15 months",
+    "description": "Support enterprise applications and production operations",
+    "overview": "Handle incidents, application health, and operational support workflows",
+    "companiesHiring": [
+      "amazon",
+      "microsoft",
+      "google",
+      "tcs",
+      "infosys",
+      "wipro",
+      "bnp paribas"
+    ],
+    "learningPath": {
+      "beginner": {
+        "duration": "2-3 months",
+        "estimatedHours": 240,
+        "topics": [
+          "Application support",
+          "Incident handling",
+          "Logging",
+          "SQL basics"
+        ],
+        "tools": [
+          "SQL",
+          "Linux",
+          "Jira",
+          "ServiceNow"
+        ],
+        "projectIdeas": [
+          "Support runbook",
+          "Incident log",
+          "Application checklist"
+        ]
+      },
+      "intermediate": {
+        "duration": "3-4 months",
+        "estimatedHours": 300,
+        "topics": [
+          "Monitoring",
+          "Automation",
+          "Release support",
+          "Root cause analysis",
+          "SLA tracking"
+        ],
+        "tools": [
+          "Splunk",
+          "Python",
+          "Postman",
+          "Ansible"
+        ],
+        "projectIdeas": [
+          "Health dashboard",
+          "Automation script pack",
+          "Release checklist"
+        ]
+      },
+      "advanced": {
+        "duration": "3-4 months",
+        "estimatedHours": 320,
+        "topics": [
+          "Production readiness",
+          "Problem management",
+          "Cross-team coordination",
+          "Security",
+          "Reliability"
+        ],
+        "tools": [
+          "Power BI",
+          "Terraform",
+          "AWS",
+          "Monitoring"
+        ],
+        "projectIdeas": [
+          "Ops improvement roadmap",
+          "Incident workflow",
+          "Production support toolkit"
+        ]
+      }
+    },
+    "requiredTools": {
+      "core": [
+        "Linux",
+        "SQL",
+        "Monitoring",
+        "Incident Response"
+      ],
+      "nice": [
+        "Python",
+        "Splunk",
+        "ServiceNow",
+        "Postman"
+      ],
+      "optional": [
+        "Ansible",
+        "AWS",
+        "Terraform",
+        "Automation"
+      ]
+    }
+  },
+  {
     "id": "role_data_analyst",
     "name": "Data Analyst",
     "category": "Data & AI",

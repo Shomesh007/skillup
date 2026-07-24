@@ -12,6 +12,18 @@ export enum AppView {
   AI_CHAT = 'ai_chat',
   LIVE_COACHING = 'live_coaching',
   PROFILE_HUB = 'profile_hub',
+  STUDENT_SETUP = 'student_setup',
+  STUDENT_HOME = 'student_home',
+  STUDENT_ROLE_EXPLORER = 'student_role_explorer',
+  STUDENT_TRACK_BUILDER = 'student_track_builder',
+  GRADUATE_SETUP = 'graduate_setup',
+  GRADUATE_HOME = 'graduate_home',
+  GRADUATE_ROLE_TARGETER = 'graduate_role_targeter',
+  GRADUATE_SHORTLIST_FIXER = 'graduate_shortlist_fixer',
+  SWITCHER_SETUP = 'switcher_setup',
+  SWITCHER_HOME = 'switcher_home',
+  SWITCHER_TARGETER = 'switcher_targeter',
+  SWITCHER_TRANSLATOR = 'switcher_translator',
   JOB_LIST = 'job_list',
   AUTH = 'auth'
 }

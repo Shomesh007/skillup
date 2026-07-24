@@ -2,6 +2,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Company, JobOpportunity } from '../types';
 import { useAppContext } from '../context/AppContext';
+import { classifyJobGuide } from '../src/utils/jobGuideClassifier';
 
 type CompanyDetails = Company & {
   careersPage?: string;
@@ -15,29 +16,11 @@ interface Props {
   onOpenTemplates: () => void;
 }
 
-const GUIDE_FALLBACKS: Record<string, string[]> = {
-  frontend: ['React fundamentals', 'TypeScript', 'state management', 'API integration', 'responsive UI'],
-  backend: ['Node.js or Java APIs', 'databases', 'authentication', 'system design basics', 'testing'],
-  full: ['React', 'REST APIs', 'SQL', 'Git', 'deployment basics'],
-  data: ['SQL', 'Python', 'Excel or BI dashboards', 'statistics', 'business storytelling'],
-  devops: ['Linux', 'Docker', 'CI/CD', 'cloud basics', 'monitoring'],
-};
-
-function getJobSkills(job?: JobOpportunity | null) {
-  if (job?.skills && job.skills.length > 0) return job.skills;
-  const title = job?.title.toLowerCase() || '';
-  if (title.includes('frontend')) return GUIDE_FALLBACKS.frontend;
-  if (title.includes('backend')) return GUIDE_FALLBACKS.backend;
-  if (title.includes('full')) return GUIDE_FALLBACKS.full;
-  if (title.includes('data')) return GUIDE_FALLBACKS.data;
-  if (title.includes('devops')) return GUIDE_FALLBACKS.devops;
-  return ['resume tailoring', 'role fundamentals', 'projects', 'communication', 'interview practice'];
-}
-
 function buildFallbackAnalysis(job: JobOpportunity, companyName: string) {
-  const skills = getJobSkills(job);
+  const profile = classifyJobGuide(job);
+  const skills = job.skills && job.skills.length > 0 ? job.skills : profile.resumeKeywords;
   return [
-    `${job.title} at ${companyName} is best prepared as a role-specific application, not a generic resume send.`,
+    `${profile.normalizedTitle} at ${companyName} is best prepared as a role-specific application, not a generic resume send.`,
     `Focus your resume around ${skills.slice(0, 3).join(', ')} and show one project or work example that proves each skill.`,
     `For ${job.experience}, keep the story practical: what you built, what changed, and how you measured the result.`,
     `Before applying, prepare a short pitch that connects your background to ${job.company}'s role, location, and ${job.mode.toLowerCase()} work setup.`,
@@ -51,8 +34,9 @@ const GuideView: React.FC<Props> = ({ company, job, onBack, onOpenTemplates }) =
   const [isGenerating, setIsGenerating] = useState(false);
   const { selectedCompany } = useAppContext();
   const displayCompany = selectedCompany || company;
-  const targetLabel = job ? `${job.title} at ${job.company}` : displayCompany.name;
-  const jobSkills = useMemo(() => getJobSkills(job), [job]);
+  const jobGuide = useMemo(() => classifyJobGuide(job), [job]);
+  const targetLabel = job ? `${jobGuide.normalizedTitle} at ${job.company}` : displayCompany.name;
+  const jobSkills = useMemo(() => (job?.skills && job.skills.length > 0 ? job.skills : jobGuide.resumeKeywords), [job, jobGuide.resumeKeywords]);
 
   useEffect(() => {
     if (!job) {
@@ -67,7 +51,8 @@ const GuideView: React.FC<Props> = ({ company, job, onBack, onOpenTemplates }) =
         const { getChatResponse } = await import('../src/services/azureOpenAI');
         const response = await getChatResponse(
           `Create a concise job readiness guide for this application:
-Role: ${job.title}
+Role: ${jobGuide.normalizedTitle}
+Original title: ${job.title}
 Company: ${job.company}
 Location: ${job.location}
 Experience: ${job.experience}
@@ -75,6 +60,7 @@ Salary: ${job.salary}
 Work mode: ${job.mode}
 Description: ${job.description || 'Not available'}
 Skills: ${(job.skills || []).join(', ') || 'Not detected'}
+Focus areas: ${jobGuide.focusAreas.join(', ')}
 
 Return 4 short paragraphs covering fit, resume keywords, interview preparation, and a 7-day action plan.`
         );
@@ -91,13 +77,18 @@ Return 4 short paragraphs covering fit, resume keywords, interview preparation, 
     return () => {
       cancelled = true;
     };
-  }, [displayCompany.name, job]);
+  }, [displayCompany.name, job, jobGuide.focusAreas, jobGuide.normalizedTitle]);
 
   return (
     <div className="flex-1 flex flex-col h-full overflow-y-auto no-scrollbar">
       <header className="p-6 shrink-0 pt-4 lg:p-8 lg:pb-4">
         <h1 className="text-3xl font-bold mb-1 text-white lg:text-5xl">Get Ready</h1>
         <p className="text-xs text-gray-500 font-mono">Guides for {targetLabel}</p>
+        {job && job.title !== jobGuide.normalizedTitle && (
+          <p className="mt-2 text-[10px] font-mono uppercase tracking-widest text-neon-cyan">
+            Classified from "{job.title}"
+          </p>
+        )}
       </header>
 
       <div className="px-6 space-y-10 pb-24 lg:grid lg:grid-cols-2 lg:gap-6 lg:space-y-0 lg:px-8 lg:pb-8">
@@ -120,6 +111,13 @@ Return 4 short paragraphs covering fit, resume keywords, interview preparation, 
               ) : (
                 <p className="whitespace-pre-line text-xs leading-relaxed text-gray-300 font-mono">{aiAnalysis}</p>
               )}
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {[jobGuide.category, jobGuide.normalizedTitle, ...jobGuide.focusAreas.slice(0, 3)].map((item) => (
+                <span key={item} className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-mono text-gray-300">
+                  {item}
+                </span>
+              ))}
             </div>
           </section>
         )}
