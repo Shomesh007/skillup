@@ -62,3 +62,9 @@ Failed writes remain in an app-level recovery cache across internal navigation, 
 Removed collection schedules, retrieval logs, backend connection labels, research coverage filters, research audit records and review dates from public pages. Company profiles retain source-backed FAQs and application links. Guidance and coaching focus on next actions. Draft storage and feature limitations remain clear. Selecting a mobile job closes its filters.
 
 Rendered checks on 11 workspace pages at 390px, 12 workspace pages at 768px, and narrow 320px checks across the workspace, account, onboarding, student and career-switcher routes found no document overflow or clipped main content. Expanded TCS FAQs, job filtering/search/details, resume preview and workspace tabs, and goal-to-resume onboarding were exercised. All 28 domain tests, type checking and production build passed. External applications and the browser print dialog were not submitted during this pass.
+
+## Zoho, Freshworks, UST and Hexaware rollout
+
+Added three official-board adapters and a verified-employer UST LinkedIn discovery adapter. The shared catalog returned 190 additional India postings in the first scheduled cloud run: Zoho 2, Freshworks 32, UST 60 and Hexaware 96. UST is a partial public first-page discovery window. Missing city, experience and salary details remain unspecified.
+
+Added 14 source-backed FAQs across the four company profiles. All four FAQ and company job pages were checked at 390px with no horizontal overflow or operational text. Company-specific jobs default to All India; returning to the main board restores South India. All 33 domain tests pass. The permanent server schedules remain 07:00 IST daily and 08:00 IST for failed sources; a temporary Cron verification job ran successfully and was removed afterward. See docs/JOB-COLLECTION-OPERATIONS.md for the deployment evidence and source limits.

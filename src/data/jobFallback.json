@@ -4,6 +4,783 @@
   "feeds": [
     {
       "feed": {
+        "company": "Zoho",
+        "provider": "zoho",
+        "board": "zohocorp",
+        "careersUrl": "https://www.zoho.com/careers/",
+        "verifiedAt": "2026-11-11",
+        "coverage": "Published India openings from the public feed linked by Zoho Careers; missing cities remain unspecified"
+      },
+      "attemptedAt": "2026-11-11T14:01:32.698Z",
+      "fetchedAt": "2026-11-11T14:01:32.698Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "zoho:zohocorp:193779000024445975",
+          "sourceProvider": "zoho",
+          "sourceBoard": "zohocorp",
+          "sourceId": "193779000024445975",
+          "company": "Zoho",
+          "title": "Technical Support Engineers",
+          "fetchedAt": "2026-11-11T14:01:32.698Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://careers.zohocorp.com/jobs/Careers/193779000024445975/Technical-Support-Engineers?source=CareerSite",
+          "linkedinUrl": "https://careers.zohocorp.com/jobs/Careers/193779000024445975/Technical-Support-Engineers?source=CareerSite",
+          "description": "Provide voice-based support to international/domestic customers over the phone (Inbound and Outbound). Build a rapport with customers with clear and c...…",
+          "employmentType": "Full time"
+        },
+        {
+          "id": "zoho:zohocorp:193779000024446028",
+          "sourceProvider": "zoho",
+          "sourceBoard": "zohocorp",
+          "sourceId": "193779000024446028",
+          "company": "Zoho",
+          "title": "Sales Executives",
+          "fetchedAt": "2026-11-11T14:01:32.698Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://careers.zohocorp.com/jobs/Careers/193779000024446028/Sales-Executives?source=CareerSite",
+          "linkedinUrl": "https://careers.zohocorp.com/jobs/Careers/193779000024446028/Sales-Executives?source=CareerSite",
+          "description": "Build rapport with contacts and understand where the prospect is in the buying process. Identify opportunities that meet a minimum qualification crite...…",
+          "employmentType": "Full time"
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Freshworks",
+        "provider": "smartrecruiters",
+        "board": "Freshworks",
+        "careersUrl": "https://careers.smartrecruiters.com/Freshworks",
+        "verifiedAt": "2026-11-11",
+        "coverage": "Paginated public India postings and their details from the official Freshworks SmartRecruiters board"
+      },
+      "attemptedAt": "2026-11-11T14:01:33.174Z",
+      "fetchedAt": "2026-11-11T14:01:33.174Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "smartrecruiters:Freshworks:744000161047199",
+          "sourceProvider": "smartrecruiters",
+          "sourceBoard": "Freshworks",
+          "sourceId": "744000161047199",
+          "company": "Freshworks",
+          "title": "Senior Analyst - Order Management",
+          "fetchedAt": "2026-11-11T14:01:33.174Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "Chennai, India",
+          "experience": "5+ years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [
+            "Excel"
+          ],
+          "sourceUrl": "https://jobs.smartrecruiters.com/Freshworks/744000161047199-senior-analyst-order-management",
+          "linkedinUrl": "https://jobs.smartrecruiters.com/Freshworks/744000161047199-senior-analyst-order-management",
+          "postedAt": "2026-11-11T09:11:16.121Z",
+          "description": "We are looking for a highly skilled Senior Analyst – Order Management to join our dynamic team. In this role, you will be responsible…",
+          "employmentType": "Full-time",
+          "seniorityLevel": "Associate",
+          "jobFunction": "Other",
+          "industries": "Information Technology And Services"
+        },
+        {
+          "id": "smartrecruiters:Freshworks:744000160816709",
+          "sourceProvider": "smartrecruiters",
+          "sourceBoard": "Freshworks",
+          "sourceId": "744000160816709",
+          "company": "Freshworks",
+          "title": "Lead - Solution Engineer",
+          "fetchedAt": "2026-11-11T14:01:33.174Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "Chennai, TN, India",
+          "experience": "6-8 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [
+            "Linux"
+          ],
+          "sourceUrl": "https://jobs.smartrecruiters.com/Freshworks/744000160816709-lead-solution-engineer",
+          "linkedinUrl": "https://jobs.smartrecruiters.com/Freshworks/744000160816709-lead-solution-engineer",
+          "postedAt": "2026-11-10T08:32:23.956Z",
+          "description": "At Freshworks, we pride ourselves on providing industry-leading, AI-first Employee Experience software. Our customers deliver greater levels of service through an intuitive and powerful…",
+          "employmentType": "Full-time",
+          "seniorityLevel": "Mid-Senior Level",
+          "jobFunction": "Other",
+          "industries": "Information Technology And Services"
+        },
+        {
+          "id": "smartrecruiters:Freshworks:744000160816499",
+          "sourceProvider": "smartrecruiters",
+          "sourceBoard": "Freshworks",
+          "sourceId": "744000160816499",
+          "company": "Freshworks",
+          "title": "Lead - Solution Engineer",
+          "fetchedAt": "2026-11-11T14:01:33.174Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "Bengaluru, India",
+          "experience": "6-8 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [
+            "Linux"
+          ],
+          "sourceUrl": "https://jobs.smartrecruiters.com/Freshworks/744000160816499-lead-solution-engineer",
+          "linkedinUrl": "https://jobs.smartrecruiters.com/Freshworks/744000160816499-lead-solution-engineer",
+          "postedAt": "2026-11-10T08:31:32.094Z",
+          "description": "At Freshworks, we pride ourselves on providing industry-leading, AI-first Employee Experience software. Our customers deliver greater levels of service through an intuitive and powerful…",
+          "employmentType": "Full-time",
+          "seniorityLevel": "Mid-Senior Level",
+          "jobFunction": "Other",
+          "industries": "Information Technology And Services"
+        },
+        {
+          "id": "smartrecruiters:Freshworks:744000159090559",
+          "sourceProvider": "smartrecruiters",
+          "sourceBoard": "Freshworks",
+          "sourceId": "744000159090559",
+          "company": "Freshworks",
+          "title": "Senior Account Management (EX) - Top Tier NA",
+          "fetchedAt": "2026-11-11T14:01:33.174Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "Chennai, India",
+          "experience": "4-8 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://jobs.smartrecruiters.com/Freshworks/744000159090559-senior-account-management-ex-top-tier-na-",
+          "linkedinUrl": "https://jobs.smartrecruiters.com/Freshworks/744000159090559-senior-account-management-ex-top-tier-na-",
+          "postedAt": "2026-11-02T09:51:27.916Z",
+          "description": "We are looking for an experienced and strategic Enterprise Account/Portfolio Manager who has a knack in building deep customer relationships and driving incremental business…",
+          "employmentType": "Full-time",
+          "seniorityLevel": "Associate",
+          "jobFunction": "Other",
+          "industries": "Information Technology And Services"
+        },
+        {
+          "id": "smartrecruiters:Freshworks:744000159089985",
+          "sourceProvider": "smartrecruiters",
+          "sourceBoard": "Freshworks",
+          "sourceId": "744000159089985",
+          "company": "Freshworks",
+          "title": "Senior Account Executive - Inside Sales",
+          "fetchedAt": "2026-11-11T14:01:33.174Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "Chennai, India",
+          "experience": "3-8 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://jobs.smartrecruiters.com/Freshworks/744000159089985-senior-account-executive-inside-sales",
+          "linkedinUrl": "https://jobs.smartrecruiters.com/Freshworks/744000159089985-senior-account-executive-inside-sales",
+          "postedAt": "2026-11-02T09:51:23.080Z",
+          "description": "We are seeking a highly motivated and customer-centric Account Executive to join our growing inbound sales team. This is a critical role responsible for…",
+          "employmentType": "Full-time",
+          "seniorityLevel": "Associate",
+          "jobFunction": "Other",
+          "industries": "Information Technology And Services"
+        },
+        {
+          "id": "smartrecruiters:Freshworks:744000158477994",
+          "sourceProvider": "smartrecruiters",
+          "sourceBoard": "Freshworks",
+          "sourceId": "744000158477994",
+          "company": "Freshworks",
+          "title": "Senior Engineering Manager - Billing Platform",
+          "fetchedAt": "2026-11-11T14:01:33.174Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "Bengaluru, KA, India",
+          "experience": "15+ years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [
+            "AWS",
+            "GCP"
+          ],
+          "sourceUrl": "https://jobs.smartrecruiters.com/Freshworks/744000158477994-senior-engineering-manager-billing-platform",
+          "linkedinUrl": "https://jobs.smartrecruiters.com/Freshworks/744000158477994-senior-engineering-manager-billing-platform",
+          "postedAt": "2026-10-29T10:09:50.477Z",
+          "description": "About the role: As a Senior Manager in Engineering, you will lead engineering teams building scalable, cloud-native core platform systems - such as billing,…",
+          "employmentType": "Full-time",
+          "seniorityLevel": "Mid-Senior Level",
+          "jobFunction": "Information Technology",
+          "industries": "Information Technology And Services"
+        },
+        {
+          "id": "smartrecruiters:Freshworks:744000157974929",
+          "sourceProvider": "smartrecruiters",
+          "sourceBoard": "Freshworks",
+          "sourceId": "744000157974929",
+          "company": "Freshworks",
+          "title": "Lead - Revenue Accounting",
+          "fetchedAt": "2026-11-11T14:01:33.174Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "Bengaluru, India",
+          "experience": "6+ years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [
+            "Excel"
+          ],
+          "sourceUrl": "https://jobs.smartrecruiters.com/Freshworks/744000157974929-lead-revenue-accounting",
+          "linkedinUrl": "https://jobs.smartrecruiters.com/Freshworks/744000157974929-lead-revenue-accounting",
+          "postedAt": "2026-10-27T07:31:03.824Z",
+          "description": "We are seeking a highly analytical and automation driven Revenue Accounting Lead to drive excellence within our revenue accounting organization.. In this high-impact role,…",
+          "employmentType": "Full-time",
+          "seniorityLevel": "Mid-Senior Level",
+          "jobFunction": "Other",
+          "industries": "Information Technology And Services"
+        },
+        {
+          "id": "smartrecruiters:Freshworks:744000155675855",
+          "sourceProvider": "smartrecruiters",
+          "sourceBoard": "Freshworks",
+          "sourceId": "744000155675855",
+          "company": "Freshworks",
+          "title": "Staff Engineer - Machine Learning",
+          "fetchedAt": "2026-11-11T14:01:33.174Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "Bengaluru, KA, India",
+          "experience": "9+ years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [
+            "Python",
+            "Java",
+            "AWS"
+          ],
+          "sourceUrl": "https://jobs.smartrecruiters.com/Freshworks/744000155675855-staff-engineer-machine-learning",
+          "linkedinUrl": "https://jobs.smartrecruiters.com/Freshworks/744000155675855-staff-engineer-machine-learning",
+          "postedAt": "2026-10-15T07:10:42.372Z",
+          "description": "The Impact You Will CreateAs a Staff Machine Learning Engineer, you will serve as the critical architectural bridge between cutting-edge Data Science research and…",
+          "employmentType": "Full-time",
+          "seniorityLevel": "Mid-Senior Level",
+          "jobFunction": "Other",
+          "industries": "Information Technology And Services"
+        },
+        {
+          "id": "smartrecruiters:Freshworks:744000155421099",
+          "sourceProvider": "smartrecruiters",
+          "sourceBoard": "Freshworks",
+          "sourceId": "744000155421099",
+          "company": "Freshworks",
+          "title": "Senior Business Development Manager - MEA / India (Enterprise)",
+          "fetchedAt": "2026-11-11T14:01:33.174Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "Bengaluru, India",
+          "experience": "4+ years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://jobs.smartrecruiters.com/Freshworks/744000155421099-senior-business-development-manager-mea-india-enterprise-",
+          "linkedinUrl": "https://jobs.smartrecruiters.com/Freshworks/744000155421099-senior-business-development-manager-mea-india-enterprise-",
+          "postedAt": "2026-10-14T06:42:39.969Z",
+          "description": "About the RoleWe are looking for a Business Development Manager to join our outbound sales team. The role will focus on building pipeline through…",
+          "employmentType": "Full-time",
+          "seniorityLevel": "Associate",
+          "jobFunction": "Other",
+          "industries": "Information Technology And Services"
+        },
+        {
+          "id": "smartrecruiters:Freshworks:744000154351019",
+          "sourceProvider": "smartrecruiters",
+          "sourceBoard": "Freshworks",
+          "sourceId": "744000154351019",
+          "company": "Freshworks",
+          "title": "Staff Engineer - Full Stack",
+          "fetchedAt": "2026-11-11T14:01:33.174Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "Chennai, India",
+          "experience": "10+ years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [
+            "AWS",
+            "GCP",
+            "REST",
+            "CI/CD"
+          ],
+          "sourceUrl": "https://jobs.smartrecruiters.com/Freshworks/744000154351019-staff-engineer-full-stack",
+          "linkedinUrl": "https://jobs.smartrecruiters.com/Freshworks/744000154351019-staff-engineer-full-stack",
+          "postedAt": "2026-10-08T06:17:26.279Z",
+          "description": "At Freshworks, we don’t just ship software—we shape it to be fast, reliable, and refreshingly simple. As a Staff Full Stack Engineer (IC4), you…",
+          "employmentType": "Full-time",
+          "seniorityLevel": "Mid-Senior Level",
+          "jobFunction": "Other",
+          "industries": "Information Technology And Services"
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "UST",
+        "provider": "linkedin",
+        "board": "ust",
+        "careersUrl": "https://www.linkedin.com/jobs/search/?keywords=UST&location=India&f_TPR=r604800",
+        "verifiedAt": "2026-11-11",
+        "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
+      },
+      "attemptedAt": "2026-11-11T14:01:43.664Z",
+      "fetchedAt": "2026-11-11T14:01:43.664Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "linkedin:ust:4452575497",
+          "title": "Cloud DevOps Team Lead (Azure OR AWS, Terraform)",
+          "company": "UST",
+          "location": "Kochi, Kerala, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ust",
+          "sourceId": "4452575497",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4452575497/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4452575497/",
+          "fetchedAt": "2026-11-11T14:01:43.664Z",
+          "postedAt": "2026-11-11",
+          "skills": [
+            "AWS",
+            "Azure"
+          ],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ust:4476669751",
+          "title": "Associate I - Engineering Design",
+          "company": "UST",
+          "location": "Pune Division, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ust",
+          "sourceId": "4476669751",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4476669751/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4476669751/",
+          "fetchedAt": "2026-11-11T14:01:43.664Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ust:4476688016",
+          "title": "Associate I - Engineering Design",
+          "company": "UST",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ust",
+          "sourceId": "4476688016",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4476688016/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4476688016/",
+          "fetchedAt": "2026-11-11T14:01:43.664Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ust:4476670659",
+          "title": "Associate I - Engineering Design",
+          "company": "UST",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ust",
+          "sourceId": "4476670659",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4476670659/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4476670659/",
+          "fetchedAt": "2026-11-11T14:01:43.664Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ust:4476670657",
+          "title": "Associate I - Engineering Design",
+          "company": "UST",
+          "location": "Pune Division, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ust",
+          "sourceId": "4476670657",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4476670657/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4476670657/",
+          "fetchedAt": "2026-11-11T14:01:43.664Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ust:4477060787",
+          "title": "Lead II - Software Engineering",
+          "company": "UST",
+          "location": "Pune Division, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ust",
+          "sourceId": "4477060787",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4477060787/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4477060787/",
+          "fetchedAt": "2026-11-11T14:01:43.664Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ust:4470161717",
+          "title": "Lead I - Azure / .NET Developer",
+          "company": "UST",
+          "location": "Trivandrum, Kerala, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ust",
+          "sourceId": "4470161717",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4470161717/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4470161717/",
+          "fetchedAt": "2026-11-11T14:01:43.664Z",
+          "postedAt": "2026-11-07",
+          "skills": [
+            "Azure"
+          ],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ust:4450499432",
+          "title": "Lead II - DevOps Engineering",
+          "company": "UST",
+          "location": "Pune Division, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ust",
+          "sourceId": "4450499432",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4450499432/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4450499432/",
+          "fetchedAt": "2026-11-11T14:01:43.664Z",
+          "postedAt": "2026-11-08",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ust:4476678356",
+          "title": "Associate III - VLSI PDK",
+          "company": "UST",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ust",
+          "sourceId": "4476678356",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4476678356/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4476678356/",
+          "fetchedAt": "2026-11-11T14:01:43.664Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ust:4478263422",
+          "title": "Project Manager II",
+          "company": "UST",
+          "location": "Trivandrum, Kerala, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ust",
+          "sourceId": "4478263422",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4478263422/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4478263422/",
+          "fetchedAt": "2026-11-11T14:01:43.664Z",
+          "postedAt": "2026-11-09",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Hexaware",
+        "provider": "hexaware",
+        "board": "hexaware",
+        "careersUrl": "https://jobs.hexaware.com/",
+        "verifiedAt": "2026-11-11",
+        "coverage": "Paginated public Hexaware Oracle CX_1 board, filtered by explicit India country metadata"
+      },
+      "attemptedAt": "2026-11-11T14:03:41.358Z",
+      "fetchedAt": "2026-11-11T14:03:41.358Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "hexaware:hexaware:689789",
+          "sourceProvider": "hexaware",
+          "sourceBoard": "hexaware",
+          "sourceId": "689789",
+          "company": "Hexaware",
+          "title": "Test Analyst - AI Assurance",
+          "fetchedAt": "2026-11-11T14:03:41.358Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/689789",
+          "linkedinUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/689789",
+          "postedAt": "2026-11-11"
+        },
+        {
+          "id": "hexaware:hexaware:698821",
+          "sourceProvider": "hexaware",
+          "sourceBoard": "hexaware",
+          "sourceId": "698821",
+          "company": "Hexaware",
+          "title": "Test Lead - API Automation",
+          "fetchedAt": "2026-11-11T14:03:41.358Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/698821",
+          "linkedinUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/698821",
+          "postedAt": "2026-11-11"
+        },
+        {
+          "id": "hexaware:hexaware:700844",
+          "sourceProvider": "hexaware",
+          "sourceBoard": "hexaware",
+          "sourceId": "700844",
+          "company": "Hexaware",
+          "title": "Test Lead - Data Automation",
+          "fetchedAt": "2026-11-11T14:03:41.358Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/700844",
+          "linkedinUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/700844",
+          "postedAt": "2026-11-11"
+        },
+        {
+          "id": "hexaware:hexaware:701457",
+          "sourceProvider": "hexaware",
+          "sourceBoard": "hexaware",
+          "sourceId": "701457",
+          "company": "Hexaware",
+          "title": "Big Data Lead",
+          "fetchedAt": "2026-11-11T14:03:41.358Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/701457",
+          "linkedinUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/701457",
+          "postedAt": "2026-11-11"
+        },
+        {
+          "id": "hexaware:hexaware:701464",
+          "sourceProvider": "hexaware",
+          "sourceBoard": "hexaware",
+          "sourceId": "701464",
+          "company": "Hexaware",
+          "title": "Big Data Lead",
+          "fetchedAt": "2026-11-11T14:03:41.358Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/701464",
+          "linkedinUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/701464",
+          "postedAt": "2026-11-11"
+        },
+        {
+          "id": "hexaware:hexaware:704300",
+          "sourceProvider": "hexaware",
+          "sourceBoard": "hexaware",
+          "sourceId": "704300",
+          "company": "Hexaware",
+          "title": "Digital CRM Architect",
+          "fetchedAt": "2026-11-11T14:03:41.358Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/704300",
+          "linkedinUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/704300",
+          "postedAt": "2026-11-11"
+        },
+        {
+          "id": "hexaware:hexaware:700818",
+          "sourceProvider": "hexaware",
+          "sourceBoard": "hexaware",
+          "sourceId": "700818",
+          "company": "Hexaware",
+          "title": "Big Data Lead",
+          "fetchedAt": "2026-11-11T14:03:41.358Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/700818",
+          "linkedinUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/700818",
+          "postedAt": "2026-11-11"
+        },
+        {
+          "id": "hexaware:hexaware:676546",
+          "sourceProvider": "hexaware",
+          "sourceBoard": "hexaware",
+          "sourceId": "676546",
+          "company": "Hexaware",
+          "title": "Customer Service International Quality Analyst-BPS",
+          "fetchedAt": "2026-11-11T14:03:41.358Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/676546",
+          "linkedinUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/676546",
+          "postedAt": "2026-11-11"
+        },
+        {
+          "id": "hexaware:hexaware:702178",
+          "sourceProvider": "hexaware",
+          "sourceBoard": "hexaware",
+          "sourceId": "702178",
+          "company": "Hexaware",
+          "title": "Test Lead - API Automation",
+          "fetchedAt": "2026-11-11T14:03:41.358Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/702178",
+          "linkedinUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/702178",
+          "postedAt": "2026-11-10"
+        },
+        {
+          "id": "hexaware:hexaware:703586",
+          "sourceProvider": "hexaware",
+          "sourceBoard": "hexaware",
+          "sourceId": "703586",
+          "company": "Hexaware",
+          "title": "Test Analyst - AI Assurance",
+          "fetchedAt": "2026-11-11T14:03:41.358Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "sourceUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/703586",
+          "linkedinUrl": "https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/703586",
+          "postedAt": "2026-11-10"
+        }
+      ]
+    },
+    {
+      "feed": {
         "company": "Tata Consultancy Services",
         "provider": "linkedin",
         "board": "tcs",
@@ -11,8 +788,8 @@
         "verifiedAt": "2026-11-11",
         "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
       },
-      "attemptedAt": "2026-11-11T13:43:31.054Z",
-      "fetchedAt": "2026-11-11T13:43:31.054Z",
+      "attemptedAt": "2026-11-11T14:01:47.191Z",
+      "fetchedAt": "2026-11-11T14:01:47.191Z",
       "status": "ok",
       "jobs": [
         {
@@ -28,7 +805,7 @@
           "sourceId": "4487328885",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487328885/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487328885/",
-          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "fetchedAt": "2026-11-11T14:01:47.191Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -48,7 +825,7 @@
           "sourceId": "4486753439",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486753439/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486753439/",
-          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "fetchedAt": "2026-11-11T14:01:47.191Z",
           "postedAt": "2026-11-05",
           "skills": [
             "AWS"
@@ -70,7 +847,7 @@
           "sourceId": "4487342689",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487342689/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487342689/",
-          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "fetchedAt": "2026-11-11T14:01:47.191Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -90,7 +867,7 @@
           "sourceId": "4487680045",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487680045/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487680045/",
-          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "fetchedAt": "2026-11-11T14:01:47.191Z",
           "postedAt": "2026-11-09",
           "skills": [],
           "sourceCountries": [
@@ -110,7 +887,7 @@
           "sourceId": "4446052432",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4446052432/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4446052432/",
-          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "fetchedAt": "2026-11-11T14:01:47.191Z",
           "postedAt": "2026-11-06",
           "skills": [
             "Azure"
@@ -132,7 +909,7 @@
           "sourceId": "4455636223",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4455636223/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4455636223/",
-          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "fetchedAt": "2026-11-11T14:01:47.191Z",
           "postedAt": "2026-11-06",
           "skills": [
             "Python"
@@ -154,7 +931,7 @@
           "sourceId": "4487349438",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487349438/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487349438/",
-          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "fetchedAt": "2026-11-11T14:01:47.191Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -174,7 +951,7 @@
           "sourceId": "4487350409",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487350409/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487350409/",
-          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "fetchedAt": "2026-11-11T14:01:47.191Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -194,7 +971,7 @@
           "sourceId": "4488660431",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4488660431/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4488660431/",
-          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "fetchedAt": "2026-11-11T14:01:47.191Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -214,7 +991,7 @@
           "sourceId": "4488661569",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4488661569/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4488661569/",
-          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "fetchedAt": "2026-11-11T14:01:47.191Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -232,8 +1009,8 @@
         "verifiedAt": "2026-11-11",
         "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
       },
-      "attemptedAt": "2026-11-11T13:43:32.184Z",
-      "fetchedAt": "2026-11-11T13:43:32.184Z",
+      "attemptedAt": "2026-11-11T14:01:48.021Z",
+      "fetchedAt": "2026-11-11T14:01:48.021Z",
       "status": "ok",
       "jobs": [
         {
@@ -249,7 +1026,7 @@
           "sourceId": "4488301558",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4488301558/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4488301558/",
-          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "fetchedAt": "2026-11-11T14:01:48.021Z",
           "postedAt": "2026-11-10",
           "skills": [],
           "sourceCountries": [
@@ -269,7 +1046,7 @@
           "sourceId": "4485811392",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4485811392/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4485811392/",
-          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "fetchedAt": "2026-11-11T14:01:48.021Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -289,7 +1066,7 @@
           "sourceId": "4487891732",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487891732/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487891732/",
-          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "fetchedAt": "2026-11-11T14:01:48.021Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -309,7 +1086,7 @@
           "sourceId": "4487152164",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487152164/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487152164/",
-          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "fetchedAt": "2026-11-11T14:01:48.021Z",
           "postedAt": "2026-11-09",
           "skills": [],
           "sourceCountries": [
@@ -329,7 +1106,7 @@
           "sourceId": "4487894736",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487894736/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487894736/",
-          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "fetchedAt": "2026-11-11T14:01:48.021Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -349,7 +1126,7 @@
           "sourceId": "4487893870",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487893870/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487893870/",
-          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "fetchedAt": "2026-11-11T14:01:48.021Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -369,7 +1146,7 @@
           "sourceId": "4478770251",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4478770251/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4478770251/",
-          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "fetchedAt": "2026-11-11T14:01:48.021Z",
           "postedAt": "2026-11-10",
           "skills": [],
           "sourceCountries": [
@@ -389,7 +1166,7 @@
           "sourceId": "4487889627",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487889627/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487889627/",
-          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "fetchedAt": "2026-11-11T14:01:48.021Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -409,7 +1186,7 @@
           "sourceId": "4489920143",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4489920143/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4489920143/",
-          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "fetchedAt": "2026-11-11T14:01:48.021Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -429,7 +1206,7 @@
           "sourceId": "4487445690",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487445690/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487445690/",
-          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "fetchedAt": "2026-11-11T14:01:48.021Z",
           "postedAt": "2026-11-10",
           "skills": [],
           "sourceCountries": [
@@ -447,8 +1224,8 @@
         "verifiedAt": "2026-11-11",
         "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
       },
-      "attemptedAt": "2026-11-11T13:43:33.336Z",
-      "fetchedAt": "2026-11-11T13:43:33.336Z",
+      "attemptedAt": "2026-11-11T14:01:49.398Z",
+      "fetchedAt": "2026-11-11T14:01:49.398Z",
       "status": "ok",
       "jobs": [
         {
@@ -464,7 +1241,7 @@
           "sourceId": "4486598564",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486598564/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486598564/",
-          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "fetchedAt": "2026-11-11T14:01:49.398Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -484,7 +1261,7 @@
           "sourceId": "4486582951",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486582951/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486582951/",
-          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "fetchedAt": "2026-11-11T14:01:49.398Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -504,7 +1281,7 @@
           "sourceId": "4487322178",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487322178/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487322178/",
-          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "fetchedAt": "2026-11-11T14:01:49.398Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -524,7 +1301,7 @@
           "sourceId": "4486589905",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486589905/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486589905/",
-          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "fetchedAt": "2026-11-11T14:01:49.398Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -544,7 +1321,7 @@
           "sourceId": "4488306531",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4488306531/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4488306531/",
-          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "fetchedAt": "2026-11-11T14:01:49.398Z",
           "postedAt": "2026-11-10",
           "skills": [],
           "sourceCountries": [
@@ -564,7 +1341,7 @@
           "sourceId": "4479370951",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4479370951/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4479370951/",
-          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "fetchedAt": "2026-11-11T14:01:49.398Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -584,7 +1361,7 @@
           "sourceId": "4479385283",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4479385283/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4479385283/",
-          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "fetchedAt": "2026-11-11T14:01:49.398Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -604,7 +1381,7 @@
           "sourceId": "4452922507",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4452922507/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4452922507/",
-          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "fetchedAt": "2026-11-11T14:01:49.398Z",
           "postedAt": "2026-11-07",
           "skills": [],
           "sourceCountries": [
@@ -624,7 +1401,7 @@
           "sourceId": "4479382423",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4479382423/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4479382423/",
-          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "fetchedAt": "2026-11-11T14:01:49.398Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -644,7 +1421,7 @@
           "sourceId": "4486592771",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486592771/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486592771/",
-          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "fetchedAt": "2026-11-11T14:01:49.398Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -662,8 +1439,8 @@
         "verifiedAt": "2026-11-11",
         "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
       },
-      "attemptedAt": "2026-11-11T13:43:34.199Z",
-      "fetchedAt": "2026-11-11T13:43:34.199Z",
+      "attemptedAt": "2026-11-11T14:01:50.221Z",
+      "fetchedAt": "2026-11-11T14:01:50.221Z",
       "status": "ok",
       "jobs": [
         {
@@ -679,7 +1456,7 @@
           "sourceId": "4489431417",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4489431417/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4489431417/",
-          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "fetchedAt": "2026-11-11T14:01:50.221Z",
           "postedAt": "2026-11-10",
           "skills": [],
           "sourceCountries": [
@@ -699,7 +1476,7 @@
           "sourceId": "4485824931",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4485824931/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4485824931/",
-          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "fetchedAt": "2026-11-11T14:01:50.221Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -719,7 +1496,7 @@
           "sourceId": "4489419709",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4489419709/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4489419709/",
-          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "fetchedAt": "2026-11-11T14:01:50.221Z",
           "postedAt": "2026-11-10",
           "skills": [],
           "sourceCountries": [
@@ -739,7 +1516,7 @@
           "sourceId": "4477374007",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4477374007/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4477374007/",
-          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "fetchedAt": "2026-11-11T14:01:50.221Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -759,7 +1536,7 @@
           "sourceId": "4477359750",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4477359750/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4477359750/",
-          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "fetchedAt": "2026-11-11T14:01:50.221Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -779,7 +1556,7 @@
           "sourceId": "4487454918",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487454918/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487454918/",
-          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "fetchedAt": "2026-11-11T14:01:50.221Z",
           "postedAt": "2026-11-10",
           "skills": [],
           "sourceCountries": [
@@ -799,7 +1576,7 @@
           "sourceId": "4488209276",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4488209276/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4488209276/",
-          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "fetchedAt": "2026-11-11T14:01:50.221Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -819,7 +1596,7 @@
           "sourceId": "4486229380",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486229380/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486229380/",
-          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "fetchedAt": "2026-11-11T14:01:50.221Z",
           "postedAt": "2026-11-06",
           "skills": [
             "Java"
@@ -841,7 +1618,7 @@
           "sourceId": "4486235111",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486235111/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486235111/",
-          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "fetchedAt": "2026-11-11T14:01:50.221Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -861,7 +1638,7 @@
           "sourceId": "4486204288",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486204288/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486204288/",
-          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "fetchedAt": "2026-11-11T14:01:50.221Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -879,8 +1656,8 @@
         "verifiedAt": "2026-11-11",
         "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
       },
-      "attemptedAt": "2026-11-11T13:43:35.466Z",
-      "fetchedAt": "2026-11-11T13:43:35.466Z",
+      "attemptedAt": "2026-11-11T14:01:51.026Z",
+      "fetchedAt": "2026-11-11T14:01:51.026Z",
       "status": "ok",
       "jobs": [
         {
@@ -896,7 +1673,7 @@
           "sourceId": "4487130913",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487130913/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487130913/",
-          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "fetchedAt": "2026-11-11T14:01:51.026Z",
           "postedAt": "2026-11-09",
           "skills": [],
           "sourceCountries": [
@@ -916,7 +1693,7 @@
           "sourceId": "4486215065",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486215065/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486215065/",
-          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "fetchedAt": "2026-11-11T14:01:51.026Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -936,7 +1713,7 @@
           "sourceId": "4487133379",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487133379/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487133379/",
-          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "fetchedAt": "2026-11-11T14:01:51.026Z",
           "postedAt": "2026-11-09",
           "skills": [],
           "sourceCountries": [
@@ -956,7 +1733,7 @@
           "sourceId": "4488220029",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4488220029/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4488220029/",
-          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "fetchedAt": "2026-11-11T14:01:51.026Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -976,7 +1753,7 @@
           "sourceId": "4487880284",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487880284/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487880284/",
-          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "fetchedAt": "2026-11-11T14:01:51.026Z",
           "postedAt": "2026-11-11",
           "skills": [
             "Java"
@@ -998,7 +1775,7 @@
           "sourceId": "4486235157",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486235157/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486235157/",
-          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "fetchedAt": "2026-11-11T14:01:51.026Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -1018,7 +1795,7 @@
           "sourceId": "4487133776",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487133776/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487133776/",
-          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "fetchedAt": "2026-11-11T14:01:51.026Z",
           "postedAt": "2026-11-09",
           "skills": [],
           "sourceCountries": [
@@ -1038,7 +1815,7 @@
           "sourceId": "4487867706",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487867706/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487867706/",
-          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "fetchedAt": "2026-11-11T14:01:51.026Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -1058,7 +1835,7 @@
           "sourceId": "4486224688",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486224688/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486224688/",
-          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "fetchedAt": "2026-11-11T14:01:51.026Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -1078,7 +1855,7 @@
           "sourceId": "4485894992",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4485894992/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4485894992/",
-          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "fetchedAt": "2026-11-11T14:01:51.026Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -1096,8 +1873,8 @@
         "verifiedAt": "2026-11-11",
         "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
       },
-      "attemptedAt": "2026-11-11T13:43:36.284Z",
-      "fetchedAt": "2026-11-11T13:43:36.284Z",
+      "attemptedAt": "2026-11-11T14:01:51.885Z",
+      "fetchedAt": "2026-11-11T14:01:51.885Z",
       "status": "ok",
       "jobs": [
         {
@@ -1113,7 +1890,7 @@
           "sourceId": "4488224392",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4488224392/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4488224392/",
-          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "fetchedAt": "2026-11-11T14:01:51.885Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -1133,7 +1910,7 @@
           "sourceId": "4485584717",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4485584717/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4485584717/",
-          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "fetchedAt": "2026-11-11T14:01:51.885Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -1153,7 +1930,7 @@
           "sourceId": "4487731242",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487731242/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487731242/",
-          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "fetchedAt": "2026-11-11T14:01:51.885Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -1173,7 +1950,7 @@
           "sourceId": "4488855501",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4488855501/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4488855501/",
-          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "fetchedAt": "2026-11-11T14:01:51.885Z",
           "postedAt": "2026-11-09",
           "skills": [],
           "sourceCountries": [
@@ -1193,7 +1970,7 @@
           "sourceId": "4487718889",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487718889/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487718889/",
-          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "fetchedAt": "2026-11-11T14:01:51.885Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -1213,7 +1990,7 @@
           "sourceId": "4488138422",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4488138422/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4488138422/",
-          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "fetchedAt": "2026-11-11T14:01:51.885Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -1233,7 +2010,7 @@
           "sourceId": "4488166314",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4488166314/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4488166314/",
-          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "fetchedAt": "2026-11-11T14:01:51.885Z",
           "postedAt": "2026-11-06",
           "skills": [],
           "sourceCountries": [
@@ -1253,7 +2030,7 @@
           "sourceId": "4486584569",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4486584569/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4486584569/",
-          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "fetchedAt": "2026-11-11T14:01:51.885Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -1273,7 +2050,7 @@
           "sourceId": "4487723609",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4487723609/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4487723609/",
-          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "fetchedAt": "2026-11-11T14:01:51.885Z",
           "postedAt": "2026-11-05",
           "skills": [],
           "sourceCountries": [
@@ -1293,7 +2070,7 @@
           "sourceId": "4489947109",
           "sourceUrl": "https://www.linkedin.com/jobs/view/4489947109/",
           "linkedinUrl": "https://www.linkedin.com/jobs/view/4489947109/",
-          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "fetchedAt": "2026-11-11T14:01:51.885Z",
           "postedAt": "2026-11-11",
           "skills": [],
           "sourceCountries": [
@@ -1311,85 +2088,34 @@
         "verifiedAt": "2026-11-11",
         "coverage": "Newest up to 50 postings per South Indian city; seven cities"
       },
-      "attemptedAt": "2026-11-11T13:43:37.096Z",
-      "fetchedAt": "2026-11-11T13:43:37.096Z",
+      "attemptedAt": "2026-11-11T14:01:52.721Z",
+      "fetchedAt": "2026-11-11T14:01:52.721Z",
       "status": "ok",
       "jobs": [
         {
-          "id": "accenture:india:ATCI-5781035-S2075089_en",
-          "title": "Web Developer",
+          "id": "accenture:india:ATCI-5881730-S2074914_en",
+          "title": "Packaged/SaaS App Engineering Lead",
           "company": "Accenture in India",
           "location": "Chennai, India",
-          "experience": "Experience: 5-10 years",
+          "experience": "Experience: 10-12 years",
           "salary": "Not disclosed",
           "mode": "Not specified",
-          "description": "Project Role : Web Developer Project Role Description : Design, build and test web-based applications for various site components and edit site content. Document…",
-          "skills": [
-            "Python"
-          ],
-          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5781035-S2075089_en",
-          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5781035-S2075089_en",
-          "sourceProvider": "accenture",
-          "sourceBoard": "india",
-          "sourceId": "ATCI-5781035-S2075089_en",
-          "fetchedAt": "2026-11-11T13:43:37.096Z",
-          "sourceCountries": [
-            "IN"
-          ],
-          "providerUpdatedAt": "2026-11-10T20:45:07.732-08:00",
-          "employmentType": "Full-time"
-        },
-        {
-          "id": "accenture:india:ATCI-5498218-S2006969_en",
-          "title": "Custom Software Engineer",
-          "company": "Accenture in India",
-          "location": "Chennai, India",
-          "experience": "Experience: 5-10 years",
-          "salary": "Not disclosed",
-          "mode": "Not specified",
-          "description": "Project Role : Custom Software Engineer Project Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications.…",
-          "skills": [
-            "Java",
-            "REST",
-            "Agile",
-            "Spring"
-          ],
-          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5498218-S2006969_en",
-          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5498218-S2006969_en",
-          "sourceProvider": "accenture",
-          "sourceBoard": "india",
-          "sourceId": "ATCI-5498218-S2006969_en",
-          "fetchedAt": "2026-11-11T13:43:37.096Z",
-          "sourceCountries": [
-            "IN"
-          ],
-          "providerUpdatedAt": "2026-11-10T19:39:49.947-08:00",
-          "employmentType": "Full-time"
-        },
-        {
-          "id": "accenture:india:AIOC-S01672172_en",
-          "title": "Business Advisory Associate",
-          "company": "Accenture in India",
-          "location": "Chennai, India",
-          "experience": "Experience: 0-2 years",
-          "salary": "Not disclosed",
-          "mode": "Not specified",
-          "description": "In this role you are required to solve routine problems, largely through precedent and referral to general guidelines. • Your expected interactions are within…",
+          "description": "Project Role : Packaged/SaaS App Engineering Lead Project Role Description : Own the design and evolution of packaged or SaaS solutions, overseeing configuration, integrations,…",
           "skills": [],
-          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01672172_en",
-          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01672172_en",
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5881730-S2074914_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5881730-S2074914_en",
           "sourceProvider": "accenture",
           "sourceBoard": "india",
-          "sourceId": "AIOC-S01672172_en",
-          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceId": "ATCI-5881730-S2074914_en",
+          "fetchedAt": "2026-11-11T14:01:52.721Z",
           "sourceCountries": [
             "IN"
           ],
-          "providerUpdatedAt": "2026-11-10T05:12:29.111-08:00",
+          "providerUpdatedAt": "2026-11-11T02:55:27.698-08:00",
           "employmentType": "Full-time"
         },
         {
-          "id": "accenture:india:ATCI-5773055-S2074942_en",
+          "id": "accenture:india:ATCI-5773054-S2074946_en",
           "title": "AI / ML Engineer",
           "company": "Accenture in India",
           "location": "Chennai, India",
@@ -1398,140 +2124,73 @@
           "mode": "Not specified",
           "description": "Project Role : AI / ML Engineer Project Role Description : Develops applications and systems that utilize AI tools, Cloud AI services, with proper…",
           "skills": [],
-          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5773055-S2074942_en",
-          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5773055-S2074942_en",
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5773054-S2074946_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5773054-S2074946_en",
           "sourceProvider": "accenture",
           "sourceBoard": "india",
-          "sourceId": "ATCI-5773055-S2074942_en",
-          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceId": "ATCI-5773054-S2074946_en",
+          "fetchedAt": "2026-11-11T14:01:52.721Z",
           "sourceCountries": [
             "IN"
           ],
-          "providerUpdatedAt": "2026-11-10T05:02:12.593-08:00",
+          "providerUpdatedAt": "2026-11-11T02:47:10.515-08:00",
           "employmentType": "Full-time"
         },
         {
-          "id": "accenture:india:ATCI-5904583-S2074455_en",
-          "title": "Custom Software Engineer",
-          "company": "Accenture in India",
-          "location": "Chennai, India",
-          "experience": "Experience: 2-5 years",
-          "salary": "Not disclosed",
-          "mode": "Not specified",
-          "description": "Project Role : Custom Software Engineer Project Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications.…",
-          "skills": [
-            "JavaScript",
-            "React",
-            "Azure",
-            "Agile"
-          ],
-          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5904583-S2074455_en",
-          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5904583-S2074455_en",
-          "sourceProvider": "accenture",
-          "sourceBoard": "india",
-          "sourceId": "ATCI-5904583-S2074455_en",
-          "fetchedAt": "2026-11-11T13:43:37.096Z",
-          "sourceCountries": [
-            "IN"
-          ],
-          "providerUpdatedAt": "2026-11-10T03:51:08.401-08:00",
-          "employmentType": "Full-time"
-        },
-        {
-          "id": "accenture:india:ATCI-5632139-S2034412_en",
-          "title": "Custom Software Engineer",
+          "id": "accenture:india:ATCI-5791303-S2074334_en",
+          "title": "AI / ML Engineer",
           "company": "Accenture in India",
           "location": "Chennai, India",
           "experience": "Experience: 5-10 years",
           "salary": "Not disclosed",
           "mode": "Not specified",
-          "description": "Project Role : Custom Software Engineer Project Role Description : Lead the effort to design, build and configure applications, acting as the primary point…",
-          "skills": [
-            "Agile"
-          ],
-          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5632139-S2034412_en",
-          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5632139-S2034412_en",
-          "sourceProvider": "accenture",
-          "sourceBoard": "india",
-          "sourceId": "ATCI-5632139-S2034412_en",
-          "fetchedAt": "2026-11-11T13:43:37.096Z",
-          "sourceCountries": [
-            "IN"
-          ],
-          "providerUpdatedAt": "2026-11-10T03:10:30.900-08:00",
-          "employmentType": "Full-time"
-        },
-        {
-          "id": "accenture:india:AIOC-S01663228_en",
-          "title": "Capital Markets Services Analyst",
-          "company": "Accenture in India",
-          "location": "Chennai, India",
-          "experience": "Experience: 2-5 years",
-          "salary": "Not disclosed",
-          "mode": "Not specified",
-          "description": "In this role you are required to do analysis and solving of lower-complexity problems. • Your day to day interaction is with peers within…",
+          "description": "Project Role : AI / ML Engineer Project Role Description : Develops applications and systems that utilize AI tools, Cloud AI services, with proper…",
           "skills": [],
-          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01663228_en",
-          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01663228_en",
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5791303-S2074334_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5791303-S2074334_en",
           "sourceProvider": "accenture",
           "sourceBoard": "india",
-          "sourceId": "AIOC-S01663228_en",
-          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceId": "ATCI-5791303-S2074334_en",
+          "fetchedAt": "2026-11-11T14:01:52.721Z",
           "sourceCountries": [
             "IN"
           ],
-          "providerUpdatedAt": "2026-11-10T02:53:31.075-08:00",
+          "providerUpdatedAt": "2026-11-11T02:39:27.409-08:00",
           "employmentType": "Full-time"
         },
         {
-          "id": "accenture:india:AIOC-S01668599_en",
-          "title": "Business Advisory Associate",
+          "id": "accenture:india:ATCI-5803538-S2071481_en",
+          "title": "Full Stack Engineer",
           "company": "Accenture in India",
           "location": "Chennai, India",
-          "experience": "Experience: 0-2 years",
+          "experience": "Experience: 5-10 years",
           "salary": "Not disclosed",
           "mode": "Not specified",
-          "description": "In this role you are required to solve routine problems, largely through precedent and referral to general guidelines. • Your expected interactions are within…",
-          "skills": [],
-          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01668599_en",
-          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01668599_en",
-          "sourceProvider": "accenture",
-          "sourceBoard": "india",
-          "sourceId": "AIOC-S01668599_en",
-          "fetchedAt": "2026-11-11T13:43:37.096Z",
-          "sourceCountries": [
-            "IN"
-          ],
-          "providerUpdatedAt": "2026-11-10T02:51:10.590-08:00",
-          "employmentType": "Full-time"
-        },
-        {
-          "id": "accenture:india:ATCI-5626351-S2031918_en",
-          "title": "Custom Software Engineer",
-          "company": "Accenture in India",
-          "location": "Chennai, India",
-          "experience": "Experience: 2-5 years",
-          "salary": "Not disclosed",
-          "mode": "Not specified",
-          "description": "Project Role : Custom Software Engineer Project Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications.…",
+          "description": "Project Role : Full Stack Engineer Project Role Description : Responsible for developing and/or engineering the end-to-end features of a system, from user experience…",
           "skills": [
-            "Agile"
+            "JavaScript",
+            "Java",
+            "HTML",
+            "CSS",
+            "REST",
+            "Agile",
+            "Spring"
           ],
-          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5626351-S2031918_en",
-          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5626351-S2031918_en",
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5803538-S2071481_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5803538-S2071481_en",
           "sourceProvider": "accenture",
           "sourceBoard": "india",
-          "sourceId": "ATCI-5626351-S2031918_en",
-          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceId": "ATCI-5803538-S2071481_en",
+          "fetchedAt": "2026-11-11T14:01:52.721Z",
           "sourceCountries": [
             "IN"
           ],
-          "providerUpdatedAt": "2026-11-10T02:40:58.206-08:00",
+          "providerUpdatedAt": "2026-11-11T02:29:43.610-08:00",
           "employmentType": "Full-time"
         },
         {
-          "id": "accenture:india:AIOC-S01668508_en",
-          "title": "Procure to Pay Operations Associate",
+          "id": "accenture:india:AIOC-S01668513_en",
+          "title": "Procure to Pay Operations New Associate",
           "company": "Accenture in India",
           "location": "Chennai, India",
           "experience": "Experience: 0-2 years",
@@ -1539,16 +2198,135 @@
           "mode": "Not specified",
           "description": "You will be aligned with our Finance Operations vertical and will be helping us in determining financial outcomes by collecting operational data reports, whilst…",
           "skills": [],
-          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01668508_en",
-          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01668508_en",
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01668513_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01668513_en",
           "sourceProvider": "accenture",
           "sourceBoard": "india",
-          "sourceId": "AIOC-S01668508_en",
-          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceId": "AIOC-S01668513_en",
+          "fetchedAt": "2026-11-11T14:01:52.721Z",
           "sourceCountries": [
             "IN"
           ],
-          "providerUpdatedAt": "2026-11-10T02:23:40.698-08:00",
+          "providerUpdatedAt": "2026-11-11T02:29:31.227-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:AIOC-S01659582_en",
+          "title": "SW/App/Cloud Tech Support Analyst",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 2-5 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will be part of the Technology for Operations team that acts as a trusted advisor and partner to Accenture Operations. The team provides…",
+          "skills": [
+            "Excel"
+          ],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01659582_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01659582_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "AIOC-S01659582_en",
+          "fetchedAt": "2026-11-11T14:01:52.721Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-11T02:11:09.783-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:AIOC-S01656733_en",
+          "title": "Procurement Operations New Associate",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 0-2 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "In this role you are required to solve routine problems, largely through precedent and referral to general guidelines • Your primary interaction is within…",
+          "skills": [],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01656733_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01656733_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "AIOC-S01656733_en",
+          "fetchedAt": "2026-11-11T14:01:52.721Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-11T01:23:17.834-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:ATCI-5751115-S2068056_en",
+          "title": "Quality Engineering Lead",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 5-10 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Project Role : Quality Engineering Lead Project Role Description : Leads a team of quality engineers through multi-disciplinary team planning and ecosystem integration to…",
+          "skills": [],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5751115-S2068056_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5751115-S2068056_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "ATCI-5751115-S2068056_en",
+          "fetchedAt": "2026-11-11T14:01:52.721Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-11T01:16:59.830-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:ATCI-5835395-S2075001_en",
+          "title": "Custom Software Engineer",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 2-5 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Project Role : Custom Software Engineer Project Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications.…",
+          "skills": [
+            "Agile"
+          ],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5835395-S2075001_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5835395-S2075001_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "ATCI-5835395-S2075001_en",
+          "fetchedAt": "2026-11-11T14:01:52.721Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-11T00:58:59.710-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:ATCI-5694419-S2072056_en",
+          "title": "Web Developer",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 2-5 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Project Role : Web Developer Project Role Description : Design, build and test web-based applications for various site components and edit site content. Document…",
+          "skills": [
+            "JavaScript",
+            "Java",
+            "HTML",
+            "CSS"
+          ],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5694419-S2072056_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5694419-S2072056_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "ATCI-5694419-S2072056_en",
+          "fetchedAt": "2026-11-11T14:01:52.721Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-11T00:44:45.347-08:00",
           "employmentType": "Full-time"
         }
       ]
@@ -1562,8 +2340,8 @@
         "verifiedAt": "2026-11-11",
         "coverage": "Official Infosys India experienced and fresher sources"
       },
-      "attemptedAt": "2026-11-11T13:43:42.696Z",
-      "fetchedAt": "2026-11-11T13:43:42.696Z",
+      "attemptedAt": "2026-11-11T14:02:03.178Z",
+      "fetchedAt": "2026-11-11T14:02:03.178Z",
       "status": "ok",
       "jobs": [
         {
@@ -1584,7 +2362,7 @@
           "sourceProvider": "infosys",
           "sourceBoard": "india",
           "sourceId": "254304",
-          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "fetchedAt": "2026-11-11T14:02:03.178Z",
           "sourceCountries": [
             "IN"
           ],
@@ -1607,7 +2385,7 @@
           "sourceProvider": "infosys",
           "sourceBoard": "india",
           "sourceId": "254301",
-          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "fetchedAt": "2026-11-11T14:02:03.178Z",
           "sourceCountries": [
             "IN"
           ],
@@ -1628,7 +2406,7 @@
           "sourceProvider": "infosys",
           "sourceBoard": "india",
           "sourceId": "254230",
-          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "fetchedAt": "2026-11-11T14:02:03.178Z",
           "sourceCountries": [
             "IN"
           ],
@@ -1652,7 +2430,7 @@
           "sourceProvider": "infosys",
           "sourceBoard": "india",
           "sourceId": "254228",
-          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "fetchedAt": "2026-11-11T14:02:03.178Z",
           "sourceCountries": [
             "IN"
           ],
@@ -1672,7 +2450,7 @@
           "sourceProvider": "infosys",
           "sourceBoard": "india",
           "sourceId": "254175",
-          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "fetchedAt": "2026-11-11T14:02:03.178Z",
           "sourceCountries": [
             "IN"
           ],
@@ -1692,7 +2470,7 @@
           "sourceProvider": "infosys",
           "sourceBoard": "india",
           "sourceId": "254174",
-          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "fetchedAt": "2026-11-11T14:02:03.178Z",
           "sourceCountries": [
             "IN"
           ],
@@ -1713,7 +2491,7 @@
           "sourceProvider": "infosys",
           "sourceBoard": "india",
           "sourceId": "254169",
-          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "fetchedAt": "2026-11-11T14:02:03.178Z",
           "sourceCountries": [
             "IN"
           ],
@@ -1736,7 +2514,7 @@
           "sourceProvider": "infosys",
           "sourceBoard": "india",
           "sourceId": "254163",
-          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "fetchedAt": "2026-11-11T14:02:03.178Z",
           "sourceCountries": [
             "IN"
           ],
@@ -1763,7 +2541,7 @@
           "sourceProvider": "infosys",
           "sourceBoard": "india",
           "sourceId": "254161",
-          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "fetchedAt": "2026-11-11T14:02:03.178Z",
           "sourceCountries": [
             "IN"
           ],
@@ -1787,7 +2565,7 @@
           "sourceProvider": "infosys",
           "sourceBoard": "india",
           "sourceId": "254160",
-          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "fetchedAt": "2026-11-11T14:02:03.178Z",
           "sourceCountries": [
             "IN"
           ],
@@ -1804,8 +2582,8 @@
         "verifiedAt": "2026-11-11",
         "coverage": "Newest up to 25 search results per South Indian city; seven cities"
       },
-      "attemptedAt": "2026-11-11T13:43:44.024Z",
-      "fetchedAt": "2026-11-11T13:43:44.024Z",
+      "attemptedAt": "2026-11-11T14:02:04.513Z",
+      "fetchedAt": "2026-11-11T14:02:04.513Z",
       "status": "ok",
       "jobs": [
         {
@@ -1822,7 +2600,7 @@
           "sourceProvider": "wipro",
           "sourceBoard": "india",
           "sourceId": "74902",
-          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "fetchedAt": "2026-11-11T14:02:04.513Z",
           "sourceCountries": [
             "IN"
           ]
@@ -1841,7 +2619,7 @@
           "sourceProvider": "wipro",
           "sourceBoard": "india",
           "sourceId": "138114",
-          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "fetchedAt": "2026-11-11T14:02:04.513Z",
           "sourceCountries": [
             "IN"
           ]
@@ -1860,7 +2638,7 @@
           "sourceProvider": "wipro",
           "sourceBoard": "india",
           "sourceId": "142539",
-          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "fetchedAt": "2026-11-11T14:02:04.513Z",
           "sourceCountries": [
             "IN"
           ]
@@ -1879,7 +2657,7 @@
           "sourceProvider": "wipro",
           "sourceBoard": "india",
           "sourceId": "121614",
-          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "fetchedAt": "2026-11-11T14:02:04.513Z",
           "sourceCountries": [
             "IN"
           ]
@@ -1898,7 +2676,7 @@
           "sourceProvider": "wipro",
           "sourceBoard": "india",
           "sourceId": "57782",
-          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "fetchedAt": "2026-11-11T14:02:04.513Z",
           "sourceCountries": [
             "IN"
           ]
@@ -1917,7 +2695,7 @@
           "sourceProvider": "wipro",
           "sourceBoard": "india",
           "sourceId": "88451",
-          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "fetchedAt": "2026-11-11T14:02:04.513Z",
           "sourceCountries": [
             "IN"
           ]
@@ -1936,7 +2714,7 @@
           "sourceProvider": "wipro",
           "sourceBoard": "india",
           "sourceId": "75445",
-          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "fetchedAt": "2026-11-11T14:02:04.513Z",
           "sourceCountries": [
             "IN"
           ]
@@ -1955,7 +2733,7 @@
           "sourceProvider": "wipro",
           "sourceBoard": "india",
           "sourceId": "65711",
-          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "fetchedAt": "2026-11-11T14:02:04.513Z",
           "sourceCountries": [
             "IN"
           ]
@@ -1974,7 +2752,7 @@
           "sourceProvider": "wipro",
           "sourceBoard": "india",
           "sourceId": "135284",
-          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "fetchedAt": "2026-11-11T14:02:04.513Z",
           "sourceCountries": [
             "IN"
           ]
@@ -1993,7 +2771,7 @@
           "sourceProvider": "wipro",
           "sourceBoard": "india",
           "sourceId": "117146",
-          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "fetchedAt": "2026-11-11T14:02:04.513Z",
           "sourceCountries": [
             "IN"
           ]
@@ -2008,8 +2786,8 @@
         "careersUrl": "https://www.capco.com/Careers/Job-Search",
         "verifiedAt": "2026-11-11"
       },
-      "attemptedAt": "2026-11-11T13:43:49.497Z",
-      "fetchedAt": "2026-11-11T13:43:49.497Z",
+      "attemptedAt": "2026-11-11T14:02:10.032Z",
+      "fetchedAt": "2026-11-11T14:02:10.032Z",
       "status": "ok",
       "jobs": [
         {
@@ -2029,7 +2807,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "capco",
           "sourceId": "8281149",
-          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "fetchedAt": "2026-11-11T14:02:10.032Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2050,7 +2828,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "capco",
           "sourceId": "8284414",
-          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "fetchedAt": "2026-11-11T14:02:10.032Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2073,7 +2851,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "capco",
           "sourceId": "8312246",
-          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "fetchedAt": "2026-11-11T14:02:10.032Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2096,7 +2874,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "capco",
           "sourceId": "8349241",
-          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "fetchedAt": "2026-11-11T14:02:10.032Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2125,7 +2903,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "capco",
           "sourceId": "8078812",
-          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "fetchedAt": "2026-11-11T14:02:10.032Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2146,7 +2924,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "capco",
           "sourceId": "8284202",
-          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "fetchedAt": "2026-11-11T14:02:10.032Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2167,7 +2945,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "capco",
           "sourceId": "7865480",
-          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "fetchedAt": "2026-11-11T14:02:10.032Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2197,7 +2975,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "capco",
           "sourceId": "8333222",
-          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "fetchedAt": "2026-11-11T14:02:10.032Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2222,7 +3000,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "capco",
           "sourceId": "8317397",
-          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "fetchedAt": "2026-11-11T14:02:10.032Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2248,7 +3026,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "capco",
           "sourceId": "8336298",
-          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "fetchedAt": "2026-11-11T14:02:10.032Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2264,8 +3042,8 @@
         "careersUrl": "https://jobs.lever.co/valgenesis",
         "verifiedAt": "2026-11-11"
       },
-      "attemptedAt": "2026-11-11T13:43:52.222Z",
-      "fetchedAt": "2026-11-11T13:43:52.222Z",
+      "attemptedAt": "2026-11-11T14:02:12.131Z",
+      "fetchedAt": "2026-11-11T14:02:12.131Z",
       "status": "ok",
       "jobs": [
         {
@@ -2283,7 +3061,7 @@
           "sourceProvider": "lever",
           "sourceBoard": "valgenesis",
           "sourceId": "f2d220b5-abc4-4dc7-b00c-c6b657768739",
-          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "fetchedAt": "2026-11-11T14:02:12.131Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2318,7 +3096,7 @@
           "sourceProvider": "lever",
           "sourceBoard": "valgenesis",
           "sourceId": "a9cfca24-ffb3-4287-9ae8-eecd34220d29",
-          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "fetchedAt": "2026-11-11T14:02:12.131Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2346,7 +3124,7 @@
           "sourceProvider": "lever",
           "sourceBoard": "valgenesis",
           "sourceId": "acbc0284-0bb8-42e4-9fd1-fa3583cb458f",
-          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "fetchedAt": "2026-11-11T14:02:12.131Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2374,7 +3152,7 @@
           "sourceProvider": "lever",
           "sourceBoard": "valgenesis",
           "sourceId": "b288a4a2-4df0-462d-bc82-b20ed3e551c7",
-          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "fetchedAt": "2026-11-11T14:02:12.131Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2398,7 +3176,7 @@
           "sourceProvider": "lever",
           "sourceBoard": "valgenesis",
           "sourceId": "7b5331dd-f7b3-42c3-b58f-27a216ab64a6",
-          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "fetchedAt": "2026-11-11T14:02:12.131Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2433,7 +3211,7 @@
           "sourceProvider": "lever",
           "sourceBoard": "valgenesis",
           "sourceId": "3bab8728-3f05-4db5-8b51-4a3d77187313",
-          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "fetchedAt": "2026-11-11T14:02:12.131Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2468,7 +3246,7 @@
           "sourceProvider": "lever",
           "sourceBoard": "valgenesis",
           "sourceId": "9799a961-0bec-4569-aee5-8850e5a85acf",
-          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "fetchedAt": "2026-11-11T14:02:12.131Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2498,7 +3276,7 @@
           "sourceProvider": "lever",
           "sourceBoard": "valgenesis",
           "sourceId": "1138f762-4ed6-41dc-90de-09d9c70b87dc",
-          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "fetchedAt": "2026-11-11T14:02:12.131Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2529,7 +3307,7 @@
           "sourceProvider": "lever",
           "sourceBoard": "valgenesis",
           "sourceId": "06de9b0f-6e37-4b3e-9abb-4b329700613a",
-          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "fetchedAt": "2026-11-11T14:02:12.131Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2557,7 +3335,7 @@
           "sourceProvider": "lever",
           "sourceBoard": "valgenesis",
           "sourceId": "43018031-a1f2-4c60-9742-d49d83591759",
-          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "fetchedAt": "2026-11-11T14:02:12.131Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2574,9 +3352,9 @@
         "careersUrl": "https://www.zuora.com/careers-search-jobs/",
         "verifiedAt": "2026-11-11"
       },
-      "attemptedAt": "2026-11-11T13:43:55.884Z",
+      "status": "failed",
+      "attemptedAt": "2026-11-11T14:03:44.720Z",
       "fetchedAt": "2026-11-11T13:43:55.884Z",
-      "status": "ok",
       "jobs": [
         {
           "id": "zuora:zuora:/careers/corporate-information-technology/sr-developer-ga-business-systems/",
@@ -2692,7 +3470,8 @@
             "IN"
           ]
         }
-      ]
+      ],
+      "error": "The operation was aborted due to timeout"
     },
     {
       "feed": {
@@ -2702,8 +3481,8 @@
         "careersUrl": "https://careers.appian.com/jobs",
         "verifiedAt": "2026-11-11"
       },
-      "attemptedAt": "2026-11-11T13:44:03.219Z",
-      "fetchedAt": "2026-11-11T13:44:03.219Z",
+      "attemptedAt": "2026-11-11T14:02:41.192Z",
+      "fetchedAt": "2026-11-11T14:02:41.192Z",
       "status": "ok",
       "jobs": [
         {
@@ -2723,7 +3502,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "appian",
           "sourceId": "8223246",
-          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "fetchedAt": "2026-11-11T14:02:41.192Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2746,7 +3525,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "appian",
           "sourceId": "7904837",
-          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "fetchedAt": "2026-11-11T14:02:41.192Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2770,7 +3549,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "appian",
           "sourceId": "7812261",
-          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "fetchedAt": "2026-11-11T14:02:41.192Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2791,7 +3570,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "appian",
           "sourceId": "8070827",
-          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "fetchedAt": "2026-11-11T14:02:41.192Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2812,7 +3591,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "appian",
           "sourceId": "8258091",
-          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "fetchedAt": "2026-11-11T14:02:41.192Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2833,7 +3612,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "appian",
           "sourceId": "8318480",
-          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "fetchedAt": "2026-11-11T14:02:41.192Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2863,7 +3642,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "appian",
           "sourceId": "8025566",
-          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "fetchedAt": "2026-11-11T14:02:41.192Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2888,7 +3667,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "appian",
           "sourceId": "7748642",
-          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "fetchedAt": "2026-11-11T14:02:41.192Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2918,7 +3697,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "appian",
           "sourceId": "7977620",
-          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "fetchedAt": "2026-11-11T14:02:41.192Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2946,7 +3725,7 @@
           "sourceProvider": "greenhouse",
           "sourceBoard": "appian",
           "sourceId": "8021616",
-          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "fetchedAt": "2026-11-11T14:02:41.192Z",
           "sourceCountries": [
             "IN"
           ],
@@ -2962,8 +3741,8 @@
         "careersUrl": "https://poshmark.com/careers",
         "verifiedAt": "2026-11-11"
       },
-      "attemptedAt": "2026-11-11T13:44:04.596Z",
-      "fetchedAt": "2026-11-11T13:44:04.596Z",
+      "attemptedAt": "2026-11-11T14:02:42.369Z",
+      "fetchedAt": "2026-11-11T14:02:42.369Z",
       "status": "ok",
       "jobs": [
         {
@@ -2988,7 +3767,7 @@
           "sourceProvider": "ashby",
           "sourceBoard": "poshmark",
           "sourceId": "461a37db-d133-4947-a17d-8afd2092a6fc",
-          "fetchedAt": "2026-11-11T13:44:04.596Z",
+          "fetchedAt": "2026-11-11T14:02:42.369Z",
           "sourceCountries": [
             "IN"
           ],
@@ -3010,7 +3789,7 @@
           "sourceProvider": "ashby",
           "sourceBoard": "poshmark",
           "sourceId": "5ed99cb0-d860-4c96-aa93-31c82af1ade7",
-          "fetchedAt": "2026-11-11T13:44:04.596Z",
+          "fetchedAt": "2026-11-11T14:02:42.369Z",
           "sourceCountries": [
             "IN"
           ],
@@ -3034,7 +3813,7 @@
           "sourceProvider": "ashby",
           "sourceBoard": "poshmark",
           "sourceId": "be164aec-878b-493f-8baf-608dc5076b80",
-          "fetchedAt": "2026-11-11T13:44:04.596Z",
+          "fetchedAt": "2026-11-11T14:02:42.369Z",
           "sourceCountries": [
             "IN"
           ],
@@ -3059,7 +3838,7 @@
           "sourceProvider": "ashby",
           "sourceBoard": "poshmark",
           "sourceId": "b13d536d-bb05-4173-a17d-6ed55a2991c7",
-          "fetchedAt": "2026-11-11T13:44:04.596Z",
+          "fetchedAt": "2026-11-11T14:02:42.369Z",
           "sourceCountries": [
             "IN"
           ],
@@ -3081,7 +3860,7 @@
           "sourceProvider": "ashby",
           "sourceBoard": "poshmark",
           "sourceId": "44f1abe4-3923-4d99-9834-d2a26853ff8f",
-          "fetchedAt": "2026-11-11T13:44:04.596Z",
+          "fetchedAt": "2026-11-11T14:02:42.369Z",
           "sourceCountries": [
             "IN"
           ],

@@ -1,4 +1,5 @@
 import {linkedinSearchUrl,parseLinkedinDiscovery} from './linkedinDiscovery';
+import {collectZoho,collectSmartRecruiters,collectHexaware} from './companyCollectors';
 import {indiaOnly} from './indiaJobs';
 import {collectAccenture,collectWipro,collectInfosys} from './indiaCollectors';
 import {parseHTML} from 'linkedom';
@@ -28,6 +29,9 @@ export function parseZuora(html:string){
  })};
 }
 export async function collectFeed(feed:JobFeed,fetchedAt:string,fetcher:typeof fetch=fetch):Promise<JobOpportunity[]>{
+ if(feed.provider==='zoho')return collectZoho(feed,fetchedAt,fetcher,read);
+ if(feed.provider==='smartrecruiters')return collectSmartRecruiters(feed,fetchedAt,fetcher,read);
+ if(feed.provider==='hexaware')return collectHexaware(feed,fetchedAt,fetcher,read);
  if(feed.provider==='linkedin'){const response=await fetcher(linkedinSearchUrl(feed),{signal:AbortSignal.timeout(25000),headers:{Accept:'text/html'}});return parseLinkedinDiscovery(feed,await read(response),fetchedAt);}
  if(feed.provider==='accenture')return indiaOnly(await collectAccenture(feed,fetchedAt,fetcher,read));
  if(feed.provider==='wipro')return indiaOnly(await collectWipro(feed,fetchedAt,fetcher,read));

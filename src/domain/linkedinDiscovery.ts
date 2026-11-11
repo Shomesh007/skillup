@@ -4,6 +4,7 @@ import {indiaOnly} from './indiaJobs';
 import type {JobFeed} from './jobFeeds';
 import type {JobOpportunity} from '../../types';
 const employers:Record<string,{keyword:string;slugs:string[];names:string[]}>= {
+ ust:{keyword:'UST',slugs:['ustglobal'],names:['UST','UST Global']},
  tcs:{keyword:'Tata Consultancy Services',slugs:['tata-consultancy-services'],names:['Tata Consultancy Services','Tata Consultancy Services Limited']},
  hcltech:{keyword:'HCLTech',slugs:['hcl-technologies','hcltech'],names:['HCLTech']},
  cognizant:{keyword:'Cognizant',slugs:['cognizant','cognizant-technology-solutions'],names:['Cognizant']},

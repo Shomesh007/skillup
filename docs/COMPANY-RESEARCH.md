@@ -6,30 +6,34 @@ Research date: 11 November 2026. This document is an operator reference, not pub
 
 - 142 company names inventoried.
 - 132 have official sources, including 13 company websites without a confirmed careers route.
-- 35 have specific published guidance summarized with source links and country or programme scope.
+- 39 have specific published guidance summarized with source links and country or programme scope.
 - 10 identities or careers routes remain unresolved; no interview stages or eligibility rules were invented.
-- 2378 India listings in the versioned snapshot across 14 sources. The public app reads the shared catalog and defaults to South India.
+- 2568 India listings in the versioned snapshot across 18 sources. The public app reads the shared catalog and defaults to South India.
 
 ## Source snapshots
 
 | Company | Method | Listings | Retrieved |
 |---|---|---:|---|
-| Tata Consultancy Services | linkedin; ok | 26 | 2026-11-11T13:43:31.054Z |
-| HCLTech | linkedin; ok | 55 | 2026-11-11T13:43:32.184Z |
-| Cognizant | linkedin; ok | 55 | 2026-11-11T13:43:33.336Z |
-| Capgemini | linkedin; ok | 37 | 2026-11-11T13:43:34.199Z |
-| Tech Mahindra | linkedin; ok | 17 | 2026-11-11T13:43:35.466Z |
-| LTM | linkedin; ok | 25 | 2026-11-11T13:43:36.284Z |
-| Accenture in India | accenture; ok | 251 | 2026-11-11T13:43:37.096Z |
-| Infosys | infosys; ok | 1698 | 2026-11-11T13:43:42.696Z |
-| Wipro | wipro; ok | 50 | 2026-11-11T13:43:44.024Z |
-| Capco | greenhouse; ok | 129 | 2026-11-11T13:43:49.497Z |
-| ValGenesis | lever; ok | 10 | 2026-11-11T13:43:52.222Z |
-| Zuora | zuora; ok | 6 | 2026-11-11T13:43:55.884Z |
-| Appian | greenhouse; ok | 14 | 2026-11-11T13:44:03.219Z |
-| Poshmark | ashby; ok | 5 | 2026-11-11T13:44:04.596Z |
+| Zoho | zoho; ok | 2 | 2026-11-11T14:01:32.698Z |
+| Freshworks | smartrecruiters; ok | 32 | 2026-11-11T14:01:33.174Z |
+| UST | linkedin; ok | 60 | 2026-11-11T14:01:43.664Z |
+| Hexaware | hexaware; ok | 96 | 2026-11-11T14:03:41.358Z |
+| Tata Consultancy Services | linkedin; ok | 26 | 2026-11-11T14:01:47.191Z |
+| HCLTech | linkedin; ok | 55 | 2026-11-11T14:01:48.021Z |
+| Cognizant | linkedin; ok | 55 | 2026-11-11T14:01:49.398Z |
+| Capgemini | linkedin; ok | 37 | 2026-11-11T14:01:50.221Z |
+| Tech Mahindra | linkedin; ok | 17 | 2026-11-11T14:01:51.026Z |
+| LTM | linkedin; ok | 25 | 2026-11-11T14:01:51.885Z |
+| Accenture in India | accenture; ok | 251 | 2026-11-11T14:01:52.721Z |
+| Infosys | infosys; ok | 1698 | 2026-11-11T14:02:03.178Z |
+| Wipro | wipro; ok | 50 | 2026-11-11T14:02:04.513Z |
+| Capco | greenhouse; ok | 129 | 2026-11-11T14:02:10.032Z |
+| ValGenesis | lever; ok | 10 | 2026-11-11T14:02:12.131Z |
+| Zuora | zuora; failed | 6 | 2026-11-11T13:43:55.884Z |
+| Appian | greenhouse; ok | 14 | 2026-11-11T14:02:41.192Z |
+| Poshmark | ashby; ok | 5 | 2026-11-11T14:02:42.369Z |
 
-Accenture and Wipro use bounded recent-result windows across seven South Indian cities. Infosys collects its India lateral and fresher portal. Appian, Capco, Poshmark, ValGenesis and Zuora use official public board APIs or HTML. Six additional employers use public LinkedIn discovery cards: exact employer name and company slug, explicit India location and recent source date are required. LinkedIn coverage is the public first page from the past week, not an employer’s complete vacancy inventory.
+Accenture and Wipro use bounded recent-result windows across seven South Indian cities. Infosys collects its India lateral and fresher portal. Appian, Capco, Poshmark, ValGenesis and Zuora use official public board APIs or HTML. Zoho uses its public Zoho Recruit feed, Freshworks uses its paginated public SmartRecruiters board and posting details, and Hexaware uses its paginated Oracle careers board with explicit India country filtering. Seven additional employers, including UST, use public LinkedIn discovery cards: exact employer name and company slug, explicit India location and recent source date are required. LinkedIn coverage is the public first page from the past week, not an employer’s complete vacancy inventory. Country-only job locations remain unspecified at city level.
 
 The shared collector is active on lotus-buzzer at 7:00 a.m. IST, with failed-source retries at 8:00 a.m. IST. It uses no model calls and does not require Codex to be open. See [job collection operations](JOB-COLLECTION-OPERATIONS.md) for deployment, security and failure handling. Frontend deployment remains separate from a repository push.
 
@@ -99,7 +103,7 @@ Refresh failures retain the last successful data. Listings absent from a success
 | Flowserve Corporation | Source identified | Official careers source; local requirements vary | [Source](https://careers.flowserve.com/career-opportunities/) |
 | Foodhub | Source identified | Official careers source; local requirements vary | [Source](https://foodhubcareers.com/) |
 | Ford Motor Company | Published guidance | Official careers source; local requirements vary | [Source](https://www.careers.ford.com/en/faqs) |
-| Freshworks | Source identified | Use India locations in the official job search | [Source](https://www.freshworks.com/company/careers/) |
+| Freshworks | Published guidance | Use India locations in the official job search | [Source](https://www.freshworks.com/company/careers/) |
 | Fujitsu | Source identified | India | [Source](https://global.fujitsu/en-apac/careers/india) |
 | Garrett - Advancing Motion | Source identified | Official careers source; local requirements vary | [Source](https://www.garrettmotion.com/) |
 | GlobalLogic | Published guidance | India | [Source](https://www.globallogic.com/in/careers/) |
@@ -111,7 +115,7 @@ Refresh failures retain the last successful data. Listings absent from a success
 | Happiest Minds Technologies | Source identified | Official careers source; local requirements vary | [Source](https://careers.smartrecruiters.com/HappiestMindsTechnologies1) |
 | HappyRobot | Source identified | Official careers source; local requirements vary | [Source](https://www.happyrobot.ai/careers) |
 | HCLTech | Published guidance | Official careers source; local requirements vary | [Source](https://www.hcltech.com/careers/recruitment-process-hcl-tech) |
-| Hexaware | Source identified | Official careers source; dynamic search requires browser access | [Source](https://hexaware.com/careers/) |
+| Hexaware | Published guidance | Official careers source; dynamic search requires browser access | [Source](https://hexaware.com/careers/) |
 | Hitachi Energy | Published guidance | Official careers source; local requirements vary | [Source](https://www.hitachienergy.com/careers/about-us/recruitment-process) |
 | HPE Aruba Networking | Source identified | HPE parent company; US FAQ | [Source](https://careers.hpe.com/us/en/FAQs) |
 | Husky Technologies | Source identified | Official careers source; local requirements vary | [Source](https://www.husky.co/en/careers/portal/) |
@@ -175,7 +179,7 @@ Refresh failures retain the last successful data. Listings absent from a success
 | TwikiBot Technologies | Source identified | Official careers source; local requirements vary | [Source](https://www.twikibot.com/careers.html) |
 | U.S. Bank | Source identified | Official careers source; local requirements vary | [Source](https://careers.usbank.com/global/en/recruitment-process) |
 | Uniserve | Unresolved | Search completed; official careers route not confidently matched | — |
-| UST | Source identified | Official careers source; local requirements vary | [Source](https://www.ust.com/en/careers) |
+| UST | Published guidance | Official careers source; local requirements vary | [Source](https://www.ust.com/en/careers) |
 | ValGenesis | Source identified | Official careers source; local requirements vary | [Source](https://jobs.lever.co/valgenesis) |
 | Valor PayTech | Source identified | Official careers source; local requirements vary | [Source](https://valorpaytech.com/get-to-know-us/join-our-team/) |
 | ValueMomentum | Source identified | Official careers source; local requirements vary | [Source](https://valuemomentum.com/careers/) |
@@ -190,12 +194,46 @@ Refresh failures retain the last successful data. Listings absent from a success
 | Wood | Source identified | Official careers source; local requirements vary | [Source](https://ehif.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs) |
 | ZF Group | Source identified | India | [Source](https://www.zf.com/india/en/careers/careers.html) |
 | Zocket | Source identified | Official careers source; local requirements vary | [Source](https://www.zocket.com/careers) |
-| Zoho | Source identified | India-focused company shortlist; vacancy-specific location and requirements | [Source](https://www.zoho.com/careers/) |
+| Zoho | Published guidance | India-focused company shortlist; vacancy-specific location and requirements | [Source](https://www.zoho.com/careers/) |
 | Zorba AI | Source identified | Zorba Consulting India website; confirm the named employer on the vacancy | [Source](https://www.zorbaconsulting.in/) |
 | Zuan Education | Source identified | Official careers source; local requirements vary | [Source](https://www.zuaneducation.com/careers/) |
 | Zuora | Source identified | Official careers source; local requirements vary | [Source](https://www.zuora.com/careers-search-jobs/) |
 
 ## Published guidance summaries
+
+### Zoho
+
+Scope: India-focused company shortlist; vacancy-specific location and requirements. Reviewed 2026-11-11.
+
+**Where should I apply for a Zoho opening?** Use View Open Roles on Zoho Careers, open the position that fits your skills, and follow its application link to the Zoho candidate portal. [Official guidance](https://www.zoho.com/careers/).
+
+**Can I hear about future openings?** Zoho’s careers page offers candidate-portal registration for notifications about new roles that match your skills. Registering for updates is separate from choosing an opening and applying. [Official guidance](https://www.zoho.com/careers/).
+
+**How do I choose the right location?** Read Job Information on the individual opening. If it lists only India, confirm the work city with the recruiting team before making relocation plans; an office address is not a job assignment. [Official guidance](https://www.zoho.com/careers/jobdetails/?job_id=193779000024445975).
+
+**What should my application demonstrate?** Zoho says it values diverse interests, skills and a willingness to learn. Show relevant work you can explain, and check the qualifications on your chosen opening rather than assuming one eligibility rule applies to every role. [Official guidance](https://www.zoho.com/careers/).
+
+### Freshworks
+
+Scope: Use India locations in the official job search. Reviewed 2026-11-11.
+
+**Where can I find Freshworks jobs in India?** Follow Explore jobs from Freshworks Careers to its SmartRecruiters board, then choose an Indian location and review the individual posting before applying. [Official guidance](https://careers.smartrecruiters.com/Freshworks).
+
+**Are opportunities limited to software engineering?** The careers page includes Product & Engineering, Sales & Marketing, Customer Service & Success, and Corporate roles. Choose an opening whose responsibilities match your experience. [Official guidance](https://www.freshworks.com/company/careers/).
+
+**What requirements should I use to tailor my resume?** Use the Qualifications and Job Description sections of the exact posting. Education and experience are role-specific; demonstrate the requested responsibilities with accurate examples from your own work. [Official guidance](https://jobs.smartrecruiters.com/Freshworks/744000161047199-senior-analyst-order-management).
+
+**Which examples are useful when preparing?** Freshworks describes customer focus, ownership, high standards, smart risks and teamwork as its values. Prepare real examples of those behaviours alongside evidence for the role’s technical or functional requirements. [Official guidance](https://www.freshworks.com/company/careers/).
+
+### Hexaware
+
+Scope: Official careers source; dynamic search requires browser access. Reviewed 2026-11-11.
+
+**How do I find Hexaware openings in India?** Use Hexaware’s careers board and select India in the location filter. Open the specific requisition to review its responsibilities and apply through that listing. [Official guidance](https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs?location=India&locationId=300000000446279&locationLevel=country&mode=location).
+
+**Does an India listing guarantee a particular city?** No. Some requisitions list India without a city. Use the location on your chosen requisition and confirm the actual work city and arrangement with the recruiter before making plans. [Official guidance](https://fa-etqo-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs?location=India&locationId=300000000446279&locationLevel=country&mode=location).
+
+**Can I reuse an older campus drive’s eligibility rules?** Check the year and programme before using a campus notice. Hexaware’s Superset page includes criteria explicitly marked for 2023 pass-outs; those do not establish eligibility for a current opening. Follow the current role or campus invitation. [Official guidance](https://app.joinsuperset.com/company/hexaware/).
 
 ### Seyyone Group of Companies
 
@@ -218,6 +256,16 @@ Scope: Staffing company recruitment-safety notice; verify the end employer. Revi
 Scope: FedEx parent careers; ACC is an imported organizational label. Reviewed 2026-11-11.
 
 **Where should I confirm an opening?** Use the current FedEx careers search and verify the business unit, location and requisition. ACC is the label in the older import; it should not be treated as a separate guarantee of eligibility or an offer. [Official guidance](https://careers.fedex.com/).
+
+### UST
+
+Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
+
+**Where should I start an application?** Use the official UST Careers page to find the position and follow its application route. Match the job title and location when checking a listing found on another portal. [Official guidance](https://www.ust.com/en/careers).
+
+**Should I pay a recruiter or agency for a UST job?** No. UST says neither it nor its authorized agencies charge fees or request money from jobseekers. Verify suspicious contact through the official careers page. [Official guidance](https://www.ust.com/en/careers).
+
+**Is an unsolicited offer without an application genuine?** UST says it does not send unsolicited employment offers to people who have not applied for a specific job through its Careers page. Treat such an offer as suspicious and verify it before sharing personal information. [Official guidance](https://www.ust.com/en/careers).
 
 ### Blue Yonder
 
@@ -453,6 +501,6 @@ Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
 
 Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
 
-**Where can I search India roles?** Use Wipro’s official careers search and check the city and country on the requisition. The current Skillup collector prioritizes South Indian city searches. [Official guidance](https://careers.wipro.com/search/?locationsearch=India).
+**Where can I search India roles?** Use Wipro’s official careers search and check the city and country on the requisition. [Official guidance](https://careers.wipro.com/search/?locationsearch=India).
 
 **Should I pay to receive an offer?** Wipro’s fraud-awareness guidance says it does not charge at any recruitment stage. Validate the vacancy on the careers portal and check the sender’s official identity. [Official guidance](https://careers.wipro.com/content/Fraud-Awareness/?locale=en_US).

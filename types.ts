@@ -63,7 +63,7 @@ export interface Company {
 
 export interface JobOpportunity {
   sourceUrl?: string;
-  sourceProvider?: 'greenhouse' | 'ashby' | 'lever' | 'zuora' | 'accenture' | 'wipro' | 'infosys' | 'linkedin' | 'browser';
+  sourceProvider?: 'greenhouse' | 'ashby' | 'lever' | 'zuora' | 'accenture' | 'wipro' | 'infosys' | 'linkedin' | 'zoho' | 'smartrecruiters' | 'hexaware' | 'browser';
   sourceBoard?: string;
   sourceId?: string;
   fetchedAt?: string;

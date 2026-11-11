@@ -1,9 +1,13 @@
 import type { JobOpportunity } from '../../types';
 import { extractSkills } from './skills';
-export interface JobFeed {company:string;provider:'greenhouse'|'ashby'|'lever'|'zuora'|'accenture'|'wipro'|'infosys'|'linkedin';board:string;careersUrl:string;verifiedAt:string;coverage?:string;}
+export interface JobFeed {company:string;provider:'greenhouse'|'ashby'|'lever'|'zuora'|'accenture'|'wipro'|'infosys'|'linkedin'|'zoho'|'smartrecruiters'|'hexaware';board:string;careersUrl:string;verifiedAt:string;coverage?:string;}
 export interface FeedResult {feed:JobFeed;attemptedAt:string;fetchedAt?:string;status:'ok'|'failed';error?:string;jobs:JobOpportunity[];}
 export interface JobSnapshot {version:1;feeds:FeedResult[];}
 export const jobFeeds:JobFeed[]=[
+ {company:'Zoho',provider:'zoho',board:'zohocorp',careersUrl:'https://www.zoho.com/careers/',verifiedAt:'2026-11-11',coverage:'Published India openings from the public feed linked by Zoho Careers; missing cities remain unspecified'},
+ {company:'Freshworks',provider:'smartrecruiters',board:'Freshworks',careersUrl:'https://careers.smartrecruiters.com/Freshworks',verifiedAt:'2026-11-11',coverage:'Paginated public India postings and their details from the official Freshworks SmartRecruiters board'},
+ {company:'UST',provider:'linkedin',board:'ust',careersUrl:'https://www.linkedin.com/jobs/search/?keywords=UST&location=India&f_TPR=r604800',verifiedAt:'2026-11-11',coverage:'LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source'},
+ {company:'Hexaware',provider:'hexaware',board:'hexaware',careersUrl:'https://jobs.hexaware.com/',verifiedAt:'2026-11-11',coverage:'Paginated public Hexaware Oracle CX_1 board, filtered by explicit India country metadata'},
  {company:'Tata Consultancy Services',provider:'linkedin',board:'tcs',careersUrl:'https://www.linkedin.com/jobs/search/?keywords=Tata%20Consultancy%20Services&location=India&f_TPR=r604800',verifiedAt:'2026-11-11',coverage:'LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source'},
  {company:'HCLTech',provider:'linkedin',board:'hcltech',careersUrl:'https://www.linkedin.com/jobs/search/?keywords=HCLTech&location=India&f_TPR=r604800',verifiedAt:'2026-11-11',coverage:'LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source'},
  {company:'Cognizant',provider:'linkedin',board:'cognizant',careersUrl:'https://www.linkedin.com/jobs/search/?keywords=Cognizant&location=India&f_TPR=r604800',verifiedAt:'2026-11-11',coverage:'LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source'},

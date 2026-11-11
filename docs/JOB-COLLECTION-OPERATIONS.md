@@ -16,7 +16,10 @@ The Edge Function `skillup-jobs-refresh` checks a collector-only token held in V
 - Accenture: official India search endpoint, latest 50 results per each of seven South Indian cities. This is a bounded window, not all Accenture vacancies.
 - Wipro: official careers search, first 25 results per South Indian city, sorted by recent postings. This is also a bounded window.
 - Appian and Capco: public Greenhouse boards; Poshmark: public Ashby board; ValGenesis: public Lever board with pagination; Zuora: official public careers HTML.
-- TCS, HCLTech, Cognizant, Capgemini, Tech Mahindra and LTM: public LinkedIn search cards from the past week. Require both an exact employer name and an allowlisted company slug, an explicit India location and a recent source date. Only the public first page is collected. These are portal discovery listings, not complete employer inventories.
+- Zoho: the public Zoho Recruit feed used by Zoho Careers. Include only published, unlocked India openings. The current feed does not supply a city; do not infer Chennai from an office address. Portal registration for future notifications is separate from an application.
+- Freshworks: the official SmartRecruiters public board, paginated with `country=in`, plus public posting details in batches of four. Require public visibility, matching employer identity and India country metadata. Zero-filled compensation fields are not a disclosed salary.
+- Hexaware: the public Oracle CX_1 board linked from jobs.hexaware.com. Read all result pages, then filter explicit India country metadata and exclude expired postings. Numeric and alphanumeric requisition IDs are both valid. Country-only locations remain country-only.
+- TCS, HCLTech, Cognizant, Capgemini, Tech Mahindra, LTM and UST: public LinkedIn search cards from the past week. Require both an exact employer name and an allowlisted company slug, an explicit India location and a recent source date. UST uses the verified `ustglobal` employer slug, excluding similarly named companies. Only the public first page is collected. These are portal discovery listings, not complete employer inventories.
 
 Collectors do not sign in, submit applications, use applicant data, solve challenges or bypass blocks. A blocked or unrecognizable response is a failed refresh, not evidence that the company has no vacancies. LinkedIn availability and markup can change.
 
@@ -41,6 +44,14 @@ npm run build
 
 `jobs:collect` updates the versioned local snapshot; it does not deploy the frontend or write to the hosted database. Failed local sources preserve their earlier successful records and make the command fail visibly. Keep source registry IDs consistent between code and `skillup_job_sources` when enabling a new source.
 
+Pass source IDs to refresh selected boards, for example `npm run jobs:collect -- zoho:zohocorp smartrecruiters:Freshworks linkedin:ust hexaware:hexaware`. Other source snapshots are retained. Unknown source IDs are rejected.
+
 Run `node --import tsx scripts/package-collector.ts` to package the shared collectors for deployment. Deploy with entrypoint `index.ts`, import map `deno.json` and `verify_jwt: false`; custom token validation inside the function is required. The import map pins linkedom. Apply the SQL setup only to a new Skillup namespace; the initial schema file is not an idempotent upgrade migration. Do not rerun it against the existing live tables.
 
 Operators can inspect `skillup_job_sources` and `skillup_job_runs` in Supabase. Only an authorized database operator should call the private dispatch function. Verify unauthorized refresh requests return 401, anonymous writes and refresh RPC execution are denied, and every returned job passes the India filter.
+
+## Four-employer rollout verification — 11 November 2026
+
+Deployed collector version 5 and enabled the four source configurations in `supabase/skillup_company_sources.sql`. A temporary server-side Cron job invoked the same private dispatch function at 14:05 UTC. Cron recorded success and all four Edge Function runs completed successfully: Zoho 2, Freshworks 32, UST 60, Hexaware 96. The 190 records all passed the India check and were returned by the public catalog. Unauthenticated refresh still returned 401.
+
+The temporary verification schedule was removed after the test. Only the permanent 07:00 IST daily and 08:00 IST failed-source schedules remain. This confirms scheduled cloud execution independently of the local app and Codex; it is not a guarantee against future provider outages or hosting interruptions. Local Zuora requests timed out during this rollout and retained its earlier snapshot; the hosted Zuora source remained healthy with six India listings.
