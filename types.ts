@@ -62,6 +62,13 @@ export interface Company {
 }
 
 export interface JobOpportunity {
+  sourceUrl?: string;
+  sourceProvider?: 'greenhouse' | 'ashby' | 'browser';
+  sourceBoard?: string;
+  sourceId?: string;
+  fetchedAt?: string;
+  providerUpdatedAt?: string;
+  sourceCountries?: string[];
   id: number | string;
   title: string;
   company: string;
