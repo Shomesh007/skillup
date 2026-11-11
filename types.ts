@@ -46,12 +46,12 @@ export interface Company {
   name: string;
   tagline: string;
   logo: string;
-  rating: number;
+  rating?: number;
   location: string;
   salary: string;
   experience: string;
   category: 'FAANG' | 'STARTUP' | 'PRODUCT' | 'SERVICE' | 'REMOTE';
-  isHiring: boolean;
+  isHiring?: boolean;
   stack: TechStack;
   about: string;
   timeline: { step: string; duration: string }[];
@@ -63,7 +63,7 @@ export interface Company {
 
 export interface JobOpportunity {
   sourceUrl?: string;
-  sourceProvider?: 'greenhouse' | 'ashby' | 'browser';
+  sourceProvider?: 'greenhouse' | 'ashby' | 'lever' | 'zuora' | 'accenture' | 'wipro' | 'infosys' | 'linkedin' | 'browser';
   sourceBoard?: string;
   sourceId?: string;
   fetchedAt?: string;

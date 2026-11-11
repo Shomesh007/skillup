@@ -4,6 +4,12 @@
 .company-faq-list details[open] summary{margin-bottom:12px}
 .company-faq-list p{font-size:13px;line-height:1.85;color:#5c6b80;margin:0 0 14px}
 .company-faq-list a{font-size:12px;color:#2549eb;text-underline-offset:3px;overflow-wrap:anywhere}
+.company-essentials{display:grid;gap:18px}
+.company-essentials>div{padding-bottom:18px;border-bottom:1px solid #e2e7ef}
+.company-essentials h3{font-size:14px;font-weight:600;margin:0 0 8px;color:#263850}
+.company-essentials p{font-size:13px;line-height:1.8;color:#5c6b80;margin:0 0 8px}
+.company-essentials a{font-size:11px;color:#2549eb;text-underline-offset:3px}
+.company-essentials>.ui-button{justify-self:start}
 .job-mobile-filter-toggle{display:none}
 @media(max-width:800px){
  .job-mobile-filter-toggle{display:flex;align-items:center;gap:12px;margin:0 0 16px}
@@ -11,3 +17,5 @@
  .job-source-toolbar:not(.filters-open){display:none}
  .job-filter-toolbar:not(.filters-open)>.ui-field:not(.search-field){display:none}
 }
+
+.company-profile-layout{grid-template-columns:minmax(0,1fr);max-width:1000px}

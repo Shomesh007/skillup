@@ -1,0 +1,3094 @@
+{
+  "version": 1,
+  "coverage": "sample",
+  "feeds": [
+    {
+      "feed": {
+        "company": "Tata Consultancy Services",
+        "provider": "linkedin",
+        "board": "tcs",
+        "careersUrl": "https://www.linkedin.com/jobs/search/?keywords=Tata%20Consultancy%20Services&location=India&f_TPR=r604800",
+        "verifiedAt": "2026-11-11",
+        "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
+      },
+      "attemptedAt": "2026-11-11T13:43:31.054Z",
+      "fetchedAt": "2026-11-11T13:43:31.054Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "linkedin:tcs:4487328885",
+          "title": "Data Scientist",
+          "company": "Tata Consultancy Services",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "tcs",
+          "sourceId": "4487328885",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487328885/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487328885/",
+          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:tcs:4486753439",
+          "title": "AWS Cloud Engineer",
+          "company": "Tata Consultancy Services",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "tcs",
+          "sourceId": "4486753439",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486753439/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486753439/",
+          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "postedAt": "2026-11-05",
+          "skills": [
+            "AWS"
+          ],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:tcs:4487342689",
+          "title": "Pyspark Developer",
+          "company": "Tata Consultancy Services",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "tcs",
+          "sourceId": "4487342689",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487342689/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487342689/",
+          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:tcs:4487680045",
+          "title": "Customer Service Specialist",
+          "company": "Tata Consultancy Services",
+          "location": "Pune District, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "tcs",
+          "sourceId": "4487680045",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487680045/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487680045/",
+          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "postedAt": "2026-11-09",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:tcs:4446052432",
+          "title": "Azure Data Engineer",
+          "company": "Tata Consultancy Services",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "tcs",
+          "sourceId": "4446052432",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4446052432/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4446052432/",
+          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "postedAt": "2026-11-06",
+          "skills": [
+            "Azure"
+          ],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:tcs:4455636223",
+          "title": "Python Developer",
+          "company": "Tata Consultancy Services",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "tcs",
+          "sourceId": "4455636223",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4455636223/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4455636223/",
+          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "postedAt": "2026-11-06",
+          "skills": [
+            "Python"
+          ],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:tcs:4487349438",
+          "title": "Informatica IDMC / IICS Developer",
+          "company": "Tata Consultancy Services",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "tcs",
+          "sourceId": "4487349438",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487349438/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487349438/",
+          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:tcs:4487350409",
+          "title": "Informatica Powercenter Developer",
+          "company": "Tata Consultancy Services",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "tcs",
+          "sourceId": "4487350409",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487350409/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487350409/",
+          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:tcs:4488660431",
+          "title": "TCS Bangalore Hiring for Third Party Risk Management (TPRM) Analyst",
+          "company": "Tata Consultancy Services",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "tcs",
+          "sourceId": "4488660431",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4488660431/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4488660431/",
+          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:tcs:4488661569",
+          "title": "TCS Bangalore Hiring for Contracts Analyst",
+          "company": "Tata Consultancy Services",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "tcs",
+          "sourceId": "4488661569",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4488661569/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4488661569/",
+          "fetchedAt": "2026-11-11T13:43:31.054Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "HCLTech",
+        "provider": "linkedin",
+        "board": "hcltech",
+        "careersUrl": "https://www.linkedin.com/jobs/search/?keywords=HCLTech&location=India&f_TPR=r604800",
+        "verifiedAt": "2026-11-11",
+        "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
+      },
+      "attemptedAt": "2026-11-11T13:43:32.184Z",
+      "fetchedAt": "2026-11-11T13:43:32.184Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "linkedin:hcltech:4488301558",
+          "title": "Service Desk Analyst",
+          "company": "HCLTech",
+          "location": "Lucknow, Uttar Pradesh, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "hcltech",
+          "sourceId": "4488301558",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4488301558/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4488301558/",
+          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "postedAt": "2026-11-10",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:hcltech:4485811392",
+          "title": "Full Stack Engineer",
+          "company": "HCLTech",
+          "location": "Madurai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "hcltech",
+          "sourceId": "4485811392",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4485811392/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4485811392/",
+          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:hcltech:4487891732",
+          "title": "Mechanical Engineer",
+          "company": "HCLTech",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "hcltech",
+          "sourceId": "4487891732",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487891732/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487891732/",
+          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:hcltech:4487152164",
+          "title": "Fine-Tuning Research Scientist",
+          "company": "HCLTech",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "hcltech",
+          "sourceId": "4487152164",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487152164/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487152164/",
+          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "postedAt": "2026-11-09",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:hcltech:4487894736",
+          "title": "Analog Layout Engineer",
+          "company": "HCLTech",
+          "location": "Kochi, Kerala, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "hcltech",
+          "sourceId": "4487894736",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487894736/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487894736/",
+          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:hcltech:4487893870",
+          "title": "Electro Mechanical Engineer",
+          "company": "HCLTech",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "hcltech",
+          "sourceId": "4487893870",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487893870/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487893870/",
+          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:hcltech:4478770251",
+          "title": "Openings for Freshers || Voice Process - Chennai",
+          "company": "HCLTech",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "hcltech",
+          "sourceId": "4478770251",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4478770251/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4478770251/",
+          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "postedAt": "2026-11-10",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:hcltech:4487889627",
+          "title": "AI Security Engineer",
+          "company": "HCLTech",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "hcltech",
+          "sourceId": "4487889627",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487889627/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487889627/",
+          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:hcltech:4489920143",
+          "title": "Presales Solutions Architect",
+          "company": "HCLTech",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "hcltech",
+          "sourceId": "4489920143",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4489920143/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4489920143/",
+          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:hcltech:4487445690",
+          "title": "SAP FICO Architect",
+          "company": "HCLTech",
+          "location": "Hyderabad, Telangana, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "hcltech",
+          "sourceId": "4487445690",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487445690/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487445690/",
+          "fetchedAt": "2026-11-11T13:43:32.184Z",
+          "postedAt": "2026-11-10",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Cognizant",
+        "provider": "linkedin",
+        "board": "cognizant",
+        "careersUrl": "https://www.linkedin.com/jobs/search/?keywords=Cognizant&location=India&f_TPR=r604800",
+        "verifiedAt": "2026-11-11",
+        "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
+      },
+      "attemptedAt": "2026-11-11T13:43:33.336Z",
+      "fetchedAt": "2026-11-11T13:43:33.336Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "linkedin:cognizant:4486598564",
+          "title": "Subject Matter Expert-IOA",
+          "company": "Cognizant",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "cognizant",
+          "sourceId": "4486598564",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486598564/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486598564/",
+          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:cognizant:4486582951",
+          "title": "SME-Order Management-Voice",
+          "company": "Cognizant",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "cognizant",
+          "sourceId": "4486582951",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486582951/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486582951/",
+          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:cognizant:4487322178",
+          "title": "IOA-Sr Process Executive",
+          "company": "Cognizant",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "cognizant",
+          "sourceId": "4487322178",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487322178/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487322178/",
+          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:cognizant:4486589905",
+          "title": "SME-Order Management-Voice",
+          "company": "Cognizant",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "cognizant",
+          "sourceId": "4486589905",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486589905/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486589905/",
+          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:cognizant:4488306531",
+          "title": "US Healthcare Claims SME",
+          "company": "Cognizant",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "cognizant",
+          "sourceId": "4488306531",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4488306531/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4488306531/",
+          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "postedAt": "2026-11-10",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:cognizant:4479370951",
+          "title": "Content Production Manager",
+          "company": "Cognizant",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "cognizant",
+          "sourceId": "4479370951",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4479370951/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4479370951/",
+          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:cognizant:4479385283",
+          "title": "Salesforce LWC Developer",
+          "company": "Cognizant",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "cognizant",
+          "sourceId": "4479385283",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4479385283/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4479385283/",
+          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:cognizant:4452922507",
+          "title": "Presales - Bid Management",
+          "company": "Cognizant",
+          "location": "Bangalore Urban, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "cognizant",
+          "sourceId": "4452922507",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4452922507/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4452922507/",
+          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "postedAt": "2026-11-07",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:cognizant:4479382423",
+          "title": "Salesforce FSC Developer",
+          "company": "Cognizant",
+          "location": "Gurgaon, Haryana, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "cognizant",
+          "sourceId": "4479382423",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4479382423/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4479382423/",
+          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:cognizant:4486592771",
+          "title": "TL-Product info & MDM",
+          "company": "Cognizant",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "cognizant",
+          "sourceId": "4486592771",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486592771/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486592771/",
+          "fetchedAt": "2026-11-11T13:43:33.336Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Capgemini",
+        "provider": "linkedin",
+        "board": "capgemini",
+        "careersUrl": "https://www.linkedin.com/jobs/search/?keywords=Capgemini&location=India&f_TPR=r604800",
+        "verifiedAt": "2026-11-11",
+        "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
+      },
+      "attemptedAt": "2026-11-11T13:43:34.199Z",
+      "fetchedAt": "2026-11-11T13:43:34.199Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "linkedin:capgemini:4489431417",
+          "title": "FBS Data Analyst II",
+          "company": "Capgemini",
+          "location": "Pune Division, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "capgemini",
+          "sourceId": "4489431417",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4489431417/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4489431417/",
+          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "postedAt": "2026-11-10",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:capgemini:4485824931",
+          "title": "Dotnet Developer",
+          "company": "Capgemini",
+          "location": "Mumbai, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "capgemini",
+          "sourceId": "4485824931",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4485824931/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4485824931/",
+          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:capgemini:4489419709",
+          "title": "FBS Data Analyst II",
+          "company": "Capgemini",
+          "location": "Hyderabad, Telangana, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "capgemini",
+          "sourceId": "4489419709",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4489419709/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4489419709/",
+          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "postedAt": "2026-11-10",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:capgemini:4477374007",
+          "title": "FBS Service Desk Technician I",
+          "company": "Capgemini",
+          "location": "Hyderabad, Telangana, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "capgemini",
+          "sourceId": "4477374007",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4477374007/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4477374007/",
+          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:capgemini:4477359750",
+          "title": "FBS Service Desk Technician I",
+          "company": "Capgemini",
+          "location": "Pune Division, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "capgemini",
+          "sourceId": "4477359750",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4477359750/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4477359750/",
+          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:capgemini:4487454918",
+          "title": "Finance Specialist",
+          "company": "Capgemini",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "capgemini",
+          "sourceId": "4487454918",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487454918/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487454918/",
+          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "postedAt": "2026-11-10",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:capgemini:4488209276",
+          "title": "WebMethods Admin",
+          "company": "Capgemini",
+          "location": "Hyderabad, Telangana, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "capgemini",
+          "sourceId": "4488209276",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4488209276/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4488209276/",
+          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:capgemini:4486229380",
+          "title": "Senior Java Software Engineer",
+          "company": "Capgemini",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "capgemini",
+          "sourceId": "4486229380",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486229380/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486229380/",
+          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "postedAt": "2026-11-06",
+          "skills": [
+            "Java"
+          ],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:capgemini:4486235111",
+          "title": "Workforce Management Analyst",
+          "company": "Capgemini",
+          "location": "Pune Division, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "capgemini",
+          "sourceId": "4486235111",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486235111/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486235111/",
+          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:capgemini:4486204288",
+          "title": "Celonis Process Mining Specialist",
+          "company": "Capgemini",
+          "location": "Pune District, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "capgemini",
+          "sourceId": "4486204288",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486204288/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486204288/",
+          "fetchedAt": "2026-11-11T13:43:34.199Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Tech Mahindra",
+        "provider": "linkedin",
+        "board": "techmahindra",
+        "careersUrl": "https://www.linkedin.com/jobs/search/?keywords=Tech%20Mahindra&location=India&f_TPR=r604800",
+        "verifiedAt": "2026-11-11",
+        "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
+      },
+      "attemptedAt": "2026-11-11T13:43:35.466Z",
+      "fetchedAt": "2026-11-11T13:43:35.466Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "linkedin:techmahindra:4487130913",
+          "title": "IT Business Analyst – Oracle Fusion Inventory / Warehouse Management",
+          "company": "Tech Mahindra",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "techmahindra",
+          "sourceId": "4487130913",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487130913/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487130913/",
+          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "postedAt": "2026-11-09",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:techmahindra:4486215065",
+          "title": "SAP CPQ Architect",
+          "company": "Tech Mahindra",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "techmahindra",
+          "sourceId": "4486215065",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486215065/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486215065/",
+          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:techmahindra:4487133379",
+          "title": "Oracle Fusion Product Hub / PLM expertise",
+          "company": "Tech Mahindra",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "techmahindra",
+          "sourceId": "4487133379",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487133379/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487133379/",
+          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "postedAt": "2026-11-09",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:techmahindra:4488220029",
+          "title": "Associate",
+          "company": "Tech Mahindra",
+          "location": "Pune District, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "techmahindra",
+          "sourceId": "4488220029",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4488220029/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4488220029/",
+          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:techmahindra:4487880284",
+          "title": "Java Fullstack Developer",
+          "company": "Tech Mahindra",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "techmahindra",
+          "sourceId": "4487880284",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487880284/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487880284/",
+          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "postedAt": "2026-11-11",
+          "skills": [
+            "Java"
+          ],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:techmahindra:4486235157",
+          "title": "Bigdata with DevOps",
+          "company": "Tech Mahindra",
+          "location": "Hyderabad, Telangana, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "techmahindra",
+          "sourceId": "4486235157",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486235157/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486235157/",
+          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:techmahindra:4487133776",
+          "title": "Oracle DBA GoldenGate Expert",
+          "company": "Tech Mahindra",
+          "location": "Delhi, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "techmahindra",
+          "sourceId": "4487133776",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487133776/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487133776/",
+          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "postedAt": "2026-11-09",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:techmahindra:4487867706",
+          "title": "Mainframe Developer",
+          "company": "Tech Mahindra",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "techmahindra",
+          "sourceId": "4487867706",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487867706/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487867706/",
+          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:techmahindra:4486224688",
+          "title": "Sr.OpenShift Admin",
+          "company": "Tech Mahindra",
+          "location": "Navi Mumbai, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "techmahindra",
+          "sourceId": "4486224688",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486224688/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486224688/",
+          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:techmahindra:4485894992",
+          "title": "Sap Business Warehouse Consultant",
+          "company": "Tech Mahindra",
+          "location": "Hyderabad, Telangana, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "techmahindra",
+          "sourceId": "4485894992",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4485894992/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4485894992/",
+          "fetchedAt": "2026-11-11T13:43:35.466Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "LTM",
+        "provider": "linkedin",
+        "board": "ltm",
+        "careersUrl": "https://www.linkedin.com/jobs/search/?keywords=LTIMindtree&location=India&f_TPR=r604800",
+        "verifiedAt": "2026-11-11",
+        "coverage": "LinkedIn discovery: public first-page India cards from the past week; partial coverage, confirm on the source"
+      },
+      "attemptedAt": "2026-11-11T13:43:36.284Z",
+      "fetchedAt": "2026-11-11T13:43:36.284Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "linkedin:ltm:4488224392",
+          "title": "Sap Security And Governance Risk And Compliance Consultant",
+          "company": "LTM",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ltm",
+          "sourceId": "4488224392",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4488224392/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4488224392/",
+          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ltm:4485584717",
+          "title": "Senior Specialist - Package Implementation",
+          "company": "LTM",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ltm",
+          "sourceId": "4485584717",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4485584717/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4485584717/",
+          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ltm:4487731242",
+          "title": "Specialist - Software Engineering",
+          "company": "LTM",
+          "location": "Pune Division, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ltm",
+          "sourceId": "4487731242",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487731242/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487731242/",
+          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ltm:4488855501",
+          "title": "Specialist - Package Implementation",
+          "company": "LTM",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ltm",
+          "sourceId": "4488855501",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4488855501/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4488855501/",
+          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "postedAt": "2026-11-09",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ltm:4487718889",
+          "title": "Specialist - Software Engineering",
+          "company": "LTM",
+          "location": "Pune Division, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ltm",
+          "sourceId": "4487718889",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487718889/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487718889/",
+          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ltm:4488138422",
+          "title": "Specialist - Data Sciences",
+          "company": "LTM",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ltm",
+          "sourceId": "4488138422",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4488138422/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4488138422/",
+          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ltm:4488166314",
+          "title": "Specialist - Data Sciences",
+          "company": "LTM",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ltm",
+          "sourceId": "4488166314",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4488166314/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4488166314/",
+          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "postedAt": "2026-11-06",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ltm:4486584569",
+          "title": "Veritas NetBackup Administrator",
+          "company": "LTM",
+          "location": "Pune City, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ltm",
+          "sourceId": "4486584569",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4486584569/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4486584569/",
+          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ltm:4487723609",
+          "title": "Specialist - System Management",
+          "company": "LTM",
+          "location": "Pune Division, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ltm",
+          "sourceId": "4487723609",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4487723609/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4487723609/",
+          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "postedAt": "2026-11-05",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "linkedin:ltm:4489947109",
+          "title": "Senior Specialist - Package Implementation",
+          "company": "LTM",
+          "location": "Navi Mumbai, Maharashtra, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "sourceProvider": "linkedin",
+          "sourceBoard": "ltm",
+          "sourceId": "4489947109",
+          "sourceUrl": "https://www.linkedin.com/jobs/view/4489947109/",
+          "linkedinUrl": "https://www.linkedin.com/jobs/view/4489947109/",
+          "fetchedAt": "2026-11-11T13:43:36.284Z",
+          "postedAt": "2026-11-11",
+          "skills": [],
+          "sourceCountries": [
+            "IN"
+          ]
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Accenture in India",
+        "provider": "accenture",
+        "board": "india",
+        "careersUrl": "https://www.accenture.com/in-en/careers/jobsearch",
+        "verifiedAt": "2026-11-11",
+        "coverage": "Newest up to 50 postings per South Indian city; seven cities"
+      },
+      "attemptedAt": "2026-11-11T13:43:37.096Z",
+      "fetchedAt": "2026-11-11T13:43:37.096Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "accenture:india:ATCI-5781035-S2075089_en",
+          "title": "Web Developer",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 5-10 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Project Role : Web Developer Project Role Description : Design, build and test web-based applications for various site components and edit site content. Document…",
+          "skills": [
+            "Python"
+          ],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5781035-S2075089_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5781035-S2075089_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "ATCI-5781035-S2075089_en",
+          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T20:45:07.732-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:ATCI-5498218-S2006969_en",
+          "title": "Custom Software Engineer",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 5-10 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Project Role : Custom Software Engineer Project Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications.…",
+          "skills": [
+            "Java",
+            "REST",
+            "Agile",
+            "Spring"
+          ],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5498218-S2006969_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5498218-S2006969_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "ATCI-5498218-S2006969_en",
+          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T19:39:49.947-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:AIOC-S01672172_en",
+          "title": "Business Advisory Associate",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 0-2 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "In this role you are required to solve routine problems, largely through precedent and referral to general guidelines. • Your expected interactions are within…",
+          "skills": [],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01672172_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01672172_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "AIOC-S01672172_en",
+          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T05:12:29.111-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:ATCI-5773055-S2074942_en",
+          "title": "AI / ML Engineer",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 2-5 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Project Role : AI / ML Engineer Project Role Description : Develops applications and systems that utilize AI tools, Cloud AI services, with proper…",
+          "skills": [],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5773055-S2074942_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5773055-S2074942_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "ATCI-5773055-S2074942_en",
+          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T05:02:12.593-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:ATCI-5904583-S2074455_en",
+          "title": "Custom Software Engineer",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 2-5 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Project Role : Custom Software Engineer Project Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications.…",
+          "skills": [
+            "JavaScript",
+            "React",
+            "Azure",
+            "Agile"
+          ],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5904583-S2074455_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5904583-S2074455_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "ATCI-5904583-S2074455_en",
+          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T03:51:08.401-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:ATCI-5632139-S2034412_en",
+          "title": "Custom Software Engineer",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 5-10 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Project Role : Custom Software Engineer Project Role Description : Lead the effort to design, build and configure applications, acting as the primary point…",
+          "skills": [
+            "Agile"
+          ],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5632139-S2034412_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5632139-S2034412_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "ATCI-5632139-S2034412_en",
+          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T03:10:30.900-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:AIOC-S01663228_en",
+          "title": "Capital Markets Services Analyst",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 2-5 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "In this role you are required to do analysis and solving of lower-complexity problems. • Your day to day interaction is with peers within…",
+          "skills": [],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01663228_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01663228_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "AIOC-S01663228_en",
+          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T02:53:31.075-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:AIOC-S01668599_en",
+          "title": "Business Advisory Associate",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 0-2 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "In this role you are required to solve routine problems, largely through precedent and referral to general guidelines. • Your expected interactions are within…",
+          "skills": [],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01668599_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01668599_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "AIOC-S01668599_en",
+          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T02:51:10.590-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:ATCI-5626351-S2031918_en",
+          "title": "Custom Software Engineer",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 2-5 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Project Role : Custom Software Engineer Project Role Description : Develop custom software solutions to design, code, and enhance components across systems or applications.…",
+          "skills": [
+            "Agile"
+          ],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5626351-S2031918_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=ATCI-5626351-S2031918_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "ATCI-5626351-S2031918_en",
+          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T02:40:58.206-08:00",
+          "employmentType": "Full-time"
+        },
+        {
+          "id": "accenture:india:AIOC-S01668508_en",
+          "title": "Procure to Pay Operations Associate",
+          "company": "Accenture in India",
+          "location": "Chennai, India",
+          "experience": "Experience: 0-2 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will be aligned with our Finance Operations vertical and will be helping us in determining financial outcomes by collecting operational data reports, whilst…",
+          "skills": [],
+          "linkedinUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01668508_en",
+          "sourceUrl": "https://www.accenture.com/in-en/careers/jobdetails?id=AIOC-S01668508_en",
+          "sourceProvider": "accenture",
+          "sourceBoard": "india",
+          "sourceId": "AIOC-S01668508_en",
+          "fetchedAt": "2026-11-11T13:43:37.096Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T02:23:40.698-08:00",
+          "employmentType": "Full-time"
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Infosys",
+        "provider": "infosys",
+        "board": "india",
+        "careersUrl": "https://career.infosys.com/jobs?countrycode=IN",
+        "verifiedAt": "2026-11-11",
+        "coverage": "Official Infosys India experienced and fresher sources"
+      },
+      "attemptedAt": "2026-11-11T13:43:42.696Z",
+      "fetchedAt": "2026-11-11T13:43:42.696Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "infosys:india:254304",
+          "title": "Informatica BDM Admin",
+          "company": "Infosys",
+          "location": "HYDERABAD, India",
+          "experience": "9–12 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "We are looking for a skilled Informatica BDM Administrator with 9+ years of experience to manage and support Informatica Big Data Management environments. The…",
+          "skills": [
+            "Python",
+            "Linux"
+          ],
+          "linkedinUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256271&sourceId=1",
+          "sourceUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256271&sourceId=1",
+          "sourceProvider": "infosys",
+          "sourceBoard": "india",
+          "sourceId": "254304",
+          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-09T12:44:49.928"
+        },
+        {
+          "id": "infosys:india:254301",
+          "title": "Astronomer Platform Support (PSO)",
+          "company": "Infosys",
+          "location": "HYDERABAD, India",
+          "experience": "5–8 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Support and manage Astronomer and Apache Airflow environments with focus on platform operations, reliability, governance, cloud infrastructure, CI/CD and operational excellence. • Astronomer/Apache Airflow…",
+          "skills": [
+            "CI/CD"
+          ],
+          "linkedinUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256268&sourceId=1",
+          "sourceUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256268&sourceId=1",
+          "sourceProvider": "infosys",
+          "sourceBoard": "india",
+          "sourceId": "254301",
+          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-09T12:20:56.867"
+        },
+        {
+          "id": "infosys:india:254230",
+          "title": "Senior Regional Manager - FES",
+          "company": "Infosys",
+          "location": "Noida, India",
+          "experience": "18–20 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "NA…",
+          "skills": [],
+          "linkedinUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256198&sourceId=1",
+          "sourceUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256198&sourceId=1",
+          "sourceProvider": "infosys",
+          "sourceBoard": "india",
+          "sourceId": "254230",
+          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-05T05:28:58.397"
+        },
+        {
+          "id": "infosys:india:254228",
+          "title": "Utilities Lead - ADMS, GIS, Maximo, CC&B",
+          "company": "Infosys",
+          "location": "BANGALORE, India",
+          "experience": "3–8 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Infosys is a global leader in next-generation digital services and consulting. We enable clients in more than 50 countries to navigate their digital transformation.…",
+          "skills": [
+            "Azure",
+            "Agile"
+          ],
+          "linkedinUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256196&sourceId=1",
+          "sourceUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256196&sourceId=1",
+          "sourceProvider": "infosys",
+          "sourceBoard": "india",
+          "sourceId": "254228",
+          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-05T04:29:32.646"
+        },
+        {
+          "id": "infosys:india:254175",
+          "title": "Cloud Security GCC Group Project Manager",
+          "company": "Infosys",
+          "location": "HYDERABAD, India",
+          "experience": "15–20 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256148&sourceId=1",
+          "sourceUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256148&sourceId=1",
+          "sourceProvider": "infosys",
+          "sourceBoard": "india",
+          "sourceId": "254175",
+          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-04T12:38:58.247"
+        },
+        {
+          "id": "infosys:india:254174",
+          "title": "Industry Principal GCC",
+          "company": "Infosys",
+          "location": "HYDERABAD, India",
+          "experience": "15–20 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256147&sourceId=1",
+          "sourceUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256147&sourceId=1",
+          "sourceProvider": "infosys",
+          "sourceBoard": "india",
+          "sourceId": "254174",
+          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-04T12:12:21.483"
+        },
+        {
+          "id": "infosys:india:254169",
+          "title": "Alteryx Developer",
+          "company": "Infosys",
+          "location": "BANGALORE, India",
+          "experience": "5–9 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "We are seeking an experienced Alteryx Developer with 5-9 years of experience in data analytics, data transformation, and workflow automation. The ideal candidate should…",
+          "skills": [],
+          "linkedinUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256142&sourceId=1",
+          "sourceUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256142&sourceId=1",
+          "sourceProvider": "infosys",
+          "sourceBoard": "india",
+          "sourceId": "254169",
+          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-04T10:40:20.498"
+        },
+        {
+          "id": "infosys:india:254163",
+          "title": "Cybersecurity and Data privacy Engineer - RegTech",
+          "company": "Infosys",
+          "location": "BANGALORE, India",
+          "experience": "5–11 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "you will help design and validate security and privacy controls for a cloud-native enterprise platform used in regulated business workflows. You will work with…",
+          "skills": [
+            "Azure"
+          ],
+          "linkedinUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256136&sourceId=1",
+          "sourceUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256136&sourceId=1",
+          "sourceProvider": "infosys",
+          "sourceBoard": "india",
+          "sourceId": "254163",
+          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-04T06:28:29.613"
+        },
+        {
+          "id": "infosys:india:254161",
+          "title": "MLOps Engineer",
+          "company": "Infosys",
+          "location": "BANGALORE, India",
+          "experience": "2–3 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "We are seeking an experienced MLOps Engineer with strong expertise in deploying, managing, and optimizing machine learning workloads in production environments. This role is…",
+          "skills": [
+            "Python",
+            "Docker",
+            "Kubernetes",
+            "AWS",
+            "CI/CD"
+          ],
+          "linkedinUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256134&sourceId=1",
+          "sourceUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256134&sourceId=1",
+          "sourceProvider": "infosys",
+          "sourceBoard": "india",
+          "sourceId": "254161",
+          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-04T05:23:31.021"
+        },
+        {
+          "id": "infosys:india:254160",
+          "title": "Python ML_GenAI Engineers",
+          "company": "Infosys",
+          "location": "CHENNAI, India",
+          "experience": "1–2 years",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "We are seeking a Junior AI Engineer to design, build, and deploy enterprise-grade Generative AI applications leveraging cloud-native architectures and modern LLM ecosystems. The…",
+          "skills": [
+            "Python",
+            "SQL"
+          ],
+          "linkedinUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256133&sourceId=1",
+          "sourceUrl": "https://career.infosys.com/jobdesc?jobReferenceCode=INFSYS-EXTERNAL-256133&sourceId=1",
+          "sourceProvider": "infosys",
+          "sourceBoard": "india",
+          "sourceId": "254160",
+          "fetchedAt": "2026-11-11T13:43:42.696Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-04T05:09:06.355"
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Wipro",
+        "provider": "wipro",
+        "board": "india",
+        "careersUrl": "https://careers.wipro.com/search/?locationsearch=India",
+        "verifiedAt": "2026-11-11",
+        "coverage": "Newest up to 25 search results per South Indian city; seven cities"
+      },
+      "attemptedAt": "2026-11-11T13:43:44.024Z",
+      "fetchedAt": "2026-11-11T13:43:44.024Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "wipro:india:74902",
+          "title": "Calypso Techno Functional Developer",
+          "company": "Wipro",
+          "location": "Chennai, IND-33, IND, 600119",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://careers.wipro.com/job/Calypso-Techno-Functional-Developer/74902-en_US",
+          "sourceUrl": "https://careers.wipro.com/job/Calypso-Techno-Functional-Developer/74902-en_US",
+          "sourceProvider": "wipro",
+          "sourceBoard": "india",
+          "sourceId": "74902",
+          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "wipro:india:138114",
+          "title": "CyberArk EPM - SECURITY ARCHITECT L1",
+          "company": "Wipro",
+          "location": "Chennai, IND-33, IND, 600119",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://careers.wipro.com/job/CyberArk-EPM-SECURITY-ARCHITECT-L1/138114-en_US",
+          "sourceUrl": "https://careers.wipro.com/job/CyberArk-EPM-SECURITY-ARCHITECT-L1/138114-en_US",
+          "sourceProvider": "wipro",
+          "sourceBoard": "india",
+          "sourceId": "138114",
+          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "wipro:india:142539",
+          "title": "DEVELOPER L3",
+          "company": "Wipro",
+          "location": "Chennai, IND-33, IND, 600119",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://careers.wipro.com/job/DEVELOPER-L3/142539-en_US",
+          "sourceUrl": "https://careers.wipro.com/job/DEVELOPER-L3/142539-en_US",
+          "sourceProvider": "wipro",
+          "sourceBoard": "india",
+          "sourceId": "142539",
+          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "wipro:india:121614",
+          "title": "Solution Architect L1",
+          "company": "Wipro",
+          "location": "Chennai, IND-33, IND, 600119",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://careers.wipro.com/job/Solution-Architect-L1/121614-en_US",
+          "sourceUrl": "https://careers.wipro.com/job/Solution-Architect-L1/121614-en_US",
+          "sourceProvider": "wipro",
+          "sourceBoard": "india",
+          "sourceId": "121614",
+          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "wipro:india:57782",
+          "title": "Administrator - L3",
+          "company": "Wipro",
+          "location": "Chennai, IND-33, IND, 600119",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://careers.wipro.com/job/Administrator-L3/57782-en_US",
+          "sourceUrl": "https://careers.wipro.com/job/Administrator-L3/57782-en_US",
+          "sourceProvider": "wipro",
+          "sourceBoard": "india",
+          "sourceId": "57782",
+          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "wipro:india:88451",
+          "title": "Technical Lead - L1",
+          "company": "Wipro",
+          "location": "Chennai, IND-33, IND, 600119",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://careers.wipro.com/job/Technical-Lead-L1/88451-en_US",
+          "sourceUrl": "https://careers.wipro.com/job/Technical-Lead-L1/88451-en_US",
+          "sourceProvider": "wipro",
+          "sourceBoard": "india",
+          "sourceId": "88451",
+          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "wipro:india:75445",
+          "title": "Service Desk Analyst - L3",
+          "company": "Wipro",
+          "location": "Chennai, IND-33, IND, 600119",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://careers.wipro.com/job/Service-Desk-Analyst-L3/75445-en_US",
+          "sourceUrl": "https://careers.wipro.com/job/Service-Desk-Analyst-L3/75445-en_US",
+          "sourceProvider": "wipro",
+          "sourceBoard": "india",
+          "sourceId": "75445",
+          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "wipro:india:65711",
+          "title": "Administrator - L3",
+          "company": "Wipro",
+          "location": "Chennai, IND-33, IND, 600119",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://careers.wipro.com/job/Administrator-L3/65711-en_US",
+          "sourceUrl": "https://careers.wipro.com/job/Administrator-L3/65711-en_US",
+          "sourceProvider": "wipro",
+          "sourceBoard": "india",
+          "sourceId": "65711",
+          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "wipro:india:135284",
+          "title": "TECHNO FUNCTIONAL CONSULTANT L2",
+          "company": "Wipro",
+          "location": "Chennai, IND-33, IND, 600119",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://careers.wipro.com/job/TECHNO-FUNCTIONAL-CONSULTANT-L2/135284-en_US",
+          "sourceUrl": "https://careers.wipro.com/job/TECHNO-FUNCTIONAL-CONSULTANT-L2/135284-en_US",
+          "sourceProvider": "wipro",
+          "sourceBoard": "india",
+          "sourceId": "135284",
+          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "wipro:india:117146",
+          "title": "Solution Architect L1",
+          "company": "Wipro",
+          "location": "Chennai, IND-33, IND, 600119",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://careers.wipro.com/job/Solution-Architect-L1/117146-en_US",
+          "sourceUrl": "https://careers.wipro.com/job/Solution-Architect-L1/117146-en_US",
+          "sourceProvider": "wipro",
+          "sourceBoard": "india",
+          "sourceId": "117146",
+          "fetchedAt": "2026-11-11T13:43:44.024Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Capco",
+        "provider": "greenhouse",
+        "board": "capco",
+        "careersUrl": "https://www.capco.com/Careers/Job-Search",
+        "verifiedAt": "2026-11-11"
+      },
+      "attemptedAt": "2026-11-11T13:43:49.497Z",
+      "fetchedAt": "2026-11-11T13:43:49.497Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "greenhouse:capco:8281149",
+          "title": "AAA Developer",
+          "company": "Capco",
+          "location": "India - Chennai ",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will work on engaging projects with the largest international and local banks, insurance companies, payment service providers and other key players in the…",
+          "skills": [
+            "PostgreSQL"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/capco/jobs/8281149",
+          "sourceUrl": "https://job-boards.greenhouse.io/capco/jobs/8281149",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "capco",
+          "sourceId": "8281149",
+          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-10-22T10:42:15-04:00"
+        },
+        {
+          "id": "greenhouse:capco:8284414",
+          "title": "Agentic Architect",
+          "company": "Capco",
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will work on engaging projects with the largest international and local banks, insurance companies, payment service providers and other key players in the…",
+          "skills": [],
+          "linkedinUrl": "https://job-boards.greenhouse.io/capco/jobs/8284414",
+          "sourceUrl": "https://job-boards.greenhouse.io/capco/jobs/8284414",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "capco",
+          "sourceId": "8284414",
+          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-10-22T10:42:15-04:00"
+        },
+        {
+          "id": "greenhouse:capco:8312246",
+          "title": "AI Business Analyst",
+          "company": "Capco",
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will work on engaging projects with the largest international and local banks, insurance companies, payment service providers and other key players in the…",
+          "skills": [
+            "Agile"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/capco/jobs/8312246",
+          "sourceUrl": "https://job-boards.greenhouse.io/capco/jobs/8312246",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "capco",
+          "sourceId": "8312246",
+          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-07T03:16:57-05:00"
+        },
+        {
+          "id": "greenhouse:capco:8349241",
+          "title": "AI Business Analyst",
+          "company": "Capco",
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will work on engaging projects with the largest international and local banks, insurance companies, payment service providers and other key players in the…",
+          "skills": [
+            "Agile"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/capco/jobs/8349241",
+          "sourceUrl": "https://job-boards.greenhouse.io/capco/jobs/8349241",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "capco",
+          "sourceId": "8349241",
+          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-07T03:14:37-05:00"
+        },
+        {
+          "id": "greenhouse:capco:8078812",
+          "title": "AI Engineer",
+          "company": "Capco",
+          "location": "India - Pune",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will work on engaging projects with the largest international and local banks, insurance companies, payment service providers and other key players in the…",
+          "skills": [
+            "Python",
+            "Java",
+            "SQL",
+            "AWS",
+            "Azure",
+            "GCP",
+            "C++"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/capco/jobs/8078812",
+          "sourceUrl": "https://job-boards.greenhouse.io/capco/jobs/8078812",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "capco",
+          "sourceId": "8078812",
+          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T05:16:12-05:00"
+        },
+        {
+          "id": "greenhouse:capco:8284202",
+          "title": "AI Governance / Ethical AI Specialist",
+          "company": "Capco",
+          "location": "India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will work on engaging projects with the largest international and local banks, insurance companies, payment service providers and other key players in the…",
+          "skills": [],
+          "linkedinUrl": "https://job-boards.greenhouse.io/capco/jobs/8284202",
+          "sourceUrl": "https://job-boards.greenhouse.io/capco/jobs/8284202",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "capco",
+          "sourceId": "8284202",
+          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-04T13:26:50-05:00"
+        },
+        {
+          "id": "greenhouse:capco:7865480",
+          "title": "Alteryx Developer",
+          "company": "Capco",
+          "location": "India - Mumbai",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will work on engaging projects with the largest international and local banks, insurance companies, payment service providers and other key players in the…",
+          "skills": [],
+          "linkedinUrl": "https://job-boards.greenhouse.io/capco/jobs/7865480",
+          "sourceUrl": "https://job-boards.greenhouse.io/capco/jobs/7865480",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "capco",
+          "sourceId": "7865480",
+          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-10-22T10:42:15-04:00"
+        },
+        {
+          "id": "greenhouse:capco:8333222",
+          "title": "Automation Engineer",
+          "company": "Capco",
+          "location": "India - Bengaluru · India - Pune",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will work on engaging projects with the largest international and local banks, insurance companies, payment service providers and other key players in the…",
+          "skills": [
+            "JavaScript",
+            "TypeScript",
+            "Python",
+            "Java",
+            "Git",
+            "Playwright",
+            "CI/CD",
+            "C#"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/capco/jobs/8333222",
+          "sourceUrl": "https://job-boards.greenhouse.io/capco/jobs/8333222",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "capco",
+          "sourceId": "8333222",
+          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-05T23:34:42-05:00"
+        },
+        {
+          "id": "greenhouse:capco:8317397",
+          "title": "AWS Support Engineer",
+          "company": "Capco",
+          "location": "India - Bengaluru",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will work on engaging projects with the largest international and local banks, insurance companies, payment service providers and other key players in the…",
+          "skills": [
+            "Python",
+            "SQL",
+            "AWS"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/capco/jobs/8317397",
+          "sourceUrl": "https://job-boards.greenhouse.io/capco/jobs/8317397",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "capco",
+          "sourceId": "8317397",
+          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-04T13:26:51-05:00"
+        },
+        {
+          "id": "greenhouse:capco:8336298",
+          "title": "Azure Solution Architect",
+          "company": "Capco",
+          "location": "India - Bengaluru",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will work on engaging projects with the largest international and local banks, insurance companies, payment service providers and other key players in the…",
+          "skills": [
+            "SQL",
+            "Azure",
+            "REST",
+            "CI/CD"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/capco/jobs/8336298",
+          "sourceUrl": "https://job-boards.greenhouse.io/capco/jobs/8336298",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "capco",
+          "sourceId": "8336298",
+          "fetchedAt": "2026-11-11T13:43:49.497Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-09T06:12:26-05:00"
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "ValGenesis",
+        "provider": "lever",
+        "board": "valgenesis",
+        "careersUrl": "https://jobs.lever.co/valgenesis",
+        "verifiedAt": "2026-11-11"
+      },
+      "attemptedAt": "2026-11-11T13:43:52.222Z",
+      "fetchedAt": "2026-11-11T13:43:52.222Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "lever:valgenesis:f2d220b5-abc4-4dc7-b00c-c6b657768739",
+          "title": "Calling all Software Engineers!",
+          "company": "ValGenesis",
+          "location": "Chennai · Chennai · Hyderabad · Bengaluru",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "About the Role: 🚀 We're Hiring Engineers Across All Levels! 🚀 Are you ready to build the future with us? At ValGenesis, we're scaling…",
+          "skills": [],
+          "linkedinUrl": "https://jobs.lever.co/valgenesis/f2d220b5-abc4-4dc7-b00c-c6b657768739",
+          "sourceUrl": "https://jobs.lever.co/valgenesis/f2d220b5-abc4-4dc7-b00c-c6b657768739",
+          "sourceProvider": "lever",
+          "sourceBoard": "valgenesis",
+          "sourceId": "f2d220b5-abc4-4dc7-b00c-c6b657768739",
+          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2025-07-07T17:48:14.861Z",
+          "employmentType": "Full-Time"
+        },
+        {
+          "id": "lever:valgenesis:a9cfca24-ffb3-4287-9ae8-eecd34220d29",
+          "title": "Lead Software Engineer, Data Engineering",
+          "company": "ValGenesis",
+          "location": "Chennai · Chennai",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "About the Role: Architect, Design, develop, and maintain data ingestion, transformation, and orchestration pipelines (batch and real-time). Build and optimize data Lakehouse architectures using…",
+          "skills": [
+            "Python",
+            "Java",
+            "SQL",
+            "PostgreSQL",
+            "MongoDB",
+            "Docker",
+            "Kubernetes",
+            "Azure",
+            "Power BI",
+            "Tableau",
+            "CI/CD",
+            "C#"
+          ],
+          "linkedinUrl": "https://jobs.lever.co/valgenesis/a9cfca24-ffb3-4287-9ae8-eecd34220d29",
+          "sourceUrl": "https://jobs.lever.co/valgenesis/a9cfca24-ffb3-4287-9ae8-eecd34220d29",
+          "sourceProvider": "lever",
+          "sourceBoard": "valgenesis",
+          "sourceId": "a9cfca24-ffb3-4287-9ae8-eecd34220d29",
+          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2025-11-19T12:18:11.161Z",
+          "employmentType": "Full-Time"
+        },
+        {
+          "id": "lever:valgenesis:acbc0284-0bb8-42e4-9fd1-fa3583cb458f",
+          "title": "Platform Product Manager, AI/ML",
+          "company": "ValGenesis",
+          "location": "Chennai · Chennai",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "About the Role: Platform AI/ML Product Strategy • Define and own the product strategy and roadmap for AI/ML and statistical capabilities as core platform…",
+          "skills": [
+            "Python",
+            "AWS",
+            "Azure",
+            "GCP",
+            "Agile"
+          ],
+          "linkedinUrl": "https://jobs.lever.co/valgenesis/acbc0284-0bb8-42e4-9fd1-fa3583cb458f",
+          "sourceUrl": "https://jobs.lever.co/valgenesis/acbc0284-0bb8-42e4-9fd1-fa3583cb458f",
+          "sourceProvider": "lever",
+          "sourceBoard": "valgenesis",
+          "sourceId": "acbc0284-0bb8-42e4-9fd1-fa3583cb458f",
+          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-04-08T06:51:23.634Z",
+          "employmentType": "Full-Time"
+        },
+        {
+          "id": "lever:valgenesis:b288a4a2-4df0-462d-bc82-b20ed3e551c7",
+          "title": "Senior Manager, Engineering",
+          "company": "ValGenesis",
+          "location": "Chennai · Chennai",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "About the Role: We are looking for experienced product engineering/development leader who could join our flagship product VLMS. If you are a technology leader…",
+          "skills": [
+            "JavaScript",
+            "SQL",
+            "HTML",
+            "CSS",
+            "C#"
+          ],
+          "linkedinUrl": "https://jobs.lever.co/valgenesis/b288a4a2-4df0-462d-bc82-b20ed3e551c7",
+          "sourceUrl": "https://jobs.lever.co/valgenesis/b288a4a2-4df0-462d-bc82-b20ed3e551c7",
+          "sourceProvider": "lever",
+          "sourceBoard": "valgenesis",
+          "sourceId": "b288a4a2-4df0-462d-bc82-b20ed3e551c7",
+          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2025-05-07T14:07:11.300Z",
+          "employmentType": "Full-Time"
+        },
+        {
+          "id": "lever:valgenesis:7b5331dd-f7b3-42c3-b58f-27a216ab64a6",
+          "title": "Senior Manager, Product Management – MSAT",
+          "company": "ValGenesis",
+          "location": "Chennai · Chennai",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "In this role, you’ll own the executioand evolution of key MSAT product areas, including Electronic Batch Records (eBR), Technology Transfer, and Annual Product Quality…",
+          "skills": [
+            "Agile"
+          ],
+          "linkedinUrl": "https://jobs.lever.co/valgenesis/7b5331dd-f7b3-42c3-b58f-27a216ab64a6",
+          "sourceUrl": "https://jobs.lever.co/valgenesis/7b5331dd-f7b3-42c3-b58f-27a216ab64a6",
+          "sourceProvider": "lever",
+          "sourceBoard": "valgenesis",
+          "sourceId": "7b5331dd-f7b3-42c3-b58f-27a216ab64a6",
+          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-09-29T16:59:32.805Z",
+          "employmentType": "Full-Time"
+        },
+        {
+          "id": "lever:valgenesis:3bab8728-3f05-4db5-8b51-4a3d77187313",
+          "title": "Senior Software Engineer, Data Engineering",
+          "company": "ValGenesis",
+          "location": "Chennai · Chennai",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "About the Role: Design, develop, and maintain data ingestion, transformation, and orchestration pipelines (batch and real-time). Build and optimize data Lakehouse architectures using Azure…",
+          "skills": [
+            "Python",
+            "Java",
+            "SQL",
+            "PostgreSQL",
+            "MongoDB",
+            "Docker",
+            "Kubernetes",
+            "Azure",
+            "Power BI",
+            "Tableau",
+            "CI/CD",
+            "C#"
+          ],
+          "linkedinUrl": "https://jobs.lever.co/valgenesis/3bab8728-3f05-4db5-8b51-4a3d77187313",
+          "sourceUrl": "https://jobs.lever.co/valgenesis/3bab8728-3f05-4db5-8b51-4a3d77187313",
+          "sourceProvider": "lever",
+          "sourceBoard": "valgenesis",
+          "sourceId": "3bab8728-3f05-4db5-8b51-4a3d77187313",
+          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2025-11-19T12:38:54.602Z",
+          "employmentType": "Full-Time"
+        },
+        {
+          "id": "lever:valgenesis:9799a961-0bec-4569-aee5-8850e5a85acf",
+          "title": "Senior Software Engineer, Data Engineering",
+          "company": "ValGenesis",
+          "location": "Chennai · Chennai",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "About the Role: Design, develop, and maintain data ingestion, transformation, and orchestration pipelines (batch and real-time). Build and optimize data Lakehouse architectures using Azure…",
+          "skills": [
+            "Python",
+            "Java",
+            "SQL",
+            "PostgreSQL",
+            "MongoDB",
+            "Docker",
+            "Kubernetes",
+            "Azure",
+            "Power BI",
+            "Tableau",
+            "CI/CD",
+            "C#"
+          ],
+          "linkedinUrl": "https://jobs.lever.co/valgenesis/9799a961-0bec-4569-aee5-8850e5a85acf",
+          "sourceUrl": "https://jobs.lever.co/valgenesis/9799a961-0bec-4569-aee5-8850e5a85acf",
+          "sourceProvider": "lever",
+          "sourceBoard": "valgenesis",
+          "sourceId": "9799a961-0bec-4569-aee5-8850e5a85acf",
+          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-04-24T06:16:34.133Z",
+          "employmentType": "Full-Time"
+        },
+        {
+          "id": "lever:valgenesis:1138f762-4ed6-41dc-90de-09d9c70b87dc",
+          "title": "Senior Software Engineer, Full-stack",
+          "company": "ValGenesis",
+          "location": "Hyderabad · Hyderabad",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "About the Role: Understand the business requirements and technical constraints and architect/design/develop. Participate in the complete development life cycle. Review the architecture/design/code of self…",
+          "skills": [
+            "JavaScript",
+            "React",
+            "SQL",
+            "PostgreSQL",
+            "Azure",
+            "Power BI",
+            "C#"
+          ],
+          "linkedinUrl": "https://jobs.lever.co/valgenesis/1138f762-4ed6-41dc-90de-09d9c70b87dc",
+          "sourceUrl": "https://jobs.lever.co/valgenesis/1138f762-4ed6-41dc-90de-09d9c70b87dc",
+          "sourceProvider": "lever",
+          "sourceBoard": "valgenesis",
+          "sourceId": "1138f762-4ed6-41dc-90de-09d9c70b87dc",
+          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2025-04-23T13:29:18.703Z",
+          "employmentType": "Full-Time"
+        },
+        {
+          "id": "lever:valgenesis:06de9b0f-6e37-4b3e-9abb-4b329700613a",
+          "title": "Senior Software Engineering Manager, Fullstack",
+          "company": "ValGenesis",
+          "location": "Chennai · Chennai",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "About the Role: 8 to 12 years of experience in developing enterprise software products with cloud native stack Strong knowledge of C#, .NET Core…",
+          "skills": [
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "SQL",
+            "PostgreSQL",
+            "MongoDB",
+            "Azure",
+            "C#"
+          ],
+          "linkedinUrl": "https://jobs.lever.co/valgenesis/06de9b0f-6e37-4b3e-9abb-4b329700613a",
+          "sourceUrl": "https://jobs.lever.co/valgenesis/06de9b0f-6e37-4b3e-9abb-4b329700613a",
+          "sourceProvider": "lever",
+          "sourceBoard": "valgenesis",
+          "sourceId": "06de9b0f-6e37-4b3e-9abb-4b329700613a",
+          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2025-09-17T10:02:39.758Z",
+          "employmentType": "Full-Time"
+        },
+        {
+          "id": "lever:valgenesis:43018031-a1f2-4c60-9742-d49d83591759",
+          "title": "Software Engineer - Database",
+          "company": "ValGenesis",
+          "location": "Chennai · Chennai",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "About the Role: We are looking for an experienced database developer who could join our engineering team to build the enterprise applications for our…",
+          "skills": [
+            "SQL",
+            "PostgreSQL",
+            "Git",
+            "Azure",
+            "C#"
+          ],
+          "linkedinUrl": "https://jobs.lever.co/valgenesis/43018031-a1f2-4c60-9742-d49d83591759",
+          "sourceUrl": "https://jobs.lever.co/valgenesis/43018031-a1f2-4c60-9742-d49d83591759",
+          "sourceProvider": "lever",
+          "sourceBoard": "valgenesis",
+          "sourceId": "43018031-a1f2-4c60-9742-d49d83591759",
+          "fetchedAt": "2026-11-11T13:43:52.222Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2024-05-24T00:00:00.000Z",
+          "employmentType": "Full-Time"
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Zuora",
+        "provider": "zuora",
+        "board": "zuora",
+        "careersUrl": "https://www.zuora.com/careers-search-jobs/",
+        "verifiedAt": "2026-11-11"
+      },
+      "attemptedAt": "2026-11-11T13:43:55.884Z",
+      "fetchedAt": "2026-11-11T13:43:55.884Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "zuora:zuora:/careers/corporate-information-technology/sr-developer-ga-business-systems/",
+          "title": "Sr. Solutions Architect - Workday",
+          "company": "Zuora",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://www.zuora.com/careers/corporate-information-technology/sr-developer-ga-business-systems/",
+          "sourceUrl": "https://www.zuora.com/careers/corporate-information-technology/sr-developer-ga-business-systems/",
+          "sourceProvider": "zuora",
+          "sourceBoard": "zuora",
+          "sourceId": "/careers/corporate-information-technology/sr-developer-ga-business-systems/",
+          "fetchedAt": "2026-11-11T13:43:55.884Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "zuora:zuora:/careers/global-services/solution-architect/",
+          "title": "Solution Architect",
+          "company": "Zuora",
+          "location": "Bengaluru, Karnataka, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://www.zuora.com/careers/global-services/solution-architect/",
+          "sourceUrl": "https://www.zuora.com/careers/global-services/solution-architect/",
+          "sourceProvider": "zuora",
+          "sourceBoard": "zuora",
+          "sourceId": "/careers/global-services/solution-architect/",
+          "fetchedAt": "2026-11-11T13:43:55.884Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "zuora:zuora:/careers/marketing/marketing-business-analyst/",
+          "title": "Marketing Business Analyst",
+          "company": "Zuora",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://www.zuora.com/careers/marketing/marketing-business-analyst/",
+          "sourceUrl": "https://www.zuora.com/careers/marketing/marketing-business-analyst/",
+          "sourceProvider": "zuora",
+          "sourceBoard": "zuora",
+          "sourceId": "/careers/marketing/marketing-business-analyst/",
+          "fetchedAt": "2026-11-11T13:43:55.884Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "zuora:zuora:/careers/marketing/performance-marketing-analyst/",
+          "title": "Performance Marketing Analyst",
+          "company": "Zuora",
+          "location": "Bengaluru, Karnataka, India · Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://www.zuora.com/careers/marketing/performance-marketing-analyst/",
+          "sourceUrl": "https://www.zuora.com/careers/marketing/performance-marketing-analyst/",
+          "sourceProvider": "zuora",
+          "sourceBoard": "zuora",
+          "sourceId": "/careers/marketing/performance-marketing-analyst/",
+          "fetchedAt": "2026-11-11T13:43:55.884Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "zuora:zuora:/careers/marketing/senior-web-strategy-experience-specialist/",
+          "title": "Senior Web Strategy & Experience Specialist",
+          "company": "Zuora",
+          "location": "Bengaluru, Karnataka, India · Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://www.zuora.com/careers/marketing/senior-web-strategy-experience-specialist/",
+          "sourceUrl": "https://www.zuora.com/careers/marketing/senior-web-strategy-experience-specialist/",
+          "sourceProvider": "zuora",
+          "sourceBoard": "zuora",
+          "sourceId": "/careers/marketing/senior-web-strategy-experience-specialist/",
+          "fetchedAt": "2026-11-11T13:43:55.884Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        },
+        {
+          "id": "zuora:zuora:/careers/workspace-resources/office-community-manager/",
+          "title": "Office & Community Manager",
+          "company": "Zuora",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "skills": [],
+          "linkedinUrl": "https://www.zuora.com/careers/workspace-resources/office-community-manager/",
+          "sourceUrl": "https://www.zuora.com/careers/workspace-resources/office-community-manager/",
+          "sourceProvider": "zuora",
+          "sourceBoard": "zuora",
+          "sourceId": "/careers/workspace-resources/office-community-manager/",
+          "fetchedAt": "2026-11-11T13:43:55.884Z",
+          "sourceCountries": [
+            "IN"
+          ]
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Appian",
+        "provider": "greenhouse",
+        "board": "appian",
+        "careersUrl": "https://careers.appian.com/jobs",
+        "verifiedAt": "2026-11-11"
+      },
+      "attemptedAt": "2026-11-11T13:44:03.219Z",
+      "fetchedAt": "2026-11-11T13:44:03.219Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "greenhouse:appian:8223246",
+          "title": "Career Manager",
+          "company": "Appian",
+          "location": "Chennai, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "Here at Appian, our values of Intensity and Excellence define who we are. We set high standards and live up to them, ensuring that…",
+          "skills": [
+            "Excel"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/appian/jobs/8223246",
+          "sourceUrl": "https://job-boards.greenhouse.io/appian/jobs/8223246",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "appian",
+          "sourceId": "8223246",
+          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T16:13:57-05:00"
+        },
+        {
+          "id": "greenhouse:appian:7904837",
+          "title": "Compensation Analyst III",
+          "company": "Appian",
+          "location": "Chennai, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "you will act as a core equity subject matter expert based out of our Chennai tech hub. You won't just analyze numbers; you will…",
+          "skills": [
+            "Excel"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/appian/jobs/7904837",
+          "sourceUrl": "https://job-boards.greenhouse.io/appian/jobs/7904837",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "appian",
+          "sourceId": "7904837",
+          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T16:07:49-05:00"
+        },
+        {
+          "id": "greenhouse:appian:7812261",
+          "title": "Director, Platform Engineering (Product Management)",
+          "company": "Appian",
+          "location": "Chennai, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will oversee the product management execution, working closely with the product managers for several cross-functional software engineering teams around the world. This position…",
+          "skills": [
+            "Kubernetes",
+            "AWS"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/appian/jobs/7812261",
+          "sourceUrl": "https://job-boards.greenhouse.io/appian/jobs/7812261",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "appian",
+          "sourceId": "7812261",
+          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T16:07:36-05:00"
+        },
+        {
+          "id": "greenhouse:appian:8070827",
+          "title": "Global Longtail Sales Specialist – Global Alliances & Channels",
+          "company": "Appian",
+          "location": "Chennai, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "you will act as a primary growth engine for the foundational tiers of Appian’s global partner ecosystem. Moving beyond standard tracking, you will actively…",
+          "skills": [],
+          "linkedinUrl": "https://job-boards.greenhouse.io/appian/jobs/8070827",
+          "sourceUrl": "https://job-boards.greenhouse.io/appian/jobs/8070827",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "appian",
+          "sourceId": "8070827",
+          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T16:10:37-05:00"
+        },
+        {
+          "id": "greenhouse:appian:8258091",
+          "title": "Global Partner Experience & Enablement Specialist",
+          "company": "Appian",
+          "location": "Chennai, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "you will support our central Global Partner Experience team. Reporting to the Director of Global Partner Experience, you will bring your experience in partner…",
+          "skills": [],
+          "linkedinUrl": "https://job-boards.greenhouse.io/appian/jobs/8258091",
+          "sourceUrl": "https://job-boards.greenhouse.io/appian/jobs/8258091",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "appian",
+          "sourceId": "8258091",
+          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T16:11:33-05:00"
+        },
+        {
+          "id": "greenhouse:appian:8318480",
+          "title": "GSI & Regional Partner Technical Success Architect",
+          "company": "Appian",
+          "location": "Chennai, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "you will serve as a trusted technical advisor to top-tier GSIs and enterprise delivery partners. This is a high-visibility, force-multiplier role where your architectural…",
+          "skills": [],
+          "linkedinUrl": "https://job-boards.greenhouse.io/appian/jobs/8318480",
+          "sourceUrl": "https://job-boards.greenhouse.io/appian/jobs/8318480",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "appian",
+          "sourceId": "8318480",
+          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T16:17:34-05:00"
+        },
+        {
+          "id": "greenhouse:appian:8025566",
+          "title": "Principal Consultant",
+          "company": "Appian",
+          "location": "Chennai, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "As a Principal Technical Consultant , you will assume architectural leadership for multi-application platform design, execution, and performance optimization. Top engineering talent joins Appian…",
+          "skills": [
+            "JavaScript",
+            "Python",
+            "Java",
+            "SQL",
+            "Kubernetes",
+            "Selenium",
+            "REST",
+            "Agile"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/appian/jobs/8025566",
+          "sourceUrl": "https://job-boards.greenhouse.io/appian/jobs/8025566",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "appian",
+          "sourceId": "8025566",
+          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T16:09:04-05:00"
+        },
+        {
+          "id": "greenhouse:appian:7748642",
+          "title": "Product Manager II - Cloud Infrastructure",
+          "company": "Appian",
+          "location": "Chennai, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will be the product manager working closely with the team whose mission is to strengthen and optimize site infrastructure by delivering essential upgrades,…",
+          "skills": [
+            "Kubernetes",
+            "AWS",
+            "Agile"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/appian/jobs/7748642",
+          "sourceUrl": "https://job-boards.greenhouse.io/appian/jobs/7748642",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "appian",
+          "sourceId": "7748642",
+          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T16:07:25-05:00"
+        },
+        {
+          "id": "greenhouse:appian:7977620",
+          "title": "Senior Consultant",
+          "company": "Appian",
+          "location": "Chennai, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "you will design complex architectures and lead the hands-on engineering of enterprise-grade automation platforms for global industry leaders. Location: Chennai, India | Work Model:…",
+          "skills": [
+            "JavaScript",
+            "Python",
+            "Java",
+            "SQL",
+            "Kubernetes",
+            "Selenium",
+            "REST",
+            "Agile"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/appian/jobs/7977620",
+          "sourceUrl": "https://job-boards.greenhouse.io/appian/jobs/7977620",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "appian",
+          "sourceId": "7977620",
+          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T16:08:36-05:00"
+        },
+        {
+          "id": "greenhouse:appian:8021616",
+          "title": "Senior Manager Software Development",
+          "company": "Appian",
+          "location": "Chennai, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "you will provide technical leadership for a specific product area while directly driving the professional development of the engineers on your team. Key Responsibilities:…",
+          "skills": [
+            "Python",
+            "Java",
+            "Kubernetes",
+            "Agile",
+            "CI/CD",
+            "C++"
+          ],
+          "linkedinUrl": "https://job-boards.greenhouse.io/appian/jobs/8021616",
+          "sourceUrl": "https://job-boards.greenhouse.io/appian/jobs/8021616",
+          "sourceProvider": "greenhouse",
+          "sourceBoard": "appian",
+          "sourceId": "8021616",
+          "fetchedAt": "2026-11-11T13:44:03.219Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "providerUpdatedAt": "2026-11-10T16:09:10-05:00"
+        }
+      ]
+    },
+    {
+      "feed": {
+        "company": "Poshmark",
+        "provider": "ashby",
+        "board": "poshmark",
+        "careersUrl": "https://poshmark.com/careers",
+        "verifiedAt": "2026-11-11"
+      },
+      "attemptedAt": "2026-11-11T13:44:04.596Z",
+      "fetchedAt": "2026-11-11T13:44:04.596Z",
+      "status": "ok",
+      "jobs": [
+        {
+          "id": "ashby:poshmark:461a37db-d133-4947-a17d-8afd2092a6fc",
+          "title": "Senior Software Engineer II, Machine Learning",
+          "company": "Poshmark",
+          "location": "IN Tamil Nadu (Chennai) - Office",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "ABOUT POSHMARK Poshmark is the leading fashion marketplace where style comes alive through discovery, self-expression, and human connection. Powered by a vibrant community of…",
+          "skills": [
+            "Python",
+            "Java",
+            "SQL",
+            "MongoDB",
+            "Docker",
+            "Kubernetes"
+          ],
+          "linkedinUrl": "https://jobs.ashbyhq.com/poshmark/461a37db-d133-4947-a17d-8afd2092a6fc",
+          "sourceUrl": "https://jobs.ashbyhq.com/poshmark/461a37db-d133-4947-a17d-8afd2092a6fc",
+          "sourceProvider": "ashby",
+          "sourceBoard": "poshmark",
+          "sourceId": "461a37db-d133-4947-a17d-8afd2092a6fc",
+          "fetchedAt": "2026-11-11T13:44:04.596Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-06-25T03:43:08.947+00:00",
+          "employmentType": "FullTime"
+        },
+        {
+          "id": "ashby:poshmark:5ed99cb0-d860-4c96-aa93-31c82af1ade7",
+          "title": "Live Chat Support Associate (1-3 years)",
+          "company": "Poshmark",
+          "location": "IN Tamil Nadu (Chennai) - Office",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "ABOUT THE ROLE Poshmark is the largest community marketplace for fashion, where anyone can buy, sell, and share their personal style. As a Community…",
+          "skills": [],
+          "linkedinUrl": "https://jobs.ashbyhq.com/poshmark/5ed99cb0-d860-4c96-aa93-31c82af1ade7",
+          "sourceUrl": "https://jobs.ashbyhq.com/poshmark/5ed99cb0-d860-4c96-aa93-31c82af1ade7",
+          "sourceProvider": "ashby",
+          "sourceBoard": "poshmark",
+          "sourceId": "5ed99cb0-d860-4c96-aa93-31c82af1ade7",
+          "fetchedAt": "2026-11-11T13:44:04.596Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-08-26T09:30:29.412+00:00",
+          "employmentType": "FullTime"
+        },
+        {
+          "id": "ashby:poshmark:be164aec-878b-493f-8baf-608dc5076b80",
+          "title": "Junior Email Support - Night Shift (0 - 3 years only)",
+          "company": "Poshmark",
+          "location": "IN Tamil Nadu (Chennai) - Office",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "You will triage and respond to high volumes of time-sensitive customer inquiries--related to orders, their account, and provide detailed product education. Our goal is…",
+          "skills": [
+            "Express"
+          ],
+          "linkedinUrl": "https://jobs.ashbyhq.com/poshmark/be164aec-878b-493f-8baf-608dc5076b80",
+          "sourceUrl": "https://jobs.ashbyhq.com/poshmark/be164aec-878b-493f-8baf-608dc5076b80",
+          "sourceProvider": "ashby",
+          "sourceBoard": "poshmark",
+          "sourceId": "be164aec-878b-493f-8baf-608dc5076b80",
+          "fetchedAt": "2026-11-11T13:44:04.596Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-11-04T17:05:20.547+00:00",
+          "employmentType": "FullTime"
+        },
+        {
+          "id": "ashby:poshmark:b13d536d-bb05-4173-a17d-6ed55a2991c7",
+          "title": "Staff Engineer, Machine Learning",
+          "company": "Poshmark",
+          "location": "IN Tamil Nadu (Chennai) - Office",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "Not specified",
+          "description": "We are looking for exceptional, creative and passionate Machine Learning engineers to join our ML and Big Data Team. You will be responsible for…",
+          "skills": [
+            "Python",
+            "MongoDB"
+          ],
+          "linkedinUrl": "https://jobs.ashbyhq.com/poshmark/b13d536d-bb05-4173-a17d-6ed55a2991c7",
+          "sourceUrl": "https://jobs.ashbyhq.com/poshmark/b13d536d-bb05-4173-a17d-6ed55a2991c7",
+          "sourceProvider": "ashby",
+          "sourceBoard": "poshmark",
+          "sourceId": "b13d536d-bb05-4173-a17d-6ed55a2991c7",
+          "fetchedAt": "2026-11-11T13:44:04.596Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-09-23T11:26:14.239+00:00",
+          "employmentType": "FullTime"
+        },
+        {
+          "id": "ashby:poshmark:44f1abe4-3923-4d99-9834-d2a26853ff8f",
+          "title": "AML Associate",
+          "company": "Poshmark",
+          "location": "Chennai, Tamil Nadu, India",
+          "experience": "Experience not specified",
+          "salary": "Not disclosed",
+          "mode": "On-site",
+          "description": "you will have the opportunity to protect Poshmark while ensuring the best experience for the community of users. This position will sit within a…",
+          "skills": [],
+          "linkedinUrl": "https://jobs.ashbyhq.com/poshmark/44f1abe4-3923-4d99-9834-d2a26853ff8f",
+          "sourceUrl": "https://jobs.ashbyhq.com/poshmark/44f1abe4-3923-4d99-9834-d2a26853ff8f",
+          "sourceProvider": "ashby",
+          "sourceBoard": "poshmark",
+          "sourceId": "44f1abe4-3923-4d99-9834-d2a26853ff8f",
+          "fetchedAt": "2026-11-11T13:44:04.596Z",
+          "sourceCountries": [
+            "IN"
+          ],
+          "postedAt": "2026-10-15T10:25:43.989+00:00",
+          "employmentType": "FullTime"
+        }
+      ]
+    }
+  ]
+}

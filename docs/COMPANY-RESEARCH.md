@@ -1,66 +1,52 @@
-# Company research and job collection
+# Company research and India job collection
 
-Research date: 11 November 2026. Job retrieval dates are preserved per source.
+Research date: 11 November 2026. This document is an operator reference, not public interface copy.
 
 ## Coverage
 
-- 135 company names inventoried and searched.
-- 115 have official sources identified, including 7 company websites without a confirmed careers route.
-- 108 have a careers, vacancy or candidate-help source. Finding a source does not verify a company-wide interview process.
-- 24 have specific published hiring, preparation or recruitment-safety guidance summarized.
-- 20 names remain unresolved. No timelines, ratings, eligibility or interview rounds were invented for them.
-- 293 official postings collected across 4 companies; 25 mention India in their locations or supply India country metadata. Remote alone is not treated as worldwide eligibility.
+- 142 company names inventoried.
+- 132 have official sources, including 13 company websites without a confirmed careers route.
+- 35 have specific published guidance summarized with source links and country or programme scope.
+- 10 identities or careers routes remain unresolved; no interview stages or eligibility rules were invented.
+- 2378 India listings in the versioned snapshot across 14 sources. The public app reads the shared catalog and defaults to South India.
 
-## Current collection
+## Source snapshots
 
-| Company | Method | Published postings | India locations | Retrieved |
-|---|---|---:|---:|---|
-| Appian | greenhouse public API; ok | 158 | 14 | 2026-11-11T12:14:08.929Z |
-| Poshmark | ashby public API; ok | 22 | 5 | 2026-11-11T12:14:10.804Z |
-| HappyRobot | ashby public API; ok | 77 | 0 | 2026-11-11T12:14:11.383Z |
-| Zuora | Browser-visible official careers page | 36 | 6 | 2026-11-11T12:04:44.779Z |
+| Company | Method | Listings | Retrieved |
+|---|---|---:|---|
+| Tata Consultancy Services | linkedin; ok | 26 | 2026-11-11T13:43:31.054Z |
+| HCLTech | linkedin; ok | 55 | 2026-11-11T13:43:32.184Z |
+| Cognizant | linkedin; ok | 55 | 2026-11-11T13:43:33.336Z |
+| Capgemini | linkedin; ok | 37 | 2026-11-11T13:43:34.199Z |
+| Tech Mahindra | linkedin; ok | 17 | 2026-11-11T13:43:35.466Z |
+| LTM | linkedin; ok | 25 | 2026-11-11T13:43:36.284Z |
+| Accenture in India | accenture; ok | 251 | 2026-11-11T13:43:37.096Z |
+| Infosys | infosys; ok | 1698 | 2026-11-11T13:43:42.696Z |
+| Wipro | wipro; ok | 50 | 2026-11-11T13:43:44.024Z |
+| Capco | greenhouse; ok | 129 | 2026-11-11T13:43:49.497Z |
+| ValGenesis | lever; ok | 10 | 2026-11-11T13:43:52.222Z |
+| Zuora | zuora; ok | 6 | 2026-11-11T13:43:55.884Z |
+| Appian | greenhouse; ok | 14 | 2026-11-11T13:44:03.219Z |
+| Poshmark | ashby; ok | 5 | 2026-11-11T13:44:04.596Z |
 
-These are snapshots of listings visible at retrieval, not a continuous availability guarantee. Similar postings are grouped in the app, while their individual source IDs remain available. Unknown salaries, experience and work modes remain unspecified. Browser-only Zuora records link to the full description. API records keep at most a 24-word excerpt and detected skill keywords, not the full job text. A provider update timestamp is not represented as a posting date.
+Accenture and Wipro use bounded recent-result windows across seven South Indian cities. Infosys collects its India lateral and fresher portal. Appian, Capco, Poshmark, ValGenesis and Zuora use official public board APIs or HTML. Six additional employers use public LinkedIn discovery cards: exact employer name and company slug, explicit India location and recent source date are required. LinkedIn coverage is the public first page from the past week, not an employer’s complete vacancy inventory.
 
-## Refresh and collection procedure
+The shared collector is active on lotus-buzzer at 7:00 a.m. IST, with failed-source retries at 8:00 a.m. IST. It uses no model calls and does not require Codex to be open. See [job collection operations](JOB-COLLECTION-OPERATIONS.md) for deployment, security and failure handling. Frontend deployment remains separate from a repository push.
 
-Run `npm run jobs:collect` from the app repository to refresh the three API-backed boards. The collector makes sequential public GET requests with a 25-second timeout. It never submits applications, signs in, collects applicant data or bypasses browser challenges. A failed or malformed response retains that board’s previous successful records and retrieval time, marks the refresh failed, and makes the command fail visibly. A valid empty jobs array clears only that board. Results replace the snapshot atomically.
-
-The board names were established through official careers links: [Appian](https://careers.appian.com/jobs), [Poshmark](https://poshmark.com/careers), and [HappyRobot](https://www.happyrobot.ai/careers). Poshmark currently links to Ashby; older Greenhouse references were not reused. API contracts: [Greenhouse public Job Board API](https://docs.greenhouse.io/job-board.html), [Ashby published-postings API](https://developers.ashbyhq.com/docs/public-job-posting-api).
-
-Zuora was collected from visible job links and location elements on its [official jobs page](https://www.zuora.com/careers-search-jobs/). It is a manual browser snapshot. To refresh it, revisit that page with computer use, capture each visible job title/location/detail URL, confirm the full list is present, and import the capture using `node --import tsx scripts/import-browser-jobs.ts <capture.json>`. The importer accepts only the official Zuora source and HTTPS Zuora careers URLs. Its capture format is `{company:"Zuora",source:"https://www.zuora.com/careers-search-jobs/",fetchedAt:"ISO timestamp",jobs:[{title,location,sourceUrl}]}`.
-
-No recurring schedule or production backend ingestion has been enabled. The app reads versioned local snapshots. Refreshing a repository snapshot does not publish a new deployment automatically.
-
-## Next collection work
-
-1. Verify the official ATS identity for additional employers before adding their adapters. Prioritize India-relevant employers with published sources, including Accenture, Cognizant, TCS, Infosys, HCLTech, Wipro, Capco, Tekion, UST and Exterro. An official source for these companies has been identified; their live jobs have not yet been collected by this pipeline.
-2. For Workday, Oracle, PeopleStrong, SuccessFactors and other boards, use documented public feeds where available. Otherwise use the official browser UI, respecting its filters and pagination. Record the actual coverage and retrieval date; a page blocked by a challenge or login is unresolved, not zero vacancies.
-3. Extend company-specific FAQs only from published guidance. Keep country, program and role scope. Do not reuse a UK graduate rule as an India-wide requirement.
-4. Add a shared `skillup_*` ingestion namespace to the selected Lotus backend before serving updates across devices; preserve the existing Lotus application’s tables and settings.
+Refresh failures retain the last successful data. Listings absent from a successful source snapshot leave the current catalog; that does not prove the employer closed them, especially with bounded windows. Saved applications remain available. No salary, experience or work-mode guesses are added. Provider update dates are not posting dates.
 
 ## Unresolved names
 
 - **Alien Design Agency** — Search completed; official careers route not confidently matched.
-- **BigThinkCode** — Search completed; official careers route not confidently matched.
 - **Cittabase Solutions** — Search completed; official careers route not confidently matched.
-- **FedEx ACC** — Search completed; official careers route not confidently matched.
 - **Golden Opportunities** — Search completed; official careers route not confidently matched.
-- **InFynd** — Search completed; official careers route not confidently matched.
 - **Kavi India** — Search completed; official careers route not confidently matched.
 - **Life@foodhub** — Possible Foodhub brand alias; canonical identity not confirmed.
-- **Megan Soft Inc** — Search completed; official careers route not confidently matched.
 - **Microgenn Software Solutions** — Search completed; official careers route not confidently matched.
 - **MyCareernet** — Search completed; official careers route not confidently matched.
 - **Nebula AI** — Ambiguous name in the original seed data; client identity needed.
-- **Paperflite** — Search completed; official careers route not confidently matched.
-- **Pinnacle Group, Inc.** — Search completed; official careers route not confidently matched.
 - **Prognova** — Search completed; official careers route not confidently matched.
-- **Seyyone Group of Companies** — Search completed; official careers route not confidently matched.
-- **SWITS DIGITAL Private Limited** — Search completed; official careers route not confidently matched.
 - **Uniserve** — Search completed; official careers route not confidently matched.
-- **VMC Soft Technologies, Inc** — Search completed; official careers route not confidently matched.
-- **Zorba AI** — Search completed; official careers route not confidently matched.
 
 ## Company source index
 
@@ -73,23 +59,24 @@ No recurring schedule or production backend ingestion has been enabled. The app 
 | Aivar Innovations | Source identified | Company website; careers route not confirmed | [Source](https://www.aivar.tech/about-us) |
 | Alien Design Agency | Unresolved | Search completed; official careers route not confidently matched | — |
 | Amazon | Published guidance | Official careers source; local requirements vary | [Source](https://www.amazon.jobs/content/en/faq/interview-process) |
-| American Express | Source identified | Official careers source; local requirements vary | [Source](https://careers.americanexpress.com/en/sites/CX_1) |
+| American Express | Published guidance | Official careers source; local requirements vary | [Source](https://careers.americanexpress.com/en/sites/CX_1) |
 | Appian | Source identified | Official careers source; local requirements vary | [Source](https://careers.appian.com/jobs) |
 | AppViewX | Source identified | Official careers source; local requirements vary | [Source](https://www.appviewx.com/company/careers/) |
+| Aspire Systems | Source identified | India-focused shortlist; confirm role location | [Source](https://www.aspiresys.com/careers) |
 | ASSA ABLOY Group | Published guidance | Official careers source; local requirements vary | [Source](https://www.assaabloy.com/career/en/open-positions/recruitment-process) |
 | AtkinsRéalis | Source identified | UK placements | [Source](https://careers.atkinsrealis.com/en/early-careers/uk/placements/selection-process) |
 | Avantor | Source identified | Official careers source; local requirements vary | [Source](https://careers.avantorsciences.com/) |
 | Bahwan CyberTek | Source identified | Official careers source; local requirements vary | [Source](https://www.bahwancybertek.com/careers/index.html) |
-| Barclays | Source identified | Official careers source; local requirements vary | [Source](https://search.jobs.barclays/faqs) |
+| Barclays | Published guidance | Official careers source; local requirements vary | [Source](https://search.jobs.barclays/faqs) |
 | Barry-Wehmiller | Source identified | Official careers source; local requirements vary | [Source](https://www.barrywehmiller.com/careers) |
 | Beroe Inc | Source identified | Official careers source; local requirements vary | [Source](https://www.beroeinc.com/careers/) |
-| BigThinkCode | Unresolved | Search completed; official careers route not confidently matched | — |
-| Blue Yonder | Source identified | Official careers source; local requirements vary | [Source](https://careers.blueyonder.com/us/en/home) |
+| BigThinkCode | Source identified | Company website; careers route not confirmed | [Source](https://bigthinkcode.com/) |
+| Blue Yonder | Published guidance | Official careers source; local requirements vary | [Source](https://careers.blueyonder.com/us/en/home) |
 | BNP Paribas | Published guidance | Official careers source; local requirements vary | [Source](https://group.bnpparibas/en/careers/lets-prepare-to-apply) |
 | BU Soft Tech | Source identified | Official careers source; local requirements vary | [Source](https://www.busofttech.com/careers) |
 | Capco | Published guidance | Official careers source; local requirements vary | [Source](https://www.capco.com/Careers/Job-Search) |
 | CapeStart | Source identified | Official careers source; local requirements vary | [Source](https://careers.capestart.com/capestart/) |
-| Capgemini | Published guidance | UK | [Source](https://www.capgemini.com/gb-en/careers/join-capgemini/recruitment-process/) |
+| Capgemini | Published guidance | India | [Source](https://www.capgemini.com/in-en/careers/join-capgemini/) |
 | CBTS | Source identified | Official careers source; local requirements vary | [Source](https://www.cbts.com/careers) |
 | Celestica | Source identified | Official careers source; local requirements vary | [Source](https://careers.celestica.com/) |
 | CGI | Published guidance | Official careers source; local requirements vary | [Source](https://www.cgi.com/en/careers/faq) |
@@ -101,17 +88,18 @@ No recurring schedule or production backend ingestion has been enabled. The app 
 | Crisil | Source identified | Official careers source; local requirements vary | [Source](https://www.crisil.com/en/home/careers.html) |
 | Datum Technologies Group | Source identified | Official careers source; local requirements vary | [Source](https://datumtg.com/careers/) |
 | Deloitte | Published guidance | US | [Source](https://www.deloitte.com/us/en/careers/join-deloitte/recruiting-tips.html) |
-| eClerx | Source identified | Official careers source; local requirements vary | [Source](https://eclerx.com/careers/career-faq/) |
+| eClerx | Published guidance | Official careers source; local requirements vary | [Source](https://eclerx.com/careers/career-faq/) |
 | Emerson | Source identified | Official careers source; local requirements vary | [Source](https://www.emerson.com/en/corporate/careers/career-opportunities) |
 | Entropik | Source identified | Official careers source; local requirements vary | [Source](https://apply.workable.com/entropik/) |
 | EPAM Systems | Source identified | Official careers source; local requirements vary | [Source](https://www.epam.com/careers) |
 | EXL | Source identified | Official careers source; local requirements vary | [Source](https://www.exlservice.com/careers) |
 | Expleo Group | Source identified | Official careers source; local requirements vary | [Source](https://careers.expleo.com/en/) |
 | Exterro India | Source identified | Global Exterro careers; confirm the India location on each opening | [Source](https://www.exterro.com/about/careers) |
-| FedEx ACC | Unresolved | Search completed; official careers route not confidently matched | — |
+| FedEx ACC | Published guidance | FedEx parent careers; ACC is an imported organizational label | [Source](https://careers.fedex.com/) |
 | Flowserve Corporation | Source identified | Official careers source; local requirements vary | [Source](https://careers.flowserve.com/career-opportunities/) |
 | Foodhub | Source identified | Official careers source; local requirements vary | [Source](https://foodhubcareers.com/) |
 | Ford Motor Company | Published guidance | Official careers source; local requirements vary | [Source](https://www.careers.ford.com/en/faqs) |
+| Freshworks | Source identified | Use India locations in the official job search | [Source](https://www.freshworks.com/company/careers/) |
 | Fujitsu | Source identified | India | [Source](https://global.fujitsu/en-apac/careers/india) |
 | Garrett - Advancing Motion | Source identified | Official careers source; local requirements vary | [Source](https://www.garrettmotion.com/) |
 | GlobalLogic | Published guidance | India | [Source](https://www.globallogic.com/in/careers/) |
@@ -123,20 +111,22 @@ No recurring schedule or production backend ingestion has been enabled. The app 
 | Happiest Minds Technologies | Source identified | Official careers source; local requirements vary | [Source](https://careers.smartrecruiters.com/HappiestMindsTechnologies1) |
 | HappyRobot | Source identified | Official careers source; local requirements vary | [Source](https://www.happyrobot.ai/careers) |
 | HCLTech | Published guidance | Official careers source; local requirements vary | [Source](https://www.hcltech.com/careers/recruitment-process-hcl-tech) |
-| Hitachi Energy | Source identified | Official careers source; local requirements vary | [Source](https://www.hitachienergy.com/careers/about-us/recruitment-process) |
+| Hexaware | Source identified | Official careers source; dynamic search requires browser access | [Source](https://hexaware.com/careers/) |
+| Hitachi Energy | Published guidance | Official careers source; local requirements vary | [Source](https://www.hitachienergy.com/careers/about-us/recruitment-process) |
 | HPE Aruba Networking | Source identified | HPE parent company; US FAQ | [Source](https://careers.hpe.com/us/en/FAQs) |
 | Husky Technologies | Source identified | Official careers source; local requirements vary | [Source](https://www.husky.co/en/careers/portal/) |
-| IDFC FIRST Bank | Source identified | India | [Source](https://careers.idfcfirst.bank.in/in/en/faq) |
+| IDFC FIRST Bank | Published guidance | India | [Source](https://careers.idfcfirst.bank.in/in/en/faq) |
 | IGT | Source identified | Official careers source; local requirements vary | [Source](https://www.igt.com/explore-igt/careers) |
 | Improva | Source identified | Company website; careers route not confirmed | [Source](https://www.improva.io/about-us) |
-| Infosys | Source identified | Official careers source; local requirements vary | [Source](https://digitalcareers.infosys.com/) |
-| InFynd | Unresolved | Search completed; official careers route not confidently matched | — |
+| Infosys | Published guidance | India application routes | [Source](https://www.infosys.com/careers/apply/) |
+| InFynd | Source identified | Company website; careers route not confirmed | [Source](https://infynd.com/about-us) |
 | JUARA IT SOLUTIONS | Source identified | Official careers source; local requirements vary | [Source](https://juaraitsolutions.com/careers/) |
 | Kaleris | Source identified | Official careers source; local requirements vary | [Source](https://kaleris.com/company/careers/) |
 | Karix | Source identified | Official careers source; local requirements vary | [Source](https://www.karix.com/careers) |
 | Kavi India | Unresolved | Search completed; official careers route not confidently matched | — |
-| Kuehne+Nagel | Source identified | Official careers source; local requirements vary | [Source](https://jobs.kuehne-nagel.com/global/en) |
+| Kuehne+Nagel | Published guidance | Official careers source; local requirements vary | [Source](https://jobs.kuehne-nagel.com/global/en) |
 | Kumaran Systems | Source identified | Official careers source; local requirements vary | [Source](https://careers.kumaran.com/) |
+| L&T Technology Services | Source identified | India-focused shortlist; confirm role location | [Source](https://www.ltts.com/careers) |
 | Larsen & Toubro-Vyoma | Source identified | Official careers source; local requirements vary | [Source](https://larsentoubrovyoma.com/careers) |
 | LetzBizz | Source identified | Recruitment service; confirm the end employer on each opening | [Source](https://letzbizz.com/recruitment/) |
 | LevelShift | Source identified | Official careers source; local requirements vary | [Source](https://levelshift.com/careers/current-job-openings) |
@@ -145,19 +135,20 @@ No recurring schedule or production backend ingestion has been enabled. The app 
 | Logitech | Published guidance | Official careers source; local requirements vary | [Source](https://www.logitech.com/en-us/careers) |
 | LTM | Source identified | Official careers source; local requirements vary | [Source](https://www.ltm.com/careers) |
 | Luxoft | Published guidance | Official careers source; local requirements vary | [Source](https://career.luxoft.com/hiring-process) |
-| Megan Soft Inc | Unresolved | Search completed; official careers route not confidently matched | — |
+| Megan Soft Inc | Source identified | Company website; careers route not confirmed | [Source](https://megansoft.com/) |
 | Metayb | Source identified | Company website; careers route not confirmed | [Source](https://metayb.ai/) |
 | Microgenn Software Solutions | Unresolved | Search completed; official careers route not confidently matched | — |
 | Microsoft | Published guidance | Official careers source; local requirements vary | [Source](https://careers.microsoft.com/v2/global/en/hiringfaqs.html) |
 | Movate | Source identified | Official careers source; local requirements vary | [Source](https://www.movate.com/careers-at-movate/) |
+| Mphasis | Source identified | India careers; verify the exact vacancy | [Source](https://careers.mphasis.com/home.html) |
 | MyCareernet | Unresolved | Search completed; official careers route not confidently matched | — |
 | NatWest Group | Published guidance | Official careers source; local requirements vary | [Source](https://jobs.natwestgroup.com/pages/applying) |
 | Nebula AI | Unresolved | Ambiguous name in the original seed data; client identity needed | — |
 | NETGEAR | Source identified | San Jose, USA careers page | [Source](https://www.netgear.com/in/about/careers/sanjose-usa/) |
 | Neurealm | Source identified | Official careers source; local requirements vary | [Source](https://www.neurealm.com/about-us/openings/) |
 | Nokia | Source identified | Official careers source; local requirements vary | [Source](https://www.nokia.com/careers/) |
-| Paperflite | Unresolved | Search completed; official careers route not confidently matched | — |
-| Pinnacle Group, Inc. | Unresolved | Search completed; official careers route not confidently matched | — |
+| Paperflite | Source identified | Company website; careers route not confirmed | [Source](https://www.paperflite.com/) |
+| Pinnacle Group, Inc. | Published guidance | Staffing company recruitment-safety notice; verify the end employer | [Source](https://www.pinnacle1.com/fraud-alert-notice/) |
 | Poshmark | Source identified | Official careers source; local requirements vary | [Source](https://poshmark.com/careers) |
 | Presidio | Source identified | Official careers source; local requirements vary | [Source](https://www.presidio.com/careers/) |
 | Prithvi Inner Wears Private Limited | Source identified | Individual public vacancy; company-wide process not confirmed | [Source](https://prithvicareers.peoplestrong.com/job/detail/piw_st_1847001) |
@@ -168,14 +159,15 @@ No recurring schedule or production backend ingestion has been enabled. The app 
 | RX Global | Source identified | Official careers source; local requirements vary | [Source](https://rxglobal.com/event-jobs/search) |
 | SchoolCues | Source identified | Company website; careers route not confirmed | [Source](https://www.schoolcues.com/) |
 | Searce Inc | Source identified | Official careers source; local requirements vary | [Source](https://www.searce.com/join-us) |
-| Seyyone Group of Companies | Unresolved | Search completed; official careers route not confidently matched | — |
+| Seyyone Group of Companies | Published guidance | Official careers source; local requirements vary | [Source](https://www.seyyone.com/careers) |
 | Sopra Steria | Published guidance | Official careers source; local requirements vary | [Source](https://careers.soprasteria.com/faq) |
 | Spait Infotech | Source identified | Official careers source; local requirements vary | [Source](https://spaitinfotech.com/career) |
 | Staples India | Source identified | Official careers source; local requirements vary | [Source](https://staples.zohorecruit.in/jobs/careers) |
-| SWITS DIGITAL Private Limited | Unresolved | Search completed; official careers route not confidently matched | — |
+| SWITS DIGITAL Private Limited | Source identified | Company legal website; careers route not confirmed | [Source](https://www.switsdigital.com/terms) |
 | Synechron | Source identified | Official careers source; local requirements vary | [Source](https://www.synechron.com/careers) |
 | Tata Consultancy Services | Published guidance | India | [Source](https://www.tcs.com/careers/india) |
 | Tech Data APAC | Source identified | Regional company website; careers route not confirmed | [Source](https://www.techdata.com/apac/en.html) |
+| Tech Mahindra | Source identified | India careers; confirm city and experience on the requisition | [Source](https://careers.techmahindra.com/) |
 | techjays | Source identified | Company website; careers route not confirmed | [Source](https://www.techjays.com/) |
 | Tekion Corp | Source identified | Official careers source; local requirements vary | [Source](https://tekion.com/careers) |
 | TheKalki | Source identified | Official careers source; local requirements vary | [Source](https://careers.thekalki.net/) |
@@ -191,22 +183,71 @@ No recurring schedule or production backend ingestion has been enabled. The app 
 | Vestas | Published guidance | Official careers source; local requirements vary | [Source](https://www.vestas.com/en/careers/our-recruitment-process) |
 | Virtusa | Source identified | Official careers source; local requirements vary | [Source](https://www.virtusa.com/careers) |
 | Visteon Corporation | Source identified | Official careers source; local requirements vary | [Source](https://www.visteon.com/careers/join-us/default.aspx) |
-| VMC Soft Technologies, Inc | Unresolved | Search completed; official careers route not confidently matched | — |
+| VMC Soft Technologies, Inc | Source identified | Company website; careers route not confirmed | [Source](https://vmcsofttech.com/about-vmc-soft-technologies/) |
 | WhiteBlue | Source identified | Official careers source; local requirements vary | [Source](https://www.whiteblue.com/careers) |
 | Willsmarg Technologies LLC | Source identified | Official careers source; local requirements vary | [Source](https://willsmarg.com/MainPage/Careers) |
 | Wipro | Published guidance | Official careers source; local requirements vary | [Source](https://careers.wipro.com/content/Fraud-Awareness/?locale=en_US) |
 | Wood | Source identified | Official careers source; local requirements vary | [Source](https://ehif.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/jobs) |
 | ZF Group | Source identified | India | [Source](https://www.zf.com/india/en/careers/careers.html) |
 | Zocket | Source identified | Official careers source; local requirements vary | [Source](https://www.zocket.com/careers) |
-| Zorba AI | Unresolved | Search completed; official careers route not confidently matched | — |
+| Zoho | Source identified | India-focused company shortlist; vacancy-specific location and requirements | [Source](https://www.zoho.com/careers/) |
+| Zorba AI | Source identified | Zorba Consulting India website; confirm the named employer on the vacancy | [Source](https://www.zorbaconsulting.in/) |
 | Zuan Education | Source identified | Official careers source; local requirements vary | [Source](https://www.zuaneducation.com/careers/) |
 | Zuora | Source identified | Official careers source; local requirements vary | [Source](https://www.zuora.com/careers-search-jobs/) |
 
 ## Published guidance summaries
 
+### Seyyone Group of Companies
+
+Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
+
+**Where can I review the actual requirements?** Use Current Openings on Seyyone’s careers page, then open View Details for the individual role. The page provides filters for role, department, skill and other criteria. [Official guidance](https://www.seyyone.com/careers).
+
+**Can I express interest without a matching opening?** The careers page offers a Send Your Resume route when no listed role matches. This expresses interest; it does not guarantee an interview or establish eligibility for a particular vacancy. [Official guidance](https://www.seyyone.com/careers).
+
+### Pinnacle Group, Inc.
+
+Scope: Staffing company recruitment-safety notice; verify the end employer. Reviewed 2026-11-11.
+
+**Will I be asked to pay to be submitted for a role?** Pinnacle Group and PTR Global say applicants are not charged to be considered, submitted or selected, and are not asked to buy products, services or gift cards. [Official guidance](https://www.pinnacle1.com/fraud-alert-notice/).
+
+**When would banking details be needed?** The published notice says successfully placed or hired candidates provide payroll banking details during official onboarding after accepting an offer. Verify suspicious recruitment communication using the contact details on the official notice. [Official guidance](https://www.pinnacle1.com/fraud-alert-notice/).
+
+### FedEx ACC
+
+Scope: FedEx parent careers; ACC is an imported organizational label. Reviewed 2026-11-11.
+
+**Where should I confirm an opening?** Use the current FedEx careers search and verify the business unit, location and requisition. ACC is the label in the older import; it should not be treated as a separate guarantee of eligibility or an offer. [Official guidance](https://careers.fedex.com/).
+
+### Blue Yonder
+
+Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
+
+**Does joining the talent community apply me to a role?** No. Blue Yonder explicitly says talent-community registration is not an application for a particular position. Submit an application for the opening you want. [Official guidance](https://careers.blueyonder.com/us/en/jointalentcommunity).
+
+**How can I recognize genuine hiring communication?** The talent-community page says role-related communications use a blueyonder.com email address, interviews use in-person or secure video meetings, and candidates are not asked to pay during hiring. [Official guidance](https://careers.blueyonder.com/us/en/jointalentcommunity).
+
+### Kuehne+Nagel
+
+Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
+
+**What should I check before submitting?** Tailor your CV to the role, make your contact information clear, attach the requested documents and check the application for errors. [Official guidance](https://jobs.kuehne-nagel.com/global/en/candidate-zone).
+
+**What should I prepare for the interview?** Be ready to explain why you want the job and how your experience fits it. The official preparation guidance encourages candidates to ask questions about the work and team. [Official guidance](https://jobs.kuehne-nagel.com/global/en/application-support).
+
 ### Accenture in India
 
 Scope: India. Reviewed 2026-11-11.
+
+**How do I find a specific opening?** Search the official India careers page by keyword or the job number provided by your recruiting contact. [Official guidance](https://www.accenture.com/in-en/careers/explore-careers/area-of-interest/journey-to-accenture).
+
+**What happens after I apply?** Accenture sends a receipt email, reviews role fit, and contacts candidates selected for the next stage. [Official guidance](https://www.accenture.com/in-en/careers/explore-careers/area-of-interest/journey-to-accenture).
+
+**Are degree requirements the same for every role?** No. The job description states the education, skills and experience required for that position. [Official guidance](https://www.accenture.com/in-en/careers/explore-careers/area-of-interest/journey-to-accenture).
+
+**When will I hear back?** Timing varies by role and business area. Ask your recruiter about your application; no universal response time is promised. [Official guidance](https://www.accenture.com/in-en/careers/explore-careers/area-of-interest/journey-to-accenture).
+
+**How do I request interview adjustments?** Tell your Accenture recruiting contact what adjustments you need. [Official guidance](https://www.accenture.com/in-en/careers/explore-careers/area-of-interest/journey-to-accenture).
 
 **Can I have multiple applications?** The India hiring guidance allows one active application at a time. Choose the opening that best matches your experience. [Official guidance](https://www.accenture.com/in-en/careers/explore-careers/area-of-interest/journey-to-accenture).
 
@@ -218,11 +259,27 @@ Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
 
 **How should I prepare examples?** Prepare real examples using Situation, Task, Action and Result. Connect your decisions and outcomes to the Leadership Principles; use the preparation material for your specific role. [Official guidance](https://www.amazon.jobs/content/en/faq/interview-process).
 
+### American Express
+
+Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
+
+**How do I verify a recruitment message?** The US careers fraud guidance recommends confirming the opening on the official American Express careers site. Verify the role and recruitment contact before sharing personal information. [Official guidance](https://www.americanexpress.com/en-us/careers/recruitment-fraud/).
+
 ### ASSA ABLOY Group
 
 Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
 
 **How should I focus my CV?** The recruitment guidance asks candidates to show how their experience meets the opening’s requirements. Use evidence from your own work rather than unsupported skill claims. [Official guidance](https://www.assaabloy.com/career/en/open-positions/recruitment-process).
+
+### Barclays
+
+Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
+
+**Can I apply to several graduate programmes?** The graduate and internship FAQ allows one application per candidate per year for those programmes. This is a programme-specific restriction, not a rule for every experienced-hire vacancy. [Official guidance](https://search.jobs.barclays/faqs).
+
+**Which deadline should I follow?** For campus recruiting, check the deadline in your school’s careers system where applicable. Otherwise follow the programme page. Ask recruiting about adjustments if a disability affects the selection process. [Official guidance](https://search.jobs.barclays/faqs).
+
+**Is the experienced-hire process the same?** Barclays publishes a separate experienced-hire application journey and candidate preparation guide. Use that guidance and the actual role instructions. [Official guidance](https://search.jobs.barclays/en/experienced-hire-applications).
 
 ### BNP Paribas
 
@@ -238,9 +295,9 @@ Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
 
 ### Capgemini
 
-Scope: UK. Reviewed 2026-11-11.
+Scope: India. Reviewed 2026-11-11.
 
-**Who might interview me?** The UK process describes conversations with recruiting, hiring managers, technical colleagues or future teammates depending on the position. This is UK guidance; ask the recruiter about other locations. [Official guidance](https://www.capgemini.com/gb-en/careers/join-capgemini/recruitment-process/).
+**Where should I start for India openings?** Use the India careers route and choose the appropriate career path. Review the actual requisition for location, experience and qualifications rather than applying rules from another country. [Official guidance](https://www.capgemini.com/in-en/careers/join-capgemini/).
 
 ### CGI
 
@@ -267,6 +324,14 @@ Scope: India. Reviewed 2026-11-11.
 Scope: US. Reviewed 2026-11-11.
 
 **How should I prepare my application?** The US recruiting tips recommend a clear account of relevant skills and experience and preparation for explaining your background. Use the actual opening to choose your examples. [Official guidance](https://www.deloitte.com/us/en/careers/join-deloitte/recruiting-tips.html).
+
+### eClerx
+
+Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
+
+**How do I narrow my job search?** The careers FAQ recommends searching by job function, location or keywords. Review the specific opening before submitting your application. [Official guidance](https://eclerx.com/careers/career-faq/).
+
+**What happens after the initial application?** The published guidance describes a recruiter conversation to discuss the role and working at eClerx. The job portal describes a separate early-professional assessment route; do not assume that assessment applies to every position. [Official guidance](https://eclerx.com/careers/job-portal/).
 
 ### Ford Motor Company
 
@@ -297,6 +362,36 @@ Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
 Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
 
 **What happens after applying?** The published process describes recruiting and technical or hiring-manager conversations before an offer. The stages depend on the position. [Official guidance](https://www.hcltech.com/careers/recruitment-process-hcl-tech).
+
+### Hitachi Energy
+
+Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
+
+**Can I finish an application later?** The official recruitment guidance says you can save an application and complete it later. The information requested may differ by country. [Official guidance](https://www.hitachienergy.com/careers/about-us/recruitment-process).
+
+**Where do I check my application status?** Sign into the account used to apply and open Candidate Home. Use the official job search filters for location, job type and experience level. [Official guidance](https://www.hitachienergy.com/careers/about-us/recruitment-process).
+
+### IDFC FIRST Bank
+
+Scope: India. Reviewed 2026-11-11.
+
+**Should I email my CV instead of applying?** The bank says it prefers applications through its careers website. Use the category, experience, title and location filters to find and apply to the specific vacancy. [Official guidance](https://careers.idfcfirst.bank.in/in/en/faq).
+
+**When should I expect a response?** The FAQ says the timeline varies by role. Talent Acquisition contacts applicants selected for the position; no fixed response time is promised. [Official guidance](https://careers.idfcfirst.bank.in/in/en/faq).
+
+**How does campus recruitment work?** Check with your college placement team. The bank says it works with placement teams for campus recruitment drives. [Official guidance](https://careers.idfcfirst.bank.in/in/en/faq).
+
+**Will I need to pay for an interview or equipment?** The candidate guidelines say the bank does not ask applicants to pay for interviews, job offers, training or IT assets. Check the sender’s bank domain carefully. [Official guidance](https://careers.idfcfirst.bank.in/in/en/candidate-guidelines).
+
+### Infosys
+
+Scope: India application routes. Reviewed 2026-11-11.
+
+**Which portal should I use for India?** The India portal is career.infosys.com. Its source configuration separates lateral and fresher openings; the global digital-careers portal is a different route. [Official guidance](https://career.infosys.com/jobs?countrycode=IN).
+
+**Are all roles suitable for freshers?** No. Review the minimum and maximum experience stated on the individual India vacancy. A listing for an experienced consultant does not establish eligibility for a graduate applicant. [Official guidance](https://career.infosys.com/jobs?countrycode=IN).
+
+**Where do I check role location and qualifications?** Open the official job description using its reference code. Confirm the city, educational requirements, skills and experience before applying. [Official guidance](https://www.infosys.com/careers/apply/).
 
 ### Logitech
 
@@ -332,6 +427,12 @@ Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
 
 Scope: India. Reviewed 2026-11-11.
 
+**How do I find experienced roles?** Follow the lateral-hiring route to TCS iBegin. Search by skill or job ID, review the description, and use the official account-based application process. [Official guidance](https://www.tcs.com/careers/india/lateral-hiring).
+
+**Where should students and freshers look?** Use TCS India’s Entry Level & Internships page. Check the current programme notice for cohort, qualification, eligibility and registration dates. [Official guidance](https://www.tcs.com/careers/india/entry-level).
+
+**Is Rebegin a general fresher programme?** No. Rebegin is a return-to-work initiative for eligible women professionals. Read its own criteria rather than applying those rules to every TCS vacancy. [Official guidance](https://www.tcs.com/careers/india/rebegin-job-codes).
+
 **Which application route should I use?** The India careers site separates entry-level and internship opportunities from lateral hiring. Check the exact program or requisition for its eligibility conditions. [Official guidance](https://www.tcs.com/careers/india).
 
 **Are recruitment payments legitimate?** TCS warns that it does not charge recruitment fees. Use the official recruitment fraud guidance to verify suspicious communications. [Official guidance](https://www.tcs.com/careers/india/recruitment-fraud-alert).
@@ -351,5 +452,7 @@ Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
 ### Wipro
 
 Scope: Official careers source; local requirements vary. Reviewed 2026-11-11.
+
+**Where can I search India roles?** Use Wipro’s official careers search and check the city and country on the requisition. The current Skillup collector prioritizes South Indian city searches. [Official guidance](https://careers.wipro.com/search/?locationsearch=India).
 
 **Should I pay to receive an offer?** Wipro’s fraud-awareness guidance says it does not charge at any recruitment stage. Validate the vacancy on the careers portal and check the sender’s official identity. [Official guidance](https://careers.wipro.com/content/Fraud-Awareness/?locale=en_US).

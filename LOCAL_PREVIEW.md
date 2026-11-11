@@ -27,7 +27,7 @@ Phone navigation wraps instead of hiding sections in horizontal strips. Browser 
 
 ## Integration limits
 
-The user selected Supabase lotus-buzzer (ljbysmgzqohvlkcdctyj). Its existing Lotus data was inspected read-only. Skillup cloud auth and persistence are not connected, and no remote table or Auth setting was changed. See database/skillup-backend-plan.md for the additive namespace plan.
+The user selected Supabase lotus-buzzer (ljbysmgzqohvlkcdctyj). An additive Skillup job catalog is now live, with scheduled deterministic collectors and anonymous read-only catalog access. Existing Lotus tables and Auth settings remain unchanged. Personal workspace drafts still live on the device. See docs/JOB-COLLECTION-OPERATIONS.md for the deployed job service.
 
 The optional existing-account adapter reads VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY. Provider and service-role secrets must never use a VITE_ prefix or enter client code. Live career chat requires a server endpoint in VITE_CAREER_CHAT_URL accepting POST {messages:[{role,content}]} and returning {reply:string}. No endpoint is configured. Coaching calendars/bookings and verified testimonial submissions do not exist.
 
@@ -56,3 +56,9 @@ Run npm test for the domain regression suite, npm run typecheck, and npm run bui
 Resume persistence now reports rejected storage writes, offers retry/backup recovery, protects unsaved version switches, and avoids marking an incomplete version as saved. The test suite includes metadata-write rollback. GitHub checks run tests, typecheck and production build on main pushes and pull requests.
 
 Failed writes remain in an app-level recovery cache across internal navigation, with an always-mounted warning/export option and close/reload protection. Returning to a tool restores its unsaved draft; successful retry clears its recovery entry.
+
+## Public interface cleanup and current mobile verification
+
+Removed collection schedules, retrieval logs, backend connection labels, research coverage filters, research audit records and review dates from public pages. Company profiles retain source-backed FAQs and application links. Guidance and coaching focus on next actions. Draft storage and feature limitations remain clear. Selecting a mobile job closes its filters.
+
+Rendered checks on 11 workspace pages at 390px, 12 workspace pages at 768px, and narrow 320px checks across the workspace, account, onboarding, student and career-switcher routes found no document overflow or clipped main content. Expanded TCS FAQs, job filtering/search/details, resume preview and workspace tabs, and goal-to-resume onboarding were exercised. All 28 domain tests, type checking and production build passed. External applications and the browser print dialog were not submitted during this pass.

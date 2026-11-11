@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "jobs:collect": "node --import tsx scripts/collect-jobs.ts",
+    "jobs:fallback": "node --import tsx scripts/create-job-fallback.ts",
+    "jobs:verify": "node --import tsx scripts/verify-job-backend.ts",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -19,6 +21,7 @@
     "@sentry/react": "^10.51.0",
     "@supabase/supabase-js": "^2.105.3",
     "docx": "9.15.3",
+    "linkedom": "0.18.12",
     "motion": "^12.38.0",
     "posthog-js": "^1.372.8",
     "react": "^19.2.4",

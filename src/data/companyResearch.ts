@@ -1,9 +1,27 @@
 export interface CompanyResearch {
+ applyUrl?:string; graduateUrl?:string;
  name:string; sourceUrl:string; scope:string; reviewedAt:string;
  faqs:{question:string;answer:string;sourceUrl?:string}[];
 }
 // Source discovery is separate from verified guidance. Empty FAQs mean no process claims.
 const sources: [string,string,string?][] = [
+ ['Tech Mahindra','https://careers.techmahindra.com/','India careers; confirm city and experience on the requisition'],
+ ['Zoho','https://www.zoho.com/careers/','India-focused company shortlist; vacancy-specific location and requirements'],
+ ['Freshworks','https://www.freshworks.com/company/careers/','Use India locations in the official job search'],
+ ['Hexaware','https://hexaware.com/careers/','Official careers source; dynamic search requires browser access'],
+ ['Mphasis','https://careers.mphasis.com/home.html','India careers; verify the exact vacancy'],
+ ['Aspire Systems','https://www.aspiresys.com/careers','India-focused shortlist; confirm role location'],
+ ['L&T Technology Services','https://www.ltts.com/careers','India-focused shortlist; confirm role location'],
+ ['Megan Soft Inc','https://megansoft.com/','Company website; careers route not confirmed'],
+ ['Seyyone Group of Companies','https://www.seyyone.com/careers'],
+ ['VMC Soft Technologies, Inc','https://vmcsofttech.com/about-vmc-soft-technologies/','Company website; careers route not confirmed'],
+ ['Zorba AI','https://www.zorbaconsulting.in/','Zorba Consulting India website; confirm the named employer on the vacancy'],
+ ['Pinnacle Group, Inc.','https://www.pinnacle1.com/fraud-alert-notice/','Staffing company recruitment-safety notice; verify the end employer'],
+ ['FedEx ACC','https://careers.fedex.com/','FedEx parent careers; ACC is an imported organizational label'],
+ ['BigThinkCode','https://bigthinkcode.com/','Company website; careers route not confirmed'],
+ ['InFynd','https://infynd.com/about-us','Company website; careers route not confirmed'],
+ ['Paperflite','https://www.paperflite.com/','Company website; careers route not confirmed'],
+ ['SWITS DIGITAL Private Limited','https://www.switsdigital.com/terms','Company legal website; careers route not confirmed'],
  ['UST','https://www.ust.com/en/careers'],
  ['Tekion Corp','https://tekion.com/careers'],
  ['Exterro India','https://www.exterro.com/about/careers','Global Exterro careers; confirm the India location on each opening'],
@@ -64,7 +82,7 @@ const sources: [string,string,string?][] = [
  ['BNP Paribas','https://group.bnpparibas/en/careers/lets-prepare-to-apply'],
  ['Capco','https://www.capco.com/Careers/Job-Search'],
  ['CapeStart','https://careers.capestart.com/capestart/'],
- ['Capgemini','https://www.capgemini.com/gb-en/careers/join-capgemini/recruitment-process/','UK'],
+ ['Capgemini','https://www.capgemini.com/in-en/careers/join-capgemini/','India'],
  ['CBTS','https://www.cbts.com/careers'],
  ['Celestica','https://careers.celestica.com/'],
  ['CGI','https://www.cgi.com/en/careers/faq'],
@@ -95,7 +113,7 @@ const sources: [string,string,string?][] = [
  ['HPE Aruba Networking','https://careers.hpe.com/us/en/FAQs','HPE parent company; US FAQ'],
  ['Husky Technologies','https://www.husky.co/en/careers/portal/'],
  ['IDFC FIRST Bank','https://careers.idfcfirst.bank.in/in/en/faq','India'],
- ['Infosys','https://digitalcareers.infosys.com/'],
+ ['Infosys','https://www.infosys.com/careers/apply/','India application routes'],
  ['Lincoln Electric','https://jobs.lincolnelectric.com/content/Hiring-Process/?locale=en_US'],
  ['Logitech','https://www.logitech.com/en-us/careers'],
  ['Luxoft','https://career.luxoft.com/hiring-process'],
@@ -121,18 +139,60 @@ const sources: [string,string,string?][] = [
  ['Wipro','https://careers.wipro.com/content/Fraud-Awareness/?locale=en_US'],
 ];
 const guidance:Record<string,CompanyResearch['faqs']>={
+ 'Infosys':[
+  {question:'Which portal should I use for India?',answer:'The India portal is career.infosys.com. Its source configuration separates lateral and fresher openings; the global digital-careers portal is a different route.',sourceUrl:'https://career.infosys.com/jobs?countrycode=IN'},
+  {question:'Are all roles suitable for freshers?',answer:'No. Review the minimum and maximum experience stated on the individual India vacancy. A listing for an experienced consultant does not establish eligibility for a graduate applicant.',sourceUrl:'https://career.infosys.com/jobs?countrycode=IN'},
+  {question:'Where do I check role location and qualifications?',answer:'Open the official job description using its reference code. Confirm the city, educational requirements, skills and experience before applying.',sourceUrl:'https://www.infosys.com/careers/apply/'}],
+ 'Pinnacle Group, Inc.':[
+  {question:'Will I be asked to pay to be submitted for a role?',answer:'Pinnacle Group and PTR Global say applicants are not charged to be considered, submitted or selected, and are not asked to buy products, services or gift cards.'},
+  {question:'When would banking details be needed?',answer:'The published notice says successfully placed or hired candidates provide payroll banking details during official onboarding after accepting an offer. Verify suspicious recruitment communication using the contact details on the official notice.'}],
+ 'Seyyone Group of Companies':[
+  {question:'Where can I review the actual requirements?',answer:'Use Current Openings on Seyyone’s careers page, then open View Details for the individual role. The page provides filters for role, department, skill and other criteria.'},
+  {question:'Can I express interest without a matching opening?',answer:'The careers page offers a Send Your Resume route when no listed role matches. This expresses interest; it does not guarantee an interview or establish eligibility for a particular vacancy.'}],
+ 'FedEx ACC':[{question:'Where should I confirm an opening?',answer:'Use the current FedEx careers search and verify the business unit, location and requisition. ACC is the label in the older import; it should not be treated as a separate guarantee of eligibility or an offer.'}],
+ 'eClerx':[
+  {question:'How do I narrow my job search?',answer:'The careers FAQ recommends searching by job function, location or keywords. Review the specific opening before submitting your application.'},
+  {question:'What happens after the initial application?',answer:'The published guidance describes a recruiter conversation to discuss the role and working at eClerx. The job portal describes a separate early-professional assessment route; do not assume that assessment applies to every position.',sourceUrl:'https://eclerx.com/careers/job-portal/'}],
+ 'Barclays':[
+  {question:'Can I apply to several graduate programmes?',answer:'The graduate and internship FAQ allows one application per candidate per year for those programmes. This is a programme-specific restriction, not a rule for every experienced-hire vacancy.'},
+  {question:'Which deadline should I follow?',answer:'For campus recruiting, check the deadline in your school’s careers system where applicable. Otherwise follow the programme page. Ask recruiting about adjustments if a disability affects the selection process.'},
+  {question:'Is the experienced-hire process the same?',answer:'Barclays publishes a separate experienced-hire application journey and candidate preparation guide. Use that guidance and the actual role instructions.',sourceUrl:'https://search.jobs.barclays/en/experienced-hire-applications'}],
+ 'Hitachi Energy':[
+  {question:'Can I finish an application later?',answer:'The official recruitment guidance says you can save an application and complete it later. The information requested may differ by country.'},
+  {question:'Where do I check my application status?',answer:'Sign into the account used to apply and open Candidate Home. Use the official job search filters for location, job type and experience level.'}],
+ 'Kuehne+Nagel':[
+  {question:'What should I check before submitting?',answer:'Tailor your CV to the role, make your contact information clear, attach the requested documents and check the application for errors.',sourceUrl:'https://jobs.kuehne-nagel.com/global/en/candidate-zone'},
+  {question:'What should I prepare for the interview?',answer:'Be ready to explain why you want the job and how your experience fits it. The official preparation guidance encourages candidates to ask questions about the work and team.',sourceUrl:'https://jobs.kuehne-nagel.com/global/en/application-support'}],
+ 'IDFC FIRST Bank':[
+  {question:'Should I email my CV instead of applying?',answer:'The bank says it prefers applications through its careers website. Use the category, experience, title and location filters to find and apply to the specific vacancy.'},
+  {question:'When should I expect a response?',answer:'The FAQ says the timeline varies by role. Talent Acquisition contacts applicants selected for the position; no fixed response time is promised.'},
+  {question:'How does campus recruitment work?',answer:'Check with your college placement team. The bank says it works with placement teams for campus recruitment drives.'},
+  {question:'Will I need to pay for an interview or equipment?',answer:'The candidate guidelines say the bank does not ask applicants to pay for interviews, job offers, training or IT assets. Check the sender’s bank domain carefully.',sourceUrl:'https://careers.idfcfirst.bank.in/in/en/candidate-guidelines'}],
+ 'American Express':[{question:'How do I verify a recruitment message?',answer:'The US careers fraud guidance recommends confirming the opening on the official American Express careers site. Verify the role and recruitment contact before sharing personal information.',sourceUrl:'https://www.americanexpress.com/en-us/careers/recruitment-fraud/'}],
+ 'Blue Yonder':[
+  {question:'Does joining the talent community apply me to a role?',answer:'No. Blue Yonder explicitly says talent-community registration is not an application for a particular position. Submit an application for the opening you want.',sourceUrl:'https://careers.blueyonder.com/us/en/jointalentcommunity'},
+  {question:'How can I recognize genuine hiring communication?',answer:'The talent-community page says role-related communications use a blueyonder.com email address, interviews use in-person or secure video meetings, and candidates are not asked to pay during hiring.',sourceUrl:'https://careers.blueyonder.com/us/en/jointalentcommunity'}],
  'Capco':[{question:'How can I check a recruiter contact?',answer:'Capco’s official job-search page warns about impersonation scams. Verify anyone claiming to recruit for Capco through official channels before continuing.'}],
  'Accenture in India':[
+  {question:'How do I find a specific opening?',answer:'Search the official India careers page by keyword or the job number provided by your recruiting contact.'},
+  {question:'What happens after I apply?',answer:'Accenture sends a receipt email, reviews role fit, and contacts candidates selected for the next stage.'},
+  {question:'Are degree requirements the same for every role?',answer:'No. The job description states the education, skills and experience required for that position.'},
+  {question:'When will I hear back?',answer:'Timing varies by role and business area. Ask your recruiter about your application; no universal response time is promised.'},
+  {question:'How do I request interview adjustments?',answer:'Tell your Accenture recruiting contact what adjustments you need.'},
   {question:'Can I have multiple applications?',answer:'The India hiring guidance allows one active application at a time. Choose the opening that best matches your experience.'},
   {question:'How many interviews should I expect?',answer:'The number depends on the role. Some roles also require an assessment; the recruiting team confirms the applicable stages.'}],
  'Amazon':[{question:'How should I prepare examples?',answer:'Prepare real examples using Situation, Task, Action and Result. Connect your decisions and outcomes to the Leadership Principles; use the preparation material for your specific role.'}],
  'Google':[{question:'Where can I check my application?',answer:'Use the application dashboard in your Google Careers account. The application help page explains what is submitted to recruiting and how to review your application.'}],
  'Microsoft':[{question:'Where do I find interview and accessibility guidance?',answer:'Use Microsoft Careers hiring tips and hiring FAQs. Confirm role-specific interview arrangements with your recruiter; request an accommodation through the careers accessibility route.',sourceUrl:'https://careers.microsoft.com/v2/global/en/hiring-tips.html'}],
- 'Tata Consultancy Services':[{question:'Which application route should I use?',answer:'The India careers site separates entry-level and internship opportunities from lateral hiring. Check the exact program or requisition for its eligibility conditions.'},{question:'Are recruitment payments legitimate?',answer:'TCS warns that it does not charge recruitment fees. Use the official recruitment fraud guidance to verify suspicious communications.',sourceUrl:'https://www.tcs.com/careers/india/recruitment-fraud-alert'}],
+ 'Tata Consultancy Services':[
+ {question:'How do I find experienced roles?',answer:'Follow the lateral-hiring route to TCS iBegin. Search by skill or job ID, review the description, and use the official account-based application process.',sourceUrl:'https://www.tcs.com/careers/india/lateral-hiring'},
+ {question:'Where should students and freshers look?',answer:'Use TCS India’s Entry Level & Internships page. Check the current programme notice for cohort, qualification, eligibility and registration dates.',sourceUrl:'https://www.tcs.com/careers/india/entry-level'},
+ {question:'Is Rebegin a general fresher programme?',answer:'No. Rebegin is a return-to-work initiative for eligible women professionals. Read its own criteria rather than applying those rules to every TCS vacancy.',sourceUrl:'https://www.tcs.com/careers/india/rebegin-job-codes'},
+ {question:'Which application route should I use?',answer:'The India careers site separates entry-level and internship opportunities from lateral hiring. Check the exact program or requisition for its eligibility conditions.'},{question:'Are recruitment payments legitimate?',answer:'TCS warns that it does not charge recruitment fees. Use the official recruitment fraud guidance to verify suspicious communications.',sourceUrl:'https://www.tcs.com/careers/india/recruitment-fraud-alert'}],
  'Cognizant':[{question:'Where do I check progress?',answer:'Use My Jobpage in the candidate portal. Returning employees follow the standard application process described in the hiring guidance.'},{question:'What should I practise?',answer:'Prepare examples tied to the job description using Situation, Task, Action and Result. Be ready to explain why Cognizant and how your skills contribute.',sourceUrl:'https://careers.cognizant.com/media/1gjpizmr/interview-preparation-tips.pdf'}],
  'CGI':[{question:'Do I need a new profile for every opening?',answer:'The careers FAQ describes creating a candidate profile that you can reuse and update. Search openings by keyword and use career alerts for relevant opportunities.'}],
  'GlobalLogic':[{question:'What is the interview format?',answer:'The India careers guidance describes an initial phone screen followed by one or more team or hiring-manager interviews. Remote arrangements depend on the role and department.'}],
- 'Capgemini':[{question:'Who might interview me?',answer:'The UK process describes conversations with recruiting, hiring managers, technical colleagues or future teammates depending on the position. This is UK guidance; ask the recruiter about other locations.'}],
+ 'Capgemini':[{question:'Where should I start for India openings?',answer:'Use the India careers route and choose the appropriate career path. Review the actual requisition for location, experience and qualifications rather than applying rules from another country.'}],
  'Deloitte':[{question:'How should I prepare my application?',answer:'The US recruiting tips recommend a clear account of relevant skills and experience and preparation for explaining your background. Use the actual opening to choose your examples.'}],
  'Luxoft':[{question:'What should I prepare beyond technical skills?',answer:'The published process includes technical evaluation and a project-lead conversation. Prepare to discuss teamwork and your career expectations as well as your technical decisions.'}],
  'Sopra Steria':[{question:'What belongs in my CV?',answer:'Use accurate job titles, employers and dates. Prepare to explain why the company and position interest you, and request recruitment adjustments if needed.'}],
@@ -145,9 +205,16 @@ const guidance:Record<string,CompanyResearch['faqs']>={
  'GRUNDFOS':[{question:'What should my application demonstrate?',answer:'Show how your experience and accomplishments fit the requirements. Use the official jobs portal and check the hiring FAQ for the applicable application steps.'}],
  'ASSA ABLOY Group':[{question:'How should I focus my CV?',answer:'The recruitment guidance asks candidates to show how their experience meets the opening’s requirements. Use evidence from your own work rather than unsupported skill claims.'}],
  'HCLTech':[{question:'What happens after applying?',answer:'The published process describes recruiting and technical or hiring-manager conversations before an offer. The stages depend on the position.'}],
- 'Wipro':[{question:'Should I pay to receive an offer?',answer:'Wipro’s fraud-awareness guidance says it does not charge at any recruitment stage. Validate the vacancy on the careers portal and check the sender’s official identity.'}],
+ 'Wipro':[
+ {question:'Where can I search India roles?',answer:'Use Wipro’s official careers search and check the city and country on the requisition. The current Skillup collector prioritizes South Indian city searches.',sourceUrl:'https://careers.wipro.com/search/?locationsearch=India'},
+ {question:'Should I pay to receive an offer?',answer:'Wipro’s fraud-awareness guidance says it does not charge at any recruitment stage. Validate the vacancy on the careers portal and check the sender’s official identity.'}],
  'Vestas':[{question:'Will there be a video assessment?',answer:'The published process says a HireVue on-demand interview may follow shortlisting. Follow the instructions for the actual role; graduate recruitment has separate guidance.'}],
 };
-export const companyResearch:CompanyResearch[]=sources.map(([name,sourceUrl,scope])=>({name,sourceUrl,scope:scope||'Official careers source; local requirements vary',reviewedAt:'2026-11-11',faqs:guidance[name]||[]}));
+const indiaRoutes:Record<string,{applyUrl:string;graduateUrl?:string}>={
+ 'Tata Consultancy Services':{applyUrl:'https://ibegin.tcsapps.com/candidate/?geography=IN&language=EN',graduateUrl:'https://www.tcs.com/careers/india/entry-level'},
+ 'Accenture in India':{applyUrl:'https://www.accenture.com/in-en/careers/jobsearch'},
+ Infosys:{applyUrl:'https://career.infosys.com/jobs?countrycode=IN'},Wipro:{applyUrl:'https://careers.wipro.com/search/?locationsearch=India'},HCLTech:{applyUrl:'https://careers.hcltech.com/',graduateUrl:'https://freshers.hcltech.com/'},Cognizant:{applyUrl:'https://careers.cognizant.com/india-en/'},Capgemini:{applyUrl:'https://www.capgemini.com/in-en/careers/join-capgemini/'}
+};
+export const companyResearch:CompanyResearch[]=sources.map(([name,sourceUrl,scope])=>({name,sourceUrl,scope:scope||'Official careers source; local requirements vary',reviewedAt:'2026-11-11',faqs:guidance[name]||[],...indiaRoutes[name]}));
 export const companyKey=(name:string)=>name.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
-export function researchFor(name:string){return companyResearch.find(item=>companyKey(item.name)===companyKey(name));}
+export function researchFor(name:string){const aliases:Record<string,string>={tcs:'Tata Consultancy Services',accenture:'Accenture in India',hcl:'HCLTech',ltimindtree:'LTM',lti:'LTM',ltts:'L&T Technology Services'};const target=aliases[companyKey(name)]||name;return companyResearch.find(item=>companyKey(item.name)===companyKey(target));}
