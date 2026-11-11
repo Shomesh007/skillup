@@ -1,6 +1,9 @@
 
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import CareerHomeView from './components/CareerHomeView';
+import JourneyContext from './components/JourneyContext';
+import UnsavedWorkNotice from './components/UnsavedWorkNotice';
+import {resolveJourney,saveJourney} from './src/domain/journey';
 import { AppView, UserLevel, Company, JobOpportunity } from './types';
 import LandingView from './components/LandingView';
 import LevelSelectView from './components/LevelSelectView';
@@ -179,25 +182,10 @@ const App: React.FC = () => {
   };
 
   const nextStep = (() => {
-    if (userLevel === UserLevel.STUDENT && studentProfile) {
-      if (studentProfile.goal === 'internship') return {label:'Build my first track',description:'Turn your curiosity into internship-ready project proof.',view:AppView.STUDENT_TRACK_BUILDER};
-      if (studentProfile.goal === 'placement') return {label:'Start interview practice',description:'Make your next placement conversation feel more familiar.',view:AppView.INTERVIEW_PREP};
-    }
-    if (userLevel === UserLevel.GRADUATE && graduateProfile) {
-      const options = {
-        resume: {label:'Build a stronger resume',description:'Give your projects and skills a clearer story.',view:AppView.RESUME_TEMPLATES},
-        skills: {label:'Find my role target',description:'Pick a direction and the proof you need to build.',view:AppView.GRADUATE_ROLE_TARGETER},
-        jobs: {label:'Explore opportunities',description:'Build a focused list of roles to investigate.',view:AppView.JOB_LIST},
-        prep: {label:'Practise my next interview',description:'Start with one answer. Build confidence from there.',view:AppView.INTERVIEW_PREP},
-        'no-calls': {label:'Work on my shortlist',description:'Find what might be holding your applications back.',view:AppView.GRADUATE_SHORTLIST_FIXER},
-      }; return options[graduateProfile.readiness as keyof typeof options];
-    }
-    if (userLevel === UserLevel.PRO && switcherProfile) {
-      if (switcherProfile.blocker === 'resume') return {label:'Translate my experience',description:'Connect what you have done to where you want to go.',view:AppView.SWITCHER_TRANSLATOR};
-      if (switcherProfile.blocker === 'interviews') return {label:'Practise for my next role',description:'Build a stronger story for your new direction.',view:AppView.INTERVIEW_PREP};
-      return {label:'Build my switch plan',description:'Find a practical bridge from your experience to your ambition.',view:AppView.SWITCHER_TARGETER};
-    }
-    return undefined;
+    const profile=userLevel===UserLevel.STUDENT?studentProfile:userLevel===UserLevel.GRADUATE?graduateProfile:switcherProfile;
+    if(!profile||!userLevel)return undefined;
+    const journey=resolveJourney(userLevel,profile as unknown as Record<string,string>);
+    return {label:journey.label,description:journey.reason,view:journey.destination};
   })();
   const renderView = () => {
     switch (currentView) {
@@ -242,7 +230,9 @@ const App: React.FC = () => {
             onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
             onComplete={(profile) => {
               setStudentProfile(profile);
-              navigateTo(AppView.STUDENT_HOME);
+              const journey=resolveJourney(UserLevel.STUDENT,profile as unknown as Record<string,string>);
+              saveJourney(journey);
+              navigateTo(journey.destination);
             }}
           />
         );
@@ -259,7 +249,9 @@ const App: React.FC = () => {
             onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
             onComplete={(profile) => {
               setGraduateProfile(profile);
-              navigateTo(AppView.GRADUATE_HOME);
+              const journey=resolveJourney(UserLevel.GRADUATE,profile as unknown as Record<string,string>);
+              saveJourney(journey);
+              navigateTo(journey.destination);
             }}
           />
         );
@@ -276,7 +268,9 @@ const App: React.FC = () => {
             onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
             onComplete={(profile) => {
               setSwitcherProfile(profile);
-              navigateTo(AppView.SWITCHER_HOME);
+              const journey=resolveJourney(UserLevel.PRO,profile as unknown as Record<string,string>);
+              saveJourney(journey);
+              navigateTo(journey.destination);
             }}
           />
         );
@@ -333,6 +327,8 @@ const App: React.FC = () => {
       {showNav && <DesktopSidebar currentView={currentView} level={userLevel} role={selectedRole} company={selectedCompany?.name} dashboardView={dashboardView} onViewChange={navigateTo} onLogout={() => navigateTo(AppView.HOME)} />}
       <div className={showNav ? 'workspace-main' : 'public-main'}>
         {showTopHeader && <NavHeader level={userLevel} role={selectedRole} company={selectedCompany?.name} view={currentView} onBack={[AppView.PROFILE_HUB,AppView.STUDENT_HOME,AppView.GRADUATE_HOME,AppView.SWITCHER_HOME].includes(currentView) ? undefined : handleBack} onLogout={() => navigateTo(AppView.HOME)} onNavigate={navigateTo} />}
+        <UnsavedWorkNotice onResume={()=>navigateTo(AppView.RESUME_TEMPLATES)}/>
+        {showNav&&<JourneyContext view={currentView} onEdit={goToLevelSelect}/>}
         <main id="main-content" className={showNav ? 'workspace-body' : 'public-body'} key={currentView}>
           <div className={currentView === AppView.HOME || currentView === AppView.LEVEL_SELECT || [AppView.STUDENT_HOME,AppView.GRADUATE_HOME,AppView.SWITCHER_HOME,AppView.PROFILE_HUB].includes(currentView) ? 'fresh-view' : 'tool-view'}><Suspense fallback={<div className="p-10 text-sm text-muted" role="status">Opening your next step…</div>}>{renderView()}</Suspense></div>
         </main>

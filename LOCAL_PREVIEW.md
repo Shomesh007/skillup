@@ -40,3 +40,19 @@ The optional existing-account adapter reads VITE_SUPABASE_URL and VITE_SUPABASE_
 - Browser OS Print/Save as PDF and live external account/AI/booking services were not end-to-end tested.
 
 Visual guidance researched: https://github.com/pbakaus/impeccable and https://github.com/LeoStehlik/no-slop-ui . Their design references informed the work; no external slop-detector certification is claimed.
+
+## November 11 functional upgrade
+
+See docs/FEATURE-RESEARCH.md for the source-backed matrix covering all 19 product modules and the remaining implementation sequence.
+
+Onboarding now routes directly to the selected task and carries role-family or project-track defaults. The same resolver drives overview suggestions. Job searches and role-family filters retain user edits.
+
+Resume studio supports a master and independent named versions, validated JSON imports/backups, section and entry ordering, font/density options, content checks, job skill-term comparison, a plain-text reading-order inspector, text export, real editable DOCX export and browser Print/PDF. Word and text exports use the same ordered content model. Imported backups create a separate copy. Drafts still live on this device.
+
+Interview practice adds editable next-review dates and a Review due filter. The three-day default is an adjustable reminder, not a claim about optimal learning.
+
+Run npm test for the domain regression suite, npm run typecheck, and npm run build. Twelve tests cover routing, aliases and boundaries, empty entries, section order, backup validation, evidence checks and actual Word OOXML content. Compatible dependency updates resolved the 18 npm advisories reported during this work; npm audit then reported zero. This is not a security certification. The large lazy imported job-data chunk remains a build warning.
+
+Resume persistence now reports rejected storage writes, offers retry/backup recovery, protects unsaved version switches, and avoids marking an incomplete version as saved. The test suite includes metadata-write rollback. GitHub checks run tests, typecheck and production build on main pushes and pull requests.
+
+Failed writes remain in an app-level recovery cache across internal navigation, with an always-mounted warning/export option and close/reload protection. Returning to a tool restores its unsaved draft; successful retry clears its recovery entry.

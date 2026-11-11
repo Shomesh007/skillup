@@ -1,15 +1,14 @@
 import React, { useMemo, useRef, useState } from 'react';
 import { useAppContext, Role } from '../../context/AppContext';
+import {hasRequirement} from '../../src/domain/skills';
 import { AppView } from '../../types';
 import { Icon } from '../Brand';
 import { Button, Empty, Field, Page, Section, SourceNote, Tabs, useStoredState } from './UI';
-const canonical=(value:string)=>{const key=value.toLowerCase().replace(/[^a-z0-9]/g,'');return ({js:'javascript',ts:'typescript',node:'nodejs',reactjs:'react',postgres:'postgresql',html5:'html',css3:'css'} as Record<string,string>)[key]||key;};
-const variants=(value:string)=>value.split(/[\/,]/).map(canonical).filter(Boolean);
 const requirements=(role:Role)=>Array.from(new Set(role.requiredTools?.core?.length?role.requiredTools.core:role.learningPath.beginner.tools)).slice(0,10);
-const hasSkill=(skills:string[],requirement:string)=>variants(requirement).some(item=>skills.some(skill=>variants(skill).includes(item)));
+const hasSkill=hasRequirement;
 interface Props { mode?:'explore'|'student'|'graduate'|'switcher';onBrowseCompanies?:(role:string)=>void;onNavigate?:(view:AppView)=>void; }
 export default function RoleWorkbench({mode='explore',onBrowseCompanies,onNavigate}:Props){
- const {roles}=useAppContext();const [query,setQuery]=useState(''),[category,setCategory]=useState('All roles'),[tab,setTab]=useState('Overview'),[skillsText,setSkillsText]=useState(''),[mobileDetail,setMobileDetail]=useState(false),[compare,setCompare]=useState<string[]>([]);
+ const {roles}=useAppContext();const [query,setQuery]=useState(''),[category,setCategory]=useStoredState('skillup.roleFamily','All roles'),[tab,setTab]=useState('Overview'),[skillsText,setSkillsText]=useState(''),[mobileDetail,setMobileDetail]=useState(false),[compare,setCompare]=useState<string[]>([]);
  const [skills,setSkills]=useStoredState<string[]>('skillup.skills',[]);const [target,setTarget]=useStoredState<string|null>('skillup.targetRole',null);const [selectedId,setSelectedId]=useState<string|null>(null);const [stage,setStage]=useState<'beginner'|'intermediate'|'advanced'>('beginner');const compareDialog=useRef<HTMLDialogElement>(null);
  const categories=useMemo(()=>['All roles',...new Set(roles.map(role=>role.category))],[roles]);
  const ranked=useMemo(()=>roles.filter(role=>(category==='All roles'||role.category===category)&&`${role.name} ${role.category} ${role.description}`.toLowerCase().includes(query.toLowerCase())).map(role=>({role,matched:requirements(role).filter(skill=>hasSkill(skills,skill)).length,total:requirements(role).length})).sort((a,b)=>skills.length?b.matched-a.matched||a.role.name.localeCompare(b.role.name):a.role.name.localeCompare(b.role.name)),[roles,category,query,skills]);
@@ -31,5 +30,3 @@ export default function RoleWorkbench({mode='explore',onBrowseCompanies,onNaviga
  <dialog ref={compareDialog} className="comparison-dialog"><header><h2>Compare roles</h2><Button variant="ghost" aria-label="Close role comparison" onClick={()=>compareDialog.current?.close()}><Icon name="close"/></Button></header>{compare.length<2&&<p className="ui-inline-note">Add another role using its Compare button to see the differences.</p>}<div className="comparison-columns">{compare.map(id=>roles.find(role=>role.id===id)).filter(Boolean).map(role=><section key={role!.id}><h3>{role!.name}</h3><p>{role!.description}</p><h4>Core requirements</h4><ul className="ui-list">{requirements(role!).map(skill=><li key={skill}>{hasSkill(skills,skill)?'✓ ':''}{skill}</li>)}</ul><h4>First project</h4><p>{role!.learningPath.beginner.projectIdeas[0]||'Choose a small project that uses the core tools.'}</p><Button onClick={()=>{setSelectedId(role!.id);setMobileDetail(true);compareDialog.current?.close();}}>Review role<Icon name="arrow_forward"/></Button></section>)}</div></dialog>
  </Page>;
 }
-
-
