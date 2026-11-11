@@ -197,7 +197,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       { name: 'Applications Support Engineer', idSuffix: 'applications_support_engineer' },
     ]);
 
-    return expanded;
+    return expanded.filter((role, index) => expanded.findIndex(item => item.name.toLowerCase() === role.name.toLowerCase()) === index).map(role => ({...role,id: `${role.id}:${role.name.toLowerCase().replace(/[^a-z0-9]+/g,"-")}`}));
   };
 
   const mapLocalCompany = (company: (typeof COMPANIES)[number]): Company => ({
@@ -222,41 +222,36 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       setRoles(expandRoles(localRoles.map(mapLocalRole)));
       setCompanies(COMPANIES.map(mapLocalCompany));
 
-      // Check if user is logged in from localStorage
-      const savedUser = localStorage.getItem('s4skillup_user');
-      if (savedUser) {
-        try {
-          const parsedUser = JSON.parse(savedUser);
-          setUser({ ...parsedUser, isLoggedIn: true });
-        } catch (e) {
-          console.error('Error parsing saved user:', e);
-        }
+      // Local path preferences do not establish an authenticated identity.
+      if (import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY) {
+        const { supabase } = await import('../src/services/supabase');
+        const { data } = await supabase.auth.getUser();
+        if (data.user) setUser(prev => ({ ...prev, id: data.user.id, email: data.user.email || '', isLoggedIn: true }));
       }
+
     };
 
     loadData();
   }, []);
 
   const login = async (email: string, password: string) => {
-    // Mock authentication
-    const newUser: User = {
-      id: `user_${Date.now()}`,
-      email,
-      careerLevel: null,
-      isLoggedIn: true,
-    };
-    setUser(newUser);
-    localStorage.setItem('s4skillup_user', JSON.stringify(newUser));
+    const { supabase } = await import('../src/services/supabase');
+    if (!supabase) throw new Error('Account sign-in is not available yet. You can continue as a guest.');
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) throw error;
+    if (!data.user) throw new Error('Sign-in could not be completed.');
+    setUser(prev => ({ ...prev, id: data.user.id, email: data.user.email || '', isLoggedIn: true }));
   };
-
   const logout = () => {
+    if (import.meta.env.VITE_SUPABASE_URL && import.meta.env.VITE_SUPABASE_ANON_KEY) {
+      import('../src/services/supabase').then(({supabase}) => supabase?.auth.signOut());
+    }
     setUser({ id: '', email: '', careerLevel: null, isLoggedIn: false });
-    localStorage.removeItem('s4skillup_user');
   };
 
   const setUserLevel = (level: UserLevel) => {
     setUser((prev) => ({ ...prev, careerLevel: level }));
-    localStorage.setItem('s4skillup_user', JSON.stringify({ ...user, careerLevel: level }));
+
   };
 
   return (

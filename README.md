@@ -1,3 +1,5 @@
+> Current redesign: see [LOCAL_PREVIEW.md](LOCAL_PREVIEW.md) for setup, available functionality, service requirements, and verification. The original documentation below describes the earlier project and includes historical production claims.
+
 # s4skillup - Career Guidance & Interview Prep
 
 A comprehensive career guidance and interview preparation platform for tech professionals in India. Built with React, Vite, TypeScript, and Supabase.
@@ -246,7 +248,7 @@ console.log(import.meta.env.VITE_SUPABASE_URL)
 # Supabase
 VITE_SUPABASE_URL=              # Your Supabase project URL
 VITE_SUPABASE_ANON_KEY=         # Supabase anonymous key
-VITE_SUPABASE_SERVICE_ROLE_KEY= # Service role key (backend only)
+SUPABASE_SERVICE_ROLE_KEY=      # Server only; never expose through Vite
 
 # Optional: Analytics & Monitoring
 VITE_POSTHOG_API_KEY=           # PostHog analytics key
@@ -292,7 +294,7 @@ For issues, feature requests, or questions:
 
 ---
 
-**Status**: 🟢 Production Ready
+**Current status**: Local development preview; see LOCAL_PREVIEW.md for verified functionality and remaining integrations.
 
 **Deploy**: www.s4skillup.com (via Vercel)
 

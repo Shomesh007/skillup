@@ -36,27 +36,27 @@ const Breadcrumbs: React.FC<Props> = ({ level, role, company, view }) => {
   };
 
   return (
-    <nav className="px-6 pt-12 pb-2 shrink-0 flex items-center gap-1.5 text-[9px] font-mono tracking-widest text-gray-500 uppercase overflow-x-auto no-scrollbar whitespace-nowrap">
+    <nav className="px-6 pt-12 pb-2 shrink-0 flex items-center gap-1.5 text-[9px] font-mono tracking-widest text-muted uppercase overflow-x-auto no-scrollbar whitespace-nowrap">
       <span>Home</span>
       {level && (
         <>
-          <span className="text-gray-700">/</span>
+          <span className="text-muted">/</span>
           <span className="text-neon-cyan/70">{level}</span>
         </>
       )}
       {role && (
         <>
-          <span className="text-gray-700">/</span>
-          <span className="text-white">{role}</span>
+          <span className="text-muted">/</span>
+          <span className="text-ink">{role}</span>
         </>
       )}
       {company && (
         <>
-          <span className="text-gray-700">/</span>
+          <span className="text-muted">/</span>
           <span className="text-primary">{company}</span>
         </>
       )}
-      <span className="text-gray-700">/</span>
+      <span className="text-muted">/</span>
       <span className="text-neon-cyan animate-pulse">{getLabel(view)}</span>
     </nav>
   );

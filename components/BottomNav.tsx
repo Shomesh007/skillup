@@ -1,41 +1,6 @@
-
 import React from 'react';
 import { AppView } from '../types';
-
-interface Props {
-  currentView: AppView;
-  dashboardView?: AppView;
-  onViewChange: (view: AppView) => void;
+import { Icon } from './Brand';
+export default function BottomNav({currentView,dashboardView=AppView.PROFILE_HUB,onViewChange}:{currentView:AppView;dashboardView?:AppView;onViewChange:(view:AppView)=>void}){
+ return <nav className="mobile-bottom-nav" aria-label="Main workspace navigation">{[{view:dashboardView,icon:'space_dashboard',label:'Home'},{view:AppView.ROLE_HUB,icon:'explore',label:'Explore'},{view:AppView.AI_CHAT,icon:'chat_bubble_outline',label:'Guidance'},{view:AppView.RESUME_TEMPLATES,icon:'description',label:'Resume'},{view:AppView.JOB_LIST,icon:'work_outline',label:'Jobs'}].map(item=><button key={item.view} aria-current={currentView===item.view?'page':undefined} className={currentView===item.view?'active':''} onClick={()=>onViewChange(item.view)}><Icon name={item.icon}/><span>{item.label}</span></button>)}</nav>;
 }
-
-const BottomNav: React.FC<Props> = ({ currentView, dashboardView = AppView.PROFILE_HUB, onViewChange }) => {
-  const items = [
-    { view: dashboardView, icon: 'hub', label: 'DASHBOARD' },
-    { view: AppView.ROLE_HUB, icon: 'explore', label: 'GUIDES' },
-    { view: AppView.AI_CHAT, icon: 'forum', label: 'ASSISTANT' },
-    { view: AppView.RESUME_TEMPLATES, icon: 'badge', label: 'RESUME' },
-    { view: AppView.JOB_LIST, icon: 'search', label: 'JOBS' },
-  ];
-
-  return (
-    <nav className="absolute bottom-0 w-full glass-panel border-t border-white/10 flex justify-around items-center h-16 pb-2 z-50 lg:hidden">
-      {items.map((item) => (
-        <button 
-          key={item.view}
-          onClick={() => onViewChange(item.view)}
-          className={`flex flex-col items-center gap-1 group relative ${currentView === item.view ? 'text-neon-cyan' : 'text-gray-500'}`}
-        >
-          <span className={`material-symbols-outlined text-2xl ${currentView === item.view ? 'text-neon transition-all' : ''}`}>
-            {item.icon}
-          </span>
-          <span className="text-[9px] font-mono tracking-widest">{item.label}</span>
-          {currentView === item.view && (
-            <span className="absolute -bottom-1 w-1 h-1 bg-neon-cyan rounded-full shadow-[0_0_5px_rgba(0,240,255,1)]"></span>
-          )}
-        </button>
-      ))}
-    </nav>
-  );
-};
-
-export default BottomNav;

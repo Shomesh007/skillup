@@ -1,50 +1,75 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
+import CareerHomeView from './components/CareerHomeView';
 import { AppView, UserLevel, Company, JobOpportunity } from './types';
 import LandingView from './components/LandingView';
 import LevelSelectView from './components/LevelSelectView';
-import RoleHubView from './components/RoleHubView';
-import CompanyDiscoveryView from './components/CompanyDiscoveryView';
-import CompanyProfileView from './components/CompanyProfileView';
-import GuideView from './components/GuideView';
-import ResumeTemplatesView from './components/ResumeTemplatesView';
-import InterviewPrepView from './components/InterviewPrepView';
-import SuccessStoriesView from './components/SuccessStoriesView';
-import ChatView from './components/ChatView';
-import JobListView from './components/JobListView';
-import ProfileHubView from './components/ProfileHubView';
-import LiveCoachingView from './components/LiveCoachingView';
-import AuthView from './components/AuthView';
-import StudentSetupView, { StudentSetupProfile } from './components/StudentSetupView';
-import StudentHomeView from './components/StudentHomeView';
-import StudentRoleExplorerView from './components/StudentRoleExplorerView';
-import StudentTrackBuilderView from './components/StudentTrackBuilderView';
-import GraduateSetupView, { GraduateSetupProfile } from './components/GraduateSetupView';
-import GraduateHomeView from './components/GraduateHomeView';
-import GraduateRoleTargeterView from './components/GraduateRoleTargeterView';
-import GraduateShortlistFixerView from './components/GraduateShortlistFixerView';
-import SwitcherSetupView, { SwitcherSetupProfile } from './components/SwitcherSetupView';
-import SwitcherHomeView from './components/SwitcherHomeView';
-import SwitcherTargeterView from './components/SwitcherTargeterView';
-import SwitcherTranslatorView from './components/SwitcherTranslatorView';
+const RoleHubView = lazy(() => import('./components/RoleHubView'));
+const CompanyDiscoveryView = lazy(() => import('./components/CompanyDiscoveryView'));
+const CompanyProfileView = lazy(() => import('./components/CompanyProfileView'));
+const GuideView = lazy(() => import('./components/GuideView'));
+const ResumeTemplatesView = lazy(() => import('./components/ResumeTemplatesView'));
+const InterviewPrepView = lazy(() => import('./components/InterviewPrepView'));
+const SuccessStoriesView = lazy(() => import('./components/SuccessStoriesView'));
+const ChatView = lazy(() => import('./components/ChatView'));
+const JobListView = lazy(() => import('./components/JobListView'));
+const LiveCoachingView = lazy(() => import('./components/LiveCoachingView'));
+const AuthView = lazy(() => import('./components/AuthView'));
+import type { StudentSetupProfile } from './components/StudentSetupView';
+const StudentSetupView = lazy(() => import('./components/StudentSetupView'));
+const StudentRoleExplorerView = lazy(() => import('./components/StudentRoleExplorerView'));
+const StudentTrackBuilderView = lazy(() => import('./components/StudentTrackBuilderView'));
+import type { GraduateSetupProfile } from './components/GraduateSetupView';
+const GraduateSetupView = lazy(() => import('./components/GraduateSetupView'));
+const GraduateRoleTargeterView = lazy(() => import('./components/GraduateRoleTargeterView'));
+const GraduateShortlistFixerView = lazy(() => import('./components/GraduateShortlistFixerView'));
+import type { SwitcherSetupProfile } from './components/SwitcherSetupView';
+const SwitcherSetupView = lazy(() => import('./components/SwitcherSetupView'));
+const SwitcherTargeterView = lazy(() => import('./components/SwitcherTargeterView'));
+const SwitcherTranslatorView = lazy(() => import('./components/SwitcherTranslatorView'));
 import BottomNav from './components/BottomNav';
 import NavHeader from './components/NavHeader';
 import DesktopSidebar from './components/DesktopSidebar';
 import { useAppContext } from './context/AppContext';
 import { classifyJobGuide } from './src/utils/jobGuideClassifier';
+import { COMPANIES } from './constants';
 
+function readWorkspace() {
+  try { const saved = JSON.parse(localStorage.getItem('skillup_workspace_v2') || '{}'); return saved && typeof saved === 'object' && !Array.isArray(saved) ? saved : {}; } catch { return {}; }
+}
+const savedWorkspace = readWorkspace();
+const initialView = Object.values(AppView).includes(location.hash.slice(1) as AppView) ? location.hash.slice(1) as AppView : AppView.HOME;
 const App: React.FC = () => {
-  const [currentView, setCurrentView] = useState<AppView>(() => AppView.HOME);
+  const [currentView, setCurrentView] = useState<AppView>(() => initialView);
   const [viewHistory, setViewHistory] = useState<AppView[]>([]);
-  const [userLevel, setUserLevel] = useState<UserLevel | null>(null);
-  const [selectedRole, setSelectedRole] = useState<string | null>(null);
-  const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
-  const [selectedJob, setSelectedJob] = useState<JobOpportunity | null>(null);
+  const [userLevel, setUserLevel] = useState<UserLevel | null>(() => Object.values(UserLevel).includes(savedWorkspace.level) ? savedWorkspace.level : null);
+  const [selectedRole, setSelectedRole] = useState<string | null>(savedWorkspace.role || null);
+  const [selectedCompany, setSelectedCompany] = useState<Company | null>(savedWorkspace.company || null);
+  const [selectedJob, setSelectedJob] = useState<JobOpportunity | null>(savedWorkspace.job || null);
   const [jobListCompanyFilter, setJobListCompanyFilter] = useState<string | null>(null);
-  const [studentProfile, setStudentProfile] = useState<StudentSetupProfile | null>(null);
-  const [graduateProfile, setGraduateProfile] = useState<GraduateSetupProfile | null>(null);
-  const [switcherProfile, setSwitcherProfile] = useState<SwitcherSetupProfile | null>(null);
+  const [studentProfile, setStudentProfile] = useState<StudentSetupProfile | null>(savedWorkspace.student || null);
+  const [graduateProfile, setGraduateProfile] = useState<GraduateSetupProfile | null>(savedWorkspace.graduate || null);
+  const [switcherProfile, setSwitcherProfile] = useState<SwitcherSetupProfile | null>(savedWorkspace.switcher || null);
   const { logout, setUserLevel: setContextUserLevel } = useAppContext();
+  const browserNavigation = useRef(false);
+  useEffect(() => {
+    const handlePop = () => {
+      browserNavigation.current = true;
+      const next = location.hash.slice(1) as AppView;
+      setCurrentView(Object.values(AppView).includes(next) ? next : AppView.HOME);
+    };
+    window.addEventListener('popstate', handlePop);
+    window.addEventListener('hashchange', handlePop);
+    return () => {window.removeEventListener('popstate', handlePop);window.removeEventListener('hashchange', handlePop);};
+  }, []);
+  useEffect(() => {
+    const hash = currentView === AppView.HOME ? '' : '#' + currentView;
+    if (browserNavigation.current) browserNavigation.current = false;
+    else if (location.hash !== hash) history.pushState(null, '', location.pathname + location.search + hash);
+  }, [currentView]);
+  useEffect(() => {
+    try { localStorage.setItem('skillup_workspace_v2', JSON.stringify({level:userLevel,role:selectedRole,company:selectedCompany,job:selectedJob,student:studentProfile,graduate:graduateProfile,switcher:switcherProfile})); } catch {}
+  }, [userLevel, selectedRole, selectedCompany, selectedJob, studentProfile, graduateProfile, switcherProfile]);
   const fallbackCompany: Company = {
     id: '',
     name: 'your target company',
@@ -61,7 +86,8 @@ const App: React.FC = () => {
     timeline: [],
   };
 
-  const navigateTo = (view: AppView) => {
+  const navigateTo = (view: AppView, companyFilter?: string) => {
+    if (view === AppView.JOB_LIST) setJobListCompanyFilter(companyFilter || null);
     if (view === currentView) return;
     if (view === AppView.PROFILE_HUB || view === AppView.STUDENT_HOME || view === AppView.GRADUATE_HOME || view === AppView.SWITCHER_HOME) {
       setViewHistory([]);
@@ -72,16 +98,13 @@ const App: React.FC = () => {
     setCurrentView(view);
   };
 
-  const goToLevelSelect = () => {
-    setSelectedRole(null);
-    setSelectedCompany(null);
-    setSelectedJob(null);
-    setStudentProfile(null);
-    setGraduateProfile(null);
-    setSwitcherProfile(null);
-    navigateTo(AppView.LEVEL_SELECT);
-  };
+  const goToLevelSelect = () => navigateTo(AppView.LEVEL_SELECT);
 
+  const selectPath = (level: UserLevel) => {
+    setUserLevel(level);
+    setContextUserLevel(level);
+    navigateTo(level === UserLevel.STUDENT ? AppView.STUDENT_SETUP : level === UserLevel.GRADUATE ? AppView.GRADUATE_SETUP : AppView.SWITCHER_SETUP);
+  };
   const handleLogout = () => {
     logout();
     setUserLevel(null);
@@ -92,12 +115,12 @@ const App: React.FC = () => {
     setGraduateProfile(null);
     setSwitcherProfile(null);
     setViewHistory([]);
-    setCurrentView(AppView.LEVEL_SELECT);
+    setCurrentView(AppView.HOME);
   };
 
   const buildJobCompany = (job: JobOpportunity): Company => {
     const jobGuide = classifyJobGuide(job);
-    const knownCompany = [fallbackCompany].find((company) => company.name === job.company);
+    const knownCompany = COMPANIES.find((company) => company.name === job.company);
     return knownCompany || {
       ...fallbackCompany,
       id: job.company.toLowerCase().replace(/\s+/g, '-'),
@@ -128,8 +151,7 @@ const App: React.FC = () => {
   };
 
   const handleShowJobsByCompany = (companyName: string) => {
-    setJobListCompanyFilter(companyName);
-    navigateTo(AppView.JOB_LIST);
+    navigateTo(AppView.JOB_LIST, companyName);
   };
 
   const handleBack = () => {
@@ -156,13 +178,27 @@ const App: React.FC = () => {
     }
   };
 
-  const Background = () => (
-    <div className="fixed inset-0 z-0 pointer-events-none">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6IiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTAgNDBoNDBNNDAgMHY0MCIgc3Ryb2tlPSJyZ2JhKDAsMjQwLDI1NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] bg-repeat animate-circuit-move opacity-20"></div>
-      <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]"></div>
-    </div>
-  );
-
+  const nextStep = (() => {
+    if (userLevel === UserLevel.STUDENT && studentProfile) {
+      if (studentProfile.goal === 'internship') return {label:'Build my first track',description:'Turn your curiosity into internship-ready project proof.',view:AppView.STUDENT_TRACK_BUILDER};
+      if (studentProfile.goal === 'placement') return {label:'Start interview practice',description:'Make your next placement conversation feel more familiar.',view:AppView.INTERVIEW_PREP};
+    }
+    if (userLevel === UserLevel.GRADUATE && graduateProfile) {
+      const options = {
+        resume: {label:'Build a stronger resume',description:'Give your projects and skills a clearer story.',view:AppView.RESUME_TEMPLATES},
+        skills: {label:'Find my role target',description:'Pick a direction and the proof you need to build.',view:AppView.GRADUATE_ROLE_TARGETER},
+        jobs: {label:'Explore opportunities',description:'Build a focused list of roles to investigate.',view:AppView.JOB_LIST},
+        prep: {label:'Practise my next interview',description:'Start with one answer. Build confidence from there.',view:AppView.INTERVIEW_PREP},
+        'no-calls': {label:'Work on my shortlist',description:'Find what might be holding your applications back.',view:AppView.GRADUATE_SHORTLIST_FIXER},
+      }; return options[graduateProfile.readiness as keyof typeof options];
+    }
+    if (userLevel === UserLevel.PRO && switcherProfile) {
+      if (switcherProfile.blocker === 'resume') return {label:'Translate my experience',description:'Connect what you have done to where you want to go.',view:AppView.SWITCHER_TRANSLATOR};
+      if (switcherProfile.blocker === 'interviews') return {label:'Practise for my next role',description:'Build a stronger story for your new direction.',view:AppView.INTERVIEW_PREP};
+      return {label:'Build my switch plan',description:'Find a practical bridge from your experience to your ambition.',view:AppView.SWITCHER_TARGETER};
+    }
+    return undefined;
+  })();
   const renderView = () => {
     switch (currentView) {
       case AppView.HOME:
@@ -170,6 +206,8 @@ const App: React.FC = () => {
           <LandingView
             onStart={goToLevelSelect}
             onLogin={() => navigateTo(AppView.AUTH)}
+            onSelectPath={selectPath}
+            onExplore={navigateTo}
           />
         );
       case AppView.AUTH:
@@ -209,20 +247,9 @@ const App: React.FC = () => {
           />
         );
       case AppView.STUDENT_HOME:
-        return (
-          <StudentHomeView
-            profile={studentProfile}
-            onOpenRoleExplorer={() => navigateTo(AppView.STUDENT_ROLE_EXPLORER)}
-            onOpenTrackBuilder={() => navigateTo(AppView.STUDENT_TRACK_BUILDER)}
-            onOpenJobs={() => navigateTo(AppView.JOB_LIST)}
-            onOpenResume={() => navigateTo(AppView.RESUME_TEMPLATES)}
-            onOpenInterview={() => navigateTo(AppView.INTERVIEW_PREP)}
-            onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
-            onChangeProfile={() => navigateTo(AppView.STUDENT_SETUP)}
-          />
-        );
+        return <CareerHomeView nextStep={nextStep} level={userLevel} onNavigate={navigateTo} onEdit={goToLevelSelect} />;
       case AppView.STUDENT_ROLE_EXPLORER:
-        return <StudentRoleExplorerView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
+        return <StudentRoleExplorerView onNavigate={navigateTo} onSelectRole={(role) => { setSelectedRole(role); navigateTo(AppView.COMPANY_DISCOVERY); }} onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.STUDENT_TRACK_BUILDER:
         return <StudentTrackBuilderView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.GRADUATE_SETUP:
@@ -237,22 +264,11 @@ const App: React.FC = () => {
           />
         );
       case AppView.GRADUATE_HOME:
-        return (
-          <GraduateHomeView
-            profile={graduateProfile}
-            onOpenRoleTargeter={() => navigateTo(AppView.GRADUATE_ROLE_TARGETER)}
-            onOpenShortlistFixer={() => navigateTo(AppView.GRADUATE_SHORTLIST_FIXER)}
-            onOpenJobs={() => navigateTo(AppView.JOB_LIST)}
-            onOpenResume={() => navigateTo(AppView.RESUME_TEMPLATES)}
-            onOpenInterview={() => navigateTo(AppView.INTERVIEW_PREP)}
-            onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
-            onChangeProfile={() => navigateTo(AppView.GRADUATE_SETUP)}
-          />
-        );
+        return <CareerHomeView nextStep={nextStep} level={userLevel} onNavigate={navigateTo} onEdit={goToLevelSelect} />;
       case AppView.GRADUATE_ROLE_TARGETER:
-        return <GraduateRoleTargeterView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
+        return <GraduateRoleTargeterView onNavigate={navigateTo} onSelectRole={(role) => { setSelectedRole(role); navigateTo(AppView.COMPANY_DISCOVERY); }} onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.GRADUATE_SHORTLIST_FIXER:
-        return <GraduateShortlistFixerView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
+        return <GraduateShortlistFixerView onNavigate={navigateTo} onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.SWITCHER_SETUP:
         return (
           <SwitcherSetupView
@@ -265,33 +281,22 @@ const App: React.FC = () => {
           />
         );
       case AppView.SWITCHER_HOME:
-        return (
-          <SwitcherHomeView
-            profile={switcherProfile}
-            onOpenTargeter={() => navigateTo(AppView.SWITCHER_TARGETER)}
-            onOpenTranslator={() => navigateTo(AppView.SWITCHER_TRANSLATOR)}
-            onOpenJobs={() => navigateTo(AppView.JOB_LIST)}
-            onOpenResume={() => navigateTo(AppView.RESUME_TEMPLATES)}
-            onOpenInterview={() => navigateTo(AppView.INTERVIEW_PREP)}
-            onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)}
-            onChangeProfile={() => navigateTo(AppView.SWITCHER_SETUP)}
-          />
-        );
+        return <CareerHomeView nextStep={nextStep} level={userLevel} onNavigate={navigateTo} onEdit={goToLevelSelect} />;
       case AppView.SWITCHER_TARGETER:
-        return <SwitcherTargeterView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
+        return <SwitcherTargeterView onNavigate={navigateTo} onSelectRole={(role) => { setSelectedRole(role); navigateTo(AppView.COMPANY_DISCOVERY); }} onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.SWITCHER_TRANSLATOR:
-        return <SwitcherTranslatorView onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
+        return <SwitcherTranslatorView onNavigate={navigateTo} onOpenCoaching={() => navigateTo(AppView.LIVE_COACHING)} />;
       case AppView.ROLE_HUB:
         return <RoleHubView onSelectRole={(r) => { setSelectedRole(r); navigateTo(AppView.COMPANY_DISCOVERY); }} />;
       case AppView.COMPANY_DISCOVERY:
-        return <CompanyDiscoveryView role={selectedRole || ''} onSelectCompany={(c) => { setSelectedCompany(c); navigateTo(AppView.COMPANY_PROFILE); }} onBack={handleBack} onShowJobs={handleShowJobsByCompany} />;
+        return <CompanyDiscoveryView role={selectedRole || ''} onSelectCompany={(c) => { setSelectedJob(null); setSelectedCompany(c); navigateTo(AppView.COMPANY_PROFILE); }} onBack={handleBack} onShowJobs={handleShowJobsByCompany} />;
       case AppView.COMPANY_PROFILE:
         if (!selectedCompany) {
-          return <CompanyDiscoveryView role={selectedRole || ''} onSelectCompany={(c) => { setSelectedCompany(c); navigateTo(AppView.COMPANY_PROFILE); }} onBack={handleBack} onShowJobs={handleShowJobsByCompany} />;
+          return <CompanyDiscoveryView role={selectedRole || ''} onSelectCompany={(c) => { setSelectedJob(null); setSelectedCompany(c); navigateTo(AppView.COMPANY_PROFILE); }} onBack={handleBack} onShowJobs={handleShowJobsByCompany} />;
         }
         return <CompanyProfileView company={selectedCompany} onAction={(view) => navigateTo(view)} onBack={handleBack} onShowJobs={handleShowJobsByCompany} />;
       case AppView.GUIDE:
-        return <GuideView company={selectedCompany || fallbackCompany} job={selectedJob} onBack={handleBack} onOpenTemplates={() => navigateTo(AppView.RESUME_TEMPLATES)} />;
+        return <GuideView onNavigate={navigateTo} company={selectedCompany || fallbackCompany} job={selectedJob} onBack={handleBack} onOpenTemplates={() => navigateTo(AppView.RESUME_TEMPLATES)} />;
       case AppView.RESUME_TEMPLATES:
         return <ResumeTemplatesView company={selectedCompany || fallbackCompany} />;
       case AppView.INTERVIEW_PREP:
@@ -299,11 +304,11 @@ const App: React.FC = () => {
       case AppView.SUCCESS_STORIES:
         return <SuccessStoriesView company={selectedCompany || fallbackCompany} onBack={handleBack} />;
       case AppView.AI_CHAT:
-        return <ChatView onBack={handleBack} />;
+        return <ChatView onBack={handleBack} onNavigate={navigateTo} />;
       case AppView.JOB_LIST:
         return <JobListView role={selectedRole || 'Engineering'} companyName={jobListCompanyFilter || undefined} onSelectJob={handleSelectJob} onBack={handleBack} />;
       case AppView.PROFILE_HUB:
-        return <ProfileHubView onSelectModule={(m) => navigateTo(m)} onBack={handleBack} />;
+        return <CareerHomeView nextStep={nextStep} level={userLevel} onNavigate={navigateTo} onEdit={goToLevelSelect} />;
       case AppView.LIVE_COACHING:
         return <LiveCoachingView />;
       default:
@@ -311,6 +316,8 @@ const App: React.FC = () => {
           <LandingView
             onStart={goToLevelSelect}
             onLogin={() => navigateTo(AppView.AUTH)}
+            onSelectPath={selectPath}
+            onExplore={navigateTo}
           />
         );
     }
@@ -322,45 +329,16 @@ const App: React.FC = () => {
   const dashboardView = userLevel === UserLevel.STUDENT ? AppView.STUDENT_HOME : userLevel === UserLevel.GRADUATE ? AppView.GRADUATE_HOME : userLevel === UserLevel.PRO ? AppView.SWITCHER_HOME : AppView.PROFILE_HUB;
 
   return (
-    <div className="relative w-full h-screen overflow-hidden flex flex-col items-center font-display lg:h-auto lg:min-h-screen lg:overflow-visible">
-      <Background />
-      <div className={`relative z-10 w-full h-full overflow-hidden bg-background-dark/90 backdrop-blur-md border-x border-white/5 lg:h-auto lg:min-h-screen lg:overflow-visible ${
-        showNav
-          ? 'max-w-md flex flex-col lg:max-w-none lg:bg-transparent lg:backdrop-blur-0 lg:border-0 lg:grid lg:grid-cols-[280px_minmax(0,1fr)] lg:gap-6 lg:p-6'
-          : 'max-w-md flex flex-col lg:max-w-7xl lg:bg-transparent lg:backdrop-blur-0 lg:border-0'
-      }`}>
-        {showNav && (
-          <DesktopSidebar
-            currentView={currentView}
-            level={userLevel}
-            role={selectedRole}
-            company={selectedCompany?.name}
-            dashboardView={dashboardView}
-            onViewChange={navigateTo}
-            onLogout={handleLogout}
-          />
-        )}
-        <div className={`min-h-0 overflow-hidden flex flex-col lg:h-auto lg:overflow-visible ${
-          showNav ? 'h-full lg:min-h-[calc(100vh-3rem)] lg:rounded-[28px] lg:border lg:border-white/10 lg:bg-background-dark/75 lg:shadow-2xl lg:shadow-black/30' : 'h-full'
-        }`}>
-          {showTopHeader && (
-            <NavHeader
-              level={userLevel}
-              role={selectedRole}
-              company={selectedCompany?.name}
-              view={currentView}
-              onBack={currentView === AppView.PROFILE_HUB || currentView === AppView.STUDENT_HOME || currentView === AppView.GRADUATE_HOME || currentView === AppView.SWITCHER_HOME ? undefined : handleBack}
-              onLogout={handleLogout}
-            />
-          )}
-          <main className="flex-1 flex flex-col min-h-0 overflow-hidden relative lg:overflow-visible">
-            {renderView()}
-          </main>
-          {showNav && <BottomNav currentView={currentView} dashboardView={dashboardView} onViewChange={navigateTo} />}
-        </div>
+    <div className={showNav ? 'workspace-shell' : 'public-shell'}>
+      {showNav && <DesktopSidebar currentView={currentView} level={userLevel} role={selectedRole} company={selectedCompany?.name} dashboardView={dashboardView} onViewChange={navigateTo} onLogout={() => navigateTo(AppView.HOME)} />}
+      <div className={showNav ? 'workspace-main' : 'public-main'}>
+        {showTopHeader && <NavHeader level={userLevel} role={selectedRole} company={selectedCompany?.name} view={currentView} onBack={[AppView.PROFILE_HUB,AppView.STUDENT_HOME,AppView.GRADUATE_HOME,AppView.SWITCHER_HOME].includes(currentView) ? undefined : handleBack} onLogout={() => navigateTo(AppView.HOME)} onNavigate={navigateTo} />}
+        <main id="main-content" className={showNav ? 'workspace-body' : 'public-body'} key={currentView}>
+          <div className={currentView === AppView.HOME || currentView === AppView.LEVEL_SELECT || [AppView.STUDENT_HOME,AppView.GRADUATE_HOME,AppView.SWITCHER_HOME,AppView.PROFILE_HUB].includes(currentView) ? 'fresh-view' : 'tool-view'}><Suspense fallback={<div className="p-10 text-sm text-muted" role="status">Opening your next step…</div>}>{renderView()}</Suspense></div>
+        </main>
+        {showNav && <BottomNav currentView={currentView} dashboardView={dashboardView} onViewChange={navigateTo} />}
       </div>
     </div>
   );
 };
-
 export default App;
